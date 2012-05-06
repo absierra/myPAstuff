@@ -1,0 +1,19 @@
+{
+    "resource" :{
+        "three" : "Three/Three.js",
+        "three_stats" : "Three/Stats.js",
+        "three_detector" : "Three/Detector.js",
+        "three_noise" : "Three/ImprovedNoise.js",
+        "three_animation" : "Three/RequestAnimationFrame.js",
+        "myth_camera" : "MythCamera.js",
+        "argolus_tools" : "Argolus.Tools.js",
+        "argolus_mesh" : "Argolus.Mesh.js",
+        "argolus_submesh" : "Argolus.Submesh.js",
+        "argolus_scene" : "Argolus.Scene.js",
+        "argolus_view" : "Argolus.View.js",
+        "argolus_3d_view" : "Argolus.Orbital3DView.js"
+    },
+    "dependency":[
+        "mootools-core"
+    ]
+}
