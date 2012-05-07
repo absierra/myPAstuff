@@ -25,7 +25,7 @@
     }
     new Session($mc);
     WebApplication::addCache($mc);*/
-    new Session(); //api based session
+    //new Session(); //api based session
 
     //Initialize our datasources (We have no local data)
     //*

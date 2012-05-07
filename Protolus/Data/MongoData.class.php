@@ -134,7 +134,7 @@
                         $query  = array($this->primaryKey => $entry[$this->primaryKey]);
                     }
                 } else {
-                    throw new Exception('Something is wrong, the object has no primary key!');
+                    //throw new Exception('Something is wrong, the object has no primary key('.$this->primaryKey.')!');
                 }
                 $fieldsToUpdate = $this->data;
                 if(!$this->firstSave){

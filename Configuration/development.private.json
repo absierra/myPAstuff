@@ -1,15 +1,15 @@
 {
     "application":{
         "mode" : "debug",
-        "cookie_domain": "protolus.dev"
+        "cookie_domain": "pabudget.dev"
     },
-    "DB:appdata":{
-        "type":"mysql",
-        "database" : "appdata",
+    "DB:pa_budget_data":{
+        "type":"mongo",
+        "database" : "pabudgets",
         "host" : "localhost",
-        "user" : "root",
+        "user" : "",
         "password" : "",
-        "mode":"mysql",
+        "mode":"mongo",
         "session":"true",
         "session_hook":"php"
     }
