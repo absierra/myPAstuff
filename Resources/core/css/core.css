@@ -1,0 +1,577 @@
+/* RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* /RESET *//* @license
+ * MyFonts Webfont Build ID 2200210, 2012-04-02T16:44:43-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Proxima Nova Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ * 
+ * Webfont: Proxima Nova Bold Italic by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+ * 
+ * Webfont: Proxima Nova Italic by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2200210
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * 
+ * © 2012 Bitstream Inc
+*/
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../webfonts/219292_0_0.eot');
+  src: url('../webfonts/219292_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_0_0.woff') format('woff'), url('../webfonts/219292_0_0.ttf') format('truetype'), url('../webfonts/219292_0_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-BoldItalic';
+  src: url('../webfonts/219292_1_0.eot');
+  src: url('../webfonts/219292_1_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_1_0.woff') format('woff'), url('../webfonts/219292_1_0.ttf') format('truetype'), url('../webfonts/219292_1_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-Italic';
+  src: url('../webfonts/219292_2_0.eot');
+  src: url('../webfonts/219292_2_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_2_0.woff') format('woff'), url('webfonts/219292_2_0.ttf') format('truetype'), url('../webfonts/219292_2_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('../webfonts/219462_0_0.eot');
+  src: url('../webfonts/219462_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219462_0_0.woff') format('woff'), url('../webfonts/219462_0_0.ttf') format('truetype');
+}
+html {
+  font-family: "Helvetica";
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #FFFFFF;
+  color: #818285;
+  font-family: "ProximaNova";
+}
+#protolus_root {
+  margin: 0 auto;
+}
+.logo {
+  position: absolute;
+  margin-top: 22px;
+}
+#saved-metrics h3 {
+  color: #0F0;
+}
+#graph_types {
+  background-color: #FFFFFF;
+  height: 300px;
+  width: 400px;
+  background: #fff;
+  margin: 15px auto 0;
+  border: 4px solid #000;
+  border-width: 0 0 4px 4px;
+}
+#graph_types .container {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.spinner {
+  background-image: url('/Resources/core/img/loader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header {
+  position: relative;
+  background-color: #1b1b1b;
+  height: 55px;
+  min-width: 730px;
+  background-color: #373739;
+  background-image: -webkit-linear-gradient(top, #373739, #000000);
+  background-image: -moz-linear-gradient(top, #373739, #000000);
+  background-image: -o-linear-gradient(top, #373739, #000000);
+  background-image: -ms-linear-gradient(top, #373739, #000000);
+  background-image: linear-gradient(top, #373739, #000000);
+}
+header img {
+  margin-top: 17px;
+  margin-left: 15px;
+  height: 22px;
+}
+header span.logo-text {
+  position: absolute;
+  top: 17.9px;
+  margin-left: 3px;
+  font-size: 1.4em;
+  vertical-align: middle;
+  color: #f9fbfb;
+  font-family: "ProximaNova";
+}
+.navigation {
+  width: 100%;
+  min-width: 730px;
+  clear: both;
+}
+.navigation > ul {
+  position: absolute;
+  top: 55px;
+  bottom: 20px;
+  background: #f3f3f4 url('/Resources/core/img/filter-background.png') repeat;
+  color: #333335;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+.navigation > ul > ul {
+  overflow: auto;
+  position: absolute;
+  top: 57px;
+  bottom: 0;
+  vertical-align: text-top;
+  border: 1px solid lightgrey;
+  border-width: 0px 1px 1px 0px;
+}
+.navigation > ul ul ul {
+  height: 0px;
+  overflow: hidden;
+}
+.navigation > ul ul ul li {
+  margin-left: 20px;
+  overflow-x: hidden;
+}
+.navigation > ul ul li {
+  line-height: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow-x: hidden;
+}
+.navigation > ul span {
+  padding-left: 10px;
+  height: 30px;
+  display: inline-block;
+  width: 100%;
+}
+.navigation > ul .selected > span {
+  background-color: #3A3A3C;
+  color: #00A9E2;
+}
+.navigation > ul.four_col_1 {
+  left: 0;
+  width: 250px;
+}
+.navigation > ul.four_col_2 {
+  left: 250px;
+  width: 250px;
+}
+.navigation > ul.four_col_3 {
+  left: 500px;
+  width: 250px;
+}
+.navigation > ul.four_col_4 {
+  left: 750px;
+  right: 0;
+  border-width: 0px 0px 1px 0px;
+  background-image: none;
+  padding: 20px;
+  overflow: auto;
+}
+.navigation > ul.four_col_4 ol {
+  margin: 10px auto;
+  width: 400px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.navigation > ul.four_col_4 ol li {
+  float: left;
+  width: 132px;
+  border: 1px solid #000;
+  border-right-width: 0;
+}
+.navigation > ul.four_col_4 ol li:last-of-type {
+  border-right-width: 1px;
+}
+.navigation > ul.four_col_4 p {
+  white-space: pre-wrap;
+  line-height: 18px;
+}
+.navigation > ul.four_col_1 ul,
+.navigation > ul.four_col_2 ul,
+.navigation > ul.four_col_3 ul {
+  width: 249px;
+}
+.navigation ul h3 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  color: #333335;
+  font-family: "ProximaNova-Bold";
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 55px;
+  vertical-align: center;
+  background-color: #bec0c2;
+  border: 1px solid #aeaeb0;
+  border-right: 0px;
+  border-left: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bec0c2), to(#a7aaac));
+  background-image: -webkit-linear-gradient(top, #bec0c2, #a7aaac);
+  background-image: -moz-linear-gradient(top, #bec0c2, #a7aaac);
+  background-image: -o-linear-gradient(top, #bec0c2, #a7aaac);
+  background-image: -ms-linear-gradient(top, #bec0c2, #a7aaac);
+  background-image: linear-gradient(top, #bec0c2, #a7aaac);
+  filter: progid:dximagetransform.microsoft.gradient(GradientType=0, StartColorStr='#bec0c2', EndColorStr='#a7aaac');
+}
+.slider {
+  background-color: #E7E7E8;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+.slider .knob {
+  background-color: #00A9E2;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+  position: absolute;
+  cursor: pointer;
+}
+.graph {
+  margin: 20px;
+  overflow: hidden;
+  padding: 0px;
+  display: inline-block;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+  /* todo make shadow work in angle & incline */
+
+  -webkit-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
+  background-color: #FFFFFF;
+}
+.graph .subtext {
+  font-weight: 800;
+  color: black;
+  padding-left: 10px;
+  font-size: 0;
+  font-family: "ProximaNova-Bold";
+}
+.graph.selected .info:after {
+  content: " >";
+  margin-left: 5px;
+  display: inline-block;
+  position: absolute;
+}
+.graph .graphcontrols {
+  margin: 0px;
+  float: right;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 370px;
+}
+.graph .graphcontrols .control {
+  width: 40px;
+  height: 40px;
+}
+.graph .graphcontrols .control.privacy {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-icons.png');
+  width: 35px;
+  height: 35px;
+  background-position: 0px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+}
+.graph .graphcontrols .control.goals {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-icons.png');
+  width: 35px;
+  height: 35px;
+  background-position: -35px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+}
+.graph .graphcontrols .control.plot {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-icons.png');
+  width: 35px;
+  height: 35px;
+  background-position: -70px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+}
+.graph .graphcontrols .control.settings {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-icons.png');
+  width: 35px;
+  height: 35px;
+  background-position: -105px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+}
+.graph div.info.icon:before {
+  vertical-align: top;
+  margin: 0;
+}
+.graph .info,
+.graph .info-selected {
+  height: 2em;
+  font-size: 16px;
+  text-wrap: none;
+  overflow: hidden;
+  width: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px;
+  display: inline-block;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  font-family: "ProximaNova";
+  color: #333;
+  line-height: 32px;
+}
+.graph .info-selected {
+  padding: 1px 0 8px 10px;
+}
+.graph .chart {
+  height: 160px;
+  width: 160px;
+  cursor: pointer;
+}
+.graph .node {
+  fill: lightblue;
+  box-shadow: 10px 10px 5px #888888;
+}
+.graph .node.selected {
+  fill: lightblue;
+  width: 20px;
+}
+/* Icons */
+/* Area */
+.selected > .icon:before {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/icons-active.png');
+  width: 30px;
+  height: 30px;
+  background-position: -90px -180px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+.icon:before {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/icons.png');
+  width: 30px;
+  height: 30px;
+  background-position: -90px -180px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+/* category*/
+.icon:before {
+  vertical-align: top;
+  margin-right: 5px;
+}
+/* Scroll Bars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(100, 100, 100, 0.8);
+  -webkit-box-shadow: inset 0 0 2px #888888;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 230, 230, 0.8);
+  -webkit-box-shadow: inset 0 0 2px #444444;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(230, 230, 230, 0.2);
+}
