@@ -24,7 +24,7 @@
     if(!file_exists(dirname($fileName))) mkdir(dirname($fileName));
     $mostRecentTime = 0;
     foreach($resources as $resourceName){
-        $time = filemtime('Resources/'.$resourceName.'/component.conf');
+        $time = filemtime('Resources/'.$resourceName.'/component.json');
         if($mostRecentTime < $time) $mostRecentTime = $time;
     }
     $rootDir = getcwd();
@@ -47,7 +47,8 @@
             chdir('../..');
             $resource = new ResourceBundle($resourceName, Formats::loadFile('Resources/'.$resourceName.'/component.json', 'json'));
             chdir('min/lib');
-            $items = $resource->resourceItems(true);
+            $items = $resource->resourceItems(true, true);
+            //print_r($resources); print_r($items); exit();
             foreach($items as $index=>$item){
                 switch(strtolower(WebApplication::getGet('type'))){
                     case 'js' :
@@ -65,7 +66,7 @@
     }
     //chdir('../..');
     //echo($rootDir); exit();
-    $mapper = function($string) { global $rootDir; return $rootDir.$string; };
+    $mapper = function($string) { global $rootDir; return realpath($rootDir.$string); };
     $allItems = array_map($mapper, $allItems);
     //print_r($resources); print_r($allItems); exit();
     if(count($allItems) == 0){
@@ -81,12 +82,14 @@
             WebApplication::addHeader("Content-type: text/css");
             break;
     }//*/
+    //echo('[III]');
+    //print_r($allItems); exit();
     if(strtolower(WebApplication::getGet('minify')) == 'true'){
         Minify::setCache('/tmp/ResourceCache');
         Minify::serve('Files', array(
             'files'  => $allItems,
             'maxAge' => 86400
-        ));
+        ));//*/
     }else{
         $res = '';
         foreach($allItems as $item){

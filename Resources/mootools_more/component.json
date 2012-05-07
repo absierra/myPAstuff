@@ -3,6 +3,6 @@
         "mootools_more":"mootools-more.js"
     },
     "dependency":[
-        "mootools-core"
+        "mootools_core"
     ]
 }
