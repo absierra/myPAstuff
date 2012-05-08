@@ -56,8 +56,9 @@
                     $array = array();
                     $js = 'function(){ return '.implode(' && ', $discText).'; }';
                     $collection = $db->$type;
-                    $cursor = $collection->find(array('$where' => $js));
                     MongoData::$lastQuery = $js;
+                    Logger::log(MongoData::$lastQuery);
+                    $cursor = $collection->find(array('$where' => $js));
                 }else{
                     //the new way
                     $where = array();
@@ -65,8 +66,9 @@
                         if($discriminant[0] != '') $where[$discriminant[0]] = $discriminant[2];
                     }
                     $collection = $db->$type;
-                    $cursor = $collection->find($where);
                     MongoData::$lastQuery = '$collection->find('.print_r($where, true).')';
+                    Logger::log(MongoData::$lastQuery);
+                    $cursor = $collection->find($where);
                 }
                 $array = iterator_to_array($cursor);
                 return $array;
@@ -149,6 +151,7 @@
                     array(\'$set\' => '.print_r($fieldsToUpdate, true).'),
                     array(\'upsert\' => true, \'fsync\' => true, \'safe\' => true)
                 );';
+                //Logger::log(MongoData::$lastQuery);
                 $res = $collection->update(
                     $query,
                     array('$set' => $fieldsToUpdate),

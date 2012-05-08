@@ -153,6 +153,7 @@
                     $search = $query; //Data::convertArrayToSearch($query);
                 }
             }
+            if($query == null) $search = array();
 			$dummy = new $datatype();
             if(isset($search)){
                 $resultSet = $datatype::performSearch(array(

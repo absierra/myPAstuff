@@ -1,6 +1,8 @@
 <?php
     $start_time = Logger::processing_time(); //let's measure page load time
-    //Logger::$logToPHPErrorLog = true; //let's log app events into the PHP error log
+    Logger::$logToPHPErrorLog = true; //let's log app events into the PHP error log
+    
+    MongoData::$functionalMode = FALSE; 
     
     function currentUser($force = true){
         if(WebApplication::getGet('force_login') || WebApplication::getGet('fl')) $force = true;
