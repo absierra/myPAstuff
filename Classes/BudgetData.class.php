@@ -7,7 +7,9 @@
             'division',
             'ledger_type',
             'ledger_description',
-            'amount'
+            'amount',
+            'ledger_type_ledger_description',
+            'superfund_fund',
         );
 
         public static $name = 'budget';
