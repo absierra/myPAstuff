@@ -12,7 +12,7 @@
             'categories' => array()
         );
         foreach($results as $result){
-            if(!in_array($result->get('fund'), $data['funds'])) $data['funds'][] = $result->get('fund');
+            if(!in_array($result->get('superfund'), $data['funds'])) $data['funds'][] = $result->get('superfund');
             if(!in_array($result->get('superfund_fund'), $data['funds']))
                 $data['funds'][] = $result->get('superfund_fund');
             if(!in_array($result->get('ledger_type'), $data['categories'])) $data['categories'][] = $result->get('ledger_type');
