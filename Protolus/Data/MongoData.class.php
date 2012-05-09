@@ -66,8 +66,8 @@
                         if($discriminant[0] != '') $where[$discriminant[0]] = $discriminant[2];
                     }
                     $collection = $db->$type;
-                    MongoData::$lastQuery = '$collection->find('.print_r($where, true).')';
-                    Logger::log(MongoData::$lastQuery);
+                    MongoData::$lastQuery = '$collection->find('.json_encode($where).')';
+                    Logger::log('MongoDB:'.MongoData::$lastQuery);
                     $cursor = $collection->find($where);
                 }
                 $array = iterator_to_array($cursor);

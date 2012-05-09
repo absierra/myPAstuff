@@ -38,7 +38,9 @@
             for($lcv=0; $lcv<strlen($whereClause); $lcv++){
                 if($inQuote){
                     if($whereClause[$lcv] == $quoteChar){ //close a quote
-                        $result[sizeof($result)-1] .= '\''.$quotation.'\'';
+                        //use gettype to detect where quotes need to get added
+                        //$result[sizeof($result)-1] .= '\''.$quotation.'\'';
+                        $result[sizeof($result)-1] .= $quotation;
                         $inQuote = false;
                         $quotation = '';
                     }else{
@@ -71,9 +73,12 @@
                         $result[sizeof($result)-1] .= $whereClause[$lcv];
                     }
                 }
+                //echo('[q:'.$quotation.']');
             }
             if($quotation != '') $result[2] = $quotation;
+            //echo('[QUOTE!]'); exit();
             $results[] = $result;
+            //print_r($results); exit();
             return $results;
         }
         
@@ -153,6 +158,7 @@
                     $search = $query; //Data::convertArrayToSearch($query);
                 }
             }
+            //print_r($search); exit();
             if($query == null) $search = array();
 			$dummy = new $datatype();
             if(isset($search)){

@@ -12,11 +12,14 @@
             'categories' => array()
         );
         foreach($results as $result){
+            if(!in_array($result->get('fund'), $data['funds'])) $data['funds'][] = $result->get('fund');
             if(!in_array($result->get('superfund_fund'), $data['funds']))
                 $data['funds'][] = $result->get('superfund_fund');
+            if(!in_array($result->get('ledger_type'), $data['categories'])) $data['categories'][] = $result->get('ledger_type');
             if(!in_array($result->get('ledger_type_ledger_description'), $data['categories']))
                 $data['categories'][] = $result->get('ledger_type_ledger_description');
             $dep = $result->get('division')?$result->get('department').':'.$result->get('division'):$result->get('department');
+            if(!in_array($result->get('department'), $data['departments'])) $data['departments'][] = $result->get('department');
             if(!in_array($dep, $data['departments']))
                 $data['departments'][] = $dep;
         }

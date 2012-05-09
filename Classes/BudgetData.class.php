@@ -5,6 +5,7 @@
             'fund',
             'department',
             'division',
+            'department_division',
             'ledger_type',
             'ledger_description',
             'amount',
