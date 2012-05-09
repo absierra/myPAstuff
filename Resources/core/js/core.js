@@ -3,41 +3,72 @@ function panelData(){
 
 	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
         this.dataRequest = data.data;
-	    // this.totalFunds = this.dataRequest['funds'].length;
-	    // this.totalDepartments = this.dataRequest['departments'].length;
-	    // this.totalCategories = this.dataRequest['categories'].length;
 	    this.populatePanel('funds');
 		this.populatePanel('departments');
 		this.populatePanel('categories');
 		
 	}.bind(this)}).get();
 	
-	// onclick
-	// return all 3 in an object (current selection)
-	// var selection add to it with the click events.
+	var keys = new Keyboard({
+	    defaultEventType: 'keyup',
+	    events: {
+	        'esc': function(){
+				document.id('fund').removeClass('selected');
+				document.id('department').removeClass('selected');
+				document.id('category').removeClass('selected');
+				
+				document.getElements('#fund li span').each(function(item){
+					item.removeClass('colorbar');
+					item.setStyles({'background': 'none', 'color': '#333'});
+				});
+				document.getElements('#department li span').each(function(item){
+					item.removeClass('colorbar');
+					item.setStyles({'background': 'none', 'color': '#333'});
+				});
+				document.getElements('#category li span').each(function(item){
+					item.removeClass('colorbar');
+					item.setStyles({'background': 'none', 'color': '#333'});
+				});
+	        }
+	     }
+	});
+	
+	var panelFilter = function(data) {
+		if (!(document.id('fund')).hasClass('selected')) {
+			document.getElements('#fund li span').each(function(listItem){
+				if (data.funds.contains(listItem.get('itemIdentifier'))){
+					listItem.setStyles({'color':'#333'});
+				}else{
+					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+				}
+			});
+		}
+		if (!(document.id('department')).hasClass('selected')) {
+			document.getElements('#department li span').each(function(listItem){
+				if (data.departments.contains(listItem.get('itemIdentifier'))){
+					listItem.setStyles({'color':'#333'});
+				}else{
+					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+				}
+			});
+		}
+		if (!(document.id('category')).hasClass('selected')) {
+			document.getElements('#category li span').each(function(listItem){
+				if (data.categories.contains(listItem.get('itemIdentifier'))){
+					listItem.setStyles({'color':'#333'});
+				}else{
+					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+				}
+			});
+		}
+	}
+
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(data){
         var dataSelect = data.data;
-        console.log(data);
+        panelFilter(data.data);
 	}.bind(this)});
-	//.get({'fund':'Capital Fund:Capital Improvement Fund'});
 	
-	var dataSelect = {
-		'funds': [
-			'Enterprise:Water',
-			'Debt Service Funds',
-			'Debt Service Funds:Civic Center Debt 01-02'
-		],
-		'departments': [
-			'Capital Fund:Capital Improvement',
-			'City Attorney:Consultation and Advisory',
-			'City Attorney:Litigation and Dispute Resolution'
-		],
-		'categories': [
-			'Revenue',
-			'Revenue:Sales Taxes'
-		]
-	};
-
+	/*
 	function colors(num){
 		if(!num) num = 5;
 		var result = [];
@@ -49,6 +80,7 @@ function panelData(){
 		};
 		return result;
 	}
+	*/
 
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
@@ -61,7 +93,7 @@ function panelData(){
 				var panelId = document.id('category');
 			}
 			
-			var element = element.split(":");
+			var elementSplit = element.split(":");
 			
 			var panelLiClickFunction = function(event) {
 					var data = {};
@@ -76,58 +108,39 @@ function panelData(){
 							data['category'] = panelSpan.get('itemIdentifier');
 							break;
 					}
-					selectionRequest.get(data);
-					console.log(selectionRequest);
+					if (!panelId.hasClass('selected')) {
+						selectionRequest.get(data);
+						this.addClass('colorbar highlight').setStyles({'background':'#00A4E0'});
+						panelId.addClass('selected');
+					}
 					
 			};
 			
-			if ((element[0]) && (!element[1])) {
-				var panelLi = new Element('li', { class: ''+element[0].replace(/ /g, '')+'' });
-				var panelSpan = new Element('span', { html: element[0] });
-				panelSpan.set('itemIdentifier', element[0]);
-				panelSpan.addEvent('click', panelLiClickFunction.bind(this));
+
+			if ((elementSplit[0]) && (!elementSplit[1])) {
+				var panelLi = new Element('li', { class: ''+elementSplit[0].replace(/ /g, '')+'' });
+				var panelSpan = new Element('span', { html: elementSplit[0] });
+				
+				panelSpan.set('itemIdentifier', element);
+				panelSpan.addEvent('click', panelLiClickFunction);			
 				panelId.appendChild(panelLi);
 				panelLi.appendChild(panelSpan);
-				if (dataSelect[panel].contains(element[0])) {
-					document.getElement('.'+element[0].replace(/ /g, '')+' span').addClass('colorbar').setStyles({'border':'1px solid blue'});
-				} 
+
 			} else if (element[1]) {
 				var panelUl = new Element('ul');
-				var panelLi = new Element('li', { class: ''+element[1].replace(/ /g, '')+'' });
-				var panelSpan = new Element('span', { html: element[1] });
+				var panelLi = new Element('li', { class: ''+elementSplit[1].replace(/ /g, '')+'' });
+				var panelSpan = new Element('span', { html: elementSplit[1] });
 				
-				panelSpan.set('itemIdentifier', element[1]);
-				panelSpan.addEvent('click', function(){
-					alert(element[1]);
-				})
-				panelSpan.addEvent('click', panelLiClickFunction.bind(this));
-				var subItem = panelId.getElement('li.'+element[0].replace(/ /g, '')+'');
+				panelSpan.set('itemIdentifier', element);
+				panelSpan.addEvent('click', panelLiClickFunction);
+				
+				var subItem = panelId.getElement('li.'+elementSplit[0].replace(/ /g, '')+'');
 				subItem.appendChild(panelUl);
 				panelUl.appendChild(panelLi);
 				panelLi.appendChild(panelSpan);
-				if (dataSelect[panel].contains(''+element[0]+':'+element[1]+'')) {
-					document.getElement('.'+element[1].replace(/ /g, '')+' span').addClass('colorbar').setStyles({'border':'1px solid red'});
-				} 
 			}	
 		}.bind(this));
 	};
 }
 
-/*
-	Set SomeFunction(legalReturn) {
-		documents.getElements('.funds li').each(function(item,key)) {
-			if(!legalReturn.funds.contains(item.get('node-name')))
-				//item.disable();
-				//.removeClass()
-				item.setStyles({'border': '1px solid red'});
-			else 
-				//item.enable();
-				//.addClass
-				item.setStyles({'border': '1px solid blue'});
-		}
-	}
-*/
-
-document.addEvent('domready', function() {
-	datatest = new panelData();
-});
+document.addEvent('domready', function() { new panelData(); });
