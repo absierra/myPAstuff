@@ -1,0 +1,12 @@
+{
+    "resource" :{
+        "graphael":"g.raphael.js",
+        "graphael_bar":"g.bar.js",
+        "graphael_dot":"g.dot.js",
+        "graphael_line":"g.line.js",
+        "graphael_pie":"g.pie.js"
+    },
+    "dependency":[
+        "raphael"
+    ]
+}

@@ -2,7 +2,8 @@
     "resource" :{
         "html5_wedge" : "js/HTML5.js",
         "core_css" : "css/core.css",
-        "core_js" : "js/core.js"
+        "core_js" : "js/core.js",
+        "graph_js" : "js/graph.js"
     },
     "dependency":[
         "mootools-core"
