@@ -65,13 +65,13 @@
         }
         $data['departments'] = array_values($data['departments']);
         foreach($data['categories'] as $key => $item){
-            if( !in_array( $item, $results['divisions'][$fund]['ledgers'] ) ){
+            if( !in_array( $item, $results['divisions'][$department]['ledgers'] ) ){
                 unset($data['categories'][$key]);
             }
         }
         $data['categories'] = array_values($data['categories']);
         foreach($data['funds'] as $key => $item){
-            if( !in_array( $item, $results['divisions'][$fund]['funds'] ) ){
+            if( !in_array( $item, $results['divisions'][$department]['funds'] ) ){
                 unset($data['funds'][$key]);
             }
         }

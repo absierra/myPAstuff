@@ -1,5 +1,5 @@
 {page wrapper="application" title="Delphi Solutions" meta_description="Delphi Solutions provides solutions to analyzing and visualizing big distributed data"}
-{require name="mootools,core,header"}
+{require name="mootools,core,header,graphael"}
 {panel name="header"}
 <div class="navigation">
 	<ul class="four_col_1">
