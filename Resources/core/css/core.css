@@ -267,18 +267,48 @@ header span.logo-text {
   border: 1px solid lightgrey;
   border-width: 0px 1px 1px 0px;
 }
-.navigation > ul ul ul {
-  overflow: hidden;
-}
-.navigation > ul ul ul li {
-  margin-left: 20px;
-  overflow-x: hidden;
-}
 .navigation > ul ul li {
   line-height: 30px;
+  margin: 1px 0;
   cursor: pointer;
   position: relative;
   overflow-x: hidden;
+}
+.navigation > ul ul li span {
+  padding-left: 15px;
+  color: #333;
+  font-family: "ProximaNova-Bold";
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -o-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -ms-linear-gradient(top, #ffffff, #dddddd);
+  background-image: linear-gradient(top, #ffffff, #dddddd);
+}
+.navigation > ul ul li span:after {
+  position: absolute;
+  right: 15px;
+  content: '\25BC';
+  height: 30px;
+  width: 5px;
+  color: #999;
+}
+.navigation > ul ul ul {
+  overflow: hidden;
+}
+.navigation > ul ul ul .collapse {
+  height: 0px;
+}
+.navigation > ul ul ul li {
+  border: 0;
+  overflow-x: hidden;
+}
+.navigation > ul ul ul li span {
+  color: #666;
+  background: none;
+}
+.navigation > ul ul ul li span:after {
+  content: '';
 }
 .navigation > ul span {
   padding-left: 10px;
@@ -289,6 +319,37 @@ header span.logo-text {
 .navigation > ul .selected > span {
   background-color: #3A3A3C;
   color: #00A9E2;
+}
+.navigation > ul .selected > .colorbar:before {
+  position: absolute;
+  left: 0;
+  content: '';
+  background: #000;
+  padding: 2px;
+  display: block;
+  height: 30px;
+  width: 5px;
+}
+.navigation > ul .colorbar:before {
+  position: absolute;
+  left: 0;
+  content: '';
+  background: #666;
+  display: block;
+  height: 30px;
+  width: 5px;
+}
+.navigation > ul .colorbar_1:before {
+  background-color: red;
+}
+.navigation > ul .colorbar_2:before {
+  background-color: fuchsia;
+}
+.navigation > ul .colorbar_3:before {
+  background-color: green;
+}
+.navigation > ul .colorbar_4:before {
+  background-color: teal;
 }
 .navigation > ul.four_col_1 {
   left: 0;
