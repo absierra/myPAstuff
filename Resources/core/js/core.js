@@ -78,7 +78,7 @@ function panelData(){
 		return result;
 	}
 	*/
-
+    window.selected = {};
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
 		
@@ -99,9 +99,10 @@ function panelData(){
 						case 'departments' : $index = 'department'; break;
 						case 'categories' : $index = 'category'; break;
 					}
-					data[$index] = panelSpan.get('itemIdentifier');
+					window.selected[$index] = panelSpan.get('itemIdentifier');
+					//data[$index] = panelSpan.get('itemIdentifier');
 					if ((!panelId.hasClass('selected')) && (!this.hasClass('disabled'))) {
-						selectionRequest.get(data);
+						selectionRequest.get(window.selected);
 						this.addClass('colorkey selected');
 						panelId.addClass('selected');
 						//window.budgetGraph.fetch(data[$index], $index);

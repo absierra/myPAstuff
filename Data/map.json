@@ -1,5 +1,40 @@
 {
     "divisions": {
+        "Administrative Services": {
+            "funds": [
+                "General Fund:General Fund", 
+                "General Fund:Stores Inventory", 
+                "Internal Service Funds:Printing & Mailing Services Fund", 
+                "Internal Service Funds:Technology Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Rents & Leases", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Other Revenue", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Charges for Services", 
+                "Revenue:Documentary Transfer Tax", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Property Taxes", 
+                "Revenue:Rental Income", 
+                "Revenue:Return on Investments", 
+                "Revenue:Sales Taxes", 
+                "Revenue:Transient Occupancy Tax", 
+                "Revenue:Utility Users Tax", 
+                "Revenue:Permits and Licenses", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:Reserve"
+            ]
+        }, 
         "Administrative Services:Accounting": {
             "funds": [
                 "General Fund:General Fund"
@@ -144,6 +179,20 @@
                 "Expense:Facilities & Equip Purchases"
             ]
         }, 
+        "Airport": {
+            "funds": [
+                "Special Revenue Funds:Airport Enterprise"
+            ], 
+            "ledgers": [
+                "Expense:Contract Services", 
+                "Expense:Reserve", 
+                "Expense:Salaries & Benefits", 
+                "Revenue:Return on Investments", 
+                "Expense:Allocated Charges", 
+                "Expense:General Expense", 
+                "Transfers In:Trans In"
+            ]
+        }, 
         "Airport:Airport Enterprise ": {
             "funds": [
                 "Special Revenue Funds:Airport Enterprise"
@@ -158,6 +207,19 @@
                 "Transfers In:Trans In"
             ]
         }, 
+        "Capital Fund": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund"
+            ], 
+            "ledgers": [
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Transfers In:Trans In", 
+                "Expense:General Expense", 
+                "Transfers Out:Trans Out", 
+                "Expense:Reserve"
+            ]
+        }, 
         "Capital Fund:Capital Improvement": {
             "funds": [
                 "Capital Fund:Capital Improvement Fund"
@@ -169,6 +231,23 @@
                 "Expense:General Expense", 
                 "Transfers Out:Trans Out", 
                 "Expense:Reserve"
+            ]
+        }, 
+        "City Attorney": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Contract Services", 
+                "Expense:Rents & Leases", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "City Attorney:Administration": {
@@ -225,6 +304,23 @@
                 "Revenue:Other Revenue"
             ]
         }, 
+        "City Auditor": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Sales Taxes", 
+                "Transfers Out:Trans Out", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In"
+            ]
+        }, 
         "City Auditor:Audit Services": {
             "funds": [
                 "General Fund:General Fund"
@@ -240,6 +336,21 @@
                 "Transfers Out:Trans Out", 
                 "Revenue:Other Revenue", 
                 "Transfers In:Trans In"
+            ]
+        }, 
+        "City Clerk": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "City Clerk:Administration": {
@@ -315,6 +426,19 @@
                 "Expense:Allocated Charges"
             ]
         }, 
+        "City Council": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges to Other Funds"
+            ]
+        }, 
         "City Council:Administration": {
             "funds": [
                 "General Fund:General Fund"
@@ -334,6 +458,22 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials"
+            ]
+        }, 
+        "City Manager": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Rents & Leases", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue", 
+                "Transfers Out:Trans Out"
             ]
         }, 
         "City Manager:Administration": {
@@ -376,6 +516,36 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Other Revenue"
+            ]
+        }, 
+        "Community Services": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "General Fund:Family Resource", 
+                "General Fund:General Fund", 
+                "General Fund:Public Services Donation", 
+                "Special Revenue Funds:Community Development", 
+                "Special Revenue Funds:Parkland Dedication"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
+                "Revenue:Return on Investments", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Rental Income", 
+                "Revenue:Other Taxes and Fines", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:Reserve"
             ]
         }, 
         "Community Services:Administration": {
@@ -504,6 +674,18 @@
                 "Transfers Out:Trans Out"
             ]
         }, 
+        "FIR": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund"
+            ], 
+            "ledgers": [
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In", 
+                "Expense:Contract Services"
+            ]
+        }, 
         "FIR:Other Funds": {
             "funds": [
                 "Capital Fund:Capital Improvement Fund"
@@ -514,6 +696,26 @@
                 "Revenue:Other Revenue", 
                 "Transfers In:Trans In", 
                 "Expense:Contract Services"
+            ]
+        }, 
+        "Fire": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:From Other Agencies", 
+                "Expense:Rents & Leases"
             ]
         }, 
         "Fire:Emergency Response": {
@@ -594,6 +796,29 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials"
+            ]
+        }, 
+        "Human Resources": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Internal Service Funds:General Benefits & Insurance", 
+                "Internal Service Funds:Liability Insurance", 
+                "Internal Service Funds:Retiree Health Benefits", 
+                "Internal Service Funds:Worker's Comp"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Revenue:From Other Agencies", 
+                "Expense:Reserve"
             ]
         }, 
         "Human Resources:Administration": {
@@ -712,6 +937,25 @@
                 "Expense:Supplies & Materials"
             ]
         }, 
+        "Library": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Allocated Charges", 
+                "Expense:Rents & Leases", 
+                "Revenue:Other Revenue", 
+                "Revenue:Charges for Services", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Taxes and Fines"
+            ]
+        }, 
         "Library:Collections Management": {
             "funds": [
                 "General Fund:General Fund"
@@ -769,6 +1013,48 @@
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines"
+            ]
+        }, 
+        "Non-Departmental": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "Debt Service Funds:Civic Center Debt 01-02", 
+                "Debt Service Funds:Golf Course Improvement", 
+                "Debt Service Funds:Parking 02 COP Taxable", 
+                "General Fund:Child Care Fund", 
+                "General Fund:Public Services Donation", 
+                "Special Revenue Funds:BID", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Housing In-Lieu", 
+                "Special Revenue Funds:Public Benefits", 
+                "Special Revenue Funds:University Ave Parking Assessment Agency", 
+                "Special Revenue Funds:Cable - JPA", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Street Improvement", 
+                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
+                "Special Revenue Funds:Administration", 
+                "Internal Service Funds:Library Projects"
+            ], 
+            "ledgers": [
+                "Expense:Contract Services", 
+                "Transfers In:Trans In", 
+                "Expense:Debt Service", 
+                "Revenue:Other Revenue", 
+                "Expense:Allocated Charges", 
+                "Revenue:Return on Investments", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Property Taxes", 
+                "Revenue:Charges for Services", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Rental Income", 
+                "Revenue:Permits and Licenses", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:Reserve"
             ]
         }, 
         "Non-Departmental:2001 Parking Structu": {
@@ -1078,6 +1364,35 @@
                 "Revenue:Other Revenue"
             ]
         }, 
+        "Planning": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "General Fund:General Fund", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Residential Parking Permits Program"
+            ], 
+            "ledgers": [
+                "Expense:Contract Services", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In", 
+                "Expense:Allocated Charges", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Rental Income", 
+                "Revenue:Return on Investments", 
+                "Transfers Out:Trans Out", 
+                "Expense:Reserve"
+            ]
+        }, 
         "Planning:Administration": {
             "funds": [
                 "General Fund:General Fund"
@@ -1169,6 +1484,34 @@
             "ledgers": [
                 "Revenue:Charges for Services", 
                 "Revenue:Return on Investments", 
+                "Expense:Reserve"
+            ]
+        }, 
+        "Police": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Recovery Act JAG", 
+                "Capital Fund:Capital Improvement Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
+                "Revenue:Charges for Services", 
+                "Revenue:Other Revenue", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Rental Income", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Return on Investments", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans to CIP", 
                 "Expense:Reserve"
             ]
         }, 
@@ -1327,6 +1670,42 @@
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
                 "Expense:Supplies & Materials"
+            ]
+        }, 
+        "Public Works": {
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "General Fund:General Fund", 
+                "Internal Service Funds:Vehicle Replacement & Maintenance Fund"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
+                "Expense:Reserve", 
+                "Expense:Utility Purchases & Charges", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Income", 
+                "Revenue:Return on Investments", 
+                "Revenue:Other Taxes and Fines", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Property Taxes", 
+                "Revenue:Rental Income"
             ]
         }, 
         "Public Works:Administration": {
@@ -1526,6 +1905,41 @@
                 "Transfers Out:Trans Out"
             ]
         }, 
+        "Utilities": {
+            "funds": [
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Water Fund", 
+                "Special Revenue Funds:Eyerly Trust"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Rents & Leases", 
+                "Expense:Reserve", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:General Expense", 
+                "Expense:Supplies & Materials", 
+                "Expense:Debt Service", 
+                "Expense:Utility Purchases & Charges", 
+                "Expense:Wastewater Treatment", 
+                "Revenue:Charges for Services", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Income", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:From Other Agencies", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP"
+            ]
+        }, 
         "Utilities:Administration": {
             "funds": [
                 "Enterprise Funds:Electric Fund", 
@@ -1697,6 +2111,36 @@
         }
     }, 
     "funds": {
+        "Capital Fund": {
+            "divisions": [
+                "Capital Fund:Capital Improvement", 
+                "Community Services:CSD - CIP", 
+                "FIR:Other Funds", 
+                "Library:Library Other Funds", 
+                "Non-Departmental:CIP_ IT Administrato", 
+                "Planning:Other Funds", 
+                "Public Works:Other Funds", 
+                "Police:Other Funds"
+            ], 
+            "ledgers": [
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Transfers In:Trans In", 
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:From Other Agencies", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Net Sales", 
+                "Transfers Out:Trans Out", 
+                "Expense:Debt Service", 
+                "Expense:Rents & Leases", 
+                "Revenue:Charges for Services", 
+                "Expense:Reserve"
+            ]
+        }, 
         "Capital Fund:Capital Improvement Fund": {
             "divisions": [
                 "Capital Fund:Capital Improvement", 
@@ -1724,6 +2168,20 @@
                 "Expense:Debt Service", 
                 "Expense:Rents & Leases", 
                 "Revenue:Charges for Services", 
+                "Expense:Reserve"
+            ]
+        }, 
+        "Debt Service Funds": {
+            "divisions": [
+                "Non-Departmental:Civic Center Debt SV", 
+                "Non-Departmental:Golf Course Improvem", 
+                "Non-Departmental:Parking 2002 COPS Ta"
+            ], 
+            "ledgers": [
+                "Expense:Debt Service", 
+                "Revenue:Other Revenue", 
+                "Transfers In:Trans In", 
+                "Revenue:Return on Investments", 
                 "Expense:Reserve"
             ]
         }, 
@@ -1757,6 +2215,46 @@
                 "Expense:Debt Service", 
                 "Revenue:Other Revenue", 
                 "Transfers In:Trans In"
+            ]
+        }, 
+        "Enterprise Funds": {
+            "divisions": [
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:General Expense", 
+                "Expense:Rents & Leases", 
+                "Expense:Reserve", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Utility Purchases & Charges", 
+                "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Income", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Revenue:Other Taxes and Fines", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:Wastewater Treatment", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Rental Income"
             ]
         }, 
         "Enterprise Funds:Electric Fund": {
@@ -2001,6 +2499,98 @@
                 "Transfers Out:Trans to CIP"
             ]
         }, 
+        "General Fund": {
+            "divisions": [
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "City Auditor:Audit Services", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Council:City Council Operations", 
+                "City Council:Administration", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
+                "City Manager:Public Communication", 
+                "Community Services:Recreation & Youth Sciences", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Non-Departmental:Child Care Fund", 
+                "Non-Departmental:Public Donations Fun", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Police:Administration", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Other Funds"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Rents & Leases", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Other Revenue", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Charges for Services", 
+                "Revenue:Documentary Transfer Tax", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Property Taxes", 
+                "Revenue:Rental Income", 
+                "Revenue:Return on Investments", 
+                "Revenue:Sales Taxes", 
+                "Revenue:Transient Occupancy Tax", 
+                "Revenue:Utility Users Tax", 
+                "Revenue:Permits and Licenses", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans Out", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:Reserve"
+            ]
+        }, 
         "General Fund:Child Care Fund": {
             "divisions": [
                 "Non-Departmental:Child Care Fund"
@@ -2141,6 +2731,36 @@
                 "Expense:Reserve"
             ]
         }, 
+        "Internal Service Funds": {
+            "divisions": [
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Information Technology", 
+                "Human Resources:General Benefits Fun", 
+                "Human Resources:Liability Insurance", 
+                "Human Resources:Retiree Health Benef", 
+                "Human Resources:Workers' Compensatio", 
+                "Public Works:Equipment Management", 
+                "Non-Departmental:Non-Departmental"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Rents & Leases", 
+                "Expense:Reserve", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans Out", 
+                "Revenue:From Other Agencies", 
+                "Expense:Debt Service", 
+                "Revenue:Property Taxes"
+            ]
+        }, 
         "Internal Service Funds:General Benefits & Insurance": {
             "divisions": [
                 "Human Resources:General Benefits Fun"
@@ -2256,6 +2876,59 @@
                 "Expense:Salaries & Benefits", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments"
+            ]
+        }, 
+        "Special Revenue Funds": {
+            "divisions": [
+                "Community Services:CSD - Development Impact Fees", 
+                "Community Services:Parkland Dedication", 
+                "Non-Departmental:Downtown BID", 
+                "Non-Departmental:Other Funds", 
+                "Non-Departmental:Affordable Housing D", 
+                "Non-Departmental:HIL Residential Fund", 
+                "Non-Departmental:Hamilton Ave. Public", 
+                "Non-Departmental:2001 Parking Structu", 
+                "Non-Departmental:Cable JPA", 
+                "Non-Departmental:Charleston-Arastradero Develop Impact Fee", 
+                "Non-Departmental:Fed Equitable Sharin", 
+                "Non-Departmental:Assets Seizure Fund", 
+                "Non-Departmental:CDBG Fund Administra", 
+                "Non-Departmental:Housing Rehab. Defer", 
+                "Non-Departmental:Below Market Rate-Em", 
+                "Non-Departmental:HIL - Commercial Fun", 
+                "Non-Departmental:California Ave. Park", 
+                "Non-Departmental:Gas Tax Fund", 
+                "Non-Departmental:San Antonio/West Bay", 
+                "Non-Departmental:Stanf Res. Park/ El", 
+                "Non-Departmental:Univ Ave In-Lieu Par", 
+                "Non-Departmental:Redevelopment Agny-A", 
+                "Planning:Transportation Impact ", 
+                "Police:Other Funds", 
+                "Police:Recovery Act JAG", 
+                "Utilities:Eyerly Trust", 
+                "Planning:Planning", 
+                "Airport:Airport Enterprise "
+            ], 
+            "ledgers": [
+                "Revenue:Charges for Services", 
+                "Revenue:Return on Investments", 
+                "Transfers In:Trans In", 
+                "Transfers Out:Trans to CIP", 
+                "Expense:General Expense", 
+                "Expense:Contract Services", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Other Revenue", 
+                "Revenue:Property Taxes", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Rental Income", 
+                "Revenue:Permits and Licenses", 
+                "Transfers Out:Trans Out", 
+                "Expense:Allocated Charges", 
+                "Revenue:Other Taxes and Fines", 
+                "Expense:Reserve"
             ]
         }, 
         "Special Revenue Funds:Administration": {
@@ -2490,6 +3163,169 @@
         }
     }, 
     "ledgers": {
+        "Expense": {
+            "divisions": [
+                "Community Services:CSD - CIP", 
+                "FIR:Other Funds", 
+                "Library:Library Other Funds", 
+                "Non-Departmental:CIP_ IT Administrato", 
+                "Planning:Other Funds", 
+                "Public Works:Other Funds", 
+                "Non-Departmental:Civic Center Debt SV", 
+                "Non-Departmental:Golf Course Improvem", 
+                "Non-Departmental:Parking 2002 COPS Ta", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "City Auditor:Audit Services", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Council:City Council Operations", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
+                "City Manager:Public Communication", 
+                "Community Services:Recreation & Youth Sciences", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Non-Departmental:Child Care Fund", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Police:Administration", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Administrative Services:Information Technology", 
+                "Human Resources:General Benefits Fun", 
+                "Human Resources:Liability Insurance", 
+                "Human Resources:Retiree Health Benef", 
+                "Human Resources:Workers' Compensatio", 
+                "Public Works:Equipment Management", 
+                "Non-Departmental:Downtown BID", 
+                "Non-Departmental:Other Funds", 
+                "Non-Departmental:Affordable Housing D", 
+                "Non-Departmental:HIL Residential Fund", 
+                "Non-Departmental:Hamilton Ave. Public", 
+                "Non-Departmental:2001 Parking Structu", 
+                "Police:Other Funds", 
+                "Police:Recovery Act JAG", 
+                "Utilities:Eyerly Trust", 
+                "Capital Fund:Capital Improvement", 
+                "Non-Departmental:Non-Departmental", 
+                "Airport:Airport Enterprise ", 
+                "Non-Departmental:Below Market Rate-Em", 
+                "Non-Departmental:Public Donations Fun", 
+                "Community Services:CSD - Development Impact Fees", 
+                "Community Services:Parkland Dedication", 
+                "Non-Departmental:Redevelopment Agny-A", 
+                "Non-Departmental:Cable JPA", 
+                "Non-Departmental:Charleston-Arastradero Develop Impact Fee", 
+                "Non-Departmental:Fed Equitable Sharin", 
+                "Non-Departmental:Assets Seizure Fund", 
+                "Non-Departmental:CDBG Fund Administra", 
+                "Non-Departmental:Housing Rehab. Defer", 
+                "Non-Departmental:HIL - Commercial Fun", 
+                "Non-Departmental:California Ave. Park", 
+                "Non-Departmental:Gas Tax Fund", 
+                "Non-Departmental:San Antonio/West Bay", 
+                "Non-Departmental:Stanf Res. Park/ El", 
+                "Non-Departmental:Univ Ave In-Lieu Par", 
+                "Planning:Transportation Impact ", 
+                "City Council:Administration"
+            ], 
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "Debt Service Funds:Civic Center Debt 01-02", 
+                "Debt Service Funds:Golf Course Improvement", 
+                "Debt Service Funds:Parking 02 COP Taxable", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Water Fund", 
+                "General Fund:General Fund", 
+                "General Fund:Stores Inventory", 
+                "General Fund:Family Resource", 
+                "General Fund:Child Care Fund", 
+                "Internal Service Funds:Printing & Mailing Services Fund", 
+                "Internal Service Funds:Technology Fund", 
+                "Internal Service Funds:General Benefits & Insurance", 
+                "Internal Service Funds:Liability Insurance", 
+                "Internal Service Funds:Retiree Health Benefits", 
+                "Internal Service Funds:Worker's Comp", 
+                "Internal Service Funds:Vehicle Replacement & Maintenance Fund", 
+                "Special Revenue Funds:BID", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Housing In-Lieu", 
+                "Special Revenue Funds:Public Benefits", 
+                "Special Revenue Funds:University Ave Parking Assessment Agency", 
+                "Special Revenue Funds:Recovery Act JAG", 
+                "Special Revenue Funds:Eyerly Trust", 
+                "General Fund:Public Services Donation", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Internal Service Funds:Library Projects", 
+                "Special Revenue Funds:Airport Enterprise", 
+                "Special Revenue Funds:Community Development", 
+                "Special Revenue Funds:Parkland Dedication", 
+                "Special Revenue Funds:Administration", 
+                "Special Revenue Funds:Cable - JPA", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Street Improvement", 
+                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu"
+            ]
+        }, 
         "Expense:Allocated Charges": {
             "divisions": [
                 "Community Services:CSD - CIP", 
@@ -3275,6 +4111,156 @@
                 "Enterprise Funds:Wastewater Collection"
             ]
         }, 
+        "Revenue": {
+            "divisions": [
+                "Capital Fund:Capital Improvement", 
+                "Community Services:CSD - CIP", 
+                "FIR:Other Funds", 
+                "Planning:Other Funds", 
+                "Public Works:Other Funds", 
+                "Non-Departmental:Civic Center Debt SV", 
+                "Non-Departmental:Golf Course Improvem", 
+                "Non-Departmental:Parking 2002 COPS Ta", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Utilities:Engineering (Operating)", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Official & Administration", 
+                "City Auditor:Audit Services", 
+                "City Clerk:Administration", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Public Information", 
+                "City Council:Administration", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
+                "Community Services:Recreation & Youth Sciences", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Development", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Non-Departmental:Child Care Fund", 
+                "Non-Departmental:Public Donations Fun", 
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Administrative Services:Information Technology", 
+                "Human Resources:General Benefits Fun", 
+                "Human Resources:Liability Insurance", 
+                "Human Resources:Retiree Health Benef", 
+                "Human Resources:Workers' Compensatio", 
+                "Public Works:Equipment Management", 
+                "Community Services:CSD - Development Impact Fees", 
+                "Community Services:Parkland Dedication", 
+                "Non-Departmental:Downtown BID", 
+                "Non-Departmental:Cable JPA", 
+                "Non-Departmental:Charleston-Arastradero Develop Impact Fee", 
+                "Non-Departmental:Fed Equitable Sharin", 
+                "Non-Departmental:Assets Seizure Fund", 
+                "Non-Departmental:CDBG Fund Administra", 
+                "Non-Departmental:Housing Rehab. Defer", 
+                "Non-Departmental:Other Funds", 
+                "Non-Departmental:Below Market Rate-Em", 
+                "Non-Departmental:HIL - Commercial Fun", 
+                "Non-Departmental:HIL Residential Fund", 
+                "Non-Departmental:Hamilton Ave. Public", 
+                "Non-Departmental:California Ave. Park", 
+                "Non-Departmental:Gas Tax Fund", 
+                "Non-Departmental:San Antonio/West Bay", 
+                "Non-Departmental:Stanf Res. Park/ El", 
+                "Non-Departmental:Univ Ave In-Lieu Par", 
+                "Non-Departmental:2001 Parking Structu", 
+                "Planning:Transportation Impact ", 
+                "Police:Other Funds", 
+                "Police:Recovery Act JAG", 
+                "Utilities:Eyerly Trust", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Manager:Public Communication", 
+                "Public Works:Trees", 
+                "Library:Library Other Funds", 
+                "Non-Departmental:Non-Departmental", 
+                "Airport:Airport Enterprise ", 
+                "Non-Departmental:Affordable Housing D", 
+                "City Clerk:Administrative Citations"
+            ], 
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "Debt Service Funds:Civic Center Debt 01-02", 
+                "Debt Service Funds:Golf Course Improvement", 
+                "Debt Service Funds:Parking 02 COP Taxable", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Water Fund", 
+                "General Fund:General Fund", 
+                "General Fund:Family Resource", 
+                "General Fund:Public Services Donation", 
+                "General Fund:Child Care Fund", 
+                "Internal Service Funds:Printing & Mailing Services Fund", 
+                "Internal Service Funds:Technology Fund", 
+                "Internal Service Funds:General Benefits & Insurance", 
+                "Internal Service Funds:Liability Insurance", 
+                "Internal Service Funds:Retiree Health Benefits", 
+                "Internal Service Funds:Worker's Comp", 
+                "Internal Service Funds:Vehicle Replacement & Maintenance Fund", 
+                "Special Revenue Funds:Community Development", 
+                "Special Revenue Funds:Parkland Dedication", 
+                "Special Revenue Funds:BID", 
+                "Special Revenue Funds:Cable - JPA", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Housing In-Lieu", 
+                "Special Revenue Funds:Public Benefits", 
+                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Street Improvement", 
+                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
+                "Special Revenue Funds:University Ave Parking Assessment Agency", 
+                "Special Revenue Funds:Recovery Act JAG", 
+                "Special Revenue Funds:Eyerly Trust", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "General Fund:Stores Inventory", 
+                "Internal Service Funds:Library Projects", 
+                "Special Revenue Funds:Airport Enterprise"
+            ]
+        }, 
         "Revenue:Charges for Services": {
             "divisions": [
                 "Public Works:Refuse Fund-Operation", 
@@ -3788,6 +4774,63 @@
                 "General Fund:General Fund"
             ]
         }, 
+        "Transfers In": {
+            "divisions": [
+                "Capital Fund:Capital Improvement", 
+                "Community Services:CSD - CIP", 
+                "FIR:Other Funds", 
+                "Non-Departmental:CIP_ IT Administrato", 
+                "Planning:Other Funds", 
+                "Public Works:Other Funds", 
+                "Non-Departmental:Civic Center Debt SV", 
+                "Non-Departmental:Golf Course Improvem", 
+                "Non-Departmental:Parking 2002 COPS Ta", 
+                "Public Works:Refuse Fund-Operation", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Capital Improvement Program", 
+                "Administrative Services:Non-Departmental", 
+                "Community Services:Cubberley & Human Services", 
+                "Planning:Planning", 
+                "Public Works:Streets", 
+                "Administrative Services:Information Technology", 
+                "Public Works:Equipment Management", 
+                "Community Services:CSD - Development Impact Fees", 
+                "Non-Departmental:Redevelopment Agny-A", 
+                "Non-Departmental:Other Funds", 
+                "Non-Departmental:California Ave. Park", 
+                "Non-Departmental:Gas Tax Fund", 
+                "Non-Departmental:Stanf Res. Park/ El", 
+                "Utilities:Administration", 
+                "Police:Other Funds", 
+                "Public Works:Storm Drainage - Operation", 
+                "City Auditor:Audit Services", 
+                "Airport:Airport Enterprise "
+            ], 
+            "funds": [
+                "Capital Fund:Capital Improvement Fund", 
+                "Debt Service Funds:Civic Center Debt 01-02", 
+                "Debt Service Funds:Golf Course Improvement", 
+                "Debt Service Funds:Parking 02 COP Taxable", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Water Fund", 
+                "General Fund:General Fund", 
+                "Internal Service Funds:Technology Fund", 
+                "Internal Service Funds:Vehicle Replacement & Maintenance Fund", 
+                "Special Revenue Funds:Community Development", 
+                "Special Revenue Funds:Administration", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Street Improvement", 
+                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Special Revenue Funds:Airport Enterprise"
+            ]
+        }, 
         "Transfers In:Trans In": {
             "divisions": [
                 "Capital Fund:Capital Improvement", 
@@ -3843,6 +4886,58 @@
                 "Enterprise Funds:Storm Drainage", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Special Revenue Funds:Airport Enterprise"
+            ]
+        }, 
+        "Transfers Out": {
+            "divisions": [
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment", 
+                "Utilities:Administration", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Capital Improvement Program", 
+                "Administrative Services:Non-Departmental", 
+                "City Auditor:Audit Services", 
+                "Community Services:Recreation & Youth Sciences", 
+                "Community Services:Open Space", 
+                "Planning:Planning", 
+                "Public Works:Trees", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Information Technology", 
+                "Public Works:Equipment Management", 
+                "Community Services:CSD - Development Impact Fees", 
+                "Non-Departmental:Redevelopment Agny-A", 
+                "Non-Departmental:Charleston-Arastradero Develop Impact Fee", 
+                "Non-Departmental:Housing Rehab. Defer", 
+                "Non-Departmental:California Ave. Park", 
+                "Non-Departmental:Gas Tax Fund", 
+                "Capital Fund:Capital Improvement", 
+                "Public Works:Other Funds", 
+                "City Manager:Administration", 
+                "Police:Other Funds"
+            ], 
+            "funds": [
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Water Fund", 
+                "General Fund:General Fund", 
+                "General Fund:Family Resource", 
+                "Internal Service Funds:Printing & Mailing Services Fund", 
+                "Internal Service Funds:Technology Fund", 
+                "Internal Service Funds:Vehicle Replacement & Maintenance Fund", 
+                "Special Revenue Funds:Community Development", 
+                "Special Revenue Funds:Administration", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Street Improvement", 
+                "Capital Fund:Capital Improvement Fund", 
+                "Enterprise Funds:Utilities Administration Fund"
             ]
         }, 
         "Transfers Out:Trans Out": {

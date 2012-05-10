@@ -32,6 +32,7 @@ var BudgetGraph = new Class({
         });
     },
     display : function(metric){
+        if(this.lines) this.lines.remove();
         if(true){
             if(!metric) metric = 'revenue';
             xSet = [];
@@ -46,10 +47,12 @@ var BudgetGraph = new Class({
                 xSet.push(xs);
                 ySet.push(ys);
             });
+            console.log(['diz', xSet, ySet]);
             this.lines = this.raphael.linechart(40, 20, 360, 260, xSet, ySet, {
                 shade: true,
                 nostroke: false,
-                axis: "0 0 1 1"
+                axis: "0 0 1 1",
+                stacked:true
             });
         }else{
         
