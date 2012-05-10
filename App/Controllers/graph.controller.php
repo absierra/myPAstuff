@@ -22,7 +22,7 @@
         if($item->get('ledger_type') == 'Expense') $transactionType = 'expenses';
         if($item->get('ledger_type') == 'Revenue') $transactionType = 'revenue';
         if($deep){
-            $data[$item->get('year')][$transactionType] += (float)$item->get('amount');
+            $data[$name][$item->get('year')][$transactionType] += (float)$item->get('amount');
         }else{
             $data[$item->get($uniqueType)][$item->get('year')][$transactionType] += (float)$item->get('amount');
         }

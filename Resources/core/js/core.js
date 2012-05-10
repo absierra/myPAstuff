@@ -93,19 +93,18 @@ function panelData(){
 			var elementSplit = element.split(":");
 			
 			var panelSpanClickFunction = function(event) {
-					var data = {};
+					var index;
 					switch (panel){
-						case 'funds' : $index = 'fund'; break;
-						case 'departments' : $index = 'department'; break;
-						case 'categories' : $index = 'category'; break;
+						case 'funds' : index = 'fund'; break;
+						case 'departments' : index = 'department'; break;
+						case 'categories' : index = 'category'; break;
 					}
-					window.selected[$index] = panelSpan.get('itemIdentifier');
-					//data[$index] = panelSpan.get('itemIdentifier');
+					window.selected[index] = panelSpan.get('itemIdentifier');
 					if ((!panelId.hasClass('selected')) && (!this.hasClass('disabled'))) {
 						selectionRequest.get(window.selected);
 						this.addClass('colorkey selected');
 						panelId.addClass('selected');
-						//window.budgetGraph.fetch(data[$index], $index);
+						window.budgetGraph.fetch(window.selected[index], index);
 					}
 					
 			};

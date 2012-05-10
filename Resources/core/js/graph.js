@@ -48,7 +48,7 @@ var BudgetGraph = new Class({
                 ySet.push(ys);
             });
             console.log(['diz', xSet, ySet]);
-            this.lines = this.raphael.linechart(40, 20, 360, 260, xSet, ySet, {
+            this.lines = this.raphael.linechart(50, 20, 340, 260, xSet, ySet, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
