@@ -13,7 +13,7 @@
     if( ($category && $category != '*') ){
         $data['categories'] = array();
         foreach ($unique['categories'] as $name){
-            if(startsWith($category, $name)){
+            if(startsWith($name, $category)){
                 $data['categories'][] = $name;
             }
         }
@@ -36,7 +36,7 @@
     if( ($fund && $fund != '*') ){
         $data['funds'] = array();
         foreach ($unique['funds'] as $name){
-            if(startsWith($fund, $name)){
+            if(startsWith($name, $fund)){
                 $data['funds'][] = $name;
             }
         }
@@ -59,7 +59,7 @@
     if( ($department && $department != '*') ){
         $data['departments'] = array();
         foreach ($unique['departments'] as $name){
-            if(startsWith($department, $name)){
+            if(startsWith($name, $department)){
                 $data['departments'][] = $name;
             }
         }

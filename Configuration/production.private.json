@@ -1,14 +1,14 @@
 {
     "application":{
-        "cookie_domain": "demo.protol.us"
+        "cookie_domain": "streetsweeper.delphi.us"
     },
-    "DB:appdata":{
-        "type":"mysql",
-        "database" : "appdata",
-        "host" : "localhost",
-        "user" : "root",
-        "password" : "",
-        "mode":"mysql",
+    "DB:pa_budget_data":{
+        "type":"mongo",
+        "database" : "admin",
+        "host" : "10.12.26.240",
+        "user" : "admin",
+        "password" : "78_?7K.D<6",
+        "mode":"mongo",
         "session":"true",
         "session_hook":"php"
     }

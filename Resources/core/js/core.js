@@ -106,7 +106,8 @@ function panelData(){
 						selectionRequest.get(window.selected);
 						this.addClass('colorkey selected');
 						panelId.addClass('selected');
-						window.budgetGraph.fetch(window.selected[index], index);
+						if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
+						event.stop();
 					}
 					
 			};
@@ -138,4 +139,7 @@ function panelData(){
 	};
 }
 
-document.addEvent('domready', function() { new panelData(); });
+document.addEvent('domready', function() { 
+    var tabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    new panelData();
+});

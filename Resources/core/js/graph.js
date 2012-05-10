@@ -22,40 +22,33 @@ var BudgetGraph = new Class({
         this.raphael = Raphael(element);
         this.fetch();
     },
-    fetch : function(name, type){
-        if(name) this.options.name = name;
+    fetch : function(data, type){
         if(type) this.options.type = type;
-        
-        this.options.requestor.get({
-            type : this.options.type,
-            name : this.options.name,
-        });
+        var requestData = Object.clone(data);
+        requestData.type = this.options.type;
+        this.options.requestor.get(requestData);
     },
     display : function(metric){
         if(this.lines) this.lines.remove();
-        if(true){
-            if(!metric) metric = 'revenue';
-            xSet = [];
-            ySet = [];
-            Object.each(this.data, function(data, name){
-                var xs = [];
-                var ys = [];
-                Object.each(data, function(item, year){
-                    xs.push(year);
-                    ys.push((item[metric]?item[metric]:0));
-                });
-                xSet.push(xs);
-                ySet.push(ys);
+        if(!metric) metric = 'revenue';
+        xSet = [];
+        ySet = [];
+        Object.each(this.data, function(data, name){
+            var xs = [];
+            var ys = [];
+            Object.each(data, function(item, year){
+                xs.push(year);
+                ys.push((item[metric]?item[metric]:0));
             });
-            console.log(['diz', xSet, ySet]);
-            this.lines = this.raphael.linechart(50, 20, 340, 260, xSet, ySet, {
-                shade: true,
-                nostroke: false,
-                axis: "0 0 1 1",
-                stacked:true
-            });
-        }else{
-        
-        }
+            xSet.push(xs);
+            ySet.push(ys);
+        });
+        //console.log(['diz', xSet, ySet]);
+        this.lines = this.raphael.linechart(50, 20, 340, 260, xSet, ySet, {
+            shade: true,
+            nostroke: false,
+            axis: "0 0 1 1",
+            stacked:true
+        });
     }
 })

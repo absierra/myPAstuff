@@ -31,7 +31,7 @@ MGFX.Tabs = new Class({
 	initialize: function(tabs, slides, options){
 		this.tabs = $$(tabs);
 		this.createTabs();
-		if(options.hash && window.location.hash) {
+		if(options && options.hash && window.location.hash) {
 			this.getHashIndex(options);
 		}
 		return this.parent(slides,options);

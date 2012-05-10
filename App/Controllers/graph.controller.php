@@ -1,6 +1,12 @@
 <?php
     //todo: add filtering by other columns
-    $name = WebApplication::get('name');
+    $incomingType = WebApplication::get('type');
+    $values = array();
+    $values['fund'] = WebApplication::get('fund')?WebApplication::get('fund'):false;
+    $values['department'] = WebApplication::get('department')?WebApplication::get('department'):false;
+    $values['category'] = WebApplication::get('category')?WebApplication::get('category'):false;
+    if(!$values[$incomingType]) throw new Exception('no value for type :'.$incomingType);
+    $name = $values[$incomingType];
     $deep = strstr($name, ':')?true:false;
     switch($incomingType = WebApplication::get('type')){
         case 'fund': $uniqueType = 'superfund_fund'; break;

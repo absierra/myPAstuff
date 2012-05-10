@@ -103,12 +103,10 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 blockquote:before,
@@ -181,8 +179,7 @@ html {
 .clear {
   clear: both;
 }
-body,
-html {
+body, html {
   height: 100%;
 }
 body {
@@ -208,6 +205,11 @@ body {
   margin: 15px auto 0;
   border: 4px solid #000;
   border-width: 0 0 4px 4px;
+}
+#graph_types .graph {
+  height: 300px;
+  width: 400px;
+  position: absolute;
 }
 #graph_types .container {
   display: inline-block;
@@ -382,9 +384,7 @@ header span.logo-text {
   white-space: pre-wrap;
   line-height: 18px;
 }
-.navigation > ul.four_col_1 ul,
-.navigation > ul.four_col_2 ul,
-.navigation > ul.four_col_3 ul {
+.navigation > ul.four_col_1 ul, .navigation > ul.four_col_2 ul, .navigation > ul.four_col_3 ul {
   width: 249px;
 }
 .navigation ul h3 {
@@ -433,145 +433,6 @@ header span.logo-text {
   border-bottom-left-radius: 4px;
   position: absolute;
   cursor: pointer;
-}
-.graph {
-  margin: 20px;
-  overflow: hidden;
-  padding: 0px;
-  display: inline-block;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  border-bottom-right-radius: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-left-radius: 10px;
-  /* todo make shadow work in angle & incline */
-
-  -webkit-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
-  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8);
-  background-color: #FFFFFF;
-}
-.graph .subtext {
-  font-weight: 800;
-  color: black;
-  padding-left: 10px;
-  font-size: 0;
-  font-family: "ProximaNova-Bold";
-}
-.graph.selected .info:after {
-  content: " >";
-  margin-left: 5px;
-  display: inline-block;
-  position: absolute;
-}
-.graph .graphcontrols {
-  margin: 0px;
-  float: right;
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 370px;
-}
-.graph .graphcontrols .control {
-  width: 40px;
-  height: 40px;
-}
-.graph .graphcontrols .control.privacy {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/graph-icons.png');
-  width: 35px;
-  height: 35px;
-  background-position: 0px 0px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  vertical-align: middle;
-}
-.graph .graphcontrols .control.goals {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/graph-icons.png');
-  width: 35px;
-  height: 35px;
-  background-position: -35px 0px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  vertical-align: middle;
-}
-.graph .graphcontrols .control.plot {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/graph-icons.png');
-  width: 35px;
-  height: 35px;
-  background-position: -70px 0px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  vertical-align: middle;
-}
-.graph .graphcontrols .control.settings {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/graph-icons.png');
-  width: 35px;
-  height: 35px;
-  background-position: -105px 0px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  vertical-align: middle;
-}
-.graph div.info.icon:before {
-  vertical-align: top;
-  margin: 0;
-}
-.graph .info,
-.graph .info-selected {
-  height: 2em;
-  font-size: 16px;
-  text-wrap: none;
-  overflow: hidden;
-  width: 160px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 5px;
-  display: inline-block;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  font-family: "ProximaNova";
-  color: #333;
-  line-height: 32px;
-}
-.graph .info-selected {
-  padding: 1px 0 8px 10px;
-}
-.graph .chart {
-  height: 160px;
-  width: 160px;
-  cursor: pointer;
-}
-.graph .node {
-  fill: lightblue;
-  box-shadow: 10px 10px 5px #888888;
-}
-.graph .node.selected {
-  fill: lightblue;
-  width: 20px;
 }
 /* Icons */
 /* Area */
