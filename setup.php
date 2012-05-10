@@ -4,6 +4,9 @@
     
     MongoData::$functionalMode = FALSE;
     
+    ResourceBundle::$minify = false; //encode the script
+    ResourceBundle::$merge = true; //combine the scripts/styles
+    
     function uniqueCategories(){
         $results = Data::search('BudgetData');
         $data = array(

@@ -1,4 +1,5 @@
 <?php
+    //todo: add filtering by other columns
     $name = WebApplication::get('name');
     $deep = strstr($name, ':')?true:false;
     switch($incomingType = WebApplication::get('type')){
@@ -18,10 +19,12 @@
     $results = Data::search('BudgetData', $type.'=\''.$name.'\'');
     $data = array();
     foreach($results as $item){
+        if($item->get('ledger_type') == 'Expense') $transactionType = 'expenses';
+        if($item->get('ledger_type') == 'Revenue') $transactionType = 'revenue';
         if($deep){
             $data[$item->get('year')] += (float)$item->get('amount');
         }else{
-            $data[$item->get($uniqueType)][$item->get('year')] += (float)$item->get('amount');
+            $data[$item->get($uniqueType)][$item->get('year')][$transactionType] += (float)$item->get('amount');
         }
     }
     $renderer->assign('data', $data);
