@@ -1,0 +1,189 @@
+// This file can ONLY contain macros!! Do not add styles here!
+// This file spans multiple projects, do not edit project specific settings here!
+
+// GEOMETRY
+
+.transition(@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+
+.transform(@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+	-webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	-ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+	transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+// COLORS & PATTERNS
+
+.simpleGradient(@origin: left, @alpha: 0.2) {
+	background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+	background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+
+// BOX MODEL
+.sprite(@position, @image, @width:20px, @height:20px, @columns:1){
+    display:block;
+    display:inline-block;
+    background-image:url(@image);
+    width:@width;
+    height:@height;
+    @posCol : floor(@position/@columns);
+    background-position:-(@width * (@position - @columns*@posCol)) -(@height *  @posCol);
+    
+}
+
+.spriteIcon(@position, @image, @size, @width:10){
+    .sprite(@position, @image, @size, @size, @width);
+    content: '';
+    display:block;
+    display:inline-block;
+    height:@size;
+    width:@size;
+    vertical-align: middle;
+}
+ 
+.inset(@blur, @color){
+    box-shadow:inset 0px 4px @blur @color;
+    -moz-box-shadow:inset 0px 4px @blur @color;
+    -webkit-box-shadow:inset 0px 4px @blur @color;
+}
+
+.striped(@width, @color, @angle:45deg){
+    background: -webkit-repeating-linear-gradient(@angle, rgba(0,0,0,0.1), rgba(0,0,0,0.1) @width, rgba(255,255,255,0.1) @width, rgba(255,255,255,0.1) (2*@width)), @color;
+}
+.shadowed(@zHeight, @opacity){ /* todo make shadow work in angle & incline */
+    -webkit-box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity);
+    -moz-box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity);
+    box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity);
+    
+}
+
+.glow(@color, @distance:3px, @falloff:3px, @opacity:0.8){
+    -webkit-box-shadow : @distance @distance @falloff fade(@color, @opacity),
+        -@distance @distance @falloff fade(@color, @opacity),
+        @distance -@distance @falloff fade(@color, @opacity),
+        -@distance -@distance @falloff fade(@color, @opacity);
+    -moz-box-shadow : @distance @distance @falloff fade(@color, @opacity),
+        -@distance @distance @falloff fade(@color, @opacity),
+        @distance -@distance @falloff fade(@color, @opacity),
+        -@distance -@distance @falloff fade(@color, @opacity);
+    box-shadow : @distance @distance @falloff fade(@color, @opacity),
+        -@distance @distance @falloff fade(@color, @opacity),
+        @distance -@distance @falloff fade(@color, @opacity),
+        -@distance -@distance @falloff fade(@color, @opacity);
+        
+    
+}
+
+.centeredBackground(@url){
+     background-image:url(@url);
+     background-repeat:no-repeat;
+     background-position:center;
+ }
+
+.indented(@zHeight, @opacity){ /* todo make shadow work in angle & incline */
+    -webkit-box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity) inset;
+    -moz-box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity) inset;
+    box-shadow : @zHeight @zHeight (3 * @zHeight) rgba(0,0,0, @opacity) inset;
+    
+}
+
+.beveled(@depth){
+    -webkit-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset;
+    -moz-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset;
+    box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset;
+}
+
+.beveledAndDepressed(@depth){
+    -webkit-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(255,255,255,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4) inset;
+    -moz-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(255,255,255,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4) inset;
+    box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(255,255,255,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4) inset;
+}
+
+.beveledAndShadowed(@depth){
+    -webkit-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset,
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4),
+                        (@depth/5) (@depth/5) (@depth/2) rgba(0,0,0,0.6),
+                        (@depth/5 *-1) (@depth/5 * -1) (@depth/2) rgba(0,0,0,0.6);
+    -moz-box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset,
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4),
+                        (@depth/5) (@depth/5) (@depth/2) rgba(0,0,0,0.6),
+                        (@depth/5 *-1) (@depth/5 * -1) (@depth/2) rgba(0,0,0,0.6);
+    box-shadow: (-1 * @depth) (-1 * @depth) (2 * @depth) rgba(0,0,0,0.4) inset,  
+                        (@depth) (@depth) (2 * @depth) rgba(255,255,255,0.4) inset,
+                        (@depth) (@depth) (2 * @depth) rgba(0,0,0,0.4),
+                        (@depth/5) (@depth/5) (@depth/2) rgba(0,0,0,0.6),
+                        (@depth/5 *-1) (@depth/5 * -1) (@depth/2) rgba(0,0,0,0.6);
+}
+
+.cover(@image){
+    background-image: url(@image);
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%; 
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@image', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@image', sizingMethod='scale')";
+}
+
+.roundedUpperRightCorner(@pixels:5px){
+    -moz-border-radius-topright: @pixels;
+    border-top-right-radius: @pixels;
+}
+.roundedUpperLeftCorner(@pixels:5px){
+    -moz-border-radius-topleft: @pixels;
+    border-top-left-radius: @pixels;
+}
+
+.roundedTop(@pixels:5px){
+    .roundedUpperRightCorner(@pixels);
+    .roundedUpperLeftCorner(@pixels);
+}
+.roundedBottom(@pixels:5px){
+    .roundedLowerRightCorner(@pixels);
+    .roundedLowerLeftCorner(@pixels);
+}
+
+.roundedLowerRightCorner(@pixels:5px){
+    -moz-border-radius-bottomright: @pixels;
+    border-bottom-right-radius: @pixels;
+}
+.roundedLowerLeftCorner(@pixels:5px){
+    -moz-border-radius-bottomleft: @pixels;
+    border-bottom-left-radius: @pixels;
+}
+
+.roundedRight(@pixels:5px){
+    .roundedUpperRightCorner(@pixels);
+    .roundedLowerRightCorner(@pixels);
+}
+.roundedLeft(@pixels:5px){
+    .roundedUpperLeftCorner(@pixels);
+    .roundedLowerLeftCorner(@pixels);
+}
+
+.rounded(@pixels){
+    .roundedTop(@pixels);
+    .roundedBottom(@pixels);
+}
