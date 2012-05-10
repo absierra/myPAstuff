@@ -149,23 +149,23 @@ table {
 */
 @font-face {
   font-family: 'ProximaNova';
-  src: url('../webfonts/219292_0_0.eot');
-  src: url('../webfonts/219292_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_0_0.woff') format('woff'), url('../webfonts/219292_0_0.ttf') format('truetype'), url('../webfonts/219292_0_0.svg#wf') format('svg');
+  src: url('/Resources/core/webfonts/219292_0_0.eot');
+  src: url('/Resources/core/webfonts/219292_0_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_0_0.woff') format('woff'), url('/Resources/core/webfonts/219292_0_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_0_0.svg#wf') format('svg');
 }
 @font-face {
   font-family: 'ProximaNova-BoldItalic';
-  src: url('../webfonts/219292_1_0.eot');
-  src: url('../webfonts/219292_1_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_1_0.woff') format('woff'), url('../webfonts/219292_1_0.ttf') format('truetype'), url('../webfonts/219292_1_0.svg#wf') format('svg');
+  src: url('/Resources/core/webfonts/219292_1_0.eot');
+  src: url('/Resources/core/webfonts/219292_1_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_1_0.woff') format('woff'), url('/Resources/core/webfonts/219292_1_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_1_0.svg#wf') format('svg');
 }
 @font-face {
   font-family: 'ProximaNova-Italic';
-  src: url('../webfonts/219292_2_0.eot');
-  src: url('../webfonts/219292_2_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219292_2_0.woff') format('woff'), url('webfonts/219292_2_0.ttf') format('truetype'), url('../webfonts/219292_2_0.svg#wf') format('svg');
+  src: url('/Resources/core/webfonts/219292_2_0.eot');
+  src: url('/Resources/core/webfonts/219292_2_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_2_0.woff') format('woff'), url('/Resources/core/webfonts/219292_2_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_2_0.svg#wf') format('svg');
 }
 @font-face {
   font-family: 'ProximaNova-Bold';
-  src: url('../webfonts/219462_0_0.eot');
-  src: url('../webfonts/219462_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/219462_0_0.woff') format('woff'), url('../webfonts/219462_0_0.ttf') format('truetype');
+  src: url('/Resources/core/webfonts/219462_0_0.eot');
+  src: url('/Resources/core/webfonts/219462_0_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219462_0_0.woff') format('woff'), url('/Resources/core/webfonts/219462_0_0.ttf') format('truetype');
 }
 html {
   font-family: "Helvetica";
