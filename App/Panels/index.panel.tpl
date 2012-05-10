@@ -38,6 +38,6 @@
 </div>
 <script>{literal}
     document.addEvent('domready', function(){
-        new BudgetGraph('graph_stage');
+        window.budgetGraph = new BudgetGraph('graph_stage');
     });
 {/literal}</script>

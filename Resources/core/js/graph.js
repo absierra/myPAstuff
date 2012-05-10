@@ -29,7 +29,7 @@ var BudgetGraph = new Class({
         this.options.requestor.get({
             type : this.options.type,
             name : this.options.name,
-        })
+        });
     },
     display : function(metric){
         if(true){
@@ -46,7 +46,11 @@ var BudgetGraph = new Class({
                 xSet.push(xs);
                 ySet.push(ys);
             });
-            this.lines = this.raphael.linechart(10, 10, 300, 220, xSet, ySet);
+            this.lines = this.raphael.linechart(40, 20, 360, 260, xSet, ySet, {
+                shade: true,
+                nostroke: false,
+                axis: "0 0 1 1"
+            });
         }else{
         
         }

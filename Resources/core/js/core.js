@@ -92,23 +92,19 @@ function panelData(){
 			
 			var elementSplit = element.split(":");
 			
-			var panelLiClickFunction = function(event) {
+			var panelSpanClickFunction = function(event) {
 					var data = {};
 					switch (panel){
-						case 'funds': 
-							data['fund'] = panelSpan.get('itemIdentifier');
-							break;
-						case 'departments': 
-							data['department'] = panelSpan.get('itemIdentifier');
-							break;
-						case 'categories': 
-							data['category'] = panelSpan.get('itemIdentifier');
-							break;
+						case 'funds' : $index = 'fund'; break;
+						case 'departments' : $index = 'department'; break;
+						case 'categories' : $index = 'category'; break;
 					}
+					data[$index] = panelSpan.get('itemIdentifier');
 					if ((!panelId.hasClass('selected')) && (!this.hasClass('disabled'))) {
 						selectionRequest.get(data);
 						this.addClass('colorkey selected');
 						panelId.addClass('selected');
+						//window.budgetGraph.fetch(data[$index], $index);
 					}
 					
 			};
@@ -119,7 +115,7 @@ function panelData(){
 				var panelSpan = new Element('span', { html: elementSplit[0] });
 				
 				panelSpan.set('itemIdentifier', element);
-				panelSpan.addEvent('click', panelLiClickFunction);			
+				panelSpan.addEvent('click', panelSpanClickFunction);			
 				panelId.appendChild(panelLi);
 				panelLi.appendChild(panelSpan);
 
@@ -129,7 +125,7 @@ function panelData(){
 				var panelSpan = new Element('span', { html: elementSplit[1] });
 				
 				panelSpan.set('itemIdentifier', element);
-				panelSpan.addEvent('click', panelLiClickFunction);
+				panelSpan.addEvent('click', panelSpanClickFunction);
 				
 				var subItem = panelId.getElement('li.'+elementSplit[0].replace(/ /g, '')+'');
 				subItem.appendChild(panelUl);
