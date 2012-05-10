@@ -33,8 +33,10 @@ function panelData(){
 	var panelFilter = function(data) {
 		//if (!(document.id('fund')).hasClass('selected')) {
 			document.getElements('#fund li span').each(function(listItem){
-				if (data.funds.contains(listItem.get('itemIdentifier'))){
+			    //console.log(['cc', data.funds.contains(listItem.retrieve('itemIdentifier')), data.funds, listItem.retrieve('itemIdentifier')]);
+				if (data.funds.contains(listItem.retrieve('itemIdentifier'))){
 					listItem.addClass('highlight');
+					//console.log(['hh', listItem.getAttribute('class')]);
 				}else{
 					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
 				}
@@ -42,7 +44,7 @@ function panelData(){
 		//}
 		//if (!(document.id('department')).hasClass('selected')) {
 			document.getElements('#department li span').each(function(listItem){
-				if (data.departments.contains(listItem.get('itemIdentifier'))){
+				if (data.departments.contains(listItem.retrieve('itemIdentifier'))){
 					listItem.addClass('highlight');
 				}else{
 					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
@@ -51,7 +53,7 @@ function panelData(){
 		//}
 		//if (!(document.id('category')).hasClass('selected')) {
 			document.getElements('#category li span').each(function(listItem){
-				if (data.categories.contains(listItem.get('itemIdentifier'))){
+				if (data.categories.contains(listItem.retrieve('itemIdentifier'))){
 					listItem.addClass('highlight');
 				}else{
 					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
@@ -99,7 +101,7 @@ function panelData(){
 						case 'departments' : index = 'department'; break;
 						case 'categories' : index = 'category'; break;
 					}
-					window.selected[index] = panelSpan.get('itemIdentifier');
+					window.selected[index] = panelSpan.retrieve('itemIdentifier');
 					if ((!panelId.hasClass('selected')) && (!this.hasClass('disabled'))) {
 						selectionRequest.get(window.selected);
 						this.addClass('colorkey selected');
@@ -114,7 +116,7 @@ function panelData(){
 				var panelLi = new Element('li', { class: ''+elementSplit[0].replace(/ /g, '')+'' });
 				var panelSpan = new Element('span', { html: elementSplit[0] });
 				
-				panelSpan.set('itemIdentifier', element);
+				panelSpan.store('itemIdentifier', element);
 				panelSpan.addEvent('click', panelSpanClickFunction);			
 				panelId.appendChild(panelLi);
 				panelLi.appendChild(panelSpan);
@@ -124,7 +126,7 @@ function panelData(){
 				var panelLi = new Element('li', { class: ''+elementSplit[1].replace(/ /g, '')+'' });
 				var panelSpan = new Element('span', { html: elementSplit[1] });
 				
-				panelSpan.set('itemIdentifier', element);
+				panelSpan.store('itemIdentifier', element);
 				panelSpan.addEvent('click', panelSpanClickFunction);
 				
 				var subItem = panelId.getElement('li.'+elementSplit[0].replace(/ /g, '')+'');
