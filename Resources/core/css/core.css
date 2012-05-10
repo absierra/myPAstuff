@@ -278,12 +278,13 @@ header span.logo-text {
   padding-left: 15px;
   color: #333;
   font-family: "ProximaNova-Bold";
-  background-color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
-  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
-  background-image: -o-linear-gradient(top, #ffffff, #dddddd);
-  background-image: -ms-linear-gradient(top, #ffffff, #dddddd);
-  background-image: linear-gradient(top, #ffffff, #dddddd);
+}
+.navigation > ul ul li span.disabled {
+  color: #b8b8b8;
+}
+.navigation > ul ul li span.selected {
+  color: #fff;
+  background-color: #00a1e4;
 }
 .navigation > ul ul li span:after {
   position: absolute;
@@ -291,7 +292,7 @@ header span.logo-text {
   content: '\25BC';
   height: 30px;
   width: 5px;
-  color: #999;
+  color: #333;
 }
 .navigation > ul ul ul {
   overflow: hidden;
@@ -302,9 +303,11 @@ header span.logo-text {
 .navigation > ul ul ul li {
   border: 0;
   overflow-x: hidden;
+  margin-left: 15px;
 }
 .navigation > ul ul ul li span {
-  color: #666;
+  font-family: "ProximaNova";
+  color: #333;
   background: none;
 }
 .navigation > ul ul ul li span:after {
@@ -320,36 +323,24 @@ header span.logo-text {
   background-color: #3A3A3C;
   color: #00A9E2;
 }
-.navigation > ul .selected > .colorbar:before {
+.navigation > ul .selected > .colorkey:before {
   position: absolute;
-  left: 0;
+  left: 15px;
   content: '';
   background: #000;
   padding: 2px;
   display: block;
   height: 30px;
-  width: 5px;
+  width: 7px;
 }
-.navigation > ul .colorbar:before {
+.navigation > ul .colorkey:before {
   position: absolute;
   left: 0;
   content: '';
   background: #666;
   display: block;
   height: 30px;
-  width: 5px;
-}
-.navigation > ul .colorbar_1:before {
-  background-color: red;
-}
-.navigation > ul .colorbar_2:before {
-  background-color: fuchsia;
-}
-.navigation > ul .colorbar_3:before {
-  background-color: green;
-}
-.navigation > ul .colorbar_4:before {
-  background-color: teal;
+  width: 7px;
 }
 .navigation > ul.four_col_1 {
   left: 0;

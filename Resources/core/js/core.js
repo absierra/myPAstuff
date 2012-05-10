@@ -18,49 +18,46 @@ function panelData(){
 				document.id('category').removeClass('selected');
 				
 				document.getElements('#fund li span').each(function(item){
-					item.removeClass('colorbar');
-					item.setStyles({'background': 'none', 'color': '#333'});
+					item.removeClass('colorkey').removeClass('selected').removeClass('highlight').removeClass('disabled');
 				});
 				document.getElements('#department li span').each(function(item){
-					item.removeClass('colorbar');
-					item.setStyles({'background': 'none', 'color': '#333'});
+					item.removeClass('colorkey').removeClass('selected').removeClass('highlight').removeClass('disabled');
 				});
 				document.getElements('#category li span').each(function(item){
-					item.removeClass('colorbar');
-					item.setStyles({'background': 'none', 'color': '#333'});
+					item.removeClass('colorkey').removeClass('selected').removeClass('highlight').removeClass('disabled');
 				});
 	        }
 	     }
 	});
 	
 	var panelFilter = function(data) {
-		if (!(document.id('fund')).hasClass('selected')) {
+		//if (!(document.id('fund')).hasClass('selected')) {
 			document.getElements('#fund li span').each(function(listItem){
 				if (data.funds.contains(listItem.get('itemIdentifier'))){
-					listItem.setStyles({'color':'#333'});
+					listItem.addClass('highlight');
 				}else{
-					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
 				}
 			});
-		}
-		if (!(document.id('department')).hasClass('selected')) {
+		//}
+		//if (!(document.id('department')).hasClass('selected')) {
 			document.getElements('#department li span').each(function(listItem){
 				if (data.departments.contains(listItem.get('itemIdentifier'))){
-					listItem.setStyles({'color':'#333'});
+					listItem.addClass('highlight');
 				}else{
-					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
 				}
 			});
-		}
-		if (!(document.id('category')).hasClass('selected')) {
+		//}
+		//if (!(document.id('category')).hasClass('selected')) {
 			document.getElements('#category li span').each(function(listItem){
 				if (data.categories.contains(listItem.get('itemIdentifier'))){
-					listItem.setStyles({'color':'#333'});
+					listItem.addClass('highlight');
 				}else{
-					if (!listItem.hasClass('highlight')) listItem.removeClass('colorbar').setStyles({'color':'#ccc'});
+					if (!listItem.hasClass('selected')) listItem.removeClass('colorkey').addClass('disabled');
 				}
 			});
-		}
+		//}
 	}
 
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(data){
@@ -108,9 +105,9 @@ function panelData(){
 							data['category'] = panelSpan.get('itemIdentifier');
 							break;
 					}
-					if (!panelId.hasClass('selected')) {
+					if ((!panelId.hasClass('selected')) && (!this.hasClass('disabled'))) {
 						selectionRequest.get(data);
-						this.addClass('colorbar highlight').setStyles({'background':'#00A4E0'});
+						this.addClass('colorkey selected');
 						panelId.addClass('selected');
 					}
 					
