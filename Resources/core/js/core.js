@@ -125,7 +125,41 @@ function panelData(){
 	};
 }
 
+function colors(){
+    var args = {};
+    var arg;
+    for(var lcv=0; lcv < arguments.length; lcv++){
+        arg = arguments[lcv];
+        if(typeOf(arg) == 'number') args.num = arg;
+        else if(
+            typeOf(arg) == 'array' ||
+            (typeOf(arg) == 'string' && arg.match(/#?[0-9A-F]{6}/))
+        ) args.color = arg;
+        else if(typeOf(arg) == 'string') args.result = arg;
+    };
+    if(!args.num) args.num = 5;
+    if(!args.color) args.color = '#FF0000';
+    var result = [];
+    for(var lcv=0;lcv<args.num;lcv++){
+        var newColor = new Color(args.color);
+        var newColor = (newColor).setHue((newColor.hsb[0]+(359/args.num)*lcv)%359);
+        if(args.result)result.push(newColor[args.result]);
+        else result.push(newColor);
+    }
+    return result;
+}
+
 document.addEvent('domready', function() { 
+    window.graphs = {};
+    window.graphs.fund = new BudgetGraph('fund_graph', {
+        type : 'fund',
+        colors : colors(4,'hex')
+    });
+    window.graphs.department = new BudgetGraph('department_graph', {
+        type : 'department',
+        colors : colors(4,'hex')
+    });
     window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     new panelData();
 });
+
