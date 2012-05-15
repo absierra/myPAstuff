@@ -39,17 +39,3 @@
     </ul>
 </div>
 </div>
-<script>{literal}
-    document.addEvent('domready', function(){
-        window.graphs = {};
-        window.graphs.fund = new BudgetGraph('fund_graph', {
-            type : 'fund'
-        });
-        window.graphs.department = new BudgetGraph('department_graph', {
-            type : 'department'
-        });
-        /*window.graphs.category = new BudgetGraph('category_graph', {
-            type : 'category'
-        });*/
-    });
-{/literal}</script>
