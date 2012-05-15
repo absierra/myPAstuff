@@ -166,12 +166,12 @@
             	
 				//scale the values
 				if (opts.stacked){
-					if (!opts.percent){
-                		var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
-                    		Y = (y + height - gutter - (valuesy[i][j] + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+					if (opts.percent){
+                		var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
+                			Y = (y + height - gutter - ((valuesy[i][j]/totals[valuesx[i][j]])*100 + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
                     } else {
                     	var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
-                    		Y = (y + height - gutter - ((valuesy[i][j]/totals[valuesx[i][j]])*100 + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+                    		Y = (y + height - gutter - (valuesy[i][j] + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
                     }
                 } else {
                 	var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
@@ -179,7 +179,7 @@
                 }
                 
                 //stacking
-                yearsum[valuesx[i][j]] = (yearsum[valuesx[i][j]] || 0) + (valuesy[i][j]/totals[valuesx[i][j]])*100;			
+                yearsum[valuesx[i][j]] = (yearsum[valuesx[i][j]] || 0) + (opts.percent ? (valuesy[i][j]/totals[valuesx[i][j]])*100 : valuesy[i][j]);			
 				
 				//?
                 (Raphael.is(sym, "array") ? sym[j] : sym) && symset.push(paper[Raphael.is(sym, "array") ? sym[j] : sym](X, Y, (opts.width || 2) * 3).attr({ fill: colors[i], stroke: "none" }));
