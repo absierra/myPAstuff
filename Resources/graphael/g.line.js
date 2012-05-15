@@ -105,9 +105,30 @@
             maxy = ydim.to,
             kx = (width - gutter * 2) / ((maxx - minx) || 1),
             ky = (height - gutter * 2) / ((maxy - miny) || 1);
-
+        
+        var totals = [];
+        
+        var maxtotal = 0;
+        
+        for (i = 0, ii=valuesy.length; i < ii; i++ ) {
+            for (var j = 0, jj = valuesy[i].length; j<jj; j++) {
+            	totals[valuesx[i][j]] = (totals[valuesx[i][j]] || 0) + valuesy[i][j];
+            	if (totals[valuesx[i][j]] > maxtotal) {
+            		maxtotal = totals[valuesx[i][j]];
+            	}
+            }
+        }
+        
+        if (opts.stacked) {
+        	miny = 0;
+        	maxy = opts.percent ? 100 : maxtotal;
+        	ky = (height - gutter * 2) / ((maxy - miny) || 1);
+        }
+		
+		
         var axis = paper.set();
-
+		
+		//ADDS AXES
         if (opts.axis) {
             var ax = (opts.axis + "").split(/[,\s]+/);
             +ax[0] && axis.push(chartinst.axis(x + gutter, y + gutter, width - 2 * gutter, minx, maxx, opts.axisxstep || Math.floor((width - 2 * gutter) / 20), 2, paper));
@@ -119,8 +140,11 @@
         var lines = paper.set(),
             symbols = paper.set(),
             line;
-
-        for (i = 0, ii = valuesy.length; i < ii; i++) {
+            	
+		yearsum = []
+		lastpath = [];
+		
+        for (i = 0, ii = valuesy.length; i < ii; i++) {	//for each line
             if (!opts.nostroke) {
                 lines.push(line = paper.path().attr({
                     stroke: colors[i],
@@ -135,13 +159,32 @@
                 symset = paper.set();
 
             path = [];
-
-            for (var j = 0, jj = valuesy[i].length; j < jj; j++) {
-                var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
-                    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
-
+            backpath = [];
+            
+			
+            for (var j = 0, jj = valuesy[i].length; j < jj; j++) { //for each year
+            	
+				//scale the values
+				if (opts.stacked){
+					if (!opts.percent){
+                		var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
+                    		Y = (y + height - gutter - (valuesy[i][j] + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+                    } else {
+                    	var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
+                    		Y = (y + height - gutter - ((valuesy[i][j]/totals[valuesx[i][j]])*100 + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+                    }
+                } else {
+                	var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
+                    	Y = (y + height - gutter - (valuesy[i][j] - miny) * ky);
+                }
+                
+                //stacking
+                yearsum[valuesx[i][j]] = (yearsum[valuesx[i][j]] || 0) + (valuesy[i][j]/totals[valuesx[i][j]])*100;			
+				
+				//?
                 (Raphael.is(sym, "array") ? sym[j] : sym) && symset.push(paper[Raphael.is(sym, "array") ? sym[j] : sym](X, Y, (opts.width || 2) * 3).attr({ fill: colors[i], stroke: "none" }));
-
+					
+				//smoothing - ignore
                 if (opts.smooth) {
                     if (j && j != jj - 1) {
                         var X0 = x + gutter + ((valuesx[i] || valuesx[0])[j - 1] - minx) * kx,
@@ -156,20 +199,30 @@
                     if (!j) {
                         path = ["M", X, Y, "C", X, Y];
                     }
+                //where line gets constructed
                 } else {
                     path = path.concat([j ? "L" : "M", X, Y]);
+                    backpath = ["L",X,Y].concat(backpath);
                 }
             }
-
+			
+			//smoothing - ignore
             if (opts.smooth) {
                 path = path.concat([X, Y, X, Y]);
             }
 
             symbols.push(symset);
-
+						
+			//where bottom line gets added
             if (opts.shade) {
-                shades[i].attr({ path: path.concat(["L", X, y + height - gutter, "L",  x + gutter + ((valuesx[i] || valuesx[0])[0] - minx) * kx, y + height - gutter, "z"]).join(",") });
+            	if (opts.stacked){
+                	shades[i].attr({ path: path.concat(i ? lastpath : ["L", X, y + height - gutter, "L", x + gutter + ((valuesx[i] || valuesx[0])[0] - minx) * kx, y + height - gutter, "z"]).join(",") });
+            	} else {
+            		shades[i].attr({ path: path.concat(["L", X, y + height - gutter, "L", x + gutter + ((valuesx[i] || valuesx[0])[0] - minx) * kx, y + height - gutter, "z"]).join(",") });
+            	}
             }
+                        
+            lastpath = backpath.concat(["z"]);
 
             !opts.nostroke && line.attr({ path: path.join(",") });
         }
