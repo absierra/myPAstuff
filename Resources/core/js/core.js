@@ -5,8 +5,8 @@ function panelData(){
         this.dataRequest = data.data;
 	    this.populatePanel('funds');
 		this.populatePanel('departments');
-		//this.populatePanel('categories');
-        document.getElements('.DebtServiceFunds span')[0].fireEvent('click');
+		var target = document.getElement('.DebtServiceFunds span');
+        if(target) target.fireEvent.delay(200, target, ['click']);
 	}.bind(this)}).get();
 	
 	var keys = new Keyboard({
@@ -24,111 +24,78 @@ function panelData(){
 	var panelFilter = function(data) {
         
         document.getElements('#fund li span').each(function(listItem){
-
-            if (listItem.getParent('ul #fund').hasClass('panelSelected')) {
-                 var tabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph').showSlide(0);
-            }
-
-            var listItemValue = listItem.retrieve('itemIdentifier');
-            var listItemClass = listItemValue.replace(/ /g, '');
-            var listItemMatch = listItemValue.match(/\:/);
-            
-            if (listItemMatch != null) { 
-                listItemSplit = listItemClass.split(':');
-                listItemClass = listItemSplit[0];
-            }
-            if (data.funds.contains(listItemValue)){
-                document.getElement('#fund li.'+listItemClass+' span').removeClass('disabled').removeClass('colorkey');
-                if (listItem.getParent('ul #fund').hasClass('panelSelected')) {
-                    listItem.addClass('colorkey');
-                    listItem.removeClass('disabled');
-                }
-			} else {
-                listItem.addClass('disabled');
-			}
+            if (data.funds.contains(listItem.retrieve('itemIdentifier'))) listItem.removeClass('disabled');
+            else listItem.addClass('disabled');
 		});
         document.getElements('#department li span').each(function(listItem){
-
-            if (listItem.getParent('ul #department').hasClass('panelSelected')) {
-                 var tabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph').showSlide(1);
-            }
-
-            var listItemValue = listItem.retrieve('itemIdentifier');
-            var listItemClass = listItemValue.replace(/ /g, '');
-            var listItemMatch = listItemValue.match(/\:/);
-            
-            if (listItemMatch != null) { 
-                listItemSplit = listItemClass.split(':');
-                listItemClass = listItemSplit[0];
-            }
-    
-           if (data.departments.contains(listItemValue)){
-                document.getElement('#department li.'+listItemClass+' span').removeClass('disabled').removeClass('colorkey');
-                if (listItem.getParent('ul #department').hasClass('panelSelected') && !listItem.hasClass('disabled') ) {
-                    listItem.addClass('colorkey');
-                }
-			} else {
-                listItem.addClass('disabled');
-			}
-            
+            if (data.departments.contains(listItem.retrieve('itemIdentifier'))) listItem.removeClass('disabled');
+            else listItem.addClass('disabled');
 		});
-        /*
-        document.getElements('#category li span').each(function(listItem){
-
-            if (listItem.getParent('ul #category').hasClass('panelSelected')) {
-                 var tabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph').showSlide(2);
-            }
-
-            var listItemValue = listItem.retrieve('itemIdentifier');
-            var listItemClass = listItemValue.replace(/ /g, '');
-            var listItemMatch = listItemValue.match(/\:/);
-            
-            if (listItemMatch != null) { 
-                listItemSplit = listItemClass.split(':');
-                listItemClass = listItemSplit[0];
-            }
-    
-           if (data.categories.contains(listItemValue)){
-                document.getElement('#category li.'+listItemClass+' span').removeClass('disabled').removeClass('colorkey');
-                if (listItem.getParent('ul #category').hasClass('panelSelected')) {
-                    listItem.addClass('colorkey');
-                }
-			} else {
-                listItem.addClass('disabled');
-			}
-            
-		});
-        */
+	}
+	
+	var selectGraph = function(type, legals){
+	    if(legals){
+	        //todo: enable/disable graphs
+	    }
+	    switch(type){
+	        case 'fund':
+	            window.graphTabs.showSlide(0);
+	            break;
+	        case 'department':
+	            window.graphTabs.showSlide(1);
+	            break;
+	        case 'expenditure':
+	            window.graphTabs.showSlide(2);
+	            break;
+	        case 'revenue':
+	            window.graphTabs.showSlide(3);
+	            break;
+	        case 'fee_revenue':
+	            window.graphTabs.showSlide(4);
+	            break;
+	        case 'expenditure_vs_fee_revenue':
+	            window.graphTabs.showSlide(5);
+	            break;
+	    }
 	}
 
-	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(data){
-        var dataSelect = data.data;
-        panelFilter(data.data);
+	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
+        var dataSelect = payload.data;
+        switch(window.lastSelectedColumn){
+            case 'fund':
+                
+                selectGraph('fund');
+                break;
+            case 'department':
+                
+                selectGraph('department');
+                break;
+        }
+        panelFilter(payload.data);
+        // remove color key from all items
+        document.getElements('span.colorkey').removeClass('colorkey');
+        // add color key to all active items in the selected column
+        var column = document.id(window.lastSelectedColumn);
+        if(column){
+            column.getElements('ul li span:not(.disabled)').addClass('colorkey');
+        }
 	}.bind(this)});
 	
     window.selected = {};
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
-            var elementSplit = element.split(":");
-            var panelColumn = 0;
+            var parts = element.split(":");
             var index;
-            var panelId;
 			switch (panel){
-				case 'funds' : panelColumn = 0; index = 'fund'; panelId = document.id(index); break;
-				case 'departments' : panelColumn = 1; index = 'department'; panelId = document.id(index); break;
-            //  case 'categories' : panelColumn = 2; index = 'category'; panelId = document.id(index); break;
+				case 'funds' : index = 'fund'; break;
+				case 'departments' : index = 'department'; break;
 			}
-			
+			var panelId = document.id(index);
 			var panelSpanClickFunction = function(event) {
-                    if (panelId.hasClass('panelSelected')) {
-                        window.selected = {};
-                        window.selected[index] = panelSpan.retrieve('itemIdentifier');
-                    } else {
-                        document.getElements('.panelSelected').removeClass('panelSelected');
-                        panelId.addClass('panelSelected');
-                        window.selected[index] = panelSpan.retrieve('itemIdentifier');
-                    }
-
+                    if (panelId.hasClass('panelSelected')) window.selected = {};
+                    window.selected[index] = panelSpan.retrieve('itemIdentifier');
+                    window.lastSelectedColumn = index;
+                    window.lastSelectedItem = element;
                     panelId.getElements('.selected').removeClass('selected');
                     document.getElements('.colorkey').removeClass('colorkey');
                     this.addClass('colorkey selected');
@@ -136,34 +103,29 @@ function panelData(){
                     selectionRequest.get(window.selected);
                     if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
 			};
-			
-			if ((elementSplit[0]) && (!elementSplit[1])) {
-				var panelLi = new Element('li', { class: ''+elementSplit[0].replace(/ /g, '')+'' });
-				var panelSpan = new Element('span', { html: elementSplit[0] });
-				
-				panelSpan.store('itemIdentifier', element);
-				panelSpan.addEvent('click', panelSpanClickFunction);			
-				panelId.appendChild(panelLi);
-				panelLi.appendChild(panelSpan);
-
-			} else if (element[1]) {
-				var panelUl = new Element('ul');
-				var panelLi = new Element('li', { class: ''+elementSplit[1].replace(/ /g, '')+'' });
-				var panelSpan = new Element('span', { html: elementSplit[1] });
-				
-				panelSpan.store('itemIdentifier', element);
-				panelSpan.addEvent('click', panelSpanClickFunction);
-				
-				var subItem = panelId.getElement('li.'+elementSplit[0].replace(/ /g, '')+'');
-				subItem.appendChild(panelUl);
-				panelUl.appendChild(panelLi);
-				panelLi.appendChild(panelSpan);
-			}	
+			var name = (parts.length == 1)?parts[0]:parts[1];
+			var panelLi = new Element('li', { class: ''+name.replace(/ /g, '')+'' });
+            var panelSpan = new Element('span', { html: name });
+            panelSpan.store('itemIdentifier', element);
+            panelSpan.addEvent('click', panelSpanClickFunction);			
+            panelLi.appendChild(panelSpan);
+			if(parts.length == 2){ //2nd level
+			    var ul = panelId.getElement('.sublist.'+parts[0]);
+			    if(!ul){
+			        ul = new Element('ul', {
+			            class: 'sublist '+parts[0]
+			        });
+			        panelId.appendChild(ul);
+			    }
+			    ul.appendChild(panelLi);
+			}else{ //top level
+			    panelId.appendChild(panelLi);
+			}
 		}.bind(this));
 	};
 }
 
 document.addEvent('domready', function() { 
-    var tabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     new panelData();
 });

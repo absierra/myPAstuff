@@ -39,7 +39,7 @@
         $department = $values['department'];
         $results = $dependencyTree;
         //handle category selection
-        if( ($category && $category != '*') ){
+        /*if( ($category && $category != '*') ){ deprecated
             $data['categories'] = array();
             foreach ($unique['categories'] as $name){
                 if(startsWith($name, $category)){
@@ -59,7 +59,7 @@
                 }
             }
             $data['departments'] = array_values($data['departments']);
-        }
+        }*/
         
         //handle fund selection
         if( ($fund && $fund != '*') ){
@@ -83,6 +83,14 @@
             }
             $data['departments'] = array_values($data['departments']);
         }
+        // handle fund parents
+        foreach ($data['funds'] as $fund){
+            foreach ($unique['funds'] as $name){
+                if(startsWith($fund, $name) && !in_array($name, $data['funds'])){ // is parent?
+                    $data['funds'][] = $name;
+                }
+            }
+        }
         
         //handle department selection
         if( ($department && $department != '*') ){
@@ -105,6 +113,16 @@
                 }
             }
             $data['funds'] = array_values($data['funds']);
+            //print_r($unique['departments']);
+            //echo($department); exit();
+        }
+        // handle departmental parents
+        foreach ($data['departments'] as $department){
+            foreach ($unique['departments'] as $name){
+                if(startsWith($department, $name) && !in_array($name, $data['departments'])){ // is parent?
+                    $data['departments'][] = $name;
+                }
+            }
         }
         return $data;
     }

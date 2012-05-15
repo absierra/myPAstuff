@@ -30,8 +30,6 @@
     $results = Data::search('BudgetData', $type.'=\''.$name.'\'');
     $data = array();
     foreach($results as $item){
-        //print_r($dependencies);
-        //print_r($item); exit();
         if(
             in_array($item->get('superfund_fund'), $dependencies['funds']) ||
             in_array($item->get('department_division'), $dependencies['departments']) ||
