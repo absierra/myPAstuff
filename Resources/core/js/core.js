@@ -89,7 +89,7 @@ function panelData(){
 		});
 	}
 	
-	var selectGraph = function(type, colors, legals){
+	var selectGraph = function(type, hexColors, legals){
 	    if(legals){
 	        //todo: enable/disable graphs
 	    }
