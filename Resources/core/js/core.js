@@ -1,4 +1,61 @@
 //global js here
+
+var PseudoDOM = {};
+PseudoDOM.pseudo = function(element, properties, pseudo){
+    var id = element.getAttribute('id');
+    if(!id){
+        id = 'pseudo-chop-'+Math.floor(Math.random()*6000);
+        element.setAttribute('id', id);
+    }
+    var style = document.getElementById(id+'-rule');
+    if(!style){
+        style = new Element('style', {
+            id : id+'-rule',
+            class : 'pseudo-chop'
+        });
+    }
+    var css = '#'+id+'::'+pseudo+'{\n';
+    Object.each(properties, function(value, key){
+        css += key+' : '+value+';\n';
+    });
+    css += '}';
+    style.innerHTML = css;
+    style.inject(document.head);
+};
+PseudoDOM.before = function(element, properties){
+    return PseudoDOM.pseudo(element, properties, 'before');
+};
+PseudoDOM.after = function(element, properties){
+    return PseudoDOM.pseudo(element, properties, 'after');
+};
+PseudoDOM.clear = function(element, properties){
+    document.getElements('.pseudo-chop').destroy();
+};
+
+function hueShiftedColorSet(){
+    var args = {};
+    var arg;
+    for(var lcv=0; lcv < arguments.length; lcv++){
+        arg = arguments[lcv];
+        if(typeOf(arg) == 'number') args.num = arg;
+        else if(
+            typeOf(arg) == 'array' ||
+            (typeOf(arg) == 'string' && arg.match(/#?[0-9A-F]{6}/))
+        ) args.color = arg;
+        else if(typeOf(arg) == 'string') args.result = arg;
+    };
+    if(!args.num) args.num = 5;
+    if(!args.color) args.color = '#FF0000';
+    var result = [];
+    for(var lcv=0;lcv<args.num;lcv++){
+        var newColor = new Color(args.color);
+        var newColor = (newColor).setHue((newColor.hsb[0]+(359/args.num)*lcv)%359);
+        if(args.result)result.push(newColor[args.result]);
+        else result.push(newColor);
+    }
+    return result;
+}
+
 function panelData(){
 	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
         this.dataRequest = data.data;
@@ -32,13 +89,11 @@ function panelData(){
 		});
 	}
 	
-	var selectGraph = function(type, number, legals){
+	var selectGraph = function(type, colors, legals){
 	    if(legals){
 	        //todo: enable/disable graphs
 	    }
-        var hexColors = colors(number,('hex'));
-        console.log(['colors', hexColors, 'numbers', number]);
-        return;
+        //return;
 	    switch(type){
 	        case 'fund':
                 window.graphs.fund.setColors(hexColors);
@@ -74,18 +129,24 @@ function panelData(){
         if(column){
             var columnNotDisabled = column.getElements('ul li span:not(.disabled)');
             columnNotDisabled.addClass('colorkey');
-            columnNotDisabled.setStyle('background','red');
-            window.totalLabels = columnNotDisabled.length;
-            console.log(window.graphColors);
+            //columnNotDisabled.setStyle('background','red');
+            //window.totalLabels = columnNotDisabled.length;
+            //console.log(window.graphColors);
         }
+        var hexColors = hueShiftedColorSet(columnNotDisabled.length, 'hex');
+        columnNotDisabled.each(function(item, lcv){
+            PseudoDOM.before(item, {
+                'background-color' : hexColors[lcv]
+            })
+        });
         switch(window.lastSelectedColumn){
             case 'fund':
                 
-                selectGraph('fund', columnNotDisabled.length);
+                selectGraph('fund', hexColors);
                 break;
             case 'department':
                 
-                selectGraph('department', columnNotDisabled.length);
+                selectGraph('department', hexColors);
                 break;
         }
 
@@ -114,6 +175,7 @@ function panelData(){
                     if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
 			};
             var name = (parts.length == 1)?parts[0]:parts[1];
+            //notice there are the same lines in both these branches: fix me
             if (parts.length == 1) { //top level
        			var panelLi = new Element('li', { class: parts[0].replace(/ /g, '') });
                 var panelSpan = new Element('span', { html: name });
@@ -158,30 +220,6 @@ function panelData(){
 			}*/
 		}.bind(this));
 	};
-}
-
-function colors(){
-    var args = {};
-    var arg;
-    for(var lcv=0; lcv < arguments.length; lcv++){
-        arg = arguments[lcv];
-        if(typeOf(arg) == 'number') args.num = arg;
-        else if(
-            typeOf(arg) == 'array' ||
-            (typeOf(arg) == 'string' && arg.match(/#?[0-9A-F]{6}/))
-        ) args.color = arg;
-        else if(typeOf(arg) == 'string') args.result = arg;
-    };
-    if(!args.num) args.num = 5;
-    if(!args.color) args.color = '#FF0000';
-    var result = [];
-    for(var lcv=0;lcv<args.num;lcv++){
-        var newColor = new Color(args.color);
-        var newColor = (newColor).setHue((newColor.hsb[0]+(359/args.num)*lcv)%359);
-        if(args.result)result.push(newColor[args.result]);
-        else result.push(newColor);
-    }
-    return result;
 }
 
 document.addEvent('domready', function() { 

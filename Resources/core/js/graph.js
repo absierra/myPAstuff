@@ -51,7 +51,8 @@ var BudgetGraph = new Class({
             shade: true,
             nostroke: false,
             axis: "0 0 1 1",
-            colors:this.options.colors
+            colors:this.options.colors,
+            stacked:true
         });
     }
 })
