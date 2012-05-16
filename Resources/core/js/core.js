@@ -1,6 +1,5 @@
 //global js here
 function panelData(){
-
 	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
         this.dataRequest = data.data;
 	    this.populatePanel('funds');
@@ -8,7 +7,7 @@ function panelData(){
 		var target = document.getElement('.DebtServiceFunds span');
         if(target) target.fireEvent.delay(200, target, ['click']);
 	}.bind(this)}).get();
-	
+    	
 	var keys = new Keyboard({
 	    defaultEventType: 'keyup',
 	    events: {
@@ -33,15 +32,22 @@ function panelData(){
 		});
 	}
 	
-	var selectGraph = function(type, legals){
+	var selectGraph = function(type, number, legals){
 	    if(legals){
 	        //todo: enable/disable graphs
 	    }
+        var hexColors = colors(number,('hex'));
+        console.log(['colors', hexColors, 'numbers', number]);
+        return;
 	    switch(type){
 	        case 'fund':
+                window.graphs.fund.setColors(hexColors);
+                window.graphs.fund.display();
 	            window.graphTabs.showSlide(0);
 	            break;
 	        case 'department':
+                window.graphs.department.setColors(hexColors);
+                window.graphs.department.display();
 	            window.graphTabs.showSlide(1);
 	            break;
 	        case 'expenditure':
@@ -58,27 +64,35 @@ function panelData(){
 	            break;
 	    }
 	}
-
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
-        switch(window.lastSelectedColumn){
-            case 'fund':
-                
-                selectGraph('fund');
-                break;
-            case 'department':
-                
-                selectGraph('department');
-                break;
-        }
-        panelFilter(payload.data);
+
+               panelFilter(payload.data);
+        //window.totalLabels = payload.data[window.lastSelectedPanel].length;
+        // console.log(window.totalLabels);
+       
         // remove color key from all items
         document.getElements('span.colorkey').removeClass('colorkey');
         // add color key to all active items in the selected column
         var column = document.id(window.lastSelectedColumn);
         if(column){
-            column.getElements('ul li span:not(.disabled)').addClass('colorkey');
+            var columnNotDisabled = column.getElements('ul li span:not(.disabled)');
+            columnNotDisabled.addClass('colorkey');
+            columnNotDisabled.setStyle('background','red');
+            window.totalLabels = columnNotDisabled.length;
+            console.log(window.graphColors);
         }
+        switch(window.lastSelectedColumn){
+            case 'fund':
+                
+                selectGraph('fund', columnNotDisabled.length);
+                break;
+            case 'department':
+                
+                selectGraph('department', columnNotDisabled.length);
+                break;
+        }
+
 	}.bind(this)});
 	
     window.selected = {};
@@ -87,19 +101,19 @@ function panelData(){
             var parts = element.split(":");
             var index;
 			switch (panel){
-				case 'funds' : index = 'fund'; break;
-				case 'departments' : index = 'department'; break;
+				case 'funds' : index = 'fund', selectedPanel = 'funds'; break;
+				case 'departments' : index = 'department', selectedPanel = 'funds'; break;
 			}
 			var panelId = document.id(index);
 			var panelSpanClickFunction = function(event) {
                     if (panelId.hasClass('panelSelected')) window.selected = {};
                     window.selected[index] = panelSpan.retrieve('itemIdentifier');
+                    window.lastSelectedPanel = selectedPanel;
                     window.lastSelectedColumn = index;
                     window.lastSelectedItem = element;
                     panelId.getElements('.selected').removeClass('selected');
                     document.getElements('.colorkey').removeClass('colorkey');
                     this.addClass('colorkey selected');
-
                     selectionRequest.get(window.selected);
                     if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
 			};
@@ -152,14 +166,12 @@ function colors(){
 document.addEvent('domready', function() { 
     window.graphs = {};
     window.graphs.fund = new BudgetGraph('fund_graph', {
-        type : 'fund',
-        colors : colors(4,'hex')
+        type : 'fund'
     });
     window.graphs.department = new BudgetGraph('department_graph', {
-        type : 'department',
-        colors : colors(4,'hex')
+        type : 'department'
     });
-    window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     new panelData();
+    window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
 });
 
