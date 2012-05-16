@@ -299,9 +299,6 @@ header span.logo-text {
 .navigation > ul ul ul {
   overflow: hidden;
 }
-.navigation > ul ul ul .collapse {
-  height: 0px;
-}
 .navigation > ul ul ul li {
   border: 0;
   overflow-x: hidden;

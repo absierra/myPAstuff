@@ -28,6 +28,9 @@ var BudgetGraph = new Class({
         requestData.type = this.options.type;
         this.options.requestor.get(requestData);
     },
+    setColors : function(colors) {
+        this.options.colors = colors;
+    },
     display : function(metric){
         if(this.lines) this.lines.remove();
         if(!metric) metric = 'revenue';
