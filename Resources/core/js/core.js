@@ -66,11 +66,7 @@ function panelData(){
 	}
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
-
-               panelFilter(payload.data);
-        //window.totalLabels = payload.data[window.lastSelectedPanel].length;
-        // console.log(window.totalLabels);
-       
+        panelFilter(payload.data);
         // remove color key from all items
         document.getElements('span.colorkey').removeClass('colorkey');
         // add color key to all active items in the selected column
@@ -117,7 +113,32 @@ function panelData(){
                     selectionRequest.get(window.selected);
                     if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
 			};
-			var name = (parts.length == 1)?parts[0]:parts[1];
+            var name = (parts.length == 1)?parts[0]:parts[1];
+            if (parts.length == 1) { //top level
+       			var panelLi = new Element('li', { class: parts[0].replace(/ /g, '') });
+                var panelSpan = new Element('span', { html: name });
+                panelSpan.store('itemIdentifier', element);
+                panelSpan.addEvent('click', panelSpanClickFunction);			
+                panelLi.appendChild(panelSpan);
+                panelId.appendChild(panelLi);
+            } else { // 2nd level
+                var panelSet = panelId.getElement('li.'+parts[0].replace(/ /g, ''));
+                var panelUl = panelId.getElement('li.'+parts[0].replace(/ /g, '')+' ul');
+                var panelLi = new Element('li', { class: parts[1].replace(/ /g, '') });
+                var panelSpan = new Element('span', { html: name });
+                panelSpan.store('itemIdentifier', element);
+                panelSpan.addEvent('click', panelSpanClickFunction);		
+                 if(!panelUl){
+			        panelUl = new Element('ul', {
+			            class: 'sublist'
+			        });
+			        panelSet.appendChild(panelUl);
+			    }
+                panelLi.appendChild(panelSpan);
+                panelUl.appendChild(panelLi);
+                panelSet.appendChild(panelUl);
+            }
+            /*var name = (parts.length == 1)?parts[0]:parts[1];
 			var panelLi = new Element('li', { class: ''+name.replace(/ /g, '')+'' });
             var panelSpan = new Element('span', { html: name });
             panelSpan.store('itemIdentifier', element);
@@ -134,7 +155,7 @@ function panelData(){
 			    ul.appendChild(panelLi);
 			}else{ //top level
 			    panelId.appendChild(panelLi);
-			}
+			}*/
 		}.bind(this));
 	};
 }
