@@ -25,6 +25,7 @@
 @primaryFont: "ProximaNova";
 @primaryFontBold: "ProximaNova-Bold";
 @barHeight: 55px;
+@subBarHeight: 45px;
 
 
 html{
@@ -140,7 +141,7 @@ header{
         margin-left: 3px;
         font-size: 1.4em;
         vertical-align: middle;
-        color: #f9fbfb;
+        color: #989A9C;
         font-family: @primaryFont;
     }
 }
@@ -149,6 +150,22 @@ header{
     width: 100%;
     min-width: @navigationMinWidth;
     clear: both;
+        ul h3{
+            position: absolute;
+            top: 0;
+			width: 100%;
+	        height: @subBarHeight;
+	        color: #585859;
+            font-family: @primaryFontBold;
+            .titleGradient(); 
+            text-align: center;
+            font-size: 1.5em;
+            line-height: @subBarHeight;
+            vertical-align: center;
+	        border: 1px solid #aeaeb0;
+	        border-right: 0px;
+	        border-left: 0px;
+        }
         > ul{
         	position: absolute;
         	top: @barHeight;
@@ -160,7 +177,7 @@ header{
             > ul {
             	overflow: auto;
             	position: absolute;
-        		top: @barHeight + 2;
+        		top: @subBarHeight + 2;
         		bottom: 0;
 	            vertical-align: text-top;
 	            border: 1px solid lightgrey;
@@ -319,23 +336,6 @@ header{
         > ul.four_col_3 ul{
 	        width: 249px;
 	    }
-        
-        ul h3{
-            position: absolute;
-            top: 0;
-			width: 100%;
-	        height: @barHeight;
-	        color: #585859;
-            font-family: @primaryFontBold;
-            .titleGradient(); 
-            text-align: center;
-            font-size: 1.5em;
-            line-height: 55px;
-            vertical-align: center;
-	        border: 1px solid #aeaeb0;
-	        border-right: 0px;
-	        border-left: 0px;
-        }
     &::before{
 
     }
