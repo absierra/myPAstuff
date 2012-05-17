@@ -81,7 +81,15 @@ body{
 	background-image: -ms-linear-gradient(@origin, @start, @stop);
 	background-image: linear-gradient(@origin, @start, @stop);
 }
-.titleGradient (@origin: top, @start: #CCCDCF, @stop: #A6A9AC) {
+.lightGrayGradient (@origin: top, @start: #CCCDCF, @stop: #A6A9AC) {
+    background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+.darkGrayGradient (@origin: top, @start: #58585A, @stop: #7D7E81) {
     background-color: @start;
 	background-image: -webkit-linear-gradient(@origin, @start, @stop);
 	background-image: -moz-linear-gradient(@origin, @start, @stop);
@@ -104,7 +112,7 @@ body{
     margin: 10px auto 0;
     border: 1px solid #ccc;
     border-width: 1px 0 0 1px;
-    .shadowed(3px, 0.8);
+    .shadowed(3px, 0.5);
     .rounded(10px);
     .graph{
         height:450px;
@@ -157,7 +165,7 @@ header{
 	        height: @subBarHeight;
 	        color: #585859;
             font-family: @primaryFontBold;
-            .titleGradient(); 
+            .lightGrayGradient(); 
             text-align: center;
             font-size: 1.5em;
             line-height: @subBarHeight;
@@ -311,18 +319,36 @@ header{
 	           	margin: 20px auto;
 	           	width: 600px;
 	           	text-align:center;
-	           	height: 30px;
-	           	line-height:30px;
+	           	height: 40px;
+	           	line-height:40px;
+                color: #373739;
 	           	li {
 	           		float:left;
-                    padding: 0 18px;
-	           		border: 1px solid #000;
+                    .lightGrayGradient(); 
+                    padding: 0 13px;
+	           		border-top: 1px solid #dcddde;
+                    border-bottom: 1px solid #838689;
+                    border-right: 1px solid #8d9093;
 	           		border-left-width: 0;
+                    font-size: 14px;
+                    cursor:pointer;
 	           		&:first-of-type{
 	           			border-left-width: 1px;
+                        .roundedUpperLeftCorner(10px);
+                        .roundedLowerLeftCorner(10px);
+	           		}
+                    &:last-of-type{
+                        .roundedUpperRightCorner(10px);
+                        .roundedLowerRightCorner(10px);
 	           		}
                     &.active {
-                        text-decoration: underline;
+                        color: #fff;
+                        .darkGrayGradient(); 
+                        border-top: 1px solid #373739;
+                        border-bottom: 1px solid #696A6C;
+                        border-right: 1px solid #636567;
+                        border-left: 1px solid #636567;
+                        font-family: @primaryFontBold;
                     }
 	           	}
 	        }

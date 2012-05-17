@@ -51,7 +51,7 @@ function hueShiftedColorSet(){
         else if(typeOf(arg) == 'string') args.result = arg;
     };
     if(!args.num) args.num = 5;
-    if(!args.color) args.color = '#00AEFF';
+    if(!args.color) args.color = '#336699';
     var result = [];
     for(var lcv=0;lcv<args.num;lcv++){
         var newColor = new Color(args.color);
