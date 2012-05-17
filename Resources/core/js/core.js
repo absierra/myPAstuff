@@ -68,7 +68,7 @@ function panelData(){
 	    this.populatePanel('funds');
 		this.populatePanel('departments');
 		var target = document.getElement('.EnterpriseFunds span');
-        if(target) target.fireEvent.delay(200, target, ['click']);
+        if(target) target.fireEvent.delay(50, target, ['click']);
 	}.bind(this)}).get();
     	
 	var keys = new Keyboard({
@@ -118,13 +118,13 @@ function panelData(){
         //return;
 	    switch(type){
 	        case 'fund':
-                window.graphs.fund.setColors(hexColors);
-                //window.graphs.fund.display();
+                if(hexColors) window.graphs.fund.setColors(hexColors);
+                window.currentGraph = window.graphs.fund;
 	            window.graphTabs.showSlide(0);
 	            break;
 	        case 'department':
-                window.graphs.department.setColors(hexColors);
-                //window.graphs.department.display();
+                if(hexColors) window.graphs.department.setColors(hexColors);
+                window.currentGraph = window.graphs.department;
 	            window.graphTabs.showSlide(1);
 	            break;
 	        case 'expenditure':
@@ -140,6 +140,11 @@ function panelData(){
 	            window.graphTabs.showSlide(5);
 	            break;
 	    }
+	    (function(){
+	    Object.each(window.graphs, function(graph, graphType){
+	        if(graph != graphType) graph.fetch(window.selected, window.lastSelectedColumn);
+	    });
+	    }).delay(200);
 	}
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
@@ -273,5 +278,32 @@ document.addEvent('domready', function() {
     });
     new panelData();
     window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    document.id('standard_graph').addEvent('click', function(){
+        window.currentGraph.setOptions({
+            stacked: false,
+            percent: false
+        });
+        window.currentGraph.display();
+    });
+    document.id('stacked_graph').addEvent('click', function(){
+        window.currentGraph.setOptions({
+            stacked: true,
+            percent: false
+        });
+        window.currentGraph.display();
+    });
+    document.id('percentage_graph').addEvent('click', function(){
+        window.currentGraph.setOptions({
+            stacked: true,
+            percent: true
+        });
+        window.currentGraph.display();
+    });
+    /*document.id('bar_graph').addEvent('click', function(){
+        window.currentGraph.setOptions({
+            bar: true
+        });
+        window.currentGraph.display();
+    });*/
 });
 

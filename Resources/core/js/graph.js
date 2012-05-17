@@ -7,7 +7,10 @@ var BudgetGraph = new Class({
             height: 100
         },
         type : 'fund',
-        name : 'Debt Service Funds'
+        name : 'Debt Service Funds',
+        stacked : true,
+        percent : false,
+        bar : false
     },
     initialize : function(element, options){
         this.element = element;
@@ -47,13 +50,23 @@ var BudgetGraph = new Class({
             ySet.push(ys);
         });
         //console.log(['diz', xSet, ySet]);
-        this.lines = this.raphael.linechart(70, 10, 570, 400, xSet, ySet, {
-            shade: true,
-            nostroke: false,
-            axis: "0 0 1 1",
-            colors:this.options.colors,
-            stacked:true
-            //percent:true
-        });
+        if(this.options.bar){
+            this.lines = this.raphael.barchart(25, 10, 570, 400, xSet, ySet, {
+                shade: true,
+                nostroke: false,
+                axis: "0 0 1 1",
+                colors:this.options.colors
+            });
+        }else{
+            this.lines = this.raphael.linechart(25, 10, 570, 400, xSet, ySet, {
+                shade: true,
+                nostroke: false,
+                axis: "0 0 1 1",
+                axisxstep : 4,
+                colors:this.options.colors,
+                stacked:this.options.stacked,
+                percent:this.options.percent
+            });
+        }
     }
 })
