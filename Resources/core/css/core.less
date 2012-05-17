@@ -80,8 +80,14 @@ body{
 	background-image: -ms-linear-gradient(@origin, @start, @stop);
 	background-image: linear-gradient(@origin, @start, @stop);
 }
-
-
+.titleGradient (@origin: top, @start: #CCCDCF, @stop: #A6A9AC) {
+    background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
 @graphicons : '/Resources/core/img/graph-icons.png';
 
 #saved-metrics{
@@ -91,10 +97,14 @@ body{
 }
 
 #graph_types{
-    height:450px;
+    height:430px;
     width: 600px; 
-    background-color: transparent;
+    background-color: #fff;
     margin: 10px auto 0;
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 1px;
+    .shadowed(3px, 0.8);
+    .rounded(10px);
     .graph{
         height:450px;
         width: 600px;
@@ -116,6 +126,8 @@ header{
     background-color: #1b1b1b;
     height: @barHeight;
     min-width: @headerMinWidth;
+    .shadowed(3px, 0.3);
+    z-index: 100;
     .darkGradient();
     img{
         margin-top: 17px;
@@ -276,18 +288,17 @@ header{
         	left: 500px; // 750px
         	right: 0;
             border-width: 0px 0px 1px 0px;
-            background-image: none;
             padding: 20px;
             overflow: auto;
             ol{
-	           	margin: 10px auto;
+	           	margin: 20px auto;
 	           	width: 600px;
 	           	text-align:center;
 	           	height: 30px;
 	           	line-height:30px;
 	           	li {
 	           		float:left;
-                    padding: 0 15px;
+                    padding: 0 18px;
 	           		border: 1px solid #000;
 	           		border-left-width: 0;
 	           		&:first-of-type{
@@ -314,23 +325,16 @@ header{
             top: 0;
 			width: 100%;
 	        height: @barHeight;
-	        color: #333335;
-            font-family: @primaryFontBold; 
+	        color: #585859;
+            font-family: @primaryFontBold;
+            .titleGradient(); 
             text-align: center;
             font-size: 1.5em;
             line-height: 55px;
             vertical-align: center;
-	        background-color: #bec0c2;
 	        border: 1px solid #aeaeb0;
 	        border-right: 0px;
 	        border-left: 0px;
-	        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(190, 192, 194)), to(rgb(167, 170, 172)));
-	        background-image: -webkit-linear-gradient(top, rgb(190, 192, 194), rgb(167, 170, 172));
-	        background-image: -moz-linear-gradient(top, rgb(190, 192, 194), rgb(167, 170, 172));
-	        background-image: -o-linear-gradient(top, rgb(190, 192, 194), rgb(167, 170, 172));
-	        background-image: -ms-linear-gradient(top, rgb(190, 192, 194), rgb(167, 170, 172));
-	        background-image: linear-gradient(top, rgb(190, 192, 194), rgb(167, 170, 172));
-	        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bec0c2', EndColorStr='#a7aaac');
         }
     &::before{
 
