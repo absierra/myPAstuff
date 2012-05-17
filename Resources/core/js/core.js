@@ -1,5 +1,11 @@
 //global js here
-
+Array.implement({
+  shuffle: function() {
+    //destination array
+    for(var j, x, i = this.length; i; j = parseInt(Math.random() * i), x = this[--i], this[i] = this[j], this[j] = x);
+    return this;
+  }
+});
 var PseudoDOM = {};
 PseudoDOM.pseudo = function(element, properties, pseudo){
     var id = element.getAttribute('id');
@@ -45,7 +51,7 @@ function hueShiftedColorSet(){
         else if(typeOf(arg) == 'string') args.result = arg;
     };
     if(!args.num) args.num = 5;
-    if(!args.color) args.color = '#FF0000';
+    if(!args.color) args.color = '#00AEFF';
     var result = [];
     for(var lcv=0;lcv<args.num;lcv++){
         var newColor = new Color(args.color);
@@ -61,18 +67,27 @@ function panelData(){
         this.dataRequest = data.data;
 	    this.populatePanel('funds');
 		this.populatePanel('departments');
-		var target = document.getElement('.DebtServiceFunds span');
+		var target = document.getElement('.EnterpriseFunds span');
         if(target) target.fireEvent.delay(200, target, ['click']);
 	}.bind(this)}).get();
     	
 	var keys = new Keyboard({
 	    defaultEventType: 'keyup',
 	    events: {
-	        'esc': function(){
-				document.id('fund').removeClass('selected');
-				document.getElements('#fund li span').each(function(item){
-					item.removeClass('colorkey').removeClass('selected').removeClass('highlight').removeClass('disabled');
-				});
+	        'esc': function(){    
+                window.selected = {};            
+                document.getElements('.selected').removeClass('selected');
+                document.getElements('.colorkey').removeClass('colorkey');
+                document.getElements('.disabled').removeClass('disabled');
+                document.getElements('.expanded').removeClass('expanded');
+                var sublist = document.getElements('li ul.sublist');
+                if ((sublist) && (sublist.hasClass('expanded'))) {
+                    sublist.set('morph', { unit:'px' });
+                    sublist.morph({height:0});
+                    sublist.removeClass('expanded');
+                }
+                var target = document.getElement('.EnterpriseFunds span');
+                if(target) target.fireEvent.delay(200, target, ['click']);
 	        }
 	     }
 	});
@@ -97,12 +112,12 @@ function panelData(){
 	    switch(type){
 	        case 'fund':
                 window.graphs.fund.setColors(hexColors);
-                window.graphs.fund.display();
+                //window.graphs.fund.display();
 	            window.graphTabs.showSlide(0);
 	            break;
 	        case 'department':
                 window.graphs.department.setColors(hexColors);
-                window.graphs.department.display();
+                //window.graphs.department.display();
 	            window.graphTabs.showSlide(1);
 	            break;
 	        case 'expenditure':
@@ -129,11 +144,8 @@ function panelData(){
         if(column){
             var columnNotDisabled = column.getElements('ul li span:not(.disabled)');
             columnNotDisabled.addClass('colorkey');
-            //columnNotDisabled.setStyle('background','red');
-            //window.totalLabels = columnNotDisabled.length;
-            //console.log(window.graphColors);
         }
-        var hexColors = hueShiftedColorSet(columnNotDisabled.length, 'hex');
+        var hexColors = hueShiftedColorSet(columnNotDisabled.length, 'hex').shuffle();
         columnNotDisabled.each(function(item, lcv){
             PseudoDOM.before(item, {
                 'background-color' : hexColors[lcv]
@@ -162,25 +174,47 @@ function panelData(){
 				case 'departments' : index = 'department', selectedPanel = 'funds'; break;
 			}
 			var panelId = document.id(index);
+            
 			var panelSpanClickFunction = function(event) {
-                    if (panelId.hasClass('panelSelected')) window.selected = {};
-                    window.selected[index] = panelSpan.retrieve('itemIdentifier');
-                    window.lastSelectedPanel = selectedPanel;
-                    window.lastSelectedColumn = index;
-                    window.lastSelectedItem = element;
-                    panelId.getElements('.selected').removeClass('selected');
-                    document.getElements('.colorkey').removeClass('colorkey');
-                    this.addClass('colorkey selected');
-                    selectionRequest.get(window.selected);
-                    if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
+                if (panelId.hasClass('panelSelected')) window.selected = {};
+                window.selected[index] = panelSpan.retrieve('itemIdentifier');
+                window.lastSelectedPanel = selectedPanel;
+                window.lastSelectedColumn = index;
+                window.lastSelectedItem = element;
+                panelId.getElements('.selected').removeClass('selected');
+                document.getElements('.colorkey').removeClass('colorkey');
+                this.addClass('selected');
+                this.getElements('a').addClass('expanded');
+                sublist = this.getParent('li ul.sublist');
+                sublistHeight = sublist.getScrollSize();
+                sublist.morph({height:sublistHeight.y});
+                selectionRequest.get(window.selected);
+                if(window.graphs[index]) window.graphs[index].fetch(window.selected, index);
 			};
+            var panelArrowClickFunction = function(event) {
+                var expanded = this.getParent('li span a')
+                var sublist = this.getParent('li ul.sublist');
+                    if (!expanded.hasClass('expanded')) { // expand item
+                        sublistHeight = sublist.getScrollSize();
+                        sublist.morph({height:sublistHeight.y});
+                        expanded.addClass('expanded');
+                    } else { // collapse item
+                        sublist.morph({height:0});
+                        expanded.removeClass('expanded');
+                    }
+                event.stopPropagation();
+            };
+
             var name = (parts.length == 1)?parts[0]:parts[1];
             //notice there are the same lines in both these branches: fix me
             if (parts.length == 1) { //top level
        			var panelLi = new Element('li', { class: parts[0].replace(/ /g, '') });
                 var panelSpan = new Element('span', { html: name });
+                var panelArrow = new Element('a');
                 panelSpan.store('itemIdentifier', element);
-                panelSpan.addEvent('click', panelSpanClickFunction);			
+                panelSpan.addEvent('click', panelSpanClickFunction);
+                panelArrow.addEvent('click', panelArrowClickFunction);
+                panelSpan.appendChild(panelArrow);
                 panelLi.appendChild(panelSpan);
                 panelId.appendChild(panelLi);
             } else { // 2nd level
