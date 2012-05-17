@@ -86,7 +86,7 @@ function panelData(){
                     sublist.morph({height:0});
                     sublist.removeClass('expanded');
                 }
-                var target = document.getElement('.EnterPriseFunds span');
+                var target = document.getElement('.EnterpriseFunds span');
                 if(target) target.fireEvent.delay(200, target, ['click']);
 	        }
 	     }
