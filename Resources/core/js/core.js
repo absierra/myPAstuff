@@ -75,7 +75,8 @@ function panelData(){
 	    defaultEventType: 'keyup',
 	    events: {
 	        'esc': function(){    
-                window.selected = {};            
+                window.selected = {};
+                window.graphs = {};          
                 document.getElements('.selected').removeClass('selected');
                 document.getElements('.colorkey').removeClass('colorkey');
                 document.getElements('.disabled').removeClass('disabled');
@@ -86,6 +87,14 @@ function panelData(){
                     sublist.morph({height:0});
                     sublist.removeClass('expanded');
                 }
+                document.getElements('.graph svg').destroy();
+
+                window.graphs.fund = new BudgetGraph('fund_graph', {
+                    type : 'fund'
+                });
+                window.graphs.department = new BudgetGraph('department_graph', {
+                    type : 'department'
+                });
 	        }
 	     }
 	});
