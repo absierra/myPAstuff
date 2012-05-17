@@ -52,7 +52,8 @@ var BudgetGraph = new Class({
             nostroke: false,
             axis: "0 0 1 1",
             colors:this.options.colors,
-            stacked:true
+            stacked:true,
+            percent:true
         });
     }
 })

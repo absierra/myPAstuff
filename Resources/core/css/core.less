@@ -163,28 +163,56 @@ header{
                 span{
                 	padding-left: 15px;
                 	color: #333;
-                	font-family: @primaryFontBold; 
+                	font-family: @primaryFontBold;
                 	&.disabled{
-    	               color: #b8b8b8;
+    	                color: #b8b8b8;
+                        &:hover{
+                            color: #333;
+                            background-color: #E7E8E9;
+                        }
+                        a:after {
+                            content: '\25B6';
+                            font-size: 11px;
+                        }
+                        a.expanded:after {
+        	                content: '\25BC';
+                            font-size: 14px;
+                        }
     	            }
     	            &.selected{
-    	               color: #fff;
-    	               background-color: #00a1e4;
+                        color: #fff;
+    	                background-color: #00a1e4;
+                        height: 30px;
+                        &.sublist{
+                            height: 0;    
+                        }
+                        a:after {
+        	                content: '\25B6';
+                            font-size: 11px;
+                        }
+                        a.expanded:after {
+        	               content: '\25BC';
+                           font-size: 14px
+                        }
     	            }
-                	&:after{ 
-						position: absolute;
-						right: 15px;
-						content: '\25BC';
-						height:30px;
-						width: 5px;
-						color: #333;
-					}
+                    a:after{ 
+    					position: absolute;
+                        content: '\25B6';
+    					right: 0;
+                        font-size: 11px;
+                        padding: 0 15px;
+    				}
+                    a.expanded:after {
+        	               content: '\25BC';
+                           font-size: 14px
+                    }
                 }
             }
+
             ul ul{
                 overflow:hidden;
                 &.sublist{
-                    //height: 0;
+                    height: 0;
                 }
             }
             ul ul li{

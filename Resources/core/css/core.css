@@ -284,20 +284,50 @@ header span.logo-text {
 .navigation > ul ul li span.disabled {
   color: #b8b8b8;
 }
+.navigation > ul ul li span.disabled:hover {
+  color: #333;
+  background-color: #E7E8E9;
+}
+.navigation > ul ul li span.disabled a:after {
+  content: '\25B6';
+  font-size: 11px;
+}
+.navigation > ul ul li span.disabled a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
+}
 .navigation > ul ul li span.selected {
   color: #fff;
   background-color: #00a1e4;
-}
-.navigation > ul ul li span:after {
-  position: absolute;
-  right: 15px;
-  content: '\25BC';
   height: 30px;
-  width: 5px;
-  color: #333;
+}
+.navigation > ul ul li span.selected.sublist {
+  height: 0;
+}
+.navigation > ul ul li span.selected a:after {
+  content: '\25B6';
+  font-size: 11px;
+}
+.navigation > ul ul li span.selected a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
+}
+.navigation > ul ul li span a:after {
+  position: absolute;
+  content: '\25B6';
+  right: 0;
+  font-size: 11px;
+  padding: 0 15px;
+}
+.navigation > ul ul li span a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
 }
 .navigation > ul ul ul {
   overflow: hidden;
+}
+.navigation > ul ul ul.sublist {
+  height: 0;
 }
 .navigation > ul ul ul li {
   border: 0;
