@@ -189,11 +189,16 @@ function panelData(){
             
 			var panelSpanClickFunction = function(event) {
                 if (panelId.hasClass('panelSelected')) window.selected = {};
+                if (this.hasClass('disabled')) { 
+                    document.getElements('.selected').removeClass('selected');
+                    window.selected={};
+                } else {
+                    panelId.getElements('.selected').removeClass('selected');
+                }
                 window.selected[index] = panelSpan.retrieve('itemIdentifier');
                 window.lastSelectedPanel = selectedPanel;
                 window.lastSelectedColumn = index;
                 window.lastSelectedItem = element;
-                panelId.getElements('.selected').removeClass('selected');
                 document.getElements('.colorkey').removeClass('colorkey');
                 this.addClass('selected');
                 this.getElements('a').addClass('expanded');
