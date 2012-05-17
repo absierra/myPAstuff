@@ -6,7 +6,7 @@ var BudgetGraph = new Class({
             width: 100,
             height: 100
         },
-        type : 'fund',
+        type : 'none',
         name : 'Debt Service Funds',
         stacked : true,
         percent : false,
@@ -51,14 +51,14 @@ var BudgetGraph = new Class({
         });
         //console.log(['diz', xSet, ySet]);
         if(this.options.bar){
-            this.lines = this.raphael.barchart(25, 10, 570, 400, xSet, ySet, {
+            this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
                 colors:this.options.colors
             });
         }else{
-            this.lines = this.raphael.linechart(25, 10, 570, 400, xSet, ySet, {
+            this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",

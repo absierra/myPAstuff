@@ -278,32 +278,33 @@ document.addEvent('domready', function() {
     });
     new panelData();
     window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
-    document.id('standard_graph').addEvent('click', function(){
+    document.id('standard_graph').addEvent('click', function(event){
+        //console.log(event);
+        this.getSiblings().removeClass('active');
+        this.addClass('active');
         window.currentGraph.setOptions({
             stacked: false,
             percent: false
         });
         window.currentGraph.display();
     });
-    document.id('stacked_graph').addEvent('click', function(){
+    document.id('stacked_graph').addEvent('click', function(event){
+        this.getSiblings().removeClass('active');
+        this.addClass('active');
         window.currentGraph.setOptions({
             stacked: true,
             percent: false
         });
         window.currentGraph.display();
     });
-    document.id('percentage_graph').addEvent('click', function(){
+    document.id('percentage_graph').addEvent('click', function(event){
+        this.getSiblings().removeClass('active');
+        this.addClass('active');
         window.currentGraph.setOptions({
             stacked: true,
             percent: true
         });
         window.currentGraph.display();
     });
-    /*document.id('bar_graph').addEvent('click', function(){
-        window.currentGraph.setOptions({
-            bar: true
-        });
-        window.currentGraph.display();
-    });*/
 });
 
