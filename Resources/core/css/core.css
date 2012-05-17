@@ -264,13 +264,34 @@ header span.logo-text {
   margin-left: 3px;
   font-size: 1.4em;
   vertical-align: middle;
-  color: #f9fbfb;
+  color: #989A9C;
   font-family: "ProximaNova";
 }
 .navigation {
   width: 100%;
   min-width: 730px;
   clear: both;
+}
+.navigation ul h3 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  color: #585859;
+  font-family: "ProximaNova-Bold";
+  background-color: #cccdcf;
+  background-image: -webkit-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -moz-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -o-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -ms-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: linear-gradient(top, #cccdcf, #a6a9ac);
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 45px;
+  vertical-align: center;
+  border: 1px solid #aeaeb0;
+  border-right: 0px;
+  border-left: 0px;
 }
 .navigation > ul {
   position: absolute;
@@ -284,7 +305,7 @@ header span.logo-text {
 .navigation > ul > ul {
   overflow: auto;
   position: absolute;
-  top: 57px;
+  top: 47px;
   bottom: 0;
   vertical-align: text-top;
   border: 1px solid lightgrey;
@@ -438,27 +459,6 @@ header span.logo-text {
 .navigation > ul.four_col_2 ul,
 .navigation > ul.four_col_3 ul {
   width: 249px;
-}
-.navigation ul h3 {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 55px;
-  color: #585859;
-  font-family: "ProximaNova-Bold";
-  background-color: #cccdcf;
-  background-image: -webkit-linear-gradient(top, #cccdcf, #a6a9ac);
-  background-image: -moz-linear-gradient(top, #cccdcf, #a6a9ac);
-  background-image: -o-linear-gradient(top, #cccdcf, #a6a9ac);
-  background-image: -ms-linear-gradient(top, #cccdcf, #a6a9ac);
-  background-image: linear-gradient(top, #cccdcf, #a6a9ac);
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 55px;
-  vertical-align: center;
-  border: 1px solid #aeaeb0;
-  border-right: 0px;
-  border-left: 0px;
 }
 .slider {
   background-color: #E7E7E8;
