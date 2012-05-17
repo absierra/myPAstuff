@@ -202,7 +202,7 @@ body {
 }
 #graph_types {
   height: 430px;
-  width: 600px;
+  width: 675px;
   background-color: #fff;
   margin: 10px auto 0;
   border: 1px solid #ccc;
@@ -223,7 +223,7 @@ body {
 }
 #graph_types .graph {
   height: 450px;
-  width: 600px;
+  width: 675px;
   position: absolute;
 }
 #graph_types .container {
@@ -434,7 +434,7 @@ header span.logo-text {
 }
 .navigation > ul.four_col_4 ol {
   margin: 20px auto;
-  width: 600px;
+  width: 675px;
   text-align: center;
   height: 40px;
   line-height: 40px;
@@ -448,7 +448,7 @@ header span.logo-text {
   background-image: -o-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: -ms-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: linear-gradient(top, #cccdcf, #a6a9ac);
-  padding: 0 13px;
+  padding: 0 19px;
   border-top: 1px solid #dcddde;
   border-bottom: 1px solid #838689;
   border-right: 1px solid #8d9093;
