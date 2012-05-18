@@ -337,6 +337,17 @@ document.addEvent('domready', function() {
         });
         window.currentGraph.display();
     });
-   new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});
+    new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});    
+    var descriptionTooltip = document.getElements('.descriptionTooltip');
+    descriptionTooltip.addEvents({
+        mouseover: function(){
+            this.getSiblings('.panelDescription').reveal();
+        },
+        mouseout: function(){
+            this.getSiblings('.panelDescription').dissolve();
+        }
+    });
+    new Fx.Reveal(('.panelDescription'), {duration: 500, mode: 'horizontal'});    
+
 });
 
