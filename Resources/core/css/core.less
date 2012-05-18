@@ -221,6 +221,28 @@ header{
             color: #333335;
             font-size: 0.8em;
             white-space:nowrap;
+            .panelDescription{
+                display: none;
+                position: absolute;
+                top: @subBarHeight + 2px;
+                left: 0;
+                width: 219px;
+                white-space: normal;
+                line-height: 16px;
+                padding: 10px 15px;
+                color: #333;
+                z-index: 200;
+                .lightGrayGradient(); 
+                &:before{ 
+					position: absolute;
+                    content: '\25B2';
+                    top: -11px;
+					left: 105px;
+                    font-size: 20px;
+                    padding: 0 15px;
+                    color: #CCCDCF;
+                }
+            }
             > ul {
             	overflow: auto;
             	position: absolute;

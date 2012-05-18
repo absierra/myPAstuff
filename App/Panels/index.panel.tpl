@@ -3,11 +3,13 @@
 {panel name="header"}
 <div class="navigation">
 	<ul class="four_col_1"> {* ♫ In the ghetto ♫ *}
-		<h3>Fund</h3>
+		<h3 class="descriptionTooltip">Fund</h3>
+        <div class="panelDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<ul id="fund"></ul>
     </ul>
     <ul class="four_col_2">
-    	<h3>Department</h3>
+    	<h3 class="descriptionTooltip">Department</h3>
+        <div class="panelDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
     	<ul id="department"></ul>
    	</ul>
     {*<ul class="four_col_3">
