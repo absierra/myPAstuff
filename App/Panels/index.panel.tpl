@@ -15,9 +15,9 @@
     	<ul id="category"></ul>
     </ul>*}
     <ul class="four_col_4">
-        <ol style="graphtypes">
+        <ol style="graphtypes" class="graphtabs">
         	<li id="percentage_graph">Percentage</li>
-        	<li id="stacked_graph"  class="active">Stacked</li>
+        	<li id="stacked_graph" class="active">Stacked</li>
         	<li id="standard_graph">Line</li>
         	{* <li id="bar_graph">Bar</li> *}
         </ol>
@@ -30,7 +30,8 @@
             <div id="fee_revenue_graph" class="graph"></div>
             <div id="exp_vs_fee_rev" class="graph"></div>
         </div>
-        <ol id="tabs" style="graphtabs">
+        <ol id="legend"></ol>
+        <ol id="tabs" style="graphtabs" class="graphtabs">
         	<li class="tab">Fund</li>
         	<li class="tab">Department</li>
             <li class="tab">Expenditure</li>
@@ -38,7 +39,6 @@
             <li class="tab">Fee Revenue</li>
             <li class="tab">Exp. vs. Fee Rev.</li>
         </ol>
-
     	{*<p>Notes Section:
 		<br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		<br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
