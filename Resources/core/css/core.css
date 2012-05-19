@@ -518,9 +518,12 @@ header span.logo-text {
   line-height: 40px;
   color: #373739;
 }
+.navigation > ul.four_col_4 ol.graphtabs:first-of-type li {
+  margin-left: -3px;
+}
 .navigation > ul.four_col_4 ol.graphtabs li {
   display: inline-block;
-  margin-left: -3px;
+  margin-left: 0px;
   background-color: #cccdcf;
   background-image: -webkit-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: -moz-linear-gradient(top, #cccdcf, #a6a9ac);

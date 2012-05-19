@@ -61,21 +61,13 @@ function hueShiftedColorSet(){
     }
     return result;
 }
-
 function panelData(){
-	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
-        this.dataRequest = data.data;
-	    this.populatePanel('funds');
-		this.populatePanel('departments');
-		var target = document.getElement('.EnterpriseFunds span');
-        if(target) target.fireEvent.delay(50, target, ['click']);
-	}.bind(this)}).get();
-    	
-	var keys = new Keyboard({
-	    defaultEventType: 'keyup',
-	    events: {
-	        'esc': function(){    
+    var keys = new Keyboard({
+        defaultEventType: 'keyup',
+        events: {
+            'esc': function(){    
                 window.selected = {};
+                window.panelSelection = {};
                 window.graphs = {};          
                 document.getElements('.selected').removeClass('selected');
                 document.getElements('.colorkey').removeClass('colorkey');
@@ -88,7 +80,7 @@ function panelData(){
                     sublist.removeClass('expanded');
                 }
                 document.getElements('.graph svg').destroy();
-
+    
                 window.graphs.fund = new BudgetGraph('fund_graph', {
                     type : 'fund'
                 });
@@ -96,10 +88,18 @@ function panelData(){
                     type : 'department'
                 });
                 graphLegend();
-	        }
-	     }
-	});
-	
+                graphTabsFilter();
+            }
+         }
+    });
+	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
+        this.dataRequest = data.data;
+	    this.populatePanel('funds');
+		this.populatePanel('departments');
+		var target = document.getElement('.EnterpriseFunds span');
+        if(target) target.fireEvent.delay(50, target, ['click']);
+	}.bind(this)}).get();
+    	
 	var panelFilter = function(data) {
         
         document.getElements('#fund li span').each(function(listItem){
@@ -121,23 +121,29 @@ function panelData(){
 	        case 'fund':
                 if(hexColors) window.graphs.fund.setColors(hexColors);
                 window.currentGraph = window.graphs.fund;
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(0);
 	            break;
 	        case 'department':
                 if(hexColors) window.graphs.department.setColors(hexColors);
                 window.currentGraph = window.graphs.department;
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(1);
 	            break;
 	        case 'expenditure':
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(2);
 	            break;
 	        case 'revenue':
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(3);
 	            break;
 	        case 'fee_revenue':
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(4);
 	            break;
 	        case 'expenditure_vs_fee_revenue':
+                graphTabsFilter(type);
 	            window.graphTabs.showSlide(5);
 	            break;
 	    }
@@ -147,7 +153,6 @@ function panelData(){
 	    });
 	    }).delay(200);
 	}
-
     var graphLegend = function(data) {
         var legendElement = document.getElement('#legend');
         legendElement.getElements('li').destroy();
@@ -164,7 +169,62 @@ function panelData(){
             legendElement.dissolve();
         }
     }
-
+    var graphTabsFilter = function(selectedTab) {
+        var graphTabsSelect = new Array();
+        if (window.panelSelection.fund && window.panelSelection.department){
+            if (window.panelSelection.fund == 1 && window.panelSelection.department == 1) {
+                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 1][Dept 1]
+            } else if (window.panelSelection.fund == 1 && window.panelSelection.department == 2) {
+                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 1][Dept 2]
+            } else if (window.panelSelection.fund == 2 && window.panelSelection.department == 1) {
+                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 2][Dept 1]
+            } else if (window.panelSelection.fund == 2 && window.panelSelection.department == 2) {
+                graphTabsSelect = ['Fd', 'E', 'Rf'];  // [Fund 2][Dept 2]
+            }
+        } else if (window.panelSelection.fund){
+            switch(window.panelSelection.fund){
+                case 1: 
+                    graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 1][Dept 0]
+                break;
+                case 2:
+                    graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 2][Dept 0]
+                break;
+            }
+        } else if (window.panelSelection.department){
+            switch(window.panelSelection.department){
+                case 1:
+                    graphTabsSelect = ['F', 'D', 'E', 'Rf', 'EvRf']; // [Fund 0][Dept 1]
+                break;
+                case 2:
+                    graphTabsSelect = ['F', 'D', 'E', 'Rf', 'EvRf']; // [Fund 0][Dept 2]
+                break;
+            }
+        } else {
+            graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 0][Dept 0]
+        }
+        graphTabsList = {
+            F:['Fund','fund_graph','fund'],
+            D:['Department','department_graph','department'],
+            E:['Expenditure','expenditure_graph','expenditure'],
+            R:['Revenue','revenue_graph','revenue'],
+            Rf:['Fee Revenue','revenue','fee_revenue'],
+            EvRf:['Exp. vs. Free Rev.','exp_vs_fee_rev','expenditure_vs_fee_revenue'],
+            Fd:['Fund/Department','fund_graph','fund']
+        }
+        //var graphContainer = document.getElement('#graph_types');
+        //graphContainer.getElements('.graph').destroy();
+        var tabsContainer = document.getElement('#tabs');
+        tabsContainer.getElements('li').destroy();
+        graphTabsSelect.each(function(element){
+            //var tabDiv = new Element('div', { id: graphTabsList[element][1], class: 'graph' });
+            var tabLi = new Element('li', { class: 'tab', html: graphTabsList[element][0] });
+            if (selectedTab == graphTabsList[element][2]) tabLi.addClass('active');
+            //graphContainer.appendChild(tabDiv);
+            tabsContainer.appendChild(tabLi);
+        });
+        console.log(window.graphTabs);
+        window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    }
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
@@ -203,6 +263,7 @@ function panelData(){
 	}.bind(this)});
 	
     window.selected = {};
+    window.panelSelection = {};
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
             var parts = element.split(":");
@@ -214,10 +275,11 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-                if (panelId.hasClass('panelSelected')) window.selected = {};
+                if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
-                    window.selected={};
+                    window.selected = {};
+                    window.panelSelection = {};
                 } else {
                     panelId.getElements('.selected').removeClass('selected');
                 }
@@ -228,6 +290,9 @@ function panelData(){
                 document.getElements('.colorkey').removeClass('colorkey');
                 this.addClass('selected');
                 this.getElements('a').addClass('expanded');
+                sublistCheck = this.getParent('ul.sublist');
+                if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2;
+                //if (!sublistCheck) graphTabsFilter(index, 1); else graphTabsFilter(index, 2);
                 sublist = this.getParent('li ul.sublist');
                 sublistHeight = sublist.getScrollSize();
                 sublist.morph({height:sublistHeight.y});
@@ -308,7 +373,7 @@ document.addEvent('domready', function() {
         type : 'department'
     });
     new panelData();
-    window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    //window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     document.id('standard_graph').addEvent('click', function(event){
         //console.log(event);
         this.getSiblings().removeClass('active');
@@ -337,9 +402,9 @@ document.addEvent('domready', function() {
         });
         window.currentGraph.display();
     });
-    new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});    
+    new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.descriptionTooltip');
-    descriptionTooltip.addEvents({
+        descriptionTooltip.addEvents({
         mouseover: function(){
             this.getSiblings('.panelDescription').reveal();
         },
@@ -348,6 +413,4 @@ document.addEvent('domready', function() {
         }
     });
     new Fx.Reveal(('.panelDescription'), {duration: 500, mode: 'horizontal'});    
-
 });
-
