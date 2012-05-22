@@ -192,7 +192,6 @@ header{
         font-family: @primaryFont;
     }
 }
-
 .navigation{
     width: 100%;
     min-width: @navigationMinWidth;
@@ -385,20 +384,7 @@ header{
 	           	line-height:40px;
                 color: #373739;
                 &:first-of-type li {
-                    margin-left: -3px;
-                }
-	           	li {
-	           		display: inline-block;
-                    margin-left: 0px;
-                    .lightGrayGradient(); 
-                    padding: 0 20px;
-	           		border-top: 1px solid #dcddde;
-                    border-bottom: 1px solid #838689;
-                    border-right: 1px solid #8d9093;
-	           		border-left-width: 0;
-                    font-size: 14px;
-                    cursor:pointer;
-                    font-family: @primaryFontBold;
+                    display: inline-block;
 	           		&:first-of-type{
 	           			border-left-width: 1px;
                         .roundedUpperLeftCorner(10px);
@@ -408,6 +394,21 @@ header{
                         .roundedUpperRightCorner(10px);
                         .roundedLowerRightCorner(10px);
 	           		}
+                }
+	           	li {
+                    width: 115px;
+	           		display: none;
+                    margin-left: -3px;
+                    .lightGrayGradient(); 
+                    padding: 0 10px;
+	           		border-top: 1px solid #dcddde;
+                    border-bottom: 1px solid #838689;
+                    border-right: 1px solid #8d9093;
+	           		border-left-width: 0;
+                    font-size: 14px;
+                    cursor:pointer;
+                    font-family: @primaryFontBold;
+
                     &.active {
                         color: #fff;
                         .darkGrayGradient(); 
@@ -415,6 +416,19 @@ header{
                         border-bottom: 1px solid #696A6C;
                         border-right: 1px solid #636567;
                         border-left: 1px solid #636567;
+                    }
+                    &.display {
+                        display: inline-block;
+                    }
+                    &.roundedLeft {
+                        border-left-width: 1px;
+                        .roundedUpperLeftCorner(10px);
+                        .roundedLowerLeftCorner(10px);
+                    }
+                    &.roundedRight {
+                        .roundedUpperRightCorner(10px);
+                        .roundedLowerRightCorner(10px);
+                    
                     }
 	           	}
 	        }
