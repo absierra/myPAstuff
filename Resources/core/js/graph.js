@@ -10,7 +10,8 @@ var BudgetGraph = new Class({
         name : 'Debt Service Funds',
         stacked : true,
         percent : false,
-        bar : false
+        bar : false,
+        metric : 'revenue'
     },
     initialize : function(element, options){
         this.element = element;
@@ -23,20 +24,25 @@ var BudgetGraph = new Class({
             }.bind(this)
         });
         this.raphael = Raphael(element);
-        this.fetch();
+        //this.fetch();
     },
     fetch : function(data, type){
         if(type) this.options.type = type;
         var requestData = Object.clone(data);
-        requestData.type = this.options.type;
-        this.options.requestor.get(requestData);
+        if(Object.equivalent(BudgetGraph.lastSelection, requestData)){
+            
+        }else{
+            BudgetGraph.lastSelection = requestData;
+            requestData.type = this.options.type;
+            this.options.requestor.get(requestData);
+        }
     },
     setColors : function(colors) {
         this.options.colors = colors;
     },
     display : function(metric){
         if(this.lines) this.lines.remove();
-        if(!metric) metric = 'revenue';
+        if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
         Object.each(this.data, function(data, name){
@@ -70,3 +76,4 @@ var BudgetGraph = new Class({
         }
     }
 })
+BudgetGraph.lastSelection = {};

@@ -37,6 +37,53 @@ PseudoDOM.after = function(element, properties){
 PseudoDOM.clear = function(element, properties){
     document.getElements('.pseudo-chop').destroy();
 };
+(function(context){
+    function unwrapStringOrNumber(obj) {
+        return (obj instanceof Number || obj instanceof String 
+                ? obj.valueOf() 
+                : obj);
+    }
+    function areEquivalent(a, b) {
+        a = unwrapStringOrNumber(a);
+        b = unwrapStringOrNumber(b);
+        if (a === b) return true; //e.g. a and b both null
+        if (a === null || b === null || typeof (a) !== typeof (b)) return false;
+        if (a instanceof Date) 
+            return b instanceof Date && a.valueOf() === b.valueOf();
+        if (typeof (a) !== "object") 
+            return a == b; //for boolean, number, string, xml
+    
+        var newA = (a.areEquivalent_Eq_91_2_34 === undefined),
+            newB = (b.areEquivalent_Eq_91_2_34 === undefined);
+        try {
+            if (newA) a.areEquivalent_Eq_91_2_34 = [];
+            else if (a.areEquivalent_Eq_91_2_34.some(
+                function (other) { return other === b; })) return true;
+            if (newB) b.areEquivalent_Eq_91_2_34 = [];
+            else if (b.areEquivalent_Eq_91_2_34.some(
+                function (other) { return other === a; })) return true;
+            a.areEquivalent_Eq_91_2_34.push(b);
+            b.areEquivalent_Eq_91_2_34.push(a);
+    
+            var tmp = {};
+            for (var prop in a) 
+                if(prop != "areEquivalent_Eq_91_2_34") 
+                    tmp[prop] = null;
+            for (var prop in b) 
+                if (prop != "areEquivalent_Eq_91_2_34") 
+                    tmp[prop] = null;
+    
+            for (var prop in tmp) 
+                if (!areEquivalent(a[prop], b[prop]))
+                    return false;
+            return true;
+        } finally {
+            if (newA) delete a.areEquivalent_Eq_91_2_34;
+            if (newB) delete b.areEquivalent_Eq_91_2_34;
+        }
+    }
+    Object.equivalent = areEquivalent;
+})(this);
 
 function hueShiftedColorSet(){
     var args = {};
@@ -61,6 +108,24 @@ function hueShiftedColorSet(){
     }
     return result;
 }
+
+var initGraphs = function(){
+    window.graphs.fund = new BudgetGraph('fund_graph', {
+        type : 'fund'
+    });
+    window.graphs.department = new BudgetGraph('department_graph', {
+        type : 'department'
+    });
+    window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
+        type : 'fund',
+        metric : 'expenses'
+    });
+    window.graphs.revenue = new BudgetGraph('revenue_graph', {
+        type : 'fund',
+        metric : 'revenue'
+    });
+};
+
 function panelData(){
     var keys = new Keyboard({
         defaultEventType: 'keyup',
@@ -80,13 +145,7 @@ function panelData(){
                     sublist.removeClass('expanded');
                 }
                 document.getElements('.graph svg').destroy();
-    
-                window.graphs.fund = new BudgetGraph('fund_graph', {
-                    type : 'fund'
-                });
-                window.graphs.department = new BudgetGraph('department_graph', {
-                    type : 'department'
-                });
+                initGraphs();
                 graphLegend();
                 graphTabsFilter();
             }
@@ -99,7 +158,7 @@ function panelData(){
 		var target = document.getElement('.EnterpriseFunds span');
         if(target) target.fireEvent.delay(50, target, ['click']);
 	}.bind(this)}).get();
-    	
+    
 	var panelFilter = function(data) {
         
         document.getElements('#fund li span').each(function(listItem){
@@ -132,10 +191,14 @@ function panelData(){
 	            break;
 	        case 'expenditure':
                 graphTabsFilter(type);
+	            if(hexColors) window.graphs.department.setColors(hexColors);
+                window.currentGraph = window.graphs.expenditure;
 	            window.graphTabs.showSlide(2);
 	            break;
 	        case 'revenue':
-                graphTabsFilter(type);
+	            graphTabsFilter(type);
+	            if(hexColors) window.graphs.department.setColors(hexColors);
+                window.currentGraph = window.graphs.revenue;
 	            window.graphTabs.showSlide(3);
 	            break;
 	        case 'fee_revenue':
@@ -366,12 +429,13 @@ function panelData(){
 
 document.addEvent('domready', function() { 
     window.graphs = {};
-    window.graphs.fund = new BudgetGraph('fund_graph', {
+    /*window.graphs.fund = new BudgetGraph('fund_graph', {
         type : 'fund'
     });
     window.graphs.department = new BudgetGraph('department_graph', {
         type : 'department'
-    });
+    });*/
+    initGraphs();
     new panelData();
     //window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     document.id('standard_graph').addEvent('click', function(event){
