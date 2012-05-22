@@ -236,57 +236,51 @@ function panelData(){
         var graphTabsSelect = new Array();
         if (window.panelSelection.fund && window.panelSelection.department){
             if (window.panelSelection.fund == 1 && window.panelSelection.department == 1) {
-                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 1][Dept 1]
+                graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab']; // [Fund 1][Dept 1]
             } else if (window.panelSelection.fund == 1 && window.panelSelection.department == 2) {
-                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 1][Dept 2]
+                graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab']; // [Fund 1][Dept 2]
             } else if (window.panelSelection.fund == 2 && window.panelSelection.department == 1) {
-                graphTabsSelect = ['F', 'D', 'E', 'Rf']; // [Fund 2][Dept 1]
+                graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab']; // [Fund 2][Dept 1]
             } else if (window.panelSelection.fund == 2 && window.panelSelection.department == 2) {
-                graphTabsSelect = ['Fd', 'E', 'Rf'];  // [Fund 2][Dept 2]
+                graphTabsSelect = ['fund_department_tab', 'expenditure_tab', 'fee_revenue_tab'];  // [Fund 2][Dept 2]
             }
         } else if (window.panelSelection.fund){
             switch(window.panelSelection.fund){
                 case 1: 
-                    graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 1][Dept 0]
+                    graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab']; // [Fund 1][Dept 0]
                 break;
                 case 2:
-                    graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 2][Dept 0]
+                    graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab']; // [Fund 2][Dept 0]
                 break;
             }
         } else if (window.panelSelection.department){
             switch(window.panelSelection.department){
                 case 1:
-                    graphTabsSelect = ['F', 'D', 'E', 'Rf', 'EvRf']; // [Fund 0][Dept 1]
+                    graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab', 'exp_vs_fee_rev']; // [Fund 0][Dept 1]
                 break;
                 case 2:
-                    graphTabsSelect = ['F', 'D', 'E', 'Rf', 'EvRf']; // [Fund 0][Dept 2]
+                    graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab', 'exp_vs_fee_rev']; // [Fund 0][Dept 2]
                 break;
             }
         } else {
-            graphTabsSelect = ['F', 'D', 'E', 'R']; // [Fund 0][Dept 0]
+            graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab']; // [Fund 0][Dept 0]
         }
-        graphTabsList = {
-            F:['Fund','fund_graph','fund'],
-            D:['Department','department_graph','department'],
-            E:['Expenditure','expenditure_graph','expenditure'],
-            R:['Revenue','revenue_graph','revenue'],
-            Rf:['Fee Revenue','revenue','fee_revenue'],
-            EvRf:['Exp. vs. Free Rev.','exp_vs_fee_rev','expenditure_vs_fee_revenue'],
-            Fd:['Fund/Department','fund_graph','fund']
-        }
-        //var graphContainer = document.getElement('#graph_types');
-        //graphContainer.getElements('.graph').destroy();
         var tabsContainer = document.getElement('#tabs');
-        tabsContainer.getElements('li').destroy();
-        graphTabsSelect.each(function(element){
-            //var tabDiv = new Element('div', { id: graphTabsList[element][1], class: 'graph' });
-            var tabLi = new Element('li', { class: 'tab', html: graphTabsList[element][0] });
-            if (selectedTab == graphTabsList[element][2]) tabLi.addClass('active');
-            //graphContainer.appendChild(tabDiv);
-            tabsContainer.appendChild(tabLi);
+        var tabsLi = tabsContainer.getElements('#tabs li');
+        tabsLi.removeClass('display').removeClass('roundedLeft').removeClass('roundedRight');
+        var totalTabs = graphTabsSelect.length - 1;
+        graphTabsSelect.each(function(selectedTab, tabKey){
+            var tabElement = tabsContainer.getElement('.'+selectedTab);
+            tabElement.addClass('display');
+            switch(tabKey){
+                case 0:
+                    tabElement.addClass('roundedLeft');
+                break;
+                case totalTabs:
+                    tabElement.addClass('roundedRight');
+                break;
+            }
         });
-        console.log(window.graphTabs);
-        window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     }
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
@@ -437,32 +431,44 @@ document.addEvent('domready', function() {
     });*/
     initGraphs();
     new panelData();
-    //window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+    window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
     document.id('standard_graph').addEvent('click', function(event){
         //console.log(event);
         this.getSiblings().removeClass('active');
         this.addClass('active');
+        window.currentGraph.options.stacked=false;
+        window.currentGraph.options.percent=false;
+        window.currentGraph.options.pie=false;
+/*
         window.currentGraph.setOptions({
             stacked: false,
-            percent: false
+            percent: false,
+            pie: false
         });
+*/
         window.currentGraph.display();
     });
     document.id('stacked_graph').addEvent('click', function(event){
         this.getSiblings().removeClass('active');
         this.addClass('active');
-        window.currentGraph.setOptions({
-            stacked: true,
-            percent: false
-        });
+        window.currentGraph.options.stacked=true;
+        window.currentGraph.options.percent=false;
+        window.currentGraph.options.pie=false;
         window.currentGraph.display();
     });
     document.id('percentage_graph').addEvent('click', function(event){
         this.getSiblings().removeClass('active');
         this.addClass('active');
+        window.currentGraph.options.stacked=true;
+        window.currentGraph.options.percent=true;
+        window.currentGraph.options.pie=false;
+        window.currentGraph.display();
+    });
+    document.id('pie_chart').addEvent('click', function(event){
+        this.getSiblings().removeClass('active');
+        this.addClass('active');
         window.currentGraph.setOptions({
-            stacked: true,
-            percent: true
+            pie: true
         });
         window.currentGraph.display();
     });

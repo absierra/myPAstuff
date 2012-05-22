@@ -21,6 +21,7 @@
         	<li id="percentage_graph">Percentage</li>
         	<li id="stacked_graph" class="active">Stacked</li>
         	<li id="standard_graph">Line</li>
+            <li id="pie_chart">Pie</li>
         	{* <li id="bar_graph">Bar</li> *}
         </ol>
         <div id="graph_types">
@@ -34,12 +35,12 @@
         </div>
         <ol id="legend"></ol>
         <ol id="tabs" class="graphtabs">
-        	<li class="tab fund">Fund</li>
-        	<li class="tab department">Department</li>
-            <li class="tab expenditure">Expenditure</li>
-            <li class="tab revenue">Revenue</li>
-            <li class="tab fee_revenue">Fee Revenue</li>
-            <li class="tab expenses_vs_fee_revenue">Exp. vs. Fee Rev.</li>
+        	<li class="tab fund_tab">Fund</li>
+        	<li class="tab department_tab">Department</li>
+            <li class="tab expenditure_tab">Expenditure</li>
+            <li class="tab revenue_tab">Revenue</li>
+            <li class="tab fee_revenue_tab">Fee Revenue</li>
+            <li class="tab expenses_vs_fee">Exp. vs. Fee Rev.</li>
         </ol>
     	{*<p>Notes Section:
 		<br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
