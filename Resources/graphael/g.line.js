@@ -52,7 +52,7 @@
     }
 
     function Linechart(paper, x, y, width, height, valuesx, valuesy, opts) {
-        
+                
         var chartinst = this;
         
         opts = opts || {};
@@ -101,7 +101,7 @@
             minx = xdim.from,
             maxx = xdim.to,
             ydim = chartinst.snapEnds(Math.min.apply(Math, ally), Math.max.apply(Math, ally), valuesy[0].length - 1),
-            miny = ydim.from,
+            miny = 0,//ydim.from,
             maxy = ydim.to,
             kx = (width - gutter * 2) / ((maxx - minx) || 1),
             ky = (height - gutter * 2) / ((maxy - miny) || 1);
@@ -226,6 +226,53 @@
 
             !opts.nostroke && line.attr({ path: path.join(",") });
         }
+        
+        function createDots(f) {
+            var cvrs = f || paper.set(),
+                C;
+                
+            yearsum = [];
+
+            for (var i = 0, ii = valuesy.length; i < ii; i++) {
+                for (var j = 0, jj = valuesy[i].length; j < jj; j++) {
+                
+                	if (opts.stacked){
+						if (opts.percent){
+                			var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
+                				nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
+                				Y = (y + height - gutter - ((valuesy[i][j]/totals[valuesx[i][j]])*100 + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+                    	} else {
+                    		var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
+                    			nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,	
+                    			Y = (y + height - gutter - (valuesy[i][j] + (yearsum[valuesx[i][j]] || 0) - miny) * ky);
+                    	}
+                	} else {
+                			var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,	
+                				nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
+                    			Y = (y + height - gutter - (valuesy[i][j] - miny) * ky);
+                	}
+                	
+                	yearsum[valuesx[i][j]] = (yearsum[valuesx[i][j]] || 0) + (opts.percent ? (valuesy[i][j]/totals[valuesx[i][j]])*100 : valuesy[i][j]);
+                	
+                    //var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
+                    //    nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
+                    //    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
+
+                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 40).attr({ stroke: "none", fill: "#000", opacity: 1 }));
+                    C.x = X;
+                    C.y = Y;
+                    C.value = valuesy[i][j];
+                    C.line = chart.lines[i];
+                    C.shade = chart.shades[i];
+                    C.symbol = chart.symbols[i][j];
+                    C.symbols = chart.symbols[i];
+                    C.axis = (valuesx[i] || valuesx[0])[j];
+                    f && f.call(C);
+                }
+            }
+
+            !f && (dots = cvrs);
+        }
 
         function createColumns(f) {
             // unite Xs together
@@ -280,31 +327,6 @@
             !f && (columns = cvrs);
         }
 
-        function createDots(f) {
-            var cvrs = f || paper.set(),
-                C;
-
-            for (var i = 0, ii = valuesy.length; i < ii; i++) {
-                for (var j = 0, jj = valuesy[i].length; j < jj; j++) {
-                    var X = x + gutter + ((valuesx[i] || valuesx[0])[j] - minx) * kx,
-                        nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
-                        Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
-
-                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 2).attr({ stroke: "none", fill: "#000", opacity: 0 }));
-                    C.x = X;
-                    C.y = Y;
-                    C.value = valuesy[i][j];
-                    C.line = chart.lines[i];
-                    C.shade = chart.shades[i];
-                    C.symbol = chart.symbols[i][j];
-                    C.symbols = chart.symbols[i];
-                    C.axis = (valuesx[i] || valuesx[0])[j];
-                    f && f.call(C);
-                }
-            }
-
-            !f && (dots = cvrs);
-        }
 
         chart.push(lines, shades, symbols, axis, columns, dots);
         chart.lines = lines;
