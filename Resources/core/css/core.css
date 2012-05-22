@@ -230,6 +230,56 @@ body {
   display: inline-block;
   margin-bottom: 0;
 }
+#legend {
+  display: none;
+  white-space: normal;
+  width: 675px;
+  margin: 20px auto;
+  padding: 5px 5px 3px;
+  line-height: 30px;
+  color: #373739;
+  background-color: #fff;
+  border-top: 1px solid #dcddde;
+  border-bottom: 1px solid #838689;
+  border-right: 1px solid #8d9093;
+  border-left-width: 0;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+  /* todo make shadow work in angle & incline */
+
+  -webkit-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+}
+#legend li {
+  display: inline-block;
+  margin-left: 8px;
+}
+#legend li span {
+  position: relative;
+  width: 110px;
+  padding-left: 14px;
+  text-overflow: ellipsis;
+  text-wrap: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#legend li span:before {
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  content: '';
+  display: block;
+  height: 11px;
+  width: 10px;
+  color: blue;
+}
 .spinner {
   background-image: url('/Resources/core/img/loader.gif');
   background-repeat: no-repeat;
@@ -301,6 +351,33 @@ header span.logo-text {
   color: #333335;
   font-size: 0.8em;
   white-space: nowrap;
+}
+.navigation > ul .panelDescription {
+  display: none;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  width: 219px;
+  white-space: normal;
+  line-height: 16px;
+  padding: 10px 15px;
+  color: #333;
+  z-index: 200;
+  background-color: #cccdcf;
+  background-image: -webkit-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -moz-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -o-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: -ms-linear-gradient(top, #cccdcf, #a6a9ac);
+  background-image: linear-gradient(top, #cccdcf, #a6a9ac);
+}
+.navigation > ul .panelDescription:before {
+  position: absolute;
+  content: '\25B2';
+  top: -11px;
+  left: 105px;
+  font-size: 20px;
+  padding: 0 15px;
+  color: #CCCDCF;
 }
 .navigation > ul > ul {
   overflow: auto;
@@ -429,47 +506,53 @@ header span.logo-text {
   left: 500px;
   right: 0;
   border-width: 0px 0px 1px 0px;
-  padding: 20px;
+  padding: 0 20px;
   overflow: auto;
 }
-.navigation > ul.four_col_4 ol {
-  margin: 20px auto;
+.navigation > ul.four_col_4 ol.graphtabs {
+  clear: both;
+  margin: 15px auto;
   width: 675px;
   text-align: center;
   height: 40px;
   line-height: 40px;
   color: #373739;
 }
-.navigation > ul.four_col_4 ol li {
-  float: left;
+.navigation > ul.four_col_4 ol.graphtabs:first-of-type li {
+  margin-left: -3px;
+}
+.navigation > ul.four_col_4 ol.graphtabs li {
+  display: inline-block;
+  margin-left: 0px;
   background-color: #cccdcf;
   background-image: -webkit-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: -moz-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: -o-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: -ms-linear-gradient(top, #cccdcf, #a6a9ac);
   background-image: linear-gradient(top, #cccdcf, #a6a9ac);
-  padding: 0 19px;
+  padding: 0 20px;
   border-top: 1px solid #dcddde;
   border-bottom: 1px solid #838689;
   border-right: 1px solid #8d9093;
   border-left-width: 0;
   font-size: 14px;
   cursor: pointer;
+  font-family: "ProximaNova-Bold";
 }
-.navigation > ul.four_col_4 ol li:first-of-type {
+.navigation > ul.four_col_4 ol.graphtabs li:first-of-type {
   border-left-width: 1px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   -moz-border-radius-bottomleft: 10px;
   border-bottom-left-radius: 10px;
 }
-.navigation > ul.four_col_4 ol li:last-of-type {
+.navigation > ul.four_col_4 ol.graphtabs li:last-of-type {
   -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
   -moz-border-radius-bottomright: 10px;
   border-bottom-right-radius: 10px;
 }
-.navigation > ul.four_col_4 ol li.active {
+.navigation > ul.four_col_4 ol.graphtabs li.active {
   color: #fff;
   background-color: #58585a;
   background-image: -webkit-linear-gradient(top, #58585a, #7d7e81);
@@ -481,7 +564,6 @@ header span.logo-text {
   border-bottom: 1px solid #696A6C;
   border-right: 1px solid #636567;
   border-left: 1px solid #636567;
-  font-family: "ProximaNova-Bold";
 }
 .navigation > ul.four_col_4 p {
   white-space: pre-wrap;

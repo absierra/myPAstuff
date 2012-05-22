@@ -26,6 +26,7 @@
 @primaryFontBold: "ProximaNova-Bold";
 @barHeight: 55px;
 @subBarHeight: 45px;
+@rightColumnWidth: 675px;
 
 
 html{
@@ -107,7 +108,7 @@ body{
 
 #graph_types{
     height:430px;
-    width: 675px; 
+    width: @rightColumnWidth; 
     background-color: #fff;
     margin: 10px auto 0;
     border: 1px solid #ccc;
@@ -116,7 +117,7 @@ body{
     .rounded(10px);
     .graph{
         height:450px;
-        width: 675px;
+        width: @rightColumnWidth;
         position: absolute;
     }
     .container{
@@ -125,7 +126,45 @@ body{
         margin-bottom: 0;
     }
 }
-
+#legend{
+    display: none;
+    white-space: normal;
+    width: @rightColumnWidth;
+    margin: 20px auto;
+    padding: 5px 5px 3px;
+   	line-height:30px;
+    color: #373739;
+    background-color: #fff;
+    border-top: 1px solid #dcddde;
+    border-bottom: 1px solid #838689;
+    border-right: 1px solid #8d9093;
+    border-left-width: 0;
+    .rounded(10px);
+    .shadowed(3px, 0.5);
+    li {
+        display: inline-block;
+        margin-left: 8px;
+        span{
+            position: relative;
+            width: 110px;
+            padding-left: 14px;
+            text-overflow: ellipsis;
+            text-wrap:none;
+            overflow:hidden;
+            white-space: nowrap;
+            &:before{ 
+        		position: absolute;
+        		left: 0px;
+                top: 8px;
+        		content: '';
+        		display: block;
+        		height:11px;
+        		width: 10px;
+                color: blue;
+            }
+    	}
+    }
+}
 .spinner{
     .centeredBackground('/Resources/core/img/loader.gif')
 }
@@ -182,6 +221,28 @@ header{
             color: #333335;
             font-size: 0.8em;
             white-space:nowrap;
+            .panelDescription{
+                display: none;
+                position: absolute;
+                top: @subBarHeight + 2px;
+                left: 0;
+                width: 219px;
+                white-space: normal;
+                line-height: 16px;
+                padding: 10px 15px;
+                color: #333;
+                z-index: 200;
+                .lightGrayGradient(); 
+                &:before{ 
+					position: absolute;
+                    content: '\25B2';
+                    top: -11px;
+					left: 105px;
+                    font-size: 20px;
+                    padding: 0 15px;
+                    color: #CCCDCF;
+                }
+            }
             > ul {
             	overflow: auto;
             	position: absolute;
@@ -313,25 +374,31 @@ header{
         	left: 500px; // 750px
         	right: 0;
             border-width: 0px 0px 1px 0px;
-            padding: 20px;
+            padding: 0 20px;
             overflow: auto;
-            ol{
-	           	margin: 20px auto;
-	           	width: 675px;
+            ol.graphtabs{
+                clear:both;
+	           	margin: 15px auto;
+	           	width: @rightColumnWidth;
 	           	text-align:center;
 	           	height: 40px;
 	           	line-height:40px;
                 color: #373739;
+                &:first-of-type li {
+                    margin-left: -3px;
+                }
 	           	li {
-	           		float:left;
+	           		display: inline-block;
+                    margin-left: 0px;
                     .lightGrayGradient(); 
-                    padding: 0 19px;
+                    padding: 0 20px;
 	           		border-top: 1px solid #dcddde;
                     border-bottom: 1px solid #838689;
                     border-right: 1px solid #8d9093;
 	           		border-left-width: 0;
                     font-size: 14px;
                     cursor:pointer;
+                    font-family: @primaryFontBold;
 	           		&:first-of-type{
 	           			border-left-width: 1px;
                         .roundedUpperLeftCorner(10px);
@@ -348,7 +415,6 @@ header{
                         border-bottom: 1px solid #696A6C;
                         border-right: 1px solid #636567;
                         border-left: 1px solid #636567;
-                        font-family: @primaryFontBold;
                     }
 	           	}
 	        }
