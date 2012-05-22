@@ -46,12 +46,27 @@ var BudgetGraph = new Class({
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
+
         var key;
         switch(this.options.type){
             case 'fund': key = 'funds'; break;
             case 'category': key = 'categories'; break;
             case 'department': key = 'departments'; break;
         }
+
+        window.dataRequest[key].each(function(data, index){
+           if(this.data[data]){
+               var xs = [];
+               var ys = [];
+               Object.each(this.data[data], function(item, year){
+                   xs.push(year);
+                   ys.push((item[metric]?item[metric]:0));
+               });
+               xSet.push(xs);
+               ySet.push(ys);
+           }
+       }.bind(this));
+        /*
         Object.each(this.data, function(data, name){
             var xs = [];
             var ys = [];
@@ -62,6 +77,7 @@ var BudgetGraph = new Class({
             xSet.push(xs);
             ySet.push(ys);
         });
+        */
         //console.log(['diz', xSet, ySet]);
         if(this.options.bar){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
@@ -71,6 +87,7 @@ var BudgetGraph = new Class({
                 colors:this.options.colors
             });
         }else if (this.options.pie){
+           /*
             window.totalChartValue = 0;
             var totalValues = [];
             ySet.each(function(element, key) {
@@ -89,7 +106,7 @@ var BudgetGraph = new Class({
             this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
                 colors:this.options.colors
             });
-
+            */
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,
