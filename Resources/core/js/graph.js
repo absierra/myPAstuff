@@ -11,6 +11,7 @@ var BudgetGraph = new Class({
         stacked : true,
         percent : false,
         bar : false,
+        pie : false,
         metric : 'revenue'
     },
     initialize : function(element, options){
@@ -45,6 +46,12 @@ var BudgetGraph = new Class({
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
+        var key;
+        switch(this.options.type){
+            case 'fund': key = 'funds'; break;
+            case 'category': key = 'categories'; break;
+            case 'department': key = 'departments'; break;
+        }
         Object.each(this.data, function(data, name){
             var xs = [];
             var ys = [];
@@ -63,6 +70,26 @@ var BudgetGraph = new Class({
                 axis: "0 0 1 1",
                 colors:this.options.colors
             });
+        }else if (this.options.pie){
+            window.totalChartValue = 0;
+            var totalValues = [];
+            ySet.each(function(element, key) {
+                totalValues.push(Math.floor(element.pop()/10000));
+            });
+            xSet.each(function(element, key) {
+                if (key == 0) {
+                    element.each(function(elementValue, keyValue) {
+                        if (keyValue == 0) {
+                            //console.log("Element: "+elementValue); // Year
+                        }
+                    });
+                };
+            });
+            console.log(totalValues.clone());
+            this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
+                colors:this.options.colors
+            });
+
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,
