@@ -275,15 +275,34 @@ function panelData(){
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.removeClass('display').removeClass('roundedLeft').removeClass('roundedRight');
         var totalTabs = graphTabsSelect.length;
-        graphTabsSelect.each(function(selectedTab, tabKey){
-            var tabElement = tabsContainer.getElement('.'+selectedTab);
+        graphTabsSelect.each(function(selectedTabElement, tabKey){
+            var tabElement = tabsContainer.getElement('.'+selectedTabElement);
             if (tabElement) {
+                tabElement.addEvent('click', function(event){
+                    switch(selectedTabElement){
+                        case 'fund_tab':
+                            window.currentGraph = window.graphs.fund;
+                            break;
+                        case 'department_tab':
+                            window.currentGraph = window.graphs.department;
+                            break;
+                        case 'expenditure_tab':
+                            window.currentGraph = window.graphs.expenditure;
+                            break;
+                        case 'revenue_tab':
+                            window.currentGraph = window.graphs.revenue;
+                            break;
+                        case 'fee_revenue_tab':
+                            window.currentGraph = window.graphs.fee_revenue;
+                            break;
+                        case 'exp_vs_fee_rev':
+                            window.currentGraph = window.graphs.exp_vs_fee_rev;
+                            break;
+                    }
+                });
                 tabElement.addClass('display');
                 if (tabKey == 0) tabElement.addClass('roundedLeft');
                 if (tabKey+1 == totalTabs) tabElement.addClass('roundedRight');
-            }
-            if (tabElement == null) {
-                console.log(selectedTab);
             }
         });
     }
