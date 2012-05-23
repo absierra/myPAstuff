@@ -275,15 +275,34 @@ function panelData(){
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.removeClass('display').removeClass('roundedLeft').removeClass('roundedRight');
         var totalTabs = graphTabsSelect.length;
-        graphTabsSelect.each(function(selectedTab, tabKey){
-            var tabElement = tabsContainer.getElement('.'+selectedTab);
+        graphTabsSelect.each(function(selectedTabElement, tabKey){
+            var tabElement = tabsContainer.getElement('.'+selectedTabElement);
             if (tabElement) {
+                tabElement.addEvent('click', function(event){
+                    switch(selectedTabElement){
+                        case 'fund_tab':
+                            window.currentGraph = window.graphs.fund;
+                            break;
+                        case 'department_tab':
+                            window.currentGraph = window.graphs.department;
+                            break;
+                        case 'expenditure_tab':
+                            window.currentGraph = window.graphs.expenditure;
+                            break;
+                        case 'revenue_tab':
+                            window.currentGraph = window.graphs.revenue;
+                            break;
+                        case 'fee_revenue_tab':
+                            window.currentGraph = window.graphs.fee_revenue;
+                            break;
+                        case 'exp_vs_fee_rev':
+                            window.currentGraph = window.graphs.exp_vs_fee_rev;
+                            break;
+                    }
+                });
                 tabElement.addClass('display');
                 if (tabKey == 0) tabElement.addClass('roundedLeft');
                 if (tabKey+1 == totalTabs) tabElement.addClass('roundedRight');
-            }
-            if (tabElement == null) {
-                console.log(selectedTab);
             }
         });
     }
@@ -469,16 +488,14 @@ document.addEvent('domready', function() {
         window.currentGraph.options.pie=false;
         window.currentGraph.display();
     });
-/*
     document.id('pie_chart').addEvent('click', function(event){
         this.getSiblings().removeClass('active');
         this.addClass('active');
-        window.currentGraph.setOptions({
-            pie: true
-        });
+        window.currentGraph.options.stacked=false;
+        window.currentGraph.options.percent=false;
+        window.currentGraph.options.pie=true;
         window.currentGraph.display();
     });
-*/
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.descriptionTooltip');
         descriptionTooltip.addEvents({
