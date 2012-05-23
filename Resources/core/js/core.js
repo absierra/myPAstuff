@@ -116,6 +116,7 @@ var initGraphs = function(){
     });
     window.graphs.department = new BudgetGraph('department_graph', {
         type : 'departments',
+        target : 'department',
         metric : 'expenses'
     });
     window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
