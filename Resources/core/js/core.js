@@ -488,16 +488,14 @@ document.addEvent('domready', function() {
         window.currentGraph.options.pie=false;
         window.currentGraph.display();
     });
-/*
     document.id('pie_chart').addEvent('click', function(event){
         this.getSiblings().removeClass('active');
         this.addClass('active');
-        window.currentGraph.setOptions({
-            pie: true
-        });
+        window.currentGraph.options.stacked=false;
+        window.currentGraph.options.percent=false;
+        window.currentGraph.options.pie=true;
         window.currentGraph.display();
     });
-*/
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.descriptionTooltip');
         descriptionTooltip.addEvents({
