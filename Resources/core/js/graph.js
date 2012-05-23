@@ -7,6 +7,7 @@ var BudgetGraph = new Class({
             height: 100
         },
         type : 'none',
+        target : false,
         name : 'Debt Service Funds',
         stacked : true,
         percent : false,
@@ -35,13 +36,19 @@ var BudgetGraph = new Class({
     fetch : function(data, type){
         if(type) this.options.type = type;
         var requestData = Object.clone(data);
-        if(Object.equivalent(BudgetGraph.lastSelection, requestData)){
-            
-        }else{
+        /*if(
+            BudgetGraph.lastSelectionType == this.options.type && 
+            Object.equivalent(BudgetGraph.lastSelection, requestData)
+        ){
+            this.options.requestor.onSuccess(this.data);
+        }else{*/
             BudgetGraph.lastSelection = requestData;
+            BudgetGraph.lastSelectionType = this.options.type;
             requestData.type = this.options.type;
+            if(this.options.target) requestData.target = this.options.target;
             this.options.requestor.get(requestData);
-        }
+            
+        //}
     },
     setColors : function(colors) {
         this.options.colors = colors;
@@ -51,22 +58,38 @@ var BudgetGraph = new Class({
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
+
         var key;
         switch(this.options.type){
             case 'fund': key = 'funds'; break;
             case 'category': key = 'categories'; break;
             case 'department': key = 'departments'; break;
         }
-        Object.each(this.data, function(data, name){
-            var xs = [];
-            var ys = [];
-            Object.each(data, function(item, year){
-                xs.push(year);
-                ys.push((item[metric]?item[metric]:0));
-            });
-            xSet.push(xs);
-            ySet.push(ys);
-        });
+        if(!this.options.target){
+            window.dataRequest[key].each(function(data, index){
+                if(this.data[data]){
+                    var xs = [];
+                    var ys = [];
+                    Object.each(this.data[data], function(item, year){
+                        xs.push(year);
+                        ys.push((item[metric]?item[metric]:0));
+                    });
+                    xSet.push(xs);
+                    ySet.push(ys);
+                }
+            }.bind(this));
+        }else{
+            Object.each(this.data, function(data, name){
+                var xs = [];
+                var ys = [];
+                Object.each(data, function(item, year){
+                    xs.push(year);
+                    ys.push((item[metric]?item[metric]:0));
+                });
+                xSet.push(xs);
+                ySet.push(ys);
+            }); //*/
+        }
         //console.log(['diz', xSet, ySet]);
         if(this.options.bar){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
@@ -76,6 +99,7 @@ var BudgetGraph = new Class({
                 colors:this.options.colors
             });
         }else if (this.options.pie){
+           /*
             window.totalChartValue = 0;
             var totalValues = [];
             ySet.each(function(element, key) {
@@ -94,7 +118,7 @@ var BudgetGraph = new Class({
             this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
                 colors:this.options.colors
             });
-
+            */
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
                 shade: this.options.stacked,
