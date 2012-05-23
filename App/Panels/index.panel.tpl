@@ -21,7 +21,7 @@
         	<li id="percentage_graph">Percentage</li>
         	<li id="stacked_graph" class="active">Stacked</li>
         	<li id="standard_graph">Line</li>
-            {*<li id="pie_chart">Pie</li>*}
+            <li id="pie_chart">Pie</li>
         	{*<li id="bar_graph">Bar</li>*}
         </ol>
         <div id="graph_types">

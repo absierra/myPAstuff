@@ -99,12 +99,16 @@ var BudgetGraph = new Class({
                 colors:this.options.colors
             });
         }else if (this.options.pie){
-           /*
-            window.totalChartValue = 0;
+           
+            //window.totalChartValue = 0;
+
             var totalValues = [];
-            ySet.each(function(element, key) {
-                totalValues.push(Math.floor(element.pop()/10000));
+            ySet.each(function(arraySet, key) {
+                totalValues.push(Math.floor(arraySet.pop()/10000));
             });
+            console.log(totalValues);
+
+            /* Year Values
             xSet.each(function(element, key) {
                 if (key == 0) {
                     element.each(function(elementValue, keyValue) {
@@ -114,11 +118,19 @@ var BudgetGraph = new Class({
                     });
                 };
             });
-            console.log(totalValues.clone());
-            this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
-                colors:this.options.colors
-            });
             */
+            //console.log(totalValues.clone());
+
+            this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
+                shade: true,
+                nostroke: false,
+                axis: "0 0 1 1",
+                axisxstep : 4,
+                colors:this.options.colors,
+                stacked:this.options.stacked,
+                percent:this.options.percent
+            });
+
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
                 shade: this.options.stacked,

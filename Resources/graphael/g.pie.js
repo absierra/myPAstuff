@@ -90,7 +90,7 @@
                 }
 
                 var path = sector(cx, cy, r, angle, angle -= 360 * values[i] / total);
-                var p = paper.path(opts.init ? ipath : path).attr({ fill: opts.colors && opts.colors[i] || chartinst.colors[i] || "#666", stroke: opts.stroke || "#fff", "stroke-width": (opts.strokewidth == null ? 1 : opts.strokewidth), "stroke-linejoin": "round" });
+                var p = paper.path(opts.init ? ipath : path).attr({ fill: opts.colors && opts.colors[values[i].order] || chartinst.colors[i] || "#666", stroke: opts.stroke || "#fff", "stroke-width": (opts.strokewidth == null ? 1 : opts.strokewidth), "stroke-linejoin": "round" });
 
                 p.value = values[i];
                 p.middle = path.middle;
