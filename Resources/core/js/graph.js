@@ -7,6 +7,7 @@ var BudgetGraph = new Class({
             height: 100
         },
         type : 'none',
+        target : false,
         name : 'Debt Service Funds',
         stacked : true,
         percent : false,
@@ -30,13 +31,19 @@ var BudgetGraph = new Class({
     fetch : function(data, type){
         if(type) this.options.type = type;
         var requestData = Object.clone(data);
-        if(Object.equivalent(BudgetGraph.lastSelection, requestData)){
-            
-        }else{
+        /*if(
+            BudgetGraph.lastSelectionType == this.options.type && 
+            Object.equivalent(BudgetGraph.lastSelection, requestData)
+        ){
+            this.options.requestor.onSuccess(this.data);
+        }else{*/
             BudgetGraph.lastSelection = requestData;
+            BudgetGraph.lastSelectionType = this.options.type;
             requestData.type = this.options.type;
+            if(this.options.target) requestData.target = this.options.target;
             this.options.requestor.get(requestData);
-        }
+            
+        //}
     },
     setColors : function(colors) {
         this.options.colors = colors;
@@ -53,31 +60,31 @@ var BudgetGraph = new Class({
             case 'category': key = 'categories'; break;
             case 'department': key = 'departments'; break;
         }
-
-        window.dataRequest[key].each(function(data, index){
-           if(this.data[data]){
-               var xs = [];
-               var ys = [];
-               Object.each(this.data[data], function(item, year){
-                   xs.push(year);
-                   ys.push((item[metric]?item[metric]:0));
-               });
-               xSet.push(xs);
-               ySet.push(ys);
-           }
-       }.bind(this));
-        /*
-        Object.each(this.data, function(data, name){
-            var xs = [];
-            var ys = [];
-            Object.each(data, function(item, year){
-                xs.push(year);
-                ys.push((item[metric]?item[metric]:0));
-            });
-            xSet.push(xs);
-            ySet.push(ys);
-        });
-        */
+        if(!this.options.target){
+            window.dataRequest[key].each(function(data, index){
+                if(this.data[data]){
+                    var xs = [];
+                    var ys = [];
+                    Object.each(this.data[data], function(item, year){
+                        xs.push(year);
+                        ys.push((item[metric]?item[metric]:0));
+                    });
+                    xSet.push(xs);
+                    ySet.push(ys);
+                }
+            }.bind(this));
+        }else{
+            Object.each(this.data, function(data, name){
+                var xs = [];
+                var ys = [];
+                Object.each(data, function(item, year){
+                    xs.push(year);
+                    ys.push((item[metric]?item[metric]:0));
+                });
+                xSet.push(xs);
+                ySet.push(ys);
+            }); //*/
+        }
         //console.log(['diz', xSet, ySet]);
         if(this.options.bar){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {

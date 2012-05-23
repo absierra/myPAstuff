@@ -111,17 +111,21 @@ function hueShiftedColorSet(){
 
 var initGraphs = function(){
     window.graphs.fund = new BudgetGraph('fund_graph', {
-        type : 'fund'
-    });
-    window.graphs.department = new BudgetGraph('department_graph', {
-        type : 'department'
-    });
-    window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
         type : 'fund',
         metric : 'expenses'
     });
+    window.graphs.department = new BudgetGraph('department_graph', {
+        type : 'departments',
+        metric : 'expenses'
+    });
+    window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
+        type : 'categories',
+        target : 'category',
+        metric : 'expenses'
+    });
     window.graphs.revenue = new BudgetGraph('revenue_graph', {
-        type : 'fund',
+        type : 'categories',
+        target : 'category',
         metric : 'revenue'
     });
 };
