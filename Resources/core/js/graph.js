@@ -26,12 +26,7 @@ var BudgetGraph = new Class({
             }.bind(this)
         });
         this.raphael = Raphael(element);
-<<<<<<< HEAD
-        this.fetch();
         a = this;
-=======
-        //this.fetch();
->>>>>>> 4967edb9b432cfdd8527dae3dfe0251f167327a0
     },
     fetch : function(data, type){
         if(type) this.options.type = type;
@@ -54,7 +49,8 @@ var BudgetGraph = new Class({
         this.options.colors = colors;
     },
     display : function(metric){
-        if(this.lines) this.lines.remove();
+    	this.raphael.clear();
+        //if(this.lines) this.lines.remove();
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
