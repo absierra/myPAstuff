@@ -26,7 +26,7 @@ var BudgetGraph = new Class({
             }.bind(this)
         });
         this.raphael = Raphael(element);
-        //this.fetch();
+        a = this;
     },
     fetch : function(data, type){
         if(type) this.options.type = type;
@@ -49,7 +49,8 @@ var BudgetGraph = new Class({
         this.options.colors = colors;
     },
     display : function(metric){
-        if(this.lines) this.lines.remove();
+    	this.raphael.clear();
+        //if(this.lines) this.lines.remove();
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
@@ -128,14 +129,22 @@ var BudgetGraph = new Class({
 
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
-                shade: true,
+                shade: this.options.stacked,
                 nostroke: false,
                 axis: "0 0 1 1",
                 axisxstep : 4,
                 colors:this.options.colors,
                 stacked:this.options.stacked,
                 percent:this.options.percent
-            });
+            }).hover(function() {
+            			this.attr("opacity",1);
+            			this.marker = this.marker || a.raphael.popup(this.x, this.y, this.value, "up", 5).insertBefore(this);
+            			this.marker.show();
+    				}, function() {
+        				// hide the popup element with an animation and remove the popup element at the end
+        				this.attr("opacity",0);
+        				this.marker && this.marker.hide();}
+        	);
         }
     }
 })
