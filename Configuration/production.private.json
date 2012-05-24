@@ -1,13 +1,13 @@
 {
     "application":{
-        "cookie_domain": "streetsweeper.delphi.us"
+        "cookie_domain": "8.19.34.138"
     },
     "DB:pa_budget_data":{
         "type":"mongo",
-        "database" : "admin",
-        "host" : "10.12.26.240",
+        "database" : "pabudgets",
+        "host" : "8.19.34.138",
         "user" : "admin",
-        "password" : "78_?7K.D<6",
+        "password" : "222G9mnnFD",
         "mode":"mongo",
         "session":"true",
         "session_hook":"php"

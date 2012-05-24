@@ -10,6 +10,10 @@
     function startsWith($haystack, $needle){
         return (substr($haystack, 0, strlen($needle)) === $needle);
     }
+    function contains_in_array($needle, &$haystack){
+        foreach($haystack as $key => $value) if(strpos($value, $needle) !== false) return true;
+        return false;
+    }
     
     function uniqueCategories(){
         $results = Data::search('BudgetData');
@@ -65,7 +69,10 @@
             }
             $data['categories'] = array_values($data['categories']);
             foreach($data['departments'] as $key => $item){
-                if( !in_array( $item, $results['funds'][$fund]['divisions'] ) ){
+                if( 
+                    (!in_array( $item, $results['funds'][$fund]['divisions'] )) &&
+                    (!contains_in_array($item, $results['funds'][$department]['divisions']))
+                ){
                     unset($data['departments'][$key]);
                 }
             }
@@ -90,13 +97,14 @@
             }
             $data['categories'] = array_values($data['categories']);
             foreach($data['funds'] as $key => $item){
-                if( !in_array( $item, $results['divisions'][$department]['funds'] ) ){
+                if( 
+                    (!in_array( $item, $results['divisions'][$department]['funds'] )) &&
+                    (!contains_in_array($item, $results['divisions'][$department]['funds']))
+                ){
                     unset($data['funds'][$key]);
                 }
             }
             $data['funds'] = array_values($data['funds']);
-            //print_r($unique['departments']);
-            //echo($department); exit();
         }
         // handle departmental parents
         foreach ($data['departments'] as $department){
