@@ -9,6 +9,7 @@ var BudgetGraph = new Class({
         type : 'none',
         target : false,
         name : 'Debt Service Funds',
+        //we really need to switch graph types to 1 option, rather than a bunch of weirdly intersecting booleans
         stacked : true,
         percent : false,
         bar : false,
@@ -22,35 +23,88 @@ var BudgetGraph = new Class({
             url: '/data/graph',
             onSuccess: function(payload){
                 this.data = payload.data;
+                this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex').shuffle();
+                this.setColors(this.colors);
                 this.display();
+                if(this.fetchCallback){
+                    this.fetchCallback(this.data);
+                    delete this.fetchCallback;
+                }
             }.bind(this)
         });
+        if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
+        if(this.options.select) this.options.select = this.options.select.bind(this)
         this.raphael = Raphael(element);
         a = this;
     },
-    fetch : function(data, type){
+    fetch : function(data, type, callback){
+        if(typeOf(type) == 'function'){
+            callback = type;
+            delete type;
+        }
         if(type) this.options.type = type;
         var requestData = Object.clone(data);
-        /*if(
-            BudgetGraph.lastSelectionType == this.options.type && 
-            Object.equivalent(BudgetGraph.lastSelection, requestData)
-        ){
-            this.options.requestor.onSuccess(this.data);
-        }else{*/
-            BudgetGraph.lastSelection = requestData;
-            BudgetGraph.lastSelectionType = this.options.type;
-            requestData.type = this.options.type;
-            if(this.options.target) requestData.target = this.options.target;
-            this.options.requestor.get(requestData);
-            
-        //}
+        BudgetGraph.lastSelection = requestData;
+        BudgetGraph.lastSelectionType = this.options.type;
+        requestData.type = this.options.type;
+        if(this.options.target) requestData.target = this.options.target;
+        this.options.requestor.get(requestData);
+        if(callback) this.fetchCallback = callback;
     },
     setColors : function(colors) {
         this.options.colors = colors;
     },
+    select : function(colors) {
+        window.selectedGraph = this;
+        this.setLegend();
+        this.setKeys();
+    },
+    setKeys : function(){
+        document.getElements('span.colorkey').removeClass('colorkey');
+        PseudoDOM.clear();
+        var column = document.id(this.options.column);
+        if(column){
+            activeItems = column.getElements('ul li span:not(.disabled)');
+            //console.log(['W', activeItems, column]);
+            activeItems.addClass('colorkey');
+            activeItems.each(function(item, lcv){
+                PseudoDOM.before(item, {
+                    'background-color' : this.colors[lcv]
+                })
+            }.bind(this));
+        }else{
+            //todo
+        }
+    },
+    setLegend : function(){
+        var column = document.id(this.options.column);
+        if(column){
+            var legendElement = document.getElement('#legend');
+            legendElement.getElements('li').destroy();
+            activeItems = column.getElements('ul li span:not(.disabled)');
+            if (activeItems) {
+                activeItems.each(function(element, lcv) {
+                    var legendItem = element.clone().removeClass('colorkey');
+                    var legendLi = new Element('li');
+                    legendElement.appendChild(legendLi);
+                    legendLi.appendChild(legendItem);
+                });
+                legendElement.reveal();
+            } else {
+                legendElement.dissolve();
+            }
+            var legendElements = document.getElements('#legend li span');
+            legendElements.each(function(item, lcv){
+                PseudoDOM.before(item, {
+                    'background-color' : this.colors[lcv]
+                })
+            }.bind(this));
+        }else{
+            //todo
+        }
+    },
     display : function(metric){
     	this.raphael.clear();
-        //if(this.lines) this.lines.remove();
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
@@ -87,14 +141,14 @@ var BudgetGraph = new Class({
             }); //*/
         }
         //console.log(['diz', xSet, ySet]);
-        if(this.options.bar){
+        if(this.options.mode == 'bar'){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
                 colors:this.options.colors
             });
-        }else if (this.options.pie){
+        }else if (this.options.mode == 'pie'){
            
             //window.totalChartValue = 0;
 
@@ -134,8 +188,8 @@ var BudgetGraph = new Class({
                 axis: "0 0 1 1",
                 axisxstep : 4,
                 colors:this.options.colors,
-                stacked:this.options.stacked,
-                percent:this.options.percent
+                stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+                percent:(this.options.mode == 'percentage-line')
             }).hover(function() {
             			this.attr("opacity",1);
             			this.marker = this.marker || a.raphael.popup(this.x, this.y, this.value, "up", 5).insertBefore(this);
@@ -149,3 +203,20 @@ var BudgetGraph = new Class({
     }
 })
 BudgetGraph.lastSelection = {};
+BudgetGraph.graphs = {};
+BudgetGraph.clearLegend = function(){
+    var legendElement = document.getElement('#legend');
+    legendElement.getElements('li').destroy();
+    legendElement.dissolve();
+};
+BudgetGraph.select = function(name){
+    if(BudgetGraph.graphs[name]){
+        window.currentGraph = BudgetGraph.graphs[name];
+        BudgetGraph.graphs[name].select();
+        if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select();
+    }
+};
+BudgetGraph.deselect = function(){
+    delete window.currentGraph;
+    BudgetGraph.clearLegend();
+};

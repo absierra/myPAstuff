@@ -3,6 +3,8 @@
         "html5_wedge" : "js/HTML5.js",
         "core_css" : "css/core.css",
         "core_js" : "js/core.js",
+        "graph_util_js" : "js/graph-util.js",
+        "graph_tabs_js" : "js/graph-tabs.js",
         "graph_js" : "js/graph.js"
     },
     "dependency":[

@@ -30,11 +30,11 @@
     $results = Data::search('BudgetData', $type.'=\''.$name.'\'');
     $data = array();
     $focus = WebApplication::get('target')?WebApplication::get('target'):false;
-    if($focus) switch($focus){
+    /*if($focus) switch($focus){
         case 'fund': $focus = 'superfund'; break;
         case 'department': $focus = 'department'; break;
         case 'category': $focus = 'ledger_description'; break;
-    }
+    }*/
     foreach($results as $item){
         if(
             in_array($item->get('superfund_fund'), $dependencies['funds']) ||
@@ -49,16 +49,46 @@
             $isTax = preg_match('~[Tt][Aa][Xx]~', $item->get('ledger_description'));
             if($deep){
                 if($focus){
-                    $data[$item->get($focus)][$item->get('year')][$transactionType] += (float)$item->get('amount');
-                    if($isTax) $data[$item->get($focus)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
+                    $focusHasSelection = $incomingType == $focus;
+                    switch($focus){
+                        case 'fund': 
+                            if($focusHasSelection) $index = $item->get('superfund_fund');
+                            else $index = $item->get('superfund');
+                            break;
+                        case 'department':
+                            if($focusHasSelection) $index = $item->get('department_division');
+                            else $index = $item->get('department');
+                            break;
+                        case 'category': 
+                            if($focusHasSelection) $index = $item->get('ledger_type_ledger_description');
+                            else $index = $item->get('ledger_description');
+                            break;
+                    }
+                    $data[$index][$item->get('year')][$transactionType] += (float)$item->get('amount');
+                    if($isTax) $data[$index][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
                 }else{
                     $data[$name][$item->get('year')][$transactionType] += (float)$item->get('amount');
                     if($isTax) $data[$name][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
                 }
             }else{
                 if($focus){
-                    $data[$item->get($focus)][$item->get('year')][$transactionType] += (float)$item->get('amount');
-                    if($isTax) $data[$item->get($focus)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
+                    $focusHasSelection = $incomingType == $focus;
+                    switch($focus){
+                        case 'fund': 
+                            if($focusHasSelection) $index = $item->get('superfund_fund');
+                            else $index = $item->get('superfund');
+                            break;
+                        case 'department':
+                            if($focusHasSelection) $index = $item->get('department_division');
+                            else $index = $item->get('department');
+                            break;
+                        case 'category': 
+                            if($focusHasSelection) $index = $item->get('ledger_type_ledger_description');
+                            else $index = $item->get('ledger_description');
+                            break;
+                    }
+                    $data[$index][$item->get('year')][$transactionType] += (float)$item->get('amount');
+                    if($isTax) $data[$index][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
                 }else{
                     $data[$item->get($uniqueType)][$item->get('year')][$transactionType] += (float)$item->get('amount');
                     if($isTax) $data[$item->get($uniqueType)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
