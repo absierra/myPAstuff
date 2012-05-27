@@ -9,7 +9,7 @@ var refreshGUI = function(includeData){
         graphs_initialized = true;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
-                console.log(['refresh', includeData, graph, window.currentGraph]);
+                //console.log(['refresh', includeData, graph, window.currentGraph]);
                 if(graph != window.currentGraph) graph.fetch(window.selected, window.lastSelectedColumn, function(){});
             });
         }).delay(500); //don't let offscreen graphs choke the onscreen one
@@ -124,7 +124,7 @@ function panelData(){
                 selectionRequest.get(window.selected);
                 if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
                     BudgetGraph.select(index);
-                    console.log('click');
+                    //console.log('click');
                     refreshGUI(true);
                 });
 			};
@@ -187,7 +187,7 @@ document.addEvent('domready', function() {
     initGraphs();
     new panelData();
     DelphiGraphTabs.initialize({
-    select : function(event){
+        select : function(event){
             BudgetGraph.select(event.target.innerHTML.toLowerCase());
             refreshGUI();
         }

@@ -35,7 +35,7 @@ var BudgetGraph = new Class({
         if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
         if(this.options.select) this.options.select = this.options.select.bind(this)
         this.raphael = Raphael(element);
-        a = this;
+        a = this; //?
     },
     fetch : function(data, type, callback){
         if(typeOf(type) == 'function'){
@@ -59,49 +59,72 @@ var BudgetGraph = new Class({
         this.setLegend();
         this.setKeys();
     },
+    getKeyElements : function(){
+        var column = document.id(this.options.column);
+        if(column){
+            var isSelected = column.getElement('li span.selected');
+            if(isSelected){ 
+                //console.log(['selected', column.getElements('li span.selected')]);
+                return column.getElements('ul li span:not(.disabled)');
+            }else {
+                //console.log(['rer', column.getElements('> li > span:not(.disabled)')]);
+                return column.getElements('> li > span:not(.disabled)');
+            }
+        }else return [];
+    },
+    getLegendItems : function(){
+        //console.log(['sss', this.data]);
+        var keys = Object.keys(this.data).map(function(value){
+            return value.split(':').pop();
+        });
+        var result = [];
+        /*var column = document.id(this.options.column);
+        var elements = column.getElements('ul li span:not(.disabled)');
+        elements.each(function(el){
+            result.push(el.innerHTML);
+        });
+        return result;*/
+        return keys;
+    },
     setKeys : function(){
         document.getElements('span.colorkey').removeClass('colorkey');
         PseudoDOM.clear();
-        var column = document.id(this.options.column);
-        if(column){
-            activeItems = column.getElements('ul li span:not(.disabled)');
-            //console.log(['W', activeItems, column]);
-            activeItems.addClass('colorkey');
-            activeItems.each(function(item, lcv){
-                PseudoDOM.before(item, {
-                    'background-color' : this.colors[lcv]
-                })
-            }.bind(this));
-        }else{
-            //todo
-        }
+        activeItems = this.getKeyElements();
+        activeItems.each(function(item, lcv){
+            item.addClass('colorkey');
+            PseudoDOM.before(item, {
+                'background-color' : this.colors[lcv]
+            });
+        }.bind(this));
     },
     setLegend : function(){
         var column = document.id(this.options.column);
-        if(column){
-            var legendElement = document.getElement('#legend');
-            legendElement.getElements('li').destroy();
-            activeItems = column.getElements('ul li span:not(.disabled)');
-            if (activeItems) {
-                activeItems.each(function(element, lcv) {
-                    var legendItem = element.clone().removeClass('colorkey');
-                    var legendLi = new Element('li');
-                    legendElement.appendChild(legendLi);
-                    legendLi.appendChild(legendItem);
+        var legendElement = document.getElement('#legend');
+        legendElement.getElements('li').destroy();
+        var items = this.getLegendItems();
+        //console.log(['items', items, this.colors]);
+        if(items && items.length > 0){
+            items.each(function(item, lcv) {
+                var legendItem = new Element('span', {
+                    html : item
                 });
-                legendElement.reveal();
-            } else {
-                legendElement.dissolve();
-            }
-            var legendElements = document.getElements('#legend li span');
-            legendElements.each(function(item, lcv){
-                PseudoDOM.before(item, {
+                PseudoDOM.before(legendItem, {
                     'background-color' : this.colors[lcv]
-                })
+                });
+                var legendLi = new Element('li');
+                legendElement.appendChild(legendLi);
+                legendLi.appendChild(legendItem);
             }.bind(this));
+            legendElement.reveal();
         }else{
-            //todo
+            legendElement.dissolve();
         }
+        var legendElements = document.getElements('#legend li span');
+        legendElements.each(function(item, lcv){
+            PseudoDOM.before(item, {
+                'background-color' : this.colors[lcv]
+            })
+        }.bind(this));
     },
     display : function(metric){
     	this.raphael.clear();
@@ -156,7 +179,7 @@ var BudgetGraph = new Class({
             ySet.each(function(arraySet, key) {
                 totalValues.push(Math.floor(arraySet.pop()/10000));
             });
-            console.log(totalValues);
+            //console.log(totalValues);
 
             /* Year Values
             xSet.each(function(element, key) {
@@ -211,9 +234,10 @@ BudgetGraph.clearLegend = function(){
 };
 BudgetGraph.select = function(name){
     if(BudgetGraph.graphs[name]){
+        //console.log(['selecting', name, BudgetGraph.graphs[name]]);
         window.currentGraph = BudgetGraph.graphs[name];
         BudgetGraph.graphs[name].select();
-        if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select();
+        if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
     }
 };
 BudgetGraph.deselect = function(){

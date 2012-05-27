@@ -4,15 +4,14 @@ var DelphiGraphTabs = {
         window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
         var tabsContainer = document.getElement('#tabs');
         var tabsLi = tabsContainer.getElements('#tabs li');
-        tabsLi.each(function(selectedTabElement, tabKey){
-            var tabElement = tabsContainer.getElement('.'+selectedTabElement);
-            if (tabElement) {
-                tabElement.addEvent('click', options.select);
-            }
+        tabsLi.each(function(el, tabKey){
+                el.addEvent('click', function(event){
+                    options.select(event);
+                });
         });
     },
     select : function(tab){
-        DelphiGraphTabs.tab = tab;
+        DelphiGraphTabs.selected = tab;
         DelphiGraphTabs.filter();
     },
     filter : function(){
