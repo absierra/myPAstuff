@@ -8,7 +8,7 @@
     $values['category'] = WebApplication::get('category')?WebApplication::get('category'):false;
     $mapping = json_decode(file_get_contents('Data/map.json'), true);
     $data = $unique;
-    $dependencies = categoryDependencies(&$data, $unique, $mapping, $values);\
+    $dependencies = categoryDependencies(&$data, $unique, $mapping, $values);
     if(!$values[$incomingType]) throw new Exception('no value for type :'.$incomingType);
     $name = $values[$incomingType];
     $deep = strstr($name, ':')?true:false; //is this a second level request (aggregate)
