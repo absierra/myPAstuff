@@ -201,6 +201,7 @@ body {
   color: #0F0;
 }
 #graph_types {
+  position: relative;
   height: 430px;
   width: 675px;
   background-color: #fff;
@@ -316,6 +317,33 @@ header span.logo-text {
   vertical-align: middle;
   color: #989A9C;
   font-family: "ProximaNova";
+}
+#yearsContainer {
+  display: none;
+  position: absolute;
+  left: 40px;
+  bottom: 7px;
+  width: 575px;
+}
+#yearsContainer #graphYears {
+  width: 575px;
+  height: 12px;
+}
+#yearsContainer #graphYears li {
+  font-family: "ProximaNova-Bold";
+  font-size: 11px;
+  display: inline-block;
+  margin-right: 115px;
+  line-height: 12px;
+  cursor: default;
+}
+#yearsContainer input[type='range'] {
+  /*-webkit-appearance: slider-vertical;*/
+
+  width: 575px;
+  margin-left: 10px;
+  display: block;
+  cursor: pointer;
 }
 .navigation {
   width: 100%;

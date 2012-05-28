@@ -176,25 +176,30 @@ var BudgetGraph = new Class({
             //window.totalChartValue = 0;
 
             var totalValues = [];
-            ySet.each(function(arraySet, key) {
-                totalValues.push(Math.floor(arraySet.pop()/10000));
-            });
-            //console.log(totalValues);
+            var yearValues = [];
+            var year = this.options.year;
+            var yearKey;
 
-            /* Year Values
-            xSet.each(function(element, key) {
-                if (key == 0) {
-                    element.each(function(elementValue, keyValue) {
-                        if (keyValue == 0) {
-                            //console.log("Element: "+elementValue); // Year
-                        }
-                    });
-                };
+            xSet.each(function(yearsArray) {
+                BudgetGraph.LastSelectionYearsData = yearsArray;
+                yearsArray.each(function(value, key) {
+                    if (year == value) {
+                        yearKey = key;
+                    }
+                });
             });
-            */
-            //console.log(totalValues.clone());
 
-            this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
+            if (year) {
+                ySet.each(function(arraySet, key) {
+                    totalValues.push(Math.floor(arraySet[yearKey]/10000));
+                });
+            } else {
+                ySet.each(function(arraySet, key) {
+                    totalValues.push(Math.floor(arraySet.pop()/10000));
+                });            
+            }
+
+            this.lines = this.raphael.piechart(335, 197, 175, totalValues, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
@@ -225,6 +230,7 @@ var BudgetGraph = new Class({
         }
     }
 })
+BudgetGraph.LastSelectionYearsData = {};
 BudgetGraph.lastSelection = {};
 BudgetGraph.graphs = {};
 BudgetGraph.clearLegend = function(){

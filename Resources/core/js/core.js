@@ -175,6 +175,38 @@ function panelData(){
 	};
 }
 
+var yearSlider = function(display){
+    var yearsContainer = document.id('yearsContainer');
+    if (display == 'hide') { yearsContainer.hide(); return; }
+    var years = document.id('graphYears');
+    var getYears = BudgetGraph.LastSelectionYearsData;
+    var yearsSliderBar = yearsContainer.getElement("input[type='range']");
+    years.getElements('li').destroy();
+    getYears.each(function(year){
+        var yearElement = new Element('li', {
+            html : year
+        });
+        graphYears.adopt(yearElement);
+    });
+    yearsSliderBar.setAttribute('upper', getYears.pop());
+    yearsSliderBar.setAttribute('lower', getYears.shift());
+    yearsContainer.show();
+}
+
+var yearSliderUpdate = function(element, value){
+    var upperLimit = element.getAttribute('upper');
+    var lowerLimit = element.getAttribute('lower');
+    var increment = element.getAttribute('step');
+    var totalYears = upperLimit - lowerLimit;
+    for (var i = 0, j = 0; i <= totalYears; i++, j = j + increment.toInt()){
+        if (j == value) {
+            var year = lowerLimit.toInt() + i;
+            window.currentGraph.options.year = year;
+            changeCurrentGraphType('pie', element);
+        }        
+    }    
+}
+
 var changeCurrentGraphType = function(type, el){
     el.getSiblings().removeClass('active');
     el.addClass('active');
@@ -194,15 +226,19 @@ document.addEvent('domready', function() {
     });
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
+        yearSlider('hide');
     });
     document.id('stacked_graph').addEvent('click', function(event){
         changeCurrentGraphType('stacked-line', this);
+        yearSlider('hide');
     });
     document.id('percentage_graph').addEvent('click', function(event){
         changeCurrentGraphType('percentage-line', this);
+        yearSlider('hide');
     });
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
+        yearSlider('show');
     });
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.descriptionTooltip');
