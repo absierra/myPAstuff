@@ -32,6 +32,10 @@
             <div id="revenue_graph" class="graph"></div>
             <div id="fee_revenue_graph" class="graph"></div>
             <div id="exp_vs_fee_rev" class="graph"></div>
+            <div id="yearsContainer">
+                <ul id="graphYears"></ul>
+            	<input type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>
+            </div>
         </div>
         <ol id="legend"></ol>
         <ol id="tabs" class="graphtabs">
