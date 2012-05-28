@@ -90,6 +90,7 @@ var BudgetGraph = new Class({
         document.getElements('span.colorkey').removeClass('colorkey');
         PseudoDOM.clear();
         activeItems = this.getKeyElements();
+        //if(activeItems.length != this.colors.length) console.log(['Data lengths do not match, something is wrong with the series!',this.data]);
         activeItems.each(function(item, lcv){
             item.addClass('colorkey');
             PseudoDOM.before(item, {

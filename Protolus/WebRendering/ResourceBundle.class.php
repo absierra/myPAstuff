@@ -4,7 +4,7 @@
         public static $minify = true;
         public static $integratedMinify = true;
         public static $merge = true;
-        public static $hardcodedVersion = '101';
+        public static $hardcodedVersion = '1';
         public static $resourcePackager = false;
                   
         

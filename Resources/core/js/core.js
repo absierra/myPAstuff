@@ -9,10 +9,9 @@ var refreshGUI = function(includeData){
         graphs_initialized = true;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
-                //console.log(['refresh', includeData, graph, window.currentGraph]);
                 if(graph != window.currentGraph) graph.fetch(window.selected, window.lastSelectedColumn, function(){});
             });
-        }).delay(500); //don't let offscreen graphs choke the onscreen one
+        })(); //don't let offscreen graphs choke the onscreen one
 	}
 }
 
@@ -20,6 +19,7 @@ var initGraphs = function(){
     window.graphs.fund = new BudgetGraph('fund_graph', {
         type : 'fund',
         metric : 'expenses',
+        target : 'funds',
         column : 'fund',
         id : 'fund',
         select : function(){
