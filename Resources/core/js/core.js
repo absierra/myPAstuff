@@ -59,6 +59,17 @@ var initGraphs = function(){
             
         }
     });
+    window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
+        type : 'categories',
+        target : 'category',
+        metric : 'tax_revenue',
+        id : 'fee_revenue',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            window.graphTabs.showSlide(3);
+            
+        }
+    });
 };
 
 
