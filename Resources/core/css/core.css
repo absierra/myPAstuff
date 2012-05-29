@@ -325,11 +325,11 @@ header span.logo-text {
   bottom: 7px;
   width: 575px;
 }
-#yearsContainer #graphYears {
+#yearsContainer #yearsText {
   width: 575px;
   height: 12px;
 }
-#yearsContainer #graphYears li {
+#yearsContainer #yearsText li {
   font-family: "ProximaNova-Bold";
   font-size: 11px;
   display: inline-block;
@@ -337,7 +337,7 @@ header span.logo-text {
   line-height: 12px;
   cursor: default;
 }
-#yearsContainer input[type='range'] {
+#yearsContainer #yearsSlider {
   /*-webkit-appearance: slider-vertical;*/
 
   width: 575px;
