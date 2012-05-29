@@ -43,10 +43,13 @@
             if($deep) $index = $name;
             else $index = $item->get($uniqueType);
             if($focus){
+                $subfocused = strstr($name, ':')?true:false;
+                //$focusHasSelection = ( array_key_exists($focus, $values) 
+                    //&& ($values[$focus]  && !$subfocused)
+                //);
+                $focusHasSelection = ($values[$focus]) || $subfocused;
+                //echo('[FS:'.$values[$focus].'|'.$subfocused.']');
                 
-                $focusHasSelection = ( array_key_exists($focus, $values) && $values[$focus] ) 
-                ;
-                //echo('[FS'.$focusHasSelection.'|'.$incomingType.'|'.$values[$focus].']');
                 switch($focus){
                     case 'fund': 
                         if($focusHasSelection) $index = $item->get('superfund_fund');
