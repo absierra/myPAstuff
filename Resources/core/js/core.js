@@ -194,8 +194,6 @@ var yearSlider = function(display){
     });
     yearsSliderBar.setAttribute('upper', getYears.clone().pop());
     yearsSliderBar.setAttribute('lower', getYears.clone().shift());
-    yearsSliderBar.setAttribute('value', getYears.clone().pop());
-    console.log(getYears.clone().pop());
     yearsContainer.show();
 }
 
