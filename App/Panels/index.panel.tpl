@@ -19,8 +19,8 @@
     <ul class="four_col_4">
         <ol class="graphtabs">
         	<li id="percentage_graph">Percentage</li>
-        	<li id="stacked_graph" class="active">Stacked</li>
-        	<li id="standard_graph">Line</li>
+        	<li id="stacked_graph">Stacked</li>
+        	<li id="standard_graph" class="active">Line</li>
             <li id="pie_chart">Pie</li>
         	{*<li id="bar_graph">Bar</li>*}
         </ol>
@@ -33,8 +33,8 @@
             <div id="fee_revenue_graph" class="graph"></div>
             <div id="exp_vs_fee_rev" class="graph"></div>
             <div id="yearsContainer">
-                <ul id="graphYears"></ul>
-            	<input type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>
+                <ul id="yearsText"></ul>
+            	<input id="yearsSlider" type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>
             </div>
         </div>
         <ol id="legend"></ol>

@@ -182,18 +182,20 @@ function panelData(){
 var yearSlider = function(display){
     var yearsContainer = document.id('yearsContainer');
     if (display == 'hide') { yearsContainer.hide(); return; }
-    var years = document.id('graphYears');
+    var graphYears = document.id('yearsText');
     var getYears = BudgetGraph.LastSelectionYearsData;
-    var yearsSliderBar = yearsContainer.getElement("input[type='range']");
-    years.getElements('li').destroy();
+    var yearsSliderBar = document.id('yearsSlider');
+    graphYears.getElements('li').destroy();
     getYears.each(function(year){
         var yearElement = new Element('li', {
             html : year
         });
         graphYears.adopt(yearElement);
     });
-    yearsSliderBar.setAttribute('upper', getYears.pop());
-    yearsSliderBar.setAttribute('lower', getYears.shift());
+    yearsSliderBar.setAttribute('upper', getYears.clone().pop());
+    yearsSliderBar.setAttribute('lower', getYears.clone().shift());
+    yearsSliderBar.setAttribute('value', getYears.clone().pop());
+    console.log(getYears.clone().pop());
     yearsContainer.show();
 }
 

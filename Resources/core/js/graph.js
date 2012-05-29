@@ -10,7 +10,7 @@ var BudgetGraph = new Class({
         target : false,
         name : 'Debt Service Funds',
         //we really need to switch graph types to 1 option, rather than a bunch of weirdly intersecting booleans
-        stacked : true,
+        stacked : false,
         percent : false,
         bar : false,
         pie : false,
@@ -182,12 +182,12 @@ var BudgetGraph = new Class({
             var yearKey;
 
             xSet.each(function(yearsArray) {
-                BudgetGraph.LastSelectionYearsData = yearsArray;
                 yearsArray.each(function(value, key) {
                     if (year == value) {
                         yearKey = key;
                     }
                 });
+                BudgetGraph.LastSelectionYearsData = yearsArray;
             });
 
             if (year) {
@@ -212,7 +212,7 @@ var BudgetGraph = new Class({
 
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
-                shade: this.options.stacked,
+                shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
                 axisxstep : 4,
