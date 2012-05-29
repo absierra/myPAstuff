@@ -34,7 +34,6 @@ var initGraphs = function(){
         column : 'department',
         id : 'department',
         select : function(){
-            console.log(this.options.mode);
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             window.graphTabs.showSlide(1);
         }
