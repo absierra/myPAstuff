@@ -23,6 +23,7 @@ var initGraphs = function(){
         column : 'fund',
         id : 'fund',
         select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             window.graphTabs.showSlide(0);
         }
     });
@@ -33,6 +34,7 @@ var initGraphs = function(){
         column : 'department',
         id : 'department',
         select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             window.graphTabs.showSlide(1);
         }
     });
@@ -42,6 +44,7 @@ var initGraphs = function(){
         metric : 'expenses',
         id : 'expenses',
         select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             window.graphTabs.showSlide(2);
         }
     });
@@ -51,6 +54,7 @@ var initGraphs = function(){
         metric : 'revenue',
         id : 'revenue',
         select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             window.graphTabs.showSlide(3);
             
         }
@@ -210,8 +214,10 @@ var yearSliderUpdate = function(element, value){
 var changeCurrentGraphType = function(type, el){
     el.getSiblings().removeClass('active');
     el.addClass('active');
-    window.currentGraph.options.mode = type;
-    window.currentGraph.display();
+    Object.each(window.graphs, function(graph){
+        graph.options.mode = type;
+        graph.display();
+    });
 }
 
 document.addEvent('domready', function() { 
