@@ -180,15 +180,14 @@ var BudgetGraph = new Class({
             var yearValues = [];
             var year = this.options.year;
             var yearKey;
-
+            this.availableYears = [];
             xSet.each(function(yearsArray) {
                 yearsArray.each(function(value, key) {
-                    if (year == value) {
-                        yearKey = key;
-                    }
-                });
-                BudgetGraph.LastSelectionYearsData = yearsArray;
-            });
+                    if (year == value) yearKey = key;
+                    if (!this.availableYears.contains(value)) this.availableYears.push(value);  
+                }.bind(this));
+                BudgetGraph.LastSelectionYearsData = this.availableYears.sort();
+            }.bind(this));
 
             if (year) {
                 ySet.each(function(arraySet, key) {
@@ -197,7 +196,7 @@ var BudgetGraph = new Class({
             } else {
                 ySet.each(function(arraySet, key) {
                     totalValues.push(Math.floor(arraySet.pop()/10000));
-                });            
+                });
             }
 
             this.lines = this.raphael.piechart(335, 197, 175, totalValues, {

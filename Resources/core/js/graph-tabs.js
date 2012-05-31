@@ -50,7 +50,7 @@ var DelphiGraphTabs = {
         //you know, show/hide is way better than shuffling custom classes, and you could use first/last to handle rounding
         var tabsContainer = document.getElement('#tabs');
         var tabsLi = tabsContainer.getElements('#tabs li');
-        tabsLi.removeClass('display').removeClass('roundedLeft').removeClass('roundedRight');
+        tabsLi.removeClass('display'); //.removeClass('roundedLeft').removeClass('roundedRight');
         var totalTabs = graphTabsSelect.length;
         graphTabsSelect.each(function(selectedTabElement, tabKey){
             var tabElement = tabsContainer.getElement('.'+selectedTabElement);
@@ -60,8 +60,8 @@ var DelphiGraphTabs = {
                     
                 });*/
                 tabElement.addClass('display');
-                if (tabKey == 0) tabElement.addClass('roundedLeft');
-                if (tabKey+1 == totalTabs) tabElement.addClass('roundedRight');
+                //if (tabKey == 0) tabElement.addClass('roundedLeft');
+                //if (tabKey+1 == totalTabs) tabElement.addClass('roundedRight');
             }
         });
     }

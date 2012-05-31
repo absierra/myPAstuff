@@ -194,17 +194,18 @@ var yearSlider = function(display){
     var yearsContainer = document.id('yearsContainer');
     if (display == 'hide') { yearsContainer.hide(); return; }
     var graphYears = document.id('yearsText');
-    var getYears = BudgetGraph.LastSelectionYearsData;
+    var years = BudgetGraph.LastSelectionYearsData;
     var yearsSliderBar = document.id('yearsSlider');
-    graphYears.getElements('li').destroy();
-    getYears.each(function(year){
+    graphYears.getElements('li').destroy(); 
+    if(!years) years = ['2009', '2010', '2011', '2012', '2013'];
+    years.each(function(year){
         var yearElement = new Element('li', {
             html : year
         });
         graphYears.adopt(yearElement);
-    });
-    yearsSliderBar.setAttribute('upper', getYears.clone().pop());
-    yearsSliderBar.setAttribute('lower', getYears.clone().shift());
+    }); 
+    yearsSliderBar.setAttribute('upper', years.clone().pop());
+    yearsSliderBar.setAttribute('lower', years.clone().shift());
     yearsContainer.show();
 }
 
