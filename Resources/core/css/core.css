@@ -388,17 +388,15 @@ header span.logoText {
   line-height: 18px;
 }
 .graphTabs {
-  width: 800px;
   display: block;
-  margin: 20px 0 15px 30px;
+  margin: 20px 0 15px 10px;
 }
 .graphTabs li {
   display: none;
-  width: 170px;
   font-size: 0.9em;
   background: #373936;
   text-align: center;
-  padding: 10px;
+  padding: 10px 15px;
   margin: 0;
   float: left;
   cursor: pointer;
@@ -413,10 +411,10 @@ header span.logoText {
 #graphContainer {
   clear: both;
   position: relative;
-  height: 550px;
+  height: 600px;
   width: 800px;
   background-color: #fff;
-  margin: 120px auto 0;
+  margin: 70px auto 0;
   border: 1px solid #ccc;
   border-width: 1px 0 0 1px;
   /* todo make shadow work in angle & incline */
@@ -434,7 +432,7 @@ header span.logoText {
   border-bottom-left-radius: 10px;
 }
 #graphContainer .graph {
-  height: 450px;
+  height: 418px;
   width: 800px;
   position: absolute;
 }
@@ -571,11 +569,13 @@ header span.logoText {
   bottom: 0;
   display: none;
   white-space: normal;
-  width: 800px;
+  height: 80px;
+  width: 770px;
   margin: 0 10px 15px;
   padding: 5px 5px 3px;
   line-height: 30px;
   color: #373739;
+  overflow: auto;
 }
 #legend li {
   display: inline-block;
