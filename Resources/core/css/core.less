@@ -260,16 +260,14 @@ header{
 }
 
 .graphTabs {
-    width: @rightColumnWidth;
     display: block;
-    margin: 20px 0 15px 30px;
+    margin: 20px 0 15px 10px;
     li{
         display: none;
-        width: 170px;
         font-size: 0.9em;
         background: #373936;
         text-align: center;
-        padding: 10px;
+        padding: 10px 15px;
         margin: 0;
         float: left;
         cursor: pointer;
@@ -286,16 +284,16 @@ header{
 #graphContainer{
     clear: both;
     position: relative;
-    height:550px;
+    height:600px;
     width: @rightColumnWidth; 
     background-color: #fff;
-    margin: 120px auto 0;
+    margin: 70px auto 0;
     border: 1px solid #ccc;
     border-width: 1px 0 0 1px;
     .shadowed(2px, 0.2);
     .rounded(10px);
     .graph{
-        height:450px;
+        height:418px;
         width: @rightColumnWidth;
         position: absolute;
     }
@@ -339,11 +337,13 @@ header{
     bottom: 0;
     display: none;
     white-space: normal;
-    width: @rightColumnWidth;
+    height: 80px;
+    width: @rightColumnWidth - 30px;
     margin: 0 10px 15px;
     padding: 5px 5px 3px;
    	line-height:30px;
     color: #373739;
+    overflow: auto;
     li {
         display: inline-block;
         margin: 0 8px;
