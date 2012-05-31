@@ -259,13 +259,13 @@ header{
     }
 }
 
-.graphtabs {
+.graphTabs {
     width: @rightColumnWidth;
     display: block;
     margin: 20px 0 15px 30px;
     li{
         display: none;
-        width: 175px;
+        width: 170px;
         font-size: 0.9em;
         background: #373936;
         text-align: center;
@@ -283,13 +283,13 @@ header{
     }
 }
 
-#graph_types{
+#graphContainer{
     clear: both;
     position: relative;
-    height:530px;
+    height:550px;
     width: @rightColumnWidth; 
     background-color: #fff;
-    margin: 75px auto 0;
+    margin: 120px auto 0;
     border: 1px solid #ccc;
     border-width: 1px 0 0 1px;
     .shadowed(2px, 0.2);
@@ -305,6 +305,34 @@ header{
         margin-bottom: 0;
     }
 }
+
+#graphTypes{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    z-index: 20;
+    li{
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
+
+/* Graph Type Icons */
+@graphTypeIcons : '/Resources/core/img/graph-type-icons.png';
+@graphTypeActiveIcons : '/Resources/core/img/graph-type-icons-active.png';
+
+.active.percentage.icon{ .spriteIcon(0, @graphTypeActiveIcons, 40px, 4); }
+.percentage.icon{ .spriteIcon(0, @graphTypeIcons, 40px, 4); }
+
+.active.stacked.icon{ .spriteIcon(1, @graphTypeActiveIcons, 40px, 4); }
+.stacked.icon{ .spriteIcon(1, @graphTypeIcons, 40px, 4); }
+
+.active.line.icon{ .spriteIcon(2, @graphTypeActiveIcons, 40px, 4); }
+.line.icon{ .spriteIcon(2, @graphTypeIcons, 40px, 4); }
+
+.active.pie.icon{ .spriteIcon(3, @graphTypeActiveIcons, 40px, 4); }
+.pie.icon{ .spriteIcon(3, @graphTypeIcons, 40px, 4); }
 
 #legend{
     position: absolute;
@@ -349,21 +377,22 @@ header{
     bottom: 100px;
     width: @rightColumnWidth - 100;
     #yearsText {
-        width: @rightColumnWidth - 110;
+        width: @rightColumnWidth - 95;
         height: 12px;
         li {
             font-family: @primaryFontBold;
             font-size: 11px;
             display: inline-block;
-            margin-right: 115px;
             line-height: 12px;
             cursor: default;
+            width: 140px;
+            text-align: center;
         }
     }
     #yearsSlider {
         /*-webkit-appearance: slider-vertical;*/
-        width: @rightColumnWidth - 100;
-        margin-left: 10px;
+        width: @rightColumnWidth - 235px;
+        margin-left: 70px;
         display: block;
         cursor: pointer;
     }
@@ -380,22 +409,6 @@ header{
     }
 }
 
-
-/* Icons */
-@icons : '/Resources/core/img/icons.png';
-@activeIcons : '/Resources/core/img/icons-active.png';
-
-/* Area */
-.selected > .icon:before{ .spriteIcon(39, @activeIcons, 30px, 6); }
-.icon:before{ .spriteIcon(39, @icons, 30px, 6); }
-
-/* category*/
-
-
-.icon:before {
-    vertical-align: top; 
-    margin-right: 5px;
-}
 
 /* Scroll Bars */
 ::-webkit-scrollbar{

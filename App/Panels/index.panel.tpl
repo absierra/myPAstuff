@@ -18,23 +18,21 @@
         </ul>
     </div>
     <div id="content">
-        {*<ol class="graphtabs">
-        	<li id="percentage_graph">Percentage</li>
-        	<li id="stacked_graph">Stacked</li>
-        	<li id="standard_graph" class="active">Line</li>
-            <li id="pie_chart">Pie</li>
-        </ol>*}
-
-        <ol id="tabs" class="graphtabs">
+        <ul id="tabs" class="graphTabs">
         	<li class="tab fund_tab">Breakdown by Fund</li>
         	<li class="tab department_tab">Breakdown by Department</li>
             <li class="tab expenditure_tab">Breakdown by Expenditure</li>
             <li class="tab revenue_tab">Breakdown by Revenue</li>
             <li class="tab fee_revenue_tab">Breakdown by Fee Revenue</li>
             <li class="tab exp_vs_fee_rev">Breakdown by Exp. vs. Fee Rev.</li>
-        </ol>
-
-        <div id="graph_types">
+        </ul>
+        <div id="graphContainer">
+            <ul id="graphTypes">
+            	<li id="percentage_graph" class="percentage icon"></li>
+            	<li id="stacked_graph" class="stacked icon"></li>
+            	<li id="standard_graph" class="line icon active"></li>
+                <li id="pie_chart" class="pie icon"></li>
+            </ul>
         	<div id="fund_graph" class="graph"></div>
         	<div id="department_graph" class="graph"></div>
             <div id="expenditure_graph" class="graph"></div>
@@ -45,7 +43,7 @@
                 <ul id="yearsText"></ul>
             	<input id="yearsSlider" type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>
             </div>
-             <ol id="legend"></ol>
+             <ul id="legend"></ul>
         </div>
     </div>
 </div>

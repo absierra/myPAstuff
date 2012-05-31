@@ -1,7 +1,7 @@
 var DelphiGraphTabs = {
     selected : false,
     initialize : function(options){
-        window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_types .graph');
+        window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graphContainer .graph');
         var tabsContainer = document.getElement('#tabs');
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.each(function(el, tabKey){

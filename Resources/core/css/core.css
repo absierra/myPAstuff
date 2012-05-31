@@ -387,14 +387,14 @@ header span.logoText {
   white-space: pre-wrap;
   line-height: 18px;
 }
-.graphtabs {
+.graphTabs {
   width: 800px;
   display: block;
   margin: 20px 0 15px 30px;
 }
-.graphtabs li {
+.graphTabs li {
   display: none;
-  width: 175px;
+  width: 170px;
   font-size: 0.9em;
   background: #373936;
   text-align: center;
@@ -403,20 +403,20 @@ header span.logoText {
   float: left;
   cursor: pointer;
 }
-.graphtabs li.display {
+.graphTabs li.display {
   display: block;
 }
-.graphtabs li.active {
+.graphTabs li.active {
   color: #fff;
   background: #919296;
 }
-#graph_types {
+#graphContainer {
   clear: both;
   position: relative;
-  height: 530px;
+  height: 550px;
   width: 800px;
   background-color: #fff;
-  margin: 75px auto 0;
+  margin: 120px auto 0;
   border: 1px solid #ccc;
   border-width: 1px 0 0 1px;
   /* todo make shadow work in angle & incline */
@@ -433,14 +433,138 @@ header span.logoText {
   -moz-border-radius-bottomleft: 10px;
   border-bottom-left-radius: 10px;
 }
-#graph_types .graph {
+#graphContainer .graph {
   height: 450px;
   width: 800px;
   position: absolute;
 }
-#graph_types .container {
+#graphContainer .container {
   display: inline-block;
   margin-bottom: 0;
+}
+#graphTypes {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  z-index: 20;
+}
+#graphTypes li {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/* Graph Type Icons */
+.active.percentage.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 40px;
+  height: 40px;
+  background-position: 0px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.percentage.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 40px;
+  height: 40px;
+  background-position: 0px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.active.stacked.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 40px;
+  height: 40px;
+  background-position: -40px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.stacked.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 40px;
+  height: 40px;
+  background-position: -40px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.active.line.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 40px;
+  height: 40px;
+  background-position: -80px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.line.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 40px;
+  height: 40px;
+  background-position: -80px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.active.pie.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 40px;
+  height: 40px;
+  background-position: -120px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
+}
+.pie.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 40px;
+  height: 40px;
+  background-position: -120px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  vertical-align: middle;
 }
 #legend {
   position: absolute;
@@ -485,22 +609,23 @@ header span.logoText {
   width: 700px;
 }
 #yearsContainer #yearsText {
-  width: 690px;
+  width: 705px;
   height: 12px;
 }
 #yearsContainer #yearsText li {
   font-family: "ProximaNova-Bold";
   font-size: 11px;
   display: inline-block;
-  margin-right: 115px;
   line-height: 12px;
   cursor: default;
+  width: 140px;
+  text-align: center;
 }
 #yearsContainer #yearsSlider {
   /*-webkit-appearance: slider-vertical;*/
 
-  width: 700px;
-  margin-left: 10px;
+  width: 565px;
+  margin-left: 70px;
   display: block;
   cursor: pointer;
 }
@@ -527,41 +652,6 @@ header span.logoText {
   border-bottom-left-radius: 4px;
   position: absolute;
   cursor: pointer;
-}
-/* Icons */
-/* Area */
-.selected > .icon:before {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/icons-active.png');
-  width: 30px;
-  height: 30px;
-  background-position: -90px -180px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  vertical-align: middle;
-}
-.icon:before {
-  display: block;
-  display: inline-block;
-  background-image: url('/Resources/core/img/icons.png');
-  width: 30px;
-  height: 30px;
-  background-position: -90px -180px;
-  content: '';
-  display: block;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  vertical-align: middle;
-}
-/* category*/
-.icon:before {
-  vertical-align: top;
-  margin-right: 5px;
 }
 /* Scroll Bars */
 ::-webkit-scrollbar {
