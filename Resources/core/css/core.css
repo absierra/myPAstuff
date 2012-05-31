@@ -389,11 +389,14 @@ header span.logoText {
 }
 .graphTabs {
   display: block;
-  margin: 20px 0 15px 10px;
+  margin: 20px auto;
+  width: 800px;
 }
 .graphTabs li {
   display: none;
+  width: 170px;
   font-size: 0.9em;
+  color: #a3a3a5;
   background: #373936;
   text-align: center;
   padding: 10px 15px;
@@ -432,23 +435,52 @@ header span.logoText {
   border-bottom-left-radius: 10px;
 }
 #graphContainer .graph {
-  height: 418px;
-  width: 800px;
+  height: 400px;
+  width: 600px;
   position: absolute;
+  top: 60px;
+  left: 70px;
 }
 #graphContainer .container {
   display: inline-block;
   margin-bottom: 0;
 }
+#graphContainer h1#graphTitle {
+  text-align: center;
+  font-family: "ProximaNova-Bold";
+  margin-top: 22px;
+  font-size: 18px;
+  color: #00abe3;
+  text-indent: -30px;
+}
+#graphContainer h2#graphBreakdown {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  font-family: "ProximaNova-Bold";
+  font-size: 15px;
+  -webkit-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -moz-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -o-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -ms-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+}
+#graphContainer h2#graphFiscalYear {
+  position: absolute;
+  top: 475px;
+  left: 45%;
+  font-family: "ProximaNova-Bold";
+  font-size: 15px;
+}
 #graphTypes {
   position: absolute;
-  right: 20px;
-  top: 30%;
+  right: 55px;
+  top: 20%;
   z-index: 20;
 }
 #graphTypes li {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 /* Graph Type Icons */
@@ -566,12 +598,12 @@ header span.logoText {
 }
 #legend {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   display: none;
   white-space: normal;
-  height: 80px;
-  width: 770px;
-  margin: 0 10px 15px;
+  height: 90px;
+  width: 680px;
+  margin: 0 55px;
   padding: 5px 5px 3px;
   line-height: 30px;
   color: #373739;
@@ -582,9 +614,10 @@ header span.logoText {
   margin: 0 8px;
 }
 #legend li span {
+  display: inline-block;
   position: relative;
-  width: 110px;
-  padding: 7px 0 0 14px;
+  width: 137px;
+  padding: 0 0 0 14px;
   text-overflow: ellipsis;
   text-wrap: none;
   overflow: hidden;
@@ -605,7 +638,7 @@ header span.logoText {
   display: none;
   position: absolute;
   left: 40px;
-  bottom: 100px;
+  bottom: 135px;
   width: 700px;
 }
 #yearsContainer #yearsText {
