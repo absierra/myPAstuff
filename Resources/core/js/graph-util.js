@@ -50,14 +50,20 @@ function hueShiftedColorSet(){
     };
     if(!args.num) args.num = 5;
     if(!args.color) args.color = '#336699';
-    var result = [];
+    /*var result = [];
     for(var lcv=0;lcv<args.num;lcv++){
+    	console.log(args.color);
         var newColor = new Color(args.color);
         var newColor = (newColor).setHue((newColor.hsb[0]+(359/args.num)*lcv)%359);
         if(args.result)result.push(newColor[args.result]);
         else result.push(newColor);
     }
-    return result;
+    console.log(result);
+    return result;*/
+    
+    var colors = ['#00CCFF', '#FF9900', '#99CC00', '#FF33FF', '#FFFF66', '#FF3333', '#3333FF', '#996633', '#339933', '#FF6600', '#FF0099', '#00CCFF', '#FF9900', '#99CC00', '#FF33FF', '#FFFF66', '#FF3333', '#3333FF', '#996633', '#339933', '#FF6600', '#FF0099', '#00CCFF', '#FF9900', '#99CC00', '#FF33FF', '#FFFF66', '#FF3333', '#3333FF', '#996633', '#339933', '#FF6600', '#FF0099'];
+    //var colors = ['‪#2E67B2‬', '#99CA3C‬', '#673466‬', '‪#FFCD32‬', '‪#EE1D3A', '‪#603913‬', '‪#FFCD05‬', '‪#8C3694‬', '‪#996632‬', '‪#50C3C6‬', '‪#F89838‬', '‪#991C20‬', '‪#39B54A‬', '‪#F26837‬', '‪#‬EE2A66'];
+    return colors.slice(0, args.num);
 }
 /*
 (function(context){
