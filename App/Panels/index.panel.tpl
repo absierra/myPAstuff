@@ -19,12 +19,12 @@
     </div>
     <div id="content">
         <ul id="tabs" class="graphTabs">
-        	<li class="tab fund_tab">Breakdown by Fund</li>
-        	<li class="tab department_tab">Breakdown by Department</li>
-            <li class="tab expenditure_tab">Breakdown by Expenditure</li>
-            <li class="tab revenue_tab">Breakdown by Revenue</li>
-            <li class="tab fee_revenue_tab">Breakdown by Fee Revenue</li>
-            <li class="tab exp_vs_fee_rev">Breakdown by Exp. vs. Fee Rev.</li>
+        	<li class="tab fund_tab" graph="fund">Breakdown by Fund</li>
+        	<li class="tab department_tab" graph="department">Breakdown by Department</li>
+            <li class="tab expenditure_tab" graph="expenses">Breakdown by Expenditure</li>
+            <li class="tab revenue_tab" graph="revenue">Breakdown by Revenue</li>
+            <li class="tab fee_revenue_tab" graph="fee_revenue">Breakdown by Fee Revenue</li>
+            <li class="tab exp_vs_fee_rev" graph="expenses_vs_fee_revenue">Breakdown by Exp. vs. Fee Rev.</li>
         </ul>
         <div id="graphContainer">
             <ul id="graphTypes">

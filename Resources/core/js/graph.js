@@ -104,7 +104,11 @@ var BudgetGraph = new Class({
         document.getElements('span.colorkey').removeClass('colorkey');
         PseudoDOM.clear();
         activeItems = this.getKeyElements();
-        if(activeItems.length != this.colors.length) console.log(['Data lengths do not match, something is wrong with the series!',this.data]);
+        if(activeItems.length == 0) return;
+        if(activeItems.length != this.colors.length){
+            //console.log(['Data lengths do not match, something is wrong with the series!',this.data]);
+            this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
+        }
         activeItems.each(function(item, lcv){
             item.addClass('colorkey');
             PseudoDOM.before(item, {
@@ -121,7 +125,10 @@ var BudgetGraph = new Class({
         var legendElement = document.getElement('#legend');
         legendElement.getElements('li').destroy();
         var items = this.getLegendItems();
-        console.log(['items', items, this.colors, this.data, this.options.target, this.options.type]);
+        if(items.length > this.colors.length){
+            this.colors = hueShiftedColorSet(items.length, 'hex');
+        }
+        //console.log(['items', items, this.colors, this.data, this.options.target, this.options.type]);
         if(items && items.length > 0){
             items.each(function(item, lcv) {
                 var legendItem = new Element('span', {
