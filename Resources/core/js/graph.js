@@ -26,6 +26,15 @@ var BudgetGraph = new Class({
                 this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
                 this.setColors(this.colors);
                 this.display();
+                this.fetching = false;
+                if(this.setKeysOnLoad){
+                    this.setKeys();
+                    this.setKeysOnLoad = false;
+                }
+                if(this.setLegendOnLoad){
+                    this.setLegend();
+                    this.setLegendOnLoad = false;
+                }
                 if(this.fetchCallback){
                     this.fetchCallback(this.data);
                     delete this.fetchCallback;
@@ -48,6 +57,7 @@ var BudgetGraph = new Class({
         BudgetGraph.lastSelectionType = this.options.type;
         requestData.type = this.options.type;
         if(this.options.target) requestData.target = this.options.target;
+        this.fetching = true;
         this.options.requestor.get(requestData);
         if(callback) this.fetchCallback = callback;
     },
@@ -87,6 +97,10 @@ var BudgetGraph = new Class({
         return keys;
     },
     setKeys : function(){
+        if(this.fetching){
+            this.setKeysOnLoad = true;
+            return;
+        }
         document.getElements('span.colorkey').removeClass('colorkey');
         PseudoDOM.clear();
         activeItems = this.getKeyElements();
@@ -99,11 +113,15 @@ var BudgetGraph = new Class({
         }.bind(this));
     },
     setLegend : function(){
+        if(this.fetching){
+            this.setLegendOnLoad = true;
+            return;
+        }
         var column = document.id(this.options.column);
         var legendElement = document.getElement('#legend');
         legendElement.getElements('li').destroy();
         var items = this.getLegendItems();
-        //console.log(['items', items, this.colors]);
+        console.log(['items', items, this.colors, this.data, this.options.target, this.options.type]);
         if(items && items.length > 0){
             items.each(function(item, lcv) {
                 var legendItem = new Element('span', {

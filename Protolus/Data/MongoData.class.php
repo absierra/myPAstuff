@@ -25,6 +25,7 @@
             return $db;
         }
         protected static function performSearch($subject, $predicate, $db){
+            //print_r($predicate); exit();
             //$type = $subject['type'];
             $object = $subject['object'];
             $dummyObject = new $subject['object'];
@@ -33,21 +34,23 @@
             $type = $object::$name;
             $primary_key = $dummyObject->primaryKey;
             try{
-                $operatorMapping = array(
-                    '=' => '==',
-                    '>' => '>',
-                    '<' => '<',
-                    '=>' => '=>',
-                    '=<' => '=<',
-                    '!=' => '!=',
-                    '<>' => '!=',
-                );
                 $discriminants = $predicate;
                 $discText = array();
                 if(MongoData::$functionalMode){
+                    //deprecated for now
+                    /*
+                    $operatorMapping = array(
+                        '=' => '==',
+                        '>' => '>',
+                        '<' => '<',
+                        '=>' => '=>',
+                        '=<' => '=<',
+                        '!=' => '!=',
+                        '<>' => '!=',
+                    );
                     foreach($discriminants as $discriminant){
                         if($discriminant[0] == $primary_key){
-                            $discText[] = 'this.'.$primary_key.' '.$operatorMapping[trim($discriminant[1])].' '.(is_numeric($discriminant[2]) ? $discriminant[2] : "'".$discriminant[2]."'");
+                            $discText[] = 'this.'.$primary_key.' '.$operatorMapping[trim($discriminant['operator'])].' '.(is_numeric($discriminant['value']) ? $discriminant['value'] : "'".$discriminant['value']."'");
                         }else{
                             $discText[] = 'this.'.$discriminant[0].' '.$operatorMapping[trim($discriminant[1])].' '.$discriminant[2];
                         }
@@ -58,12 +61,32 @@
                     $collection = $db->$type;
                     MongoData::$lastQuery = $js;
                     Logger::log(MongoData::$lastQuery);
-                    $cursor = $collection->find(array('$where' => $js));
+                    $cursor = $collection->find(array('$where' => $js)); //*/
                 }else{
                     //the new way
                     $where = array();
                     foreach($discriminants as $discriminant){
-                        if($discriminant[0] != '') $where[$discriminant[0]] = $discriminant[2];
+                        switch($discriminant['operator']){
+                            case '=':
+                                $where[$discriminant['key']] = $discriminant['value'];
+                                break;
+                            case '>':
+                                $where[$discriminant['key']]['$gt'] = $discriminant['value'];
+                                break;
+                            case '<':
+                                $where[$discriminant['key']]['$lt'] = $discriminant['value'];
+                                break;
+                            case '>=':
+                                $where[$discriminant['key']]['$gte'] = $discriminant['value'];
+                                break;
+                            case '<=':
+                                $where[$discriminant['key']]['$lte'] = $discriminant['value'];
+                                break;
+                            case '!=':
+                            case '<>':
+                                $where[$discriminant['key']]['$ne'] = $discriminant['value'];
+                                break;
+                        }
                     }
                     $collection = $db->$type;
                     MongoData::$lastQuery = '$collection->find('.json_encode($where).')';

@@ -66,7 +66,7 @@ var initGraphs = function(){
         id : 'fee_revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            window.graphTabs.showSlide(3);
+            window.graphTabs.showSlide(4);
             
         }
     });
@@ -139,7 +139,7 @@ function panelData(){
                 selectionRequest.get(window.selected);
                 if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
                     BudgetGraph.select(index);
-                    //console.log('click');
+                    console.log(['click', index]);
                     refreshGUI(true);
                 });
 			};
