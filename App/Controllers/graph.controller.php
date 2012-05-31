@@ -29,13 +29,13 @@
     $values['department'] = WebApplication::get('department')?WebApplication::get('department'):false;
     $values['category'] = WebApplication::get('category')?WebApplication::get('category'):false;
     $focus = WebApplication::get('target')?mapPlural(WebApplication::get('target')):false;
-    $filename = '/tmp/budget/'.md5(json_encode(array_merge(
+    $filename = 'Cache/budget/'.md5(json_encode(array_merge(
         $values,
         array(
             'focus' => $focus
         )
     ), true)).'.json';
-    if(true || !file_exists($filename)){
+    if(false || !file_exists($filename)){
         $disc = array();
         foreach($values as $key => $value){
             if($value){
@@ -76,7 +76,7 @@
             $data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
             if($isTax) $data[$item->get($index)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
         }
-        //file_put_contents($filename,json_encode($data));
+        file_put_contents($filename,json_encode($data));
     }else{
         $data = json_decode(file_get_contents($filename), true);
     }

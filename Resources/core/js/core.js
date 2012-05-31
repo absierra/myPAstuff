@@ -4,7 +4,8 @@
 var graphs_initialized = false;
 var refreshGUI = function(includeData){
     DelphiGraphTabs.filter();
-    //window.currentGraph.setLegend();
+    window.currentGraph.setKeys();
+    window.currentGraph.setLegend();
     if( includeData || (!graphs_initialized) ){
         graphs_initialized = true;
         (function(){
@@ -24,8 +25,8 @@ var initGraphs = function(){
         id : 'fund',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            this.setKeys();
-            this.setLegend();
+            //this.setKeys();
+            //this.setLegend();
             window.graphTabs.showSlide(0);
         }
     });
@@ -37,8 +38,8 @@ var initGraphs = function(){
         id : 'department',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            this.setKeys();
-            this.setLegend();
+            //this.setKeys();
+            //this.setLegend();
             window.graphTabs.showSlide(1);
         }
     });
@@ -49,8 +50,8 @@ var initGraphs = function(){
         id : 'expenses',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            this.setKeys();
-            this.setLegend();
+            //this.setKeys();
+            //this.setLegend();
             window.graphTabs.showSlide(2);
         }
     });
@@ -61,8 +62,8 @@ var initGraphs = function(){
         id : 'revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            this.setKeys();
-            this.setLegend();
+            //this.setKeys();
+            //this.setLegend();
             window.graphTabs.showSlide(3);
             
         }
@@ -74,8 +75,8 @@ var initGraphs = function(){
         id : 'fee_revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            this.setKeys();
-            this.setLegend();
+            //this.setKeys();
+            //this.setLegend();
             window.graphTabs.showSlide(4);
             
         }
@@ -111,6 +112,7 @@ function panelData(){
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
+        refreshGUI(true);
 	}.bind(this)});
 	
     window.selected = {};
@@ -149,7 +151,7 @@ function panelData(){
                 selectionRequest.get(window.selected);
                 if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
                     BudgetGraph.select(index);
-                    refreshGUI(true);
+                    //refreshGUI(true);
                 });
 			};
             var panelArrowClickFunction = function(event) {

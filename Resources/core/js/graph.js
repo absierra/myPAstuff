@@ -88,13 +88,31 @@ var BudgetGraph = new Class({
             return value.split(':').pop();
         });
         var result = [];
-        /*var column = document.id(this.options.column);
-        var elements = column.getElements('ul li span:not(.disabled)');
-        elements.each(function(el){
-            result.push(el.innerHTML);
+        var column = document.id(this.options.column);
+        var elements;
+        if(column){
+            var isSelected = column.getElement('li span.selected');
+            if(isSelected){ 
+                //console.log(['selected', column.getElements('li span.selected')]);
+                elements = column.getElements('ul li span:not(.disabled)');
+            }else {
+                //console.log(['rer', column.getElements('> li > span:not(.disabled)')]);
+                elements = column.getElements('> li > span:not(.disabled)');
+            }
+            result = [];
+            elements.each(function(el){
+                if(keys.contains(el.innerHTML.trim())){
+                    //console.log(['ee', el.innerHTML]);
+                    result.push(el.innerHTML);
+                    keys.erase(el.innerHTML);
+                }
+            });
+        }
+        //return result;*/
+        keys.each(function(key){
+            result.push(key);
         });
-        return result;*/
-        return keys;
+        return result;
     },
     setKeys : function(){
         if(this.fetching){
@@ -169,27 +187,34 @@ var BudgetGraph = new Class({
                 if(this.data[data]){
                     var xs = [];
                     var ys = [];
-                    Object.each(this.data[data], function(item, year){
+                    var keys = Object.keys(this.data[data]).sort();
+                    keys.each(function(key){
                         xs.push(year);
-                        ys.push((item[metric]?item[metric]:0));
+                        ys.push((this.data[data][key][metric]?this.data[data][key][metric]:0));
                     });
                     xSet.push(xs);
                     ySet.push(ys);
                 }
             }.bind(this));
         }else{
+            var keys;
             Object.each(this.data, function(data, name){
                 var xs = [];
                 var ys = [];
-                Object.each(data, function(item, year){
-                    xs.push(year);
-                    ys.push((item[metric]?item[metric]:0));
-                });
+                if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]).sort();
+                keys.each(function(key){
+                    //console.log(['dd', name, key, metric, this.data[name], this.data[name][key]]);
+                    xs.push(key);
+                    var v;
+                    if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
+                    else v = 0;
+                    ys.push(v);
+                }.bind(this));
                 xSet.push(xs);
                 ySet.push(ys);
-            }); //*/
+            }.bind(this)); //*/
         }
-        //console.log(['diz', xSet, ySet]);
+        //console.log(['diz', xSet, ySet]); return;
         if(this.options.mode == 'bar'){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
                 shade: true,

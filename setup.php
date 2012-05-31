@@ -16,7 +16,7 @@
     }
     
     function uniqueCategories(){
-        $filename = '/tmp/budget/unique.json';
+        $filename = './Cache/budget/unique.json';
         if(false || !file_exists($filename)){
             $results = Data::search('BudgetData');
             $data = array(

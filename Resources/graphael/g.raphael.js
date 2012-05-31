@@ -874,7 +874,7 @@ Raphael.g = {
 
         var res = paper.path(path).attr({stroke: '#CCC', "stroke-width": 2});
         
-    	console.log(res);
+    	//console.log(res);
         
         res.text = text;
         res.all = paper.set([res, text]);
