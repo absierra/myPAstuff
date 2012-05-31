@@ -130,7 +130,6 @@
 		
         var axis = paper.set();
 		
-		//ADDS AXES
         if (opts.axis) {
             var ax = (opts.axis + "").split(/[,\s]+/);
             +ax[0] && axis.push(chartinst.axis(x + gutter, y + gutter, width - 2 * gutter, minx, maxx, opts.axisxstep || Math.floor((width - 2 * gutter) / 20), 2, paper));
