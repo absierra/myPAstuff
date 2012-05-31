@@ -254,18 +254,22 @@ document.addEvent('domready', function() {
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
         yearSlider('hide');
+        document.id('graphBreakdown').set('text', 'Dollars per Year');
     });
     document.id('stacked_graph').addEvent('click', function(event){
         changeCurrentGraphType('stacked-line', this);
         yearSlider('hide');
+        document.id('graphBreakdown').set('text', 'Dollars per Year');
     });
     document.id('percentage_graph').addEvent('click', function(event){
         changeCurrentGraphType('percentage-line', this);
         yearSlider('hide');
+        document.id('graphBreakdown').set('text', 'Percent of Budget');
     });
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
         yearSlider('show');
+        document.id('graphBreakdown').empty();
     });
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.descriptionTooltip');

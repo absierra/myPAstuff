@@ -224,7 +224,7 @@ var BudgetGraph = new Class({
                 });
             }
 
-            this.lines = this.raphael.piechart(335, 197, 175, totalValues, {
+            this.lines = this.raphael.piechart(318, 180, 180, totalValues, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
@@ -235,7 +235,7 @@ var BudgetGraph = new Class({
             });
 
         }else{
-            this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
+            this.lines = this.raphael.linechart(75, 0, 520, 380, xSet, ySet, {
                 shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                 nostroke: false,
                 axis: "0 0 1 1",

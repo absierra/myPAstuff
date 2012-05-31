@@ -261,10 +261,13 @@ header{
 
 .graphTabs {
     display: block;
-    margin: 20px 0 15px 10px;
+    margin: 20px auto;
+    width: @rightColumnWidth; 
     li{
         display: none;
+        width: 170px;
         font-size: 0.9em;
+        color: #a3a3a5;
         background: #373936;
         text-align: center;
         padding: 10px 15px;
@@ -293,25 +296,50 @@ header{
     .shadowed(2px, 0.2);
     .rounded(10px);
     .graph{
-        height:418px;
-        width: @rightColumnWidth;
+        height:400px;
+        width: @rightColumnWidth - 200px;
         position: absolute;
+        top: 60px;
+        left: 70px;
     }
     .container{
         //overflow: auto;
         display: inline-block;
         margin-bottom: 0;
     }
+    h1#graphTitle{
+        text-align: center;
+        font-family: @primaryFontBold;
+        margin-top: 22px;
+        font-size: 18px;
+        color: #00abe3;
+        text-indent: -30px;
+    }
+    h2#graphBreakdown{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        font-family: @primaryFontBold;
+        font-size: 15px;
+        .transform(270deg);
+    }
+    h2#graphFiscalYear{
+        position: absolute;
+        top: 475px;
+        left: 45%;
+        font-family: @primaryFontBold;
+        font-size: 15px;
+    }
 }
 
 #graphTypes{
     position: absolute;
-    right: 20px;
-    top: 30%;
+    right: 55px;
+    top: 20%;
     z-index: 20;
     li{
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         cursor: pointer;
     }
 }
@@ -334,12 +362,12 @@ header{
 
 #legend{
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     display: none;
     white-space: normal;
-    height: 80px;
-    width: @rightColumnWidth - 30px;
-    margin: 0 10px 15px;
+    height: 90px;
+    width: @rightColumnWidth - 120px;
+    margin: 0 55px;
     padding: 5px 5px 3px;
    	line-height:30px;
     color: #373739;
@@ -348,9 +376,10 @@ header{
         display: inline-block;
         margin: 0 8px;
         span{
+            display: inline-block;
             position: relative;
-            width: 110px;
-            padding: 7px 0 0 14px;
+            width: 137px;
+            padding: 0 0 0 14px;
             text-overflow: ellipsis;
             text-wrap:none;
             overflow:hidden;
@@ -374,7 +403,7 @@ header{
     display: none;
     position: absolute;
     left: 40px;
-    bottom: 100px;
+    bottom: 135px;
     width: @rightColumnWidth - 100;
     #yearsText {
         width: @rightColumnWidth - 95;
