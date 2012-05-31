@@ -82,7 +82,7 @@
 
         for (i = 0, ii = valuesy.length; i < ii; i++) {
             if (opts.shade) {
-                shades.push(paper.path().attr({ stroke: "none", fill: colors[i], opacity: opts.nostroke ? 1 : .3 }));
+                shades.push(paper.path().attr({ stroke: "none", fill: colors[i], opacity: opts.nostroke ? 1 : .5 }));
             }
 
             if (valuesy[i].length > width - 2 * gutter) {
@@ -148,10 +148,10 @@
             if (!opts.nostroke) {
                 lines.push(line = paper.path().attr({
                     stroke: colors[i],
-                    "stroke-width": opts.width || 2,
+                    "stroke-width": opts.width || 4,
                     "stroke-linejoin": "round",
                     "stroke-linecap": "round",
-                    "stroke-dasharray": opts.dash || ""
+                    "stroke-dasharray": opts.dash || "",
                 }));
             }
 
@@ -224,7 +224,7 @@
                         
             lastpath = backpath.concat(["z"]);
 
-            !opts.nostroke && line.attr({ path: path.join(",") });
+            !opts.nostroke && line.attr({ path: path.join(",")});
         }
         
         function createDots(f) {
@@ -258,7 +258,7 @@
                     //    nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
                     //    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
 
-                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 40).attr({ stroke: "none", fill: "#000", opacity: 1 }));
+                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 25).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
                     C.x = X;
                     C.y = Y;
                     C.value = valuesy[i][j];

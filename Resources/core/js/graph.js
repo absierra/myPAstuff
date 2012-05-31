@@ -23,7 +23,7 @@ var BudgetGraph = new Class({
             url: '/data/graph',
             onSuccess: function(payload){
                 this.data = payload.data;
-                this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex').shuffle();
+                this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
                 this.setColors(this.colors);
                 this.display();
                 if(this.fetchCallback){
@@ -212,7 +212,7 @@ var BudgetGraph = new Class({
 
         }else{
             this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
-                shade: true,
+                shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                 nostroke: false,
                 axis: "0 0 1 1",
                 axisxstep : 4,
@@ -221,7 +221,7 @@ var BudgetGraph = new Class({
                 percent:(this.options.mode == 'percentage-line')
             }).hover(function() {
             			this.attr("opacity",1);
-            			this.marker = this.marker || a.raphael.popup(this.x, this.y, this.value, "up", 5).insertBefore(this);
+            			this.marker = this.marker || a.raphael.popup(this.x, this.y, '$'+this.value, "up", 5).insertAfter(this);
             			this.marker.show();
     				}, function() {
         				// hide the popup element with an animation and remove the popup element at the end
