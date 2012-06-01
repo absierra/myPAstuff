@@ -103,12 +103,10 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 blockquote:before,
@@ -181,8 +179,7 @@ html {
 .clear {
   clear: both;
 }
-body,
-html {
+body, html {
   height: 100%;
 }
 body {
@@ -222,6 +219,9 @@ header {
   background-color: #151517;
   width: 500px;
   height: 55px;
+}
+header.fullwidth {
+  width: 100%;
 }
 header img {
   margin-top: 17px;
@@ -392,6 +392,15 @@ header span.logo_text {
 #content p {
   white-space: pre-wrap;
   line-height: 18px;
+}
+#content.fullwidth {
+  left: 0;
+  top: 75px;
+  padding: 0;
+}
+#content h1 {
+  font-family: "ProximaNova-Bold";
+  font-size: 30px;
 }
 .graph_tabs {
   display: block;
