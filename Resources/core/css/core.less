@@ -91,6 +91,9 @@ header{
     background-color: #151517;
     width: @leftColumnWidth;
     height: @barHeight;
+    &.fullwidth{
+        width: 100%;
+    }
     img{
         margin-top: 17px;
         margin-left: 15px;
@@ -262,6 +265,15 @@ header{
     p {
     	white-space: pre-wrap;
     	line-height: 18px;
+    }
+    &.fullwidth{
+	left: 0;
+	top: 75px;
+	padding: 0;
+    }
+    h1 {
+	font-family: @primaryFontBold;
+	font-size: 30px;
     }
 }
 
