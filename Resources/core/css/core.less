@@ -66,10 +66,16 @@ body{
 }
 
 .spinner{
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 34%;
+    left: 47%;
     .centeredBackground('/Resources/core/img/loader.gif')
 }
 
-#contentWrapper {
+#content_wrapper {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -90,7 +96,7 @@ header{
         margin-left: 15px;
         height: 22px
     }
-    span.logoText{
+    span.logo_text{
         position: absolute;
         top: 17.9px;
         margin-left: 3px;
@@ -101,7 +107,7 @@ header{
     }
 }
 
-#leftColumn{
+#left_column{
     margin-top: 10px;
     ul h3{
             width: 250px;
@@ -119,7 +125,7 @@ header{
         font-size: 0.8em;
         white-space:nowrap;
         z-index: 10;
-        .panelDescription{
+        .panel_description{
             display: none;
             position: absolute;
             white-space: normal;
@@ -259,7 +265,7 @@ header{
     }
 }
 
-.graphTabs {
+.graph_tabs {
     display: block;
     margin: 20px auto;
     width: @rightColumnWidth; 
@@ -284,7 +290,7 @@ header{
     }
 }
 
-#graphContainer{
+#graph_container{
     clear: both;
     position: relative;
     height:600px;
@@ -307,7 +313,7 @@ header{
         display: inline-block;
         margin-bottom: 0;
     }
-    h1#graphTitle{
+    h1#graph_title{
         text-align: center;
         font-family: @primaryFontBold;
         margin-top: 22px;
@@ -315,7 +321,7 @@ header{
         color: #00abe3;
         text-indent: -30px;
     }
-    h2#graphBreakdown{
+    h2#graph_breakdown{
         position: absolute;
         top: 40%;
         left: 0;
@@ -323,7 +329,7 @@ header{
         font-size: 15px;
         .transform(270deg);
     }
-    h2#graphFiscalYear{
+    h2#graph_fiscal_year{
         position: absolute;
         top: 475px;
         left: 45%;
@@ -332,7 +338,7 @@ header{
     }
 }
 
-#graphTypes{
+#graph_types{
     position: absolute;
     right: 55px;
     top: 20%;
@@ -399,13 +405,13 @@ header{
     }
 }
 
-#yearsContainer {
+#years_container {
     display: none;
     position: absolute;
     left: 40px;
     bottom: 135px;
     width: @rightColumnWidth - 100;
-    #yearsText {
+    #years_text {
         width: @rightColumnWidth - 95;
         height: 12px;
         li {
@@ -418,7 +424,7 @@ header{
             text-align: center;
         }
     }
-    #yearsSlider {
+    #years_slider {
         /*-webkit-appearance: slider-vertical;*/
         width: @rightColumnWidth - 235px;
         margin-left: 70px;

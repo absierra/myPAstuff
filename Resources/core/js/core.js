@@ -100,11 +100,11 @@ function panelData(){
     
 	var panelFilter = function(data){
         document.getElements('#fund li span').each(function(listItem){
-            if (data.funds.contains(listItem.retrieve('itemIdentifier'))) listItem.removeClass('disabled');
+            if (data.funds.contains(listItem.retrieve('item_identifier'))) listItem.removeClass('disabled');
             else listItem.addClass('disabled');
 		});
         document.getElements('#department li span').each(function(listItem){
-            if (data.departments.contains(listItem.retrieve('itemIdentifier'))) listItem.removeClass('disabled');
+            if (data.departments.contains(listItem.retrieve('item_identifier'))) listItem.removeClass('disabled');
             else listItem.addClass('disabled');
 		});
 	}
@@ -136,7 +136,7 @@ function panelData(){
                 } else {
                     panelId.getElements('.selected').removeClass('selected');
                 }
-                window.selected[index] = panelSpan.retrieve('itemIdentifier');
+                window.selected[index] = panelSpan.retrieve('item_identifier');
                 window.lastSelectedPanel = selectedPanel;
                 window.lastSelectedColumn = index;
                 window.lastSelectedItem = element;
@@ -174,7 +174,7 @@ function panelData(){
        			var panelLi = new Element('li', { class: parts[0].replace(/ /g, '') });
                 var panelSpan = new Element('span', { html: name });
                 var panelArrow = new Element('a');
-                panelSpan.store('itemIdentifier', element);
+                panelSpan.store('item_identifier', element);
                 panelSpan.addEvent('click', panelSpanClickFunction);
                 panelArrow.addEvent('click', panelArrowClickFunction);
                 panelSpan.appendChild(panelArrow);
@@ -185,7 +185,7 @@ function panelData(){
                 var panelUl = panelId.getElement('li.'+parts[0].replace(/ /g, '')+' ul');
                 var panelLi = new Element('li', { class: parts[1].replace(/ /g, '') });
                 var panelSpan = new Element('span', { html: name });
-                panelSpan.store('itemIdentifier', element);
+                panelSpan.store('item_identifier', element);
                 panelSpan.addEvent('click', panelSpanClickFunction);		
                  if(!panelUl){
 			        panelUl = new Element('ul', {
@@ -202,11 +202,11 @@ function panelData(){
 }
 
 var yearSlider = function(display){
-    var yearsContainer = document.id('yearsContainer');
+    var yearsContainer = document.id('years_container');
     if (display == 'hide') { yearsContainer.hide(); return; }
-    var graphYears = document.id('yearsText');
+    var graphYears = document.id('years_text');
     var years = BudgetGraph.LastSelectionYearsData;
-    var yearsSliderBar = document.id('yearsSlider');
+    var yearsSliderBar = document.id('years_slider');
     graphYears.getElements('li').destroy(); 
     if(!years) years = ['2009', '2010', '2011', '2012', '2013'];
     years.each(function(year){
@@ -256,34 +256,34 @@ document.addEvent('domready', function() {
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
         yearSlider('hide');
-        document.id('graphBreakdown').set('text', 'Dollars per Year');
+        document.id('graph_breakdown').set('text', 'Dollars per Year');
     });
     document.id('stacked_graph').addEvent('click', function(event){
         changeCurrentGraphType('stacked-line', this);
         yearSlider('hide');
-        document.id('graphBreakdown').set('text', 'Dollars per Year');
+        document.id('graph_breakdown').set('text', 'Dollars per Year');
     });
     document.id('percentage_graph').addEvent('click', function(event){
         changeCurrentGraphType('percentage-line', this);
         yearSlider('hide');
-        document.id('graphBreakdown').set('text', 'Percent of Budget');
+        document.id('graph_breakdown').set('text', 'Percent of Budget');
     });
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
         yearSlider('show');
-        document.id('graphBreakdown').empty();
+        document.id('graph_breakdown').empty();
     });
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
-    var descriptionTooltip = document.getElements('.descriptionTooltip');
+    var descriptionTooltip = document.getElements('.description_tooltip');
         descriptionTooltip.addEvents({
         mouseover: function(){
-            this.getSiblings('.panelDescription').reveal();
+            this.getSiblings('.panel_description').reveal();
         },
         mouseout: function(){
-            this.getSiblings('.panelDescription').dissolve();
+            this.getSiblings('.panel_description').dissolve();
         }
     });
-    new Fx.Reveal(('.panelDescription'), {duration: 500, mode: 'horizontal'});
+    new Fx.Reveal(('.panel_description'), {duration: 500, mode: 'horizontal'});
     var keys = new Keyboard({
         defaultEventType: 'keyup',
         events: {
