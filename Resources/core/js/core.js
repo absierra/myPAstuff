@@ -3,14 +3,17 @@
 
 var graphs_initialized = false;
 var financial_state = true;
-var refreshGUI = function(finance, includeData){
-    DelphiGraphTabs.filter(finance);
+var refreshGUI = function(includeData){
+    DelphiGraphTabs.filter();
     window.currentGraph.setKeys();
     window.currentGraph.setLegend();
     if( includeData || (!graphs_initialized) ){
         graphs_initialized = true;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
+            	console.log(graph);
+            	console.log(window.currentGraph);
+            	console.log(graph != window.currentGraph);
                 if(graph != window.currentGraph) graph.fetch(window.selected, window.lastSelectedColumn, function(){});
             });
         })(); //don't let offscreen graphs choke the onscreen one
@@ -300,7 +303,7 @@ document.addEvent('domready', function() {
     DelphiGraphTabs.initialize({
         select : function(event){
             BudgetGraph.select(event.target.getAttribute('graph').toLowerCase());
-            refreshGUI(financial_state);
+            refreshGUI();
         }
     });
 

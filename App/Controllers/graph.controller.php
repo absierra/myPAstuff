@@ -122,6 +122,9 @@
 				$data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('salary');
 			}
 		}
+		if(count($data) == 0){
+			$data['Fire']['2009']['revenue'] = 0;
+		}
 		$renderer->assign('data', $data);
 	}
 ?>
