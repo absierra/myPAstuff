@@ -7,6 +7,7 @@ var BudgetGraph = new Class({
             height: 100
         },
         type : 'none',
+        dataset : 'test',
         target : false,
         name : 'Debt Service Funds',
         //we really need to switch graph types to 1 option, rather than a bunch of weirdly intersecting booleans
@@ -57,6 +58,7 @@ var BudgetGraph = new Class({
         BudgetGraph.lastSelectionType = this.options.type;
         requestData.type = this.options.type;
         if(this.options.target) requestData.target = this.options.target;
+        requestData.dataset = this.options.dataset;
         this.fetching = true;
         this.options.requestor.get(requestData);
         if(callback) this.fetchCallback = callback;
@@ -182,6 +184,7 @@ var BudgetGraph = new Class({
             case 'category': key = 'categories'; break;
             case 'department': key = 'departments'; break;
         }
+
         if(!this.options.target){
             window.dataRequest[key].each(function(data, index){
                 if(this.data[data]){
@@ -214,6 +217,7 @@ var BudgetGraph = new Class({
                 ySet.push(ys);
             }.bind(this)); //*/
         }
+
         //console.log(['diz', xSet, ySet]); return;
         if(this.options.mode == 'bar'){
             this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {

@@ -2,8 +2,9 @@
 
 
 var graphs_initialized = false;
-var refreshGUI = function(includeData){
-    DelphiGraphTabs.filter();
+var financial_state = true;
+var refreshGUI = function(finance, includeData){
+    DelphiGraphTabs.filter(finance);
     window.currentGraph.setKeys();
     window.currentGraph.setLegend();
     if( includeData || (!graphs_initialized) ){
@@ -18,6 +19,7 @@ var refreshGUI = function(includeData){
 
 var initGraphs = function(){
     window.graphs.fund = new BudgetGraph('fund_graph', {
+    	dataset : 'financial',
         type : 'fund',
         metric : 'expenses',
         target : 'funds',
@@ -31,6 +33,7 @@ var initGraphs = function(){
         }
     });
     window.graphs.department = new BudgetGraph('department_graph', {
+    	dataset : 'financial',
         type : 'departments',
         target : 'department',
         metric : 'expenses',
@@ -44,6 +47,7 @@ var initGraphs = function(){
         }
     });
     window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
+    	dataset : 'financial',
         type : 'categories',
         target : 'category',
         metric : 'expenses',
@@ -56,6 +60,7 @@ var initGraphs = function(){
         }
     });
     window.graphs.revenue = new BudgetGraph('revenue_graph', {
+    	dataset : 'financial',
         type : 'categories',
         target : 'category',
         metric : 'revenue',
@@ -69,6 +74,7 @@ var initGraphs = function(){
         }
     });
     window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
+    	dataset : 'financial',
         type : 'categories',
         target : 'category',
         metric : 'tax_revenue',
@@ -78,6 +84,45 @@ var initGraphs = function(){
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(4);
+            
+        }
+    });
+	window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
+		dataset : 'employee',
+        type : 'departments',
+        target : 'department',
+        id : 'employee_department',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(6);
+            
+        }
+    });
+    window.graphs.employee_type = new BudgetGraph('employee_type_graph', {
+		dataset : 'employee',
+        type : 'titles',
+        target : 'title',
+        id : 'employee_type',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(7);
+            
+        }
+    });
+    window.graphs.employee_salary = new BudgetGraph('employee_salary_graph', {
+		dataset : 'employee',
+        type : 'salaries',
+        target : 'salary',
+        id : 'employee_salary',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(8);
             
         }
     });
@@ -112,7 +157,7 @@ function panelData(){
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
-        refreshGUI(true);
+        refreshGUI(true, true);
 	}.bind(this)});
 	
     window.selected = {};
@@ -128,6 +173,7 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
+				console.log('hi');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
@@ -250,9 +296,10 @@ document.addEvent('domready', function() {
     DelphiGraphTabs.initialize({
         select : function(event){
             BudgetGraph.select(event.target.getAttribute('graph').toLowerCase());
-            refreshGUI();
+            refreshGUI(financial_state);
         }
     });
+
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
         yearSlider('hide');

@@ -18,13 +18,16 @@
         </ul>
     </div>
     <div id="content">
-        <ul id="tabs" class="graph_tabs">
+    	<ul id="tabs" class="graphTabs"> 
         	<li class="tab fund_tab" graph="fund">Breakdown by Fund</li>
         	<li class="tab department_tab" graph="department">Breakdown by Department</li>
             <li class="tab expenditure_tab" graph="expenses">Breakdown by Expenditure</li>
             <li class="tab revenue_tab" graph="revenue">Breakdown by Revenue</li>
             <li class="tab fee_revenue_tab" graph="fee_revenue">Breakdown by Fee Rev.</li>
             <li class="tab exp_vs_fee_rev" graph="expenses_vs_fee_revenue">Breakdown by Exp. vs. Fee Rev.</li>
+			<li class="tab employee_department_tab" graph="employee_department">Breakdown by Department</li>
+			<li class="tab employee_type_tab" graph="employee_type">Breakdown by Type</li>
+			<li class="tab employee_salary_tab" graph="employee_salary">Breakdown by Salary</li>
         </ul>
         <div id="graph_container">
             <h1 id="graph_title"></h1>
@@ -44,7 +47,10 @@
             <div id="expenditure_graph" class="graph"></div>
             <div id="revenue_graph" class="graph"></div>
             <div id="fee_revenue_graph" class="graph"></div>
-            <div id="exp_vs_fee_rev" class="graph"></div>
+            <div id="exp_vs_fee_rev_graph" class="graph"></div>
+            <div id="employee_department_graph" class="graph"></div>
+            <div id="employee_type_graph" class="graph"></div>
+            <div id="employee_salary_graph" class="graph"></div>
             <div id="years_container">
                 <ul id="years_text"></ul>
             	<input id="years_slider" type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>

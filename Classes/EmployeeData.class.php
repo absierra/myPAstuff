@@ -1,19 +1,16 @@
 <?php
-    class BudgetData extends MongoData{
+    class EmployeeData extends MongoData{
         public static $fields = array(
             'year',
+            'superfund',
             'fund',
             'department',
             'division',
-            'department_division',
-            'ledger_type',
-            'ledger_description',
-            'amount',
-            'ledger_type_ledger_description',
-            'superfund_fund',
+			'fte',
+			'salary'
         );
 
-        public static $name = 'budget';
+        public static $name = 'employees';
 
         function __construct($id = null, $field = null){
             $this->database = 'pa_budget_data';
