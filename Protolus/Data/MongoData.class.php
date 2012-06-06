@@ -25,6 +25,7 @@
             return $db;
         }
         protected static function performSearch($subject, $predicate, $db){
+        	Logger::log('#####db:'.$db);
             //print_r($predicate); exit();
             //$type = $subject['type'];
             $object = $subject['object'];
@@ -89,6 +90,7 @@
                         }
                     }
                     $collection = $db->$type;
+                    Logger::log('debug:'.$collection);
                     MongoData::$lastQuery = '$collection->find('.json_encode($where).')';
                     Logger::log('MongoDB:'.MongoData::$lastQuery);
                     $cursor = $collection->find($where);

@@ -18,16 +18,13 @@
         </ul>
     </div>
     <div id="content">
-    	<ul id="tabs" class="graph_tabs"> 
-        	<li class="tab fund_tab" graph="fund">Breakdown by Fund</li>
-        	<li class="tab department_tab" graph="department">Breakdown by Department</li>
-            <li class="tab expenditure_tab" graph="expenses">Breakdown by Expenditure</li>
-            <li class="tab revenue_tab" graph="revenue">Breakdown by Revenue</li>
-            <li class="tab fee_revenue_tab" graph="fee_revenue">Breakdown by Fee Rev.</li>
-            <li class="tab exp_vs_fee_rev" graph="expenses_vs_fee_revenue">Breakdown by Exp. vs. Fee Rev.</li>
-			<li class="tab employee_department_tab" graph="employee_department">Breakdown by Department</li>
-			<li class="tab employee_type_tab" graph="employee_type">Breakdown by Type</li>
-			<li class="tab employee_salary_tab" graph="employee_salary">Breakdown by Salary</li>
+        <ul id="tabs" class="graph_tabs">
+        	<li class="tab fund_tab" graph="fund">Fund</li>
+        	<li class="tab department_tab" graph="department">Department</li>
+            <li class="tab expenditure_tab" graph="expenses">Expenditure</li>
+            <li class="tab revenue_tab" graph="revenue">Revenue</li>
+            <li class="tab fee_revenue_tab" graph="fee_revenue">Fee Rev.</li>
+            <li class="tab exp_vs_fee_rev" graph="expenses_vs_fee_revenue">Exp. vs. Fee Rev.</li>
         </ul>
         <div id="graph_container">
             <h1 id="graph_title"></h1>
@@ -39,15 +36,12 @@
                 <li id="pie_chart" class="pie icon"></li>
             </ul>
             <div id="graphs">
-				<div id="fund_graph" class="graph"></div>
-				<div id="department_graph" class="graph"></div>
-				<div id="expenditure_graph" class="graph"></div>
-				<div id="revenue_graph" class="graph"></div>
-				<div id="fee_revenue_graph" class="graph"></div>
-				<div id="exp_vs_fee_rev_graph" class="graph"></div>
-				<div id="employee_department_graph" class="graph"></div>
-				<div id="employee_type_graph" class="graph"></div>
-				<div id="employee_salary_graph" class="graph"></div>
+            	<div id="fund_graph" class="graph"></div>
+            	<div id="department_graph" class="graph"></div>
+                <div id="expenditure_graph" class="graph"></div>
+                <div id="revenue_graph" class="graph"></div>
+                <div id="fee_revenue_graph" class="graph"></div>
+                <div id="exp_vs_fee_rev" class="graph"></div>
             </div>
             <div id="years_container">
                 <ul id="years_text"></ul>
