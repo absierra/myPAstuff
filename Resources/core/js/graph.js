@@ -229,7 +229,10 @@ var BudgetGraph = new Class({
         }else if (this.options.mode == 'pie'){
            
             //window.totalChartValue = 0;
-
+            var graphSize = document.id('graphs').getScrollSize();
+            console.log(graphSize.x);
+            var xGraph = graphSize.x / 2 - 45;
+            var yGraph = graphSize.y / 2 - 5;
             var totalValues = [];
             var yearValues = [];
             var year = this.options.year;
@@ -252,8 +255,8 @@ var BudgetGraph = new Class({
                     totalValues.push(Math.floor(arraySet.pop()/10000));
                 });
             }
-
-            this.lines = this.raphael.piechart(318, 180, 180, totalValues, {
+            
+            this.lines = this.raphael.piechart(xGraph, yGraph + 10, yGraph, totalValues, {
                 shade: true,
                 nostroke: false,
                 axis: "0 0 1 1",
@@ -264,7 +267,11 @@ var BudgetGraph = new Class({
             });
 
         }else{
-            this.lines = this.raphael.linechart(75, 0, 520, 380, xSet, ySet, {
+            var graphSize = document.id('graphs').getScrollSize();
+            var xGraph = graphSize.x - 240;
+            var yGraph = graphSize.y - 41;
+
+            this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
                 shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                 nostroke: false,
                 axis: "0 0 1 1",

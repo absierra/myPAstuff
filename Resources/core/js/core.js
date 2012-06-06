@@ -157,7 +157,8 @@ function panelData(){
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
-        refreshGUI(true, true);
+        refreshGUI(true);
+        window.loadSpinner.hide();
 	}.bind(this)});
 	
     window.selected = {};
@@ -173,7 +174,7 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-				console.log('hi');
+                var titleText = this.get('text');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
@@ -182,6 +183,8 @@ function panelData(){
                 } else {
                     panelId.getElements('.selected').removeClass('selected');
                 }
+                document.getElements('.expanded').removeClass('expanded');
+                document.getElements('li ul.sublist').morph({height:0});
                 window.selected[index] = panelSpan.retrieve('item_identifier');
                 window.lastSelectedPanel = selectedPanel;
                 window.lastSelectedColumn = index;
@@ -195,6 +198,7 @@ function panelData(){
                 sublistHeight = sublist.getScrollSize();
                 sublist.morph({height:sublistHeight.y});
                 selectionRequest.get(window.selected);
+                document.id('graph_title').set('text', titleText);
                 if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
                     BudgetGraph.select(index);
                     //refreshGUI(true);
@@ -324,10 +328,10 @@ document.addEvent('domready', function() {
     var descriptionTooltip = document.getElements('.description_tooltip');
         descriptionTooltip.addEvents({
         mouseover: function(){
-            this.getSiblings('.panel_description').reveal();
+            this.getParent().getSiblings('.panel_description').reveal();
         },
         mouseout: function(){
-            this.getSiblings('.panel_description').dissolve();
+            this.getParent().getSiblings('.panel_description').dissolve();
         }
     });
     new Fx.Reveal(('.panel_description'), {duration: 500, mode: 'horizontal'});
@@ -351,4 +355,7 @@ document.addEvent('domready', function() {
             }
          }
     });
+    window.loadSpinner = document.id('load_spinner');
+    new Spinner(window.loadSpinner);
+    window.loadSpinner.show();
 });

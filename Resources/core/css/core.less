@@ -25,8 +25,8 @@
 @primaryFont: "ProximaNova";
 @primaryFontBold: "ProximaNova-Bold";
 @barHeight: 55px;
-@rightColumnWidth: 800px;
-@leftColumnWidth: 500px;
+@rightColumnWidth: 650px;
+@leftColumnWidth: 460px;
 
 
 html{
@@ -65,13 +65,24 @@ body{
     }
 }
 
-.spinner{
+#load_spinner{ 
     display: none;
+    z-index: 200;
+    background: #fff;
+    height: 100%;
+    width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}
+
+.spinner{
+    position:absolute;
+    top: 45%;
+    left: 50%;
     height: 50px;
     width: 50px;
-    top: 34%;
-    left: 47%;
     .centeredBackground('/Resources/core/img/loader.gif')
 }
 
@@ -113,14 +124,33 @@ header{
 #left_column{
     margin-top: 10px;
     ul h3{
-            width: 250px;
-	        color: #b8b9bc;
-            background-color: #373936;
-            padding-top: 3px;
-            line-height: 2em;
-            font-family: @primaryFontBold;
-            text-align: center;
-            font-size: 1.2em;
+        position: relative;
+        width: @leftColumnWidth / 2;
+        color: #fff;
+        background-color: #373936;
+        padding-top: 3px;
+        line-height: 2em;
+        font-family: @primaryFontBold;
+        text-align: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        &:hover{
+            color: #b8b9bc;
+            background-color: #4f4f4f;
+        }
+        a{
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            display: block;
+            height: 18px;
+            width: 20px;
+            background: url('/Resources/core/img/info-icon.png') no-repeat 4px 0;
+            cursor: help;
+            &:hover{
+                background-position: 4px -17px;
+            }
+        }
     }
     > ul{
         float: left;
@@ -132,25 +162,24 @@ header{
             display: none;
             position: absolute;
             white-space: normal;
-            width: 220px;
+            width: @leftColumnWidth / 2 - 30;
             color: #b8b9bc;
-            background-color: #373936;
+            background-color: #4f4f4f;
             line-height: 1.25em;
             padding: 0 15px 10px;
             font-size: 1em;
             z-index: 20;
         }
         > ul {
-            margin-top: 30px;
         	overflow-y: scroll;
             overflow-x: hidden;
         	position: absolute;
-    		top: @barHeight + 13px;
+    		top: @barHeight + 43px;
     		bottom: 0;
             vertical-align: text-top;
         }
         ul li{
-            width: 242px;
+            width: @leftColumnWidth / 2 - 8;
             line-height: 30px;
             margin:1px 0;
             cursor:pointer;
@@ -258,7 +287,7 @@ header{
     position: absolute;
     top: 0;
     bottom: 0;
-	left: 500px;
+	left: @leftColumnWidth;
 	right: 0;
     padding: 0 20px;
     overflow: auto;
@@ -279,16 +308,16 @@ header{
 
 .graph_tabs {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto 50px;
     width: @rightColumnWidth; 
     li{
         display: none;
-        width: 170px;
-        font-size: 0.9em;
+        width: 150px;
+        font-size: 0.8em;
         color: #a3a3a5;
         background: #373936;
         text-align: center;
-        padding: 10px 15px;
+        padding: 10px 6px;
         margin: 0;
         float: left;
         cursor: pointer;
@@ -301,27 +330,37 @@ header{
         &.active{
             color: #fff;
             background: #919296;
+            &:hover {
+                background: #adadad;
+            }
         }
+        &:hover {
+            background: #4f4f4f;
+        }        
     }
 }
 
 #graph_container{
     clear: both;
     position: relative;
-    height:600px;
-    width: @rightColumnWidth; 
-    background-color: #fff;
-    margin: 70px auto 0;
+    background: url('/Resources/core/img/background_40_percent_white.png') repeat;
     border: 1px solid #ccc;
     border-width: 1px 0 0 1px;
+    min-height: 500px;
+    min-width: @rightColumnWidth;
+    padding-bottom: 10px;
     .shadowed(2px, 0.2);
     .rounded(10px);
-    .graph{
-        height:400px;
-        width: @rightColumnWidth - 200px;
-        position: absolute;
-        top: 60px;
-        left: 70px;
+    #graphs {
+        min-height: 315px;
+        .graph{
+            height:63%;
+            width: 100%;
+            position: absolute;
+            top: 35px;
+            left: 45px;
+            right: 45px;
+        }
     }
     .container{
         //overflow: auto;
@@ -331,23 +370,21 @@ header{
     h1#graph_title{
         text-align: center;
         font-family: @primaryFontBold;
-        margin-top: 22px;
+        margin-top: 15px;
         font-size: 18px;
         color: #00abe3;
-        text-indent: -30px;
     }
     h2#graph_breakdown{
         position: absolute;
-        top: 40%;
-        left: 0;
+        top: 38%;
+        left: -22px;
         font-family: @primaryFontBold;
         font-size: 15px;
         .transform(270deg);
     }
     h2#graph_fiscal_year{
-        position: absolute;
-        top: 475px;
-        left: 45%;
+        margin-top: 10px;
+        text-align: center;
         font-family: @primaryFontBold;
         font-size: 15px;
     }
@@ -355,12 +392,11 @@ header{
 
 #graph_types{
     position: absolute;
-    right: 55px;
-    top: 20%;
+    right: 15px;
+    top: 15%;
     z-index: 20;
     li{
         display: block;
-        margin-bottom: 20px;
         cursor: pointer;
     }
 }
@@ -369,37 +405,34 @@ header{
 @graphTypeIcons : '/Resources/core/img/graph-type-icons.png';
 @graphTypeActiveIcons : '/Resources/core/img/graph-type-icons-active.png';
 
-.active.percentage.icon{ .spriteIcon(0, @graphTypeActiveIcons, 40px, 4); }
-.percentage.icon{ .spriteIcon(0, @graphTypeIcons, 40px, 4); }
+.active.percentage.icon, .percentage.icon:hover{ .spriteIcon(0, @graphTypeActiveIcons, 60px, 4); }
+.percentage.icon{ .spriteIcon(0, @graphTypeIcons, 60px, 4); }
 
-.active.stacked.icon{ .spriteIcon(1, @graphTypeActiveIcons, 40px, 4); }
-.stacked.icon{ .spriteIcon(1, @graphTypeIcons, 40px, 4); }
+.active.stacked.icon, .stacked.icon:hover{ .spriteIcon(1, @graphTypeActiveIcons, 60px, 4); }
+.stacked.icon{ .spriteIcon(1, @graphTypeIcons, 60px, 4); }
 
-.active.line.icon{ .spriteIcon(2, @graphTypeActiveIcons, 40px, 4); }
-.line.icon{ .spriteIcon(2, @graphTypeIcons, 40px, 4); }
+.active.line.icon, .line.icon:hover{ .spriteIcon(2, @graphTypeActiveIcons, 60px, 4); }
+.line.icon{ .spriteIcon(2, @graphTypeIcons, 60px, 4); }
 
-.active.pie.icon{ .spriteIcon(3, @graphTypeActiveIcons, 40px, 4); }
-.pie.icon{ .spriteIcon(3, @graphTypeIcons, 40px, 4); }
+.active.pie.icon, .pie.icon:hover{ .spriteIcon(3, @graphTypeActiveIcons, 60px, 4); }
+.pie.icon{ .spriteIcon(3, @graphTypeIcons, 60px, 4); }
 
 #legend{
-    position: absolute;
-    bottom: 10px;
     display: none;
     white-space: normal;
-    height: 90px;
-    width: @rightColumnWidth - 120px;
-    margin: 0 55px;
-    padding: 5px 5px 3px;
-   	line-height:30px;
+    margin: 10px 15px;
+    padding: 0 3px;
     color: #373739;
     overflow: auto;
+    height: 118px;
     li {
         display: inline-block;
-        margin: 0 8px;
+        margin: 0 5px;
+        line-height: 24px;
         span{
             display: inline-block;
             position: relative;
-            width: 137px;
+            width: 125px;
             padding: 0 0 0 14px;
             text-overflow: ellipsis;
             text-wrap:none;
@@ -409,7 +442,7 @@ header{
             &:before{ 
         		position: absolute;
         		left: 0px;
-                top: 8px;
+                top: 6px;
         		content: '';
         		display: block;
         		height:11px;
@@ -422,12 +455,9 @@ header{
 
 #years_container {
     display: none;
-    position: absolute;
-    left: 40px;
-    bottom: 135px;
-    width: @rightColumnWidth - 100;
+    width: 510px;
+    margin: 30px auto 0;
     #years_text {
-        width: @rightColumnWidth - 95;
         height: 12px;
         li {
             font-family: @primaryFontBold;
@@ -435,30 +465,18 @@ header{
             display: inline-block;
             line-height: 12px;
             cursor: default;
-            width: 140px;
+            width: 102px;
             text-align: center;
         }
     }
     #years_slider {
         /*-webkit-appearance: slider-vertical;*/
-        width: @rightColumnWidth - 235px;
-        margin-left: 70px;
+        width: 410px;
+        margin-left: 55px;
         display: block;
         cursor: pointer;
     }
 }
-
-.slider{
-    background-color : #E7E7E8;
-    .rounded(4px);
-    .knob{
-        background-color : #00A9E2;
-        .rounded(4px);
-        position: absolute;
-        cursor: pointer;
-    }
-}
-
 
 /* Scroll Bars */
 ::-webkit-scrollbar{
