@@ -423,15 +423,23 @@ header span.logo_text {
 #content p {
   white-space: pre-wrap;
   line-height: 18px;
+  margin: 10px 0px 10px 0px;
 }
 #content.fullwidth {
   left: 0;
-  top: 75px;
-  padding: 0;
+  top: 35px;
+  padding: 20px;
+}
+#content h1, #content h2, #content h3 {
+  font-family: "ProximaNova-Bold";
+  margin-top: 20px;
 }
 #content h1 {
-  font-family: "ProximaNova-Bold";
   font-size: 30px;
+}
+#content h2 {
+  font-size: 25px;
+  font-style: italic;
 }
 .graph_tabs {
   display: block;

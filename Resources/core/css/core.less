@@ -294,15 +294,23 @@ header{
     p {
     	white-space: pre-wrap;
     	line-height: 18px;
+	margin: 10px 0px 10px 0px;
     }
     &.fullwidth{
 	left: 0;
-	top: 75px;
-	padding: 0;
+	top: @barHeight - 20px;
+	padding: 20px;
+    }
+    h1, h2, h3 {
+	font-family: @primaryFontBold;
+	margin-top: 20px;
     }
     h1 {
-	font-family: @primaryFontBold;
-	font-size: 30px;
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+	font-style: italic;
     }
 }
 
