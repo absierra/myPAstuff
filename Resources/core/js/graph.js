@@ -40,6 +40,10 @@ var BudgetGraph = new Class({
                     this.fetchCallback(this.data);
                     delete this.fetchCallback;
                 }
+                if(window.currentGraph == this){
+                	this.setKeys();
+                	this.setLegend();
+                }
             }.bind(this)
         });
         if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
@@ -86,6 +90,7 @@ var BudgetGraph = new Class({
     },
     getLegendItems : function(){
         //console.log(['sss', this.data]);
+
         var keys = Object.keys(this.data).map(function(value){
             return value.split(':').pop();
         });
@@ -173,6 +178,7 @@ var BudgetGraph = new Class({
         }.bind(this));
     },
     display : function(metric){
+
     	this.raphael.clear();
         if(!metric) metric = this.options.metric;
         xSet = [];
