@@ -1,6 +1,4 @@
 //global js here
-
-
 var graphs_initialized = false;
 var financial_state = true;
 var refreshGUI = function(includeData){
@@ -11,13 +9,16 @@ var refreshGUI = function(includeData){
         graphs_initialized = true;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
+                /*
             	console.log(graph);
             	console.log(window.currentGraph);
             	console.log(graph != window.currentGraph);
+                */
                 if(graph != window.currentGraph) graph.fetch(window.selected, window.lastSelectedColumn, function(){});
             });
         })(); //don't let offscreen graphs choke the onscreen one
 	}
+    window.loadSpinner.hide();
 }
 
 var initGraphs = function(){
@@ -122,6 +123,7 @@ var initGraphs = function(){
 		dataset : 'employee',
         type : 'departments',
         target : 'department',
+        column : 'department',
         id : 'employee_department',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
@@ -205,6 +207,7 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
+                window.loadSpinner.show();
                 var titleText = this.get('text');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
@@ -387,6 +390,5 @@ document.addEvent('domready', function() {
          }
     });
     window.loadSpinner = document.id('load_spinner');
-    new Spinner(window.loadSpinner);
     window.loadSpinner.show();
 });

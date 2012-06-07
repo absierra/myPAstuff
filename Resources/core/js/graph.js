@@ -230,7 +230,6 @@ var BudgetGraph = new Class({
            
             //window.totalChartValue = 0;
             var graphSize = document.id('graphs').getScrollSize();
-            console.log(graphSize.x);
             var xGraph = graphSize.x / 2 - 45;
             var yGraph = graphSize.y / 2 - 5;
             var totalValues = [];
@@ -270,7 +269,7 @@ var BudgetGraph = new Class({
             var graphSize = document.id('graphs').getScrollSize();
             var xGraph = graphSize.x - 240;
             var yGraph = graphSize.y - 41;
-
+            if (xGraph > 700) xGraph = 700;
             this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
                 shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                 nostroke: false,
