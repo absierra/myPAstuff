@@ -205,9 +205,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.9;
+  opacity: 0.4;
 }
-.spinner {
+#load_spinner .spinner {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -430,7 +430,9 @@ header span.logo_text {
   top: 35px;
   padding: 20px;
 }
-#content h1, #content h2, #content h3 {
+#content h1,
+#content h2,
+#content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -457,6 +459,9 @@ header span.logo_text {
   margin: 0;
   float: left;
   cursor: pointer;
+}
+.graph_tabs li.super {
+  width: 370px;
 }
 .graph_tabs li.display {
   display: block;
