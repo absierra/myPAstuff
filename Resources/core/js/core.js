@@ -48,7 +48,21 @@ var initGraphs = function(){
             //this.setLegend();
             window.graphTabs.showSlide(1);
         }
-    });
+    });/*
+    window.graphs.fund_department = new BudgetGraph('fund_department_graph', {
+    	dataset : 'financial',
+        type : 'departments',
+        target : 'department',
+        metric : 'expenses',
+        column : 'department',
+        id : 'fund_department',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(2);
+        }
+    });*/
     window.graphs.expenditures = new BudgetGraph('expenditure_graph', {
     	dataset : 'financial',
         type : 'categories',
@@ -59,7 +73,35 @@ var initGraphs = function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
-            window.graphTabs.showSlide(2);
+            window.graphTabs.showSlide(3);
+        }
+    });/*
+    window.graphs.revenue_expenses = new BudgetGraph('exp_vs_fee_rev_graph', {
+    	dataset : 'financial',
+        type : 'categories',
+        target : 'category',
+        metric : 'revenue_expense',
+        id : 'revenue_expenses',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(4);
+            
+        }
+    });*/
+    window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
+    	dataset : 'financial',
+        type : 'categories',
+        target : 'category',
+        metric : 'tax_revenue',
+        id : 'fee_revenue',
+        select : function(){
+            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //this.setKeys();
+            //this.setLegend();
+            window.graphTabs.showSlide(5);
+            
         }
     });
     window.graphs.revenue = new BudgetGraph('revenue_graph', {
@@ -68,20 +110,6 @@ var initGraphs = function(){
         target : 'category',
         metric : 'revenue',
         id : 'revenue',
-        select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(3);
-            
-        }
-    });
-    window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
-    	dataset : 'financial',
-        type : 'categories',
-        target : 'category',
-        metric : 'tax_revenue',
-        id : 'fee_revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
@@ -99,7 +127,7 @@ var initGraphs = function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
-            window.graphTabs.showSlide(6);
+            window.graphTabs.showSlide(7);
             
         }
     });
@@ -112,7 +140,7 @@ var initGraphs = function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
-            window.graphTabs.showSlide(7);
+            window.graphTabs.showSlide(8);
             
         }
     });
@@ -125,7 +153,7 @@ var initGraphs = function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
-            window.graphTabs.showSlide(8);
+            window.graphTabs.showSlide(9);
             
         }
     });

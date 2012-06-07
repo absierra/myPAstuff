@@ -822,7 +822,7 @@ Raphael.g = {
 			
             while (Y >= y - length) {
             	if (label < 1000){
-            		modifiedlabel = label+'';
+            		modifiedlabel = Math.round((label)*Math.pow(10,1))/Math.pow(10,1)+'';
             	}
             	else if (label < 1000000){
             		modifiedlabel = Math.round((label/1000)*Math.pow(10,1))/Math.pow(10,1)+'K';

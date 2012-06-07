@@ -76,7 +76,9 @@
 				}
 				if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 				$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
-				if($isTax) $data[$item->get($index)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
+				if($isTax){
+					$data[$item->get($index)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
+				}
 			}
 			file_put_contents($filename,json_encode($data));
 		}else{
@@ -124,6 +126,7 @@
 		}
 		if(count($data) == 0){
 			$data['Fire']['2009']['revenue'] = 0;
+			$data['Fire']['2010']['revenue'] = 0;
 		}
 		$renderer->assign('data', $data);
 	}

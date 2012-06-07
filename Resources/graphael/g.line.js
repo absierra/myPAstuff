@@ -149,9 +149,9 @@
             if (!opts.nostroke) {
                 lines.push(line = paper.path().attr({
                     stroke: colors[i],
-                    "stroke-width": opts.width || 4,
+                    "stroke-width": opts.width || 3,
                     "stroke-linejoin": "round",
-                    "stroke-linecap": "round",
+                    "stroke-linecap": "butt",
                     "stroke-dasharray": opts.dash || "",
                 }));
             }
@@ -259,7 +259,7 @@
                     //    nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
                     //    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
 
-                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 25).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
+                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, 7.4).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
                     C.x = X;
                     C.y = Y;
                     C.value = valuesy[i][j];
