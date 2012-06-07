@@ -7,6 +7,7 @@ var refreshGUI = function(includeData){
     window.currentGraph.setLegend();
     if( includeData || (!graphs_initialized) ){
         graphs_initialized = true;
+        cascade = 200;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
                 /*
@@ -14,7 +15,9 @@ var refreshGUI = function(includeData){
             	console.log(window.currentGraph);
             	console.log(graph != window.currentGraph);
                 */
-                if(graph != window.currentGraph) graph.fetch(window.selected, window.lastSelectedColumn, function(){});
+                if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
+
+                cascade += 800;
             });
         })(); //don't let offscreen graphs choke the onscreen one
 	}
@@ -133,6 +136,27 @@ var initGraphs = function(){
     });
 };
 
+var loadDefaultGraph = function(type){
+    window.loadSpinner.show();
+    window.selected = {}; // start: reset
+    window.panelSelection = {}; 
+    document.getElements('.selected').removeClass('selected');
+    document.getElements('.colorkey').removeClass('colorkey');
+    document.getElements('.disabled').removeClass('disabled');
+    document.getElements('.expanded').removeClass('expanded');
+    var sublist = document.getElements('li ul.sublist');
+    if ((sublist) && (sublist.hasClass('expanded'))) {
+        sublist.set('morph', { unit:'px' });
+        sublist.morph({height:0});
+        sublist.removeClass('expanded');
+    }
+    document.id('graph_title').set('text', type);
+    BudgetGraph.deselect(); // end: reset
+    if(window.graphs[type]) window.graphs[type].fetch({}, type, function(d){
+        BudgetGraph.select(type);
+        refreshGUI();
+    });
+}
 
 var initialized = false;
 function panelData(){
@@ -142,8 +166,7 @@ function panelData(){
 	    this.populatePanel('funds');
 		this.populatePanel('departments');
 		if(!initialized){
-            var target = document.getElement('.EnterpriseFunds span');
-            if(target) target.fireEvent.delay(50, target, ['click']);
+            loadDefaultGraph('fund');
             initialized = true;
         }
 	}.bind(this)}).get();
@@ -329,6 +352,12 @@ document.addEvent('domready', function() {
         changeCurrentGraphType('pie', this);
         yearSlider('show');
         document.id('graph_breakdown').empty();
+    });
+    document.id('default_department').addEvent('click', function(event){
+        loadDefaultGraph('department');
+    });
+    document.id('default_fund').addEvent('click', function(event){
+        loadDefaultGraph('fund');
     });
     new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
     var descriptionTooltip = document.getElements('.description_tooltip');
