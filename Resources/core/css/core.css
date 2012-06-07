@@ -520,6 +520,7 @@ header span.logo_text {
   margin-top: 15px;
   font-size: 18px;
   color: #00abe3;
+  text-transform: capitalize;
 }
 #graph_container h2#graph_breakdown {
   position: absolute;
