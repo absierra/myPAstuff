@@ -103,7 +103,7 @@
             minx = xdim.from,
             maxx = xdim.to,
             ydim = chartinst.snapEnds(Math.min.apply(Math, ally), Math.max.apply(Math, ally), valuesy[0].length - 1),
-            miny = 0,//ydim.from,
+            miny = Math.min.apply(Math, ally)<0 ? Math.min.apply(Math, ally)*1.1 : 0,//ydim.from,
             maxy = Math.max.apply(Math, ally)*1.1,//ydim.to,
             kx = (width - gutter * 2) / ((maxx - minx) || 1),
             ky = (height - gutter * 2) / ((maxy - miny) || 1);
