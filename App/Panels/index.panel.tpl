@@ -39,6 +39,7 @@
                 <li id="pie_chart" class="pie icon"></li>
             </ul>
             <div id="graphs">
+                <div id="graph_spinner"></div>
 				<div id="fund_graph" class="graph"></div>
 				<div id="department_graph" class="graph"></div>
 				<div id="expenditure_graph" class="graph"></div>
