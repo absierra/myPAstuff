@@ -6,7 +6,7 @@ var DelphiGraphTabs = {
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.each(function(el, tabKey){
                 el.addEvent('click', function(event){
-                    BudgetGraph.select(event.target.getAttribute('graph'));
+                    //BudgetGraph.select(event.target.getAttribute('graph'));
                     options.select(event);
                 });
         });
