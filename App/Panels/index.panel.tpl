@@ -25,7 +25,7 @@
             <li class="tab expenditure_tab" graph="expenses">Breakdown by Expenditure</li>
             <li class="tab revenue_tab" graph="revenue">Breakdown by Revenue</li>
             <li class="tab fee_revenue_tab" graph="fee_revenue">Breakdown by Fee Rev.</li>
-            <li class="tab exp_vs_fee_rev_tab" graph="expenses_vs_fee_revenue">Breakdown by Exp. vs. Fee Rev.</li>
+            <li class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Breakdown by Exp. vs. Fee Rev.</li>
 			<li class="tab employee_department_tab" graph="employee_department">Breakdown by Department</li>
 			<li class="tab employee_type_tab" graph="employee_type">Breakdown by Type</li>
         </ul>
