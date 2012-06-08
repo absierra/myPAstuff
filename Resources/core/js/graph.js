@@ -126,8 +126,7 @@ var BudgetGraph = new Class({
             this.setKeysOnLoad = true;
             return;
         }
-        document.getElements('span.colorkey').removeClass('colorkey');
-        PseudoDOM.clear();
+        BudgetGraph.clearKeys();
         activeItems = this.getKeyElements();
         if(activeItems.length == 0) return;
         if(activeItems.length != this.colors.length){
@@ -304,9 +303,13 @@ BudgetGraph.clearLegend = function(){
     legendElement.getElements('li').destroy();
     legendElement.dissolve();
 };
+BudgetGraph.clearKeys = function(){
+    document.getElements('span.colorkey').removeClass('colorkey');
+    PseudoDOM.clear();
+};
 BudgetGraph.select = function(name){
     if(BudgetGraph.graphs[name]){
-        //console.log(['selecting', name, BudgetGraph.graphs[name]]);
+        console.log(['selecting', name, BudgetGraph.graphs[name]]);
         window.currentGraph = BudgetGraph.graphs[name];
         BudgetGraph.graphs[name].select();
         if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
