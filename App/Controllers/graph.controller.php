@@ -30,14 +30,16 @@
     $values['category'] = WebApplication::get('category')?WebApplication::get('category'):false;
     $dataset = WebApplication::get('dataset');
     $focus = WebApplication::get('target')?mapPlural(WebApplication::get('target')):false;
-    if($dataset=='financial'){
-		$filename = 'Cache/budget/'.md5(json_encode(array_merge(
-			$values,
-			array(
-				'focus' => $focus
-			)
-		), true)).'.json';
-		if(false || !file_exists($filename)){
+    $filename = 'Cache/budget/'.md5(json_encode(array_merge(
+        $values,
+        array(
+            'focus' => $focus,
+            'dataset' => $dataset
+        )
+    ), true)).'.json';
+    $data = array();
+    if(false || !file_exists($filename)){
+        if($dataset=='financial'){
 			$disc = array();
 			foreach($values as $key => $value){
 				if($value){
@@ -55,7 +57,6 @@
 			$query = implode(' and ', $disc);
 			$results = Data::search('BudgetData', $query);
 			$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
-			$data = array();
 			foreach($results as $item){
 				if($focus == 'revenue_expense'){
 					$series = ($item->get('ledger_type')=='Expense')?'Expenses':'Revenues';
@@ -86,54 +87,53 @@
 					}
 				}
 			}
-			file_put_contents($filename,json_encode($data));
-		}else{
-			$data = json_decode(file_get_contents($filename), true);
-		}
-		$renderer->assign('data', $data);
-	}
-	else{
-		$disc = array();
-		foreach($values as $key => $value){
-			if($value){
-				if(strpos($value, ':') === false){
-					$disc[] = mapInternal($key).'=\''.($value).'\'';
-				}else{
-					$parts = explode(':', $value);
-					$parent = array_shift($parts);
-					$child = implode(':', $parts);
-					$disc[] = mapInternal($key).'=\''.($parent).'\'';
-					$disc[] = mapInternal($key, true).'=\''.($child).'\'';
-				}
-			}
-		}
-		$query = implode(' and ', $disc);
-		$data = array();
-		$results = Data::search('EmployeeData', $query);
-		$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
-		//results is now an arrow of rows, filtered by the selected department/division
-		foreach($results as $item){
-			if($focus == 'department'){
-				switch($depth){
-					case 0:
-						$data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-					case 1:
-						$data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-					case 2:
-						$data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-				}
-			}
-			else if($focus == 'title'){
-				$data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-			}
-			else if($focus == 'salary'){
-				$data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('salary');
-			}
-		}
-		if(count($data) == 0){
-			$data['No Employees']['2009']['revenue'] = 0;
-			$data['No Employees']['2013']['revenue'] = 0;
-		}
-		$renderer->assign('data', $data);
-	}
+		    $renderer->assign('data', $data);
+        }else{
+            $disc = array();
+            foreach($values as $key => $value){
+                if($value){
+                    if(strpos($value, ':') === false){
+                        $disc[] = mapInternal($key).'=\''.($value).'\'';
+                    }else{
+                        $parts = explode(':', $value);
+                        $parent = array_shift($parts);
+                        $child = implode(':', $parts);
+                        $disc[] = mapInternal($key).'=\''.($parent).'\'';
+                        $disc[] = mapInternal($key, true).'=\''.($child).'\'';
+                    }
+                }
+            }
+            $query = implode(' and ', $disc);
+            $results = Data::search('EmployeeData', $query);
+            $depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
+            //results is now an arrow of rows, filtered by the selected department/division
+            foreach($results as $item){
+                if($focus == 'department'){
+                    switch($depth){
+                        case 0:
+                            $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                        case 1:
+                            $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                        case 2:
+                            $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                    }
+                }
+                else if($focus == 'title'){
+                    $data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                }
+                else if($focus == 'salary'){
+                    $data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('salary');
+                }
+            }
+            if(count($data) == 0){
+                $data['No Employees']['2009']['revenue'] = 0;
+                $data['No Employees']['2013']['revenue'] = 0;
+            }
+            $renderer->assign('data', $data);
+        }
+        file_put_contents($filename,json_encode($data));
+    }else{
+        $data = json_decode(file_get_contents($filename), true);
+        $renderer->assign('data', $data);
+    }
 ?>
