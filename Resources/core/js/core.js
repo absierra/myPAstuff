@@ -1,8 +1,10 @@
 //global js here
 var graphs_initialized = false;
 var financial_state = true;
+var loadTimer = 0;
 var refreshGUI = function(includeData){
-	console.log(window.currentGraph);
+    BudgetGraph.timer(1);
+	//console.log(window.currentGraph);
     DelphiGraphTabs.filter();
     window.currentGraph.setKeys();
     window.currentGraph.setLegend();
@@ -17,12 +19,12 @@ var refreshGUI = function(includeData){
             	console.log(graph != window.currentGraph);
                 */
                 if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
-
-                cascade += 800;
+                //cascade += 800;
             });
         })(); //don't let offscreen graphs choke the onscreen one
+        
 	}
-    window.loadSpinner.hide();
+    BudgetGraph.timer(-1);
 }
 
 var initGraphs = function(){
@@ -152,7 +154,7 @@ var initGraphs = function(){
 };
 
 var loadDefaultGraph = function(type){
-    window.loadSpinner.show();
+    if (!type) type = 'fund';
     window.selected = {}; // start: reset
     window.panelSelection = {}; 
     document.getElements('.selected').removeClass('selected');
@@ -175,7 +177,16 @@ var loadDefaultGraph = function(type){
 
 var initialized = false;
 function panelData(){
-	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
+    
+	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', 
+
+    onRequest: function(){
+        BudgetGraph.timer(1);
+    },
+    onComplete: function(){
+        BudgetGraph.timer(-1);
+    },
+    onSuccess: function(data){
         this.dataRequest = data.data;
         window.dataRequest = this.dataRequest;
 	    this.populatePanel('funds');
@@ -197,17 +208,24 @@ function panelData(){
 		});
 	}
 
-	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
+	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', 
+    onRequest: function(){
+        BudgetGraph.timer(1);
+    },
+    onComplete: function(){
+        BudgetGraph.timer(-1);
+    },
+    onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
         refreshGUI(true);
-        window.loadSpinner.hide();
 	}.bind(this)});
 	
     window.selected = {};
     window.panelSelection = {};
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
+            BudgetGraph.timer(1);
             var parts = element.split(":");
             var index;
 			switch (panel){
@@ -217,36 +235,77 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-                window.loadSpinner.show();
                 var titleText = this.get('text');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
                     window.selected = {};
                     window.panelSelection = {};
-                } else {
-                    panelId.getElements('.selected').removeClass('selected');
-                }
+                }      
+
                 document.getElements('.expanded').removeClass('expanded');
                 document.getElements('li ul.sublist').morph({height:0});
-                window.selected[index] = panelSpan.retrieve('item_identifier');
-                window.lastSelectedPanel = selectedPanel;
-                window.lastSelectedColumn = index;
-                window.lastSelectedItem = element;
-                document.getElements('.colorkey').removeClass('colorkey');
-                this.addClass('selected');
-                this.getElements('a').addClass('expanded');
-                sublistCheck = this.getParent('ul.sublist');
-                if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2;
-                sublist = this.getParent('li ul.sublist');
-                sublistHeight = sublist.getScrollSize();
-                sublist.morph({height:sublistHeight.y});
-                selectionRequest.get(window.selected);
-                document.id('graph_title').set('text', titleText);
-                if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
-                    BudgetGraph.select(index);
-                    //refreshGUI(true);
-                });
+           
+                if (this.hasClass('selected')) {
+                    //window.selected = {}, window.panelSelection={};
+                    this.removeClass('selected');
+                    sublist = this.getSiblings('ul.sublist');
+                    sublistHeight = sublist.getScrollSize();
+                    sublist.morph({height:sublistHeight.y});
+                    this.getElements('a.expanded').removeClass('expanded');
+                    this.removeClass('colorkey');
+                    var selectedItems = document.getElements('ul li span.selected');
+                    if (selectedItems.length > 0) {
+                        selectedIndex = selectedItems.getParent().getParent().get('id');
+                        document.id('graph_title').set('text', selectedItems.get('text'));
+                        document.getElements('.selected').removeClass('selected');
+                        document.getElements('.colorkey').removeClass('colorkey');
+                        selectedItems.addClass('selected');
+                        
+                        BudgetGraph.select(selectedIndex);
+
+/*
+                        window.selected[index] = panelSpan.retrieve('item_identifier');
+                        window.lastSelectedPanel = selectedPanel;
+                        window.lastSelectedColumn = index;
+                        window.lastSelectedItem = element;
+
+                        sublistCheck = this.getParent('ul.sublist');
+                        if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2
+
+                        if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
+                            BudgetGraph.select(index);
+                            //refreshGUI(true);
+                        });
+*/
+                        refreshGUI();
+                    } else {
+                        loadDefaultGraph(panelId.get('id'));
+                    }
+                } else {
+                    if (!this.hasClass('disabled')) { 
+                        panelId.getElements('.selected').removeClass('selected');
+                    }
+                    
+                    window.selected[index] = panelSpan.retrieve('item_identifier');
+                    window.lastSelectedPanel = selectedPanel;
+                    window.lastSelectedColumn = index;
+                    window.lastSelectedItem = element;
+                    document.getElements('.colorkey').removeClass('colorkey');
+                    this.addClass('selected');
+                    this.getElements('a').addClass('expanded');
+                    sublistCheck = this.getParent('ul.sublist');
+                    if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2;
+                    sublist = this.getParent('li ul.sublist');
+                    sublistHeight = sublist.getScrollSize();
+                    sublist.morph({height:sublistHeight.y});
+                    selectionRequest.get(window.selected);
+                    document.id('graph_title').set('text', titleText);
+                    if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
+                        BudgetGraph.select(index);
+                        //refreshGUI(true);
+                    });
+                }
 			};
             var panelArrowClickFunction = function(event) {
                 var expanded = this.getParent('li span a')
@@ -291,6 +350,7 @@ function panelData(){
                 panelUl.appendChild(panelLi);
                 panelSet.appendChild(panelUl);
             }
+            BudgetGraph.timer(-1);
 		}.bind(this));
 	};
 }
@@ -333,6 +393,8 @@ var changeCurrentGraphType = function(type, el){
     el.addClass('active');
     Object.each(window.graphs, function(graph){
         graph.options.mode = type;
+        console.log('window graph: '+window.graphs);
+        console.log('graph: '+graph);
         graph.display();
     });
 }
@@ -389,22 +451,8 @@ document.addEvent('domready', function() {
         defaultEventType: 'keyup',
         events: {
             'esc': function(){    
-                window.selected = {};
-                window.panelSelection = {}; 
-                document.getElements('.selected').removeClass('selected');
-                document.getElements('.colorkey').removeClass('colorkey');
-                document.getElements('.disabled').removeClass('disabled');
-                document.getElements('.expanded').removeClass('expanded');
-                var sublist = document.getElements('li ul.sublist');
-                if ((sublist) && (sublist.hasClass('expanded'))) {
-                    sublist.set('morph', { unit:'px' });
-                    sublist.morph({height:0});
-                    sublist.removeClass('expanded');
-                }
-                BudgetGraph.deselect();
+                loadDefaultGraph();            
             }
          }
     });
-    window.loadSpinner = document.id('load_spinner');
-    window.loadSpinner.show();
 });

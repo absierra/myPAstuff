@@ -22,6 +22,12 @@ var BudgetGraph = new Class({
         this.setOptions(options);
         if(!this.options.requestor) this.options.requestor = new Request.JSON({
             url: '/data/graph',
+            onRequest: function(){
+               BudgetGraph.timer(1);
+            },
+            onComplete: function(){
+               BudgetGraph.timer(-1);
+            },
             onSuccess: function(payload){
                 this.data = payload.data;
                 this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
@@ -309,7 +315,7 @@ BudgetGraph.clearKeys = function(){
 };
 BudgetGraph.select = function(name){
     if(BudgetGraph.graphs[name]){
-        console.log(['selecting', name, BudgetGraph.graphs[name]]);
+        //console.log(['selecting', name, BudgetGraph.graphs[name]]);
         window.currentGraph = BudgetGraph.graphs[name];
         BudgetGraph.graphs[name].select();
         if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
@@ -319,3 +325,18 @@ BudgetGraph.deselect = function(){
     delete window.currentGraph;
     BudgetGraph.clearLegend();
 };
+BudgetGraph.timer = function(value){
+    if (value == 1) {
+        loadTimer++;
+        console.log(loadTimer);
+    } else if (value == -1) {
+        loadTimer--;
+    }
+    loadSpinner = document.id('load_spinner');
+    if (loadTimer <= 0) {
+        loadSpinner.hide();
+    } else {
+        loadSpinner.show();
+    }
+}
+

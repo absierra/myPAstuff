@@ -427,8 +427,8 @@ header span.logo_text {
 }
 #content.fullwidth {
   left: 0;
-  top: 35px;
-  padding: 20px;
+  top: 55px;
+  padding: 0 20px 20px;
 }
 #content h1,
 #content h2,
@@ -479,7 +479,7 @@ header span.logo_text {
 #graph_container {
   clear: both;
   position: relative;
-  background: url('/Resources/core/img/background_40_percent_white.png') repeat;
+  background: #fff;
   border: 1px solid #ccc;
   border-width: 1px 0 0 1px;
   min-height: 500px;
