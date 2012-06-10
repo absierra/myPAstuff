@@ -1,5 +1,5 @@
 {page wrapper="application" title="Delphi Solutions" meta_description="Delphi Solutions provides solutions to analyzing and visualizing big distributed data"}
-{require name="mootools,core,header,graphael,tabs"}
+{require name="mootools,core,header,graphael,tabs,scrollabletable"}
 {panel name="header"}
 <div id="content_wrapper">
     <header>
@@ -25,7 +25,7 @@
             <li class="tab expenditure_tab" graph="expenses">Breakdown by Expenditure</li>
             <li class="tab revenue_tab" graph="revenue">Breakdown by Revenue</li>
             <li class="tab fee_revenue_tab" graph="fee_revenue">Breakdown by Fee Rev.</li>
-            <li class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Breakdown by Exp. vs. Fee Rev.</li>
+            <li class="tab exp_vs_fee_rev_tab" graph="expenses_vs_fee_revenue">Breakdown by Exp. vs. Fee Rev.</li>
 			<li class="tab employee_department_tab" graph="employee_department">Breakdown by Department</li>
 			<li class="tab employee_type_tab" graph="employee_type">Breakdown by Type</li>
         </ul>
@@ -48,7 +48,24 @@
 				<div id="fee_revenue_graph" class="graph"></div>
 				<div id="exp_vs_fee_rev_graph" class="graph"></div>
 				<div id="employee_department_graph" class="graph"></div>
-				<div id="employee_type_graph" class="graph"></div>
+				<div id="employee_type_graph" class="graph">
+					<table id="employee_type_table">
+						<thead>
+							<tr>
+							<th>Job Title</th>
+							<th>2009 Full Time Equivalents</th>
+							<th>2010 Full Time Equivalents</th>
+							<th>2011 Full Time Equivalents</th>
+							<th>2012 Full Time Equivalents</th>
+							<th>2013 Full Time Equivalents</th>
+							<th>2013 Salary</th>
+							</tr>
+						</thead>
+						<tbody>
+        					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    					</tbody>
+					</table>
+				</div>
             </div>
             <div id="years_container">
                 <ul id="years_text"></ul>
