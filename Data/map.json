@@ -785,7 +785,7 @@
                 "Expense:Supplies & Materials"
             ]
         }, 
-        "Information Technology": {
+        "Information Technology a": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -804,7 +804,7 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Information Technology:Capital Improvement": {
+        "Information Technology a:Capital Improvement": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -814,7 +814,7 @@
                 "Revenue:Charges to Other Funds"
             ]
         }, 
-        "Information Technology:Enterprise Systems": {
+        "Information Technology a:Enterprise Systems": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -825,7 +825,7 @@
                 "Revenue:Charges to Other Funds"
             ]
         }, 
-        "Information Technology:IT Operations": {
+        "Information Technology a:IT Operations": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -840,7 +840,7 @@
                 "Revenue:Other Revenue"
             ]
         }, 
-        "Information Technology:IT Project Services": {
+        "Information Technology a:IT Project Services": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -853,7 +853,7 @@
                 "Revenue:Charges to Other Funds"
             ]
         }, 
-        "Information Technology:Office of the CIO": {
+        "Information Technology a:Office of the CIO": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -2086,11 +2086,11 @@
             "divisions": [
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management"
             ], 
             "ledgers": [
@@ -2129,11 +2129,11 @@
         "Internal Services Funds:Technology Fund": {
             "divisions": [
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO"
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2320,11 +2320,11 @@
                 "Public Works:Wastewater Treatment", 
                 "Planning:Transportation Impact ", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - CIP"
@@ -2421,11 +2421,11 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Community Services:CSD - CIP"
             ], 
@@ -2454,7 +2454,7 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Information Technology:Capital Improvement", 
+                "Information Technology a:Capital Improvement", 
                 "Public Works:Equipment Management", 
                 "Community Services:CSD - CIP"
             ], 
@@ -2542,10 +2542,10 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Community Services:CSD - CIP"
             ], 
@@ -2630,7 +2630,7 @@
                 "Utilities:Administration", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:IT Operations", 
+                "Information Technology a:IT Operations", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -2715,9 +2715,9 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - CIP"
@@ -2772,7 +2772,7 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -2898,10 +2898,10 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - CIP"
@@ -2988,8 +2988,8 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
                 "Public Works:Equipment Management", 
                 "Community Services:CSD - CIP"
             ], 
@@ -3095,11 +3095,11 @@
                 "Public Works:Wastewater Treatment", 
                 "Planning:Transportation Impact ", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - CIP"
@@ -3165,7 +3165,7 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Planning:Transportation Impact ", 
-                "Information Technology:Office of the CIO"
+                "Information Technology a:Office of the CIO"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -3209,11 +3209,11 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Capital Improvement", 
-                "Information Technology:Enterprise Systems", 
-                "Information Technology:IT Operations", 
-                "Information Technology:IT Project Services", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Capital Improvement", 
+                "Information Technology a:Enterprise Systems", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:IT Project Services", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -3357,8 +3357,8 @@
                 "Utilities:Customer Service", 
                 "Planning:Transportation Impact ", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:IT Operations", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:IT Operations", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - CIP"
@@ -3458,7 +3458,7 @@
                 "Planning:Transportation Impact ", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Information Technology", 
-                "Information Technology:Office of the CIO", 
+                "Information Technology a:Office of the CIO", 
                 "Public Works:Equipment Management", 
                 "Capital Fund:Capital Improvement"
             ], 

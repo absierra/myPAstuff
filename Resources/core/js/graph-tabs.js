@@ -6,12 +6,15 @@ var DelphiGraphTabs = {
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.each(function(el, tabKey){
                 el.addEvent('click', function(event){
-                    //console.log('selected:'+event.target.getAttribute('graph'));
+                    console.log('selected:'+event.target.getAttribute('graph'));
                     //options.select(event);
+                    console.log(BudgetGraph.graphs);
                     var g = BudgetGraph.graphs[event.target.getAttribute('graph')];
+                    console.log(g);
                     g.setLegend();
                     g.setKeys();
                     //BudgetGraph.select(event.target.getAttribute('graph'));
+
                 });
         });
     },

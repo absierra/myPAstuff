@@ -1,0 +1,8 @@
+{
+    "resource" :{
+        "scrollabletable":"scrollabletable.js"
+    },
+    "dependency":[
+        "mootools_core"
+    ]
+}

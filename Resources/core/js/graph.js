@@ -48,7 +48,7 @@ var BudgetGraph = new Class({
         });
         if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
         if(this.options.select) this.options.select = this.options.select.bind(this)
-        this.raphael = Raphael(element);
+	    this.raphael = Raphael(element);
         a = this; //?
     },
     fetch : function(data, type, callback){
@@ -182,118 +182,119 @@ var BudgetGraph = new Class({
         if(!metric) metric = this.options.metric;
         xSet = [];
         ySet = [];
+		var key;
+		switch(this.options.type){
+			case 'fund': key = 'funds'; break;
+			case 'category': key = 'categories'; break;
+			case 'department': key = 'departments'; break;
+		}
 
-        var key;
-        switch(this.options.type){
-            case 'fund': key = 'funds'; break;
-            case 'category': key = 'categories'; break;
-            case 'department': key = 'departments'; break;
-        }
+		if(!this.options.target){
+			window.dataRequest[key].each(function(data, index){
+				if(this.data[data]){
+					var xs = [];
+					var ys = [];
+					var keys = Object.keys(this.data[data]).sort();
+					keys.each(function(key){
+						xs.push(year);
+						ys.push((this.data[data][key][metric]?this.data[data][key][metric]:0));
+					});
+					xSet.push(xs);
+					ySet.push(ys);
+				}
+			}.bind(this));
+		}else{
+			var keys;
+			Object.each(this.data, function(data, name){
+				var xs = [];
+				var ys = [];
+				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]).sort();
+				keys.each(function(key){
+					//console.log(['dd', name, key, metric, this.data[name], this.data[name][key]]);
+					xs.push(key);
+					var v;
+					if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
+					else v = 0;
+					ys.push(v);
+				}.bind(this));
+				xSet.push(xs);
+				ySet.push(ys);
+			}.bind(this)); //*/
+		}
 
-        if(!this.options.target){
-            window.dataRequest[key].each(function(data, index){
-                if(this.data[data]){
-                    var xs = [];
-                    var ys = [];
-                    var keys = Object.keys(this.data[data]).sort();
-                    keys.each(function(key){
-                        xs.push(year);
-                        ys.push((this.data[data][key][metric]?this.data[data][key][metric]:0));
-                    });
-                    xSet.push(xs);
-                    ySet.push(ys);
-                }
-            }.bind(this));
-        }else{
-            var keys;
-            Object.each(this.data, function(data, name){
-                var xs = [];
-                var ys = [];
-                if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]).sort();
-                keys.each(function(key){
-                    //console.log(['dd', name, key, metric, this.data[name], this.data[name][key]]);
-                    xs.push(key);
-                    var v;
-                    if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
-                    else v = 0;
-                    ys.push(v);
-                }.bind(this));
-                xSet.push(xs);
-                ySet.push(ys);
-            }.bind(this)); //*/
-        }
+		//console.log(['diz', xSet, ySet]); return;
+		if(this.options.mode == 'bar'){
+			this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
+				shade: true,
+				nostroke: false,
+				axis: "0 0 1 1",
+				colors:this.options.colors
+			});
+		}else if (this.options.mode == 'pie'){
+		   
+			//window.totalChartValue = 0;
+			var graphSize = document.id('graphs').getScrollSize();
+			var xGraph = graphSize.x / 2 - 45;
+			var yGraph = graphSize.y / 2 - 5;
+			var totalValues = [];
+			var yearValues = [];
+			var year = this.options.year;
+			var yearKey;
+			this.availableYears = [];
+			xSet.each(function(yearsArray) {
+				yearsArray.each(function(value, key) {
+					if (year == value) yearKey = key;
+					if (!this.availableYears.contains(value)) this.availableYears.push(value);  
+				}.bind(this));
+				BudgetGraph.LastSelectionYearsData = this.availableYears.sort();
+			}.bind(this));
 
-        //console.log(['diz', xSet, ySet]); return;
-        if(this.options.mode == 'bar'){
-            this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
-                shade: true,
-                nostroke: false,
-                axis: "0 0 1 1",
-                colors:this.options.colors
-            });
-        }else if (this.options.mode == 'pie'){
-           
-            //window.totalChartValue = 0;
-            var graphSize = document.id('graphs').getScrollSize();
-            var xGraph = graphSize.x / 2 - 45;
-            var yGraph = graphSize.y / 2 - 5;
-            var totalValues = [];
-            var yearValues = [];
-            var year = this.options.year;
-            var yearKey;
-            this.availableYears = [];
-            xSet.each(function(yearsArray) {
-                yearsArray.each(function(value, key) {
-                    if (year == value) yearKey = key;
-                    if (!this.availableYears.contains(value)) this.availableYears.push(value);  
-                }.bind(this));
-                BudgetGraph.LastSelectionYearsData = this.availableYears.sort();
-            }.bind(this));
+			if (year) {
+				ySet.each(function(arraySet, key) {
+					totalValues.push(Math.floor(arraySet[yearKey]/10000));
+				});
+			} else {
+				ySet.each(function(arraySet, key) {
+					totalValues.push(Math.floor(arraySet.pop()/10000));
+				});
+			}
+			
+			this.lines = this.raphael.piechart(xGraph, yGraph + 10, yGraph, totalValues, {
+				shade: true,
+				nostroke: false,
+				axis: "0 0 1 1",
+				axisxstep : 4,
+				colors:this.options.colors,
+				stacked:this.options.stacked,
+				percent:this.options.percent
+			});
+			
 
-            if (year) {
-                ySet.each(function(arraySet, key) {
-                    totalValues.push(Math.floor(arraySet[yearKey]/10000));
-                });
-            } else {
-                ySet.each(function(arraySet, key) {
-                    totalValues.push(Math.floor(arraySet.pop()/10000));
-                });
-            }
-            
-            this.lines = this.raphael.piechart(xGraph, yGraph + 10, yGraph, totalValues, {
-                shade: true,
-                nostroke: false,
-                axis: "0 0 1 1",
-                axisxstep : 4,
-                colors:this.options.colors,
-                stacked:this.options.stacked,
-                percent:this.options.percent
-            });
-
-        }else{
-            var graphSize = document.id('graphs').getScrollSize();
-            var xGraph = graphSize.x - 240;
-            var yGraph = graphSize.y - 41;
-            if (xGraph > 700) xGraph = 700;
-            this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
-                shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-                nostroke: false,
-                axis: "0 0 1 1",
-                axisxstep : 4,
-                colors:this.options.colors,
-                stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-                percent:(this.options.mode == 'percentage-line')
-            }).hover(function() {
-            			this.attr("opacity",1);
-            			this.marker = this.marker || a.raphael.popup(this.x, this.y, '$'+this.value, "up", 5).insertAfter(this);
-            			this.marker.show();
-    				}, function() {
-        				// hide the popup element with an animation and remove the popup element at the end
-        				this.attr("opacity",0);
-        				this.marker && this.marker.hide();}
-        	);
-        }
-    }
+		}else{
+			var graphSize = document.id('graphs').getScrollSize();
+			var xGraph = graphSize.x - 240;
+			var yGraph = graphSize.y - 41;
+			if (xGraph > 700) xGraph = 700;
+			var a = this;
+			this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
+				shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+				nostroke: false,
+				axis: "0 0 1 1",
+				axisxstep : 4,
+				colors:this.options.colors,
+				stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+				percent:(this.options.mode == 'percentage-line')
+			}).hover(function() {
+						this.attr("opacity",1);
+						this.marker = this.marker || a.raphael.popup(this.x, this.y, '$'+this.value, "up", 5).insertAfter(this);
+						this.marker.show();
+					}, function() {
+						// hide the popup element with an animation and remove the popup element at the end
+						this.attr("opacity",0);
+						this.marker && this.marker.hide();}
+			);
+		}
+	}
 })
 BudgetGraph.LastSelectionYearsData = {};
 BudgetGraph.lastSelection = {};

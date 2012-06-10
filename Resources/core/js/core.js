@@ -2,7 +2,6 @@
 var graphs_initialized = false;
 var financial_state = true;
 var refreshGUI = function(includeData){
-	console.log(window.currentGraph);
     DelphiGraphTabs.filter();
     window.currentGraph.setKeys();
     window.currentGraph.setLegend();
@@ -18,7 +17,7 @@ var refreshGUI = function(includeData){
                 */
                 if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
 
-                cascade += 800;
+                //cascade += 800;
             });
         })(); //don't let offscreen graphs choke the onscreen one
 	}
@@ -86,7 +85,7 @@ var initGraphs = function(){
         type : 'rev_exp',
         target : 'revenue_expense',
         metric : 'revenue_expense',
-        id : 'revenue_expenses',
+        id : 'expenses_vs_fee_revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
@@ -136,7 +135,7 @@ var initGraphs = function(){
             
         }
     });
-    window.graphs.employee_type = new BudgetGraph('employee_type_graph', {
+    window.graphs.employee_type = new BudgetTable('employee_type_graph', {
 		dataset : 'employee',
         type : 'titles',
         target : 'title',
