@@ -3,23 +3,21 @@
         "Administrative Services": {
             "funds": [
                 "General Funds:General Fund", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund"
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
+                "Revenue:Charges for Services", 
+                "Expense:Facilities & Equip Purchases", 
                 "Revenue:Charges to Other Funds", 
                 "Expense:Rents & Leases", 
-                "Revenue:Permits and Licenses", 
-                "Expense:Reserve", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Revenue:Permits and Licenses"
             ]
         }, 
         "Administrative Services:Accounting": {
@@ -29,12 +27,12 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Revenue:Other Revenue", 
                 "Revenue:Charges for Services", 
-                "Revenue:Other Revenue"
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Administrative Services:Administration": {
@@ -58,29 +56,11 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
+                "Revenue:Charges for Services", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges for Services"
-            ]
-        }, 
-        "Administrative Services:Information Technology": {
-            "funds": [
-                "Internal Services Funds:Technology Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
-                "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Reserve", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Administrative Services:Purchasing": {
@@ -93,12 +73,11 @@
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
+                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue", 
-                "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Revenue:Charges to Other Funds", 
+                "Revenue:Other Revenue", 
                 "Revenue:Return on Investments"
             ]
         }, 
@@ -109,14 +88,14 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Administrative Services:Treasury": {
@@ -126,38 +105,36 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Airport": {
             "funds": [
-                "Enterprise Funds:Airport Enterprise"
+                "Enterprise Funds:Airport Enterprise Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Allocated Charges", 
+                "Expense:General Expense"
             ]
         }, 
-        "Airport:Airport Enterprise ": {
+        "Airport:Airport Enterprise": {
             "funds": [
-                "Enterprise Funds:Airport Enterprise"
+                "Enterprise Funds:Airport Enterprise Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Allocated Charges", 
+                "Expense:General Expense"
             ]
         }, 
         "Capital Fund": {
@@ -165,11 +142,10 @@
                 "Capital Funds:Capital Improvement Fund"
             ], 
             "ledgers": [
-                "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:General Expense"
             ]
         }, 
         "Capital Fund:Capital Improvement": {
@@ -177,11 +153,10 @@
                 "Capital Funds:Capital Improvement Fund"
             ], 
             "ledgers": [
-                "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:General Expense"
             ]
         }, 
         "City Attorney": {
@@ -190,12 +165,12 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
+                "Expense:Contract Services", 
                 "Expense:Rents & Leases", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Other Revenue"
@@ -207,12 +182,12 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds"
+                "Revenue:Charges to Other Funds", 
+                "Expense:Contract Services"
             ]
         }, 
         "City Attorney:Consultation and Advisory": {
@@ -234,11 +209,11 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:General Expense", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Attorney:Official & Administration": {
@@ -266,8 +241,8 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue", 
-                "Revenue:Sales Taxes"
+                "Revenue:Sales Taxes", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "City Auditor:Audit Services": {
@@ -281,8 +256,8 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue", 
-                "Revenue:Sales Taxes"
+                "Revenue:Sales Taxes", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "City Clerk": {
@@ -320,9 +295,9 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Expense:Allocated Charges", 
                 "Revenue:Charges for Services"
             ]
         }, 
@@ -344,11 +319,11 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Charges for Services"
+                "Revenue:Charges for Services", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Clerk:Legislative Records": {
@@ -356,10 +331,10 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Salaries & Benefits"
+                "Expense:Salaries & Benefits", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Clerk:Public Information": {
@@ -367,11 +342,11 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Council": {
@@ -379,8 +354,8 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Revenue:Charges to Other Funds", 
+                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
@@ -393,8 +368,8 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
-                "Revenue:Charges to Other Funds"
+                "Revenue:Charges to Other Funds", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Council:City Council Operations": {
@@ -425,7 +400,7 @@
                 "Revenue:Other Revenue"
             ]
         }, 
-        "City Manager:Administration": {
+        "City Manager:Administration and City Management": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -440,29 +415,16 @@
                 "Revenue:Other Revenue"
             ]
         }, 
-        "City Manager:City Management": {
-            "funds": [
-                "General Funds:General Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue"
-            ]
-        }, 
         "City Manager:Economic Development": {
             "funds": [
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials"
+                "Expense:Supplies & Materials", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "City Manager:Public Communication": {
@@ -486,19 +448,18 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:Rents & Leases", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Rental Income", 
-                "Revenue:Other Taxes and Fines", 
                 "Expense:Capital Improvement", 
-                "Expense:Reserve"
+                "Revenue:Other Taxes and Fines"
             ]
         }, 
         "Community Services:Administration": {
@@ -508,12 +469,12 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Community Services:Arts & Culture": {
@@ -541,14 +502,13 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Community Services:Cubberley & Human Services": {
@@ -561,11 +521,11 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue", 
-                "Revenue:Rental Income"
+                "Revenue:Rental Income", 
+                "Revenue:Other Revenue"
             ]
         }, 
-        "Community Services:Open Space! Parks! & Golf": {
+        "Community Services:Open Space Parks & Golf": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -615,8 +575,8 @@
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Expense:Rents & Leases", 
                 "Revenue:Permits and Licenses", 
+                "Expense:Rents & Leases", 
                 "Revenue:From Other Agencies"
             ]
         }, 
@@ -646,14 +606,14 @@
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "Revenue:Other Revenue", 
+                "Expense:Rents & Leases"
             ]
         }, 
         "Fire:Fire Administration": {
@@ -663,14 +623,14 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:From Other Agencies", 
                 "Revenue:Permits and Licenses"
             ]
         }, 
@@ -681,10 +641,10 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges for Services"
+                "Revenue:Charges for Services", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Fire:Training & Personnel": {
@@ -706,12 +666,12 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Contract Services", 
                 "Expense:Rents & Leases", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue"
@@ -723,12 +683,12 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds"
+                "Revenue:Charges to Other Funds", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:Contract Services"
             ]
         }, 
         "Human Resources:Employee Compensation": {
@@ -785,47 +745,7 @@
                 "Expense:Supplies & Materials"
             ]
         }, 
-        "Information Technology a": {
-            "funds": [
-                "Internal Services Funds:Technology Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
-                "Revenue:Charges to Other Funds", 
-                "Expense:Contract Services", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Facilities & Equip Purchases", 
-                "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue", 
-                "Expense:Rents & Leases", 
-                "Revenue:Charges for Services", 
-                "Revenue:Return on Investments"
-            ]
-        }, 
-        "Information Technology a:Capital Improvement": {
-            "funds": [
-                "Internal Services Funds:Technology Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
-                "Revenue:Charges to Other Funds"
-            ]
-        }, 
-        "Information Technology a:Enterprise Systems": {
-            "funds": [
-                "Internal Services Funds:Technology Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:Salaries & Benefits", 
-                "Revenue:Charges to Other Funds"
-            ]
-        }, 
-        "Information Technology a:IT Operations": {
+        "Information Technology": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -834,39 +754,33 @@
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
+                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement", 
+                "Revenue:Charges for Services"
             ]
         }, 
-        "Information Technology a:IT Project Services": {
+        "Information Technology:Information Technology Division": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds"
-            ]
-        }, 
-        "Information Technology a:Office of the CIO": {
-            "funds": [
-                "Internal Services Funds:Technology Fund"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Charges for Services", 
+                "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement", 
+                "Revenue:Charges for Services"
             ]
         }, 
         "Library": {
@@ -874,18 +788,18 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Other Revenue", 
+                "Expense:Allocated Charges", 
                 "Expense:Rents & Leases", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Taxes and Fines"
+                "Revenue:Other Taxes and Fines", 
+                "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
         "Library:Collections Management": {
@@ -893,13 +807,13 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "Library:Library Services Administration": {
@@ -914,11 +828,11 @@
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines"
+                "Revenue:Other Taxes and Fines", 
+                "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
         "Library:Public Services": {
@@ -933,34 +847,33 @@
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines"
+                "Revenue:Other Taxes and Fines", 
+                "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
         "Planning": {
             "funds": [
                 "General Funds:General Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Residential Parking Permits Program"
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:Rents & Leases", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Revenue", 
                 "Revenue:Permits and Licenses", 
+                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Rental Income", 
                 "Revenue:Return on Investments"
@@ -974,7 +887,6 @@
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits"
             ]
         }, 
@@ -990,12 +902,12 @@
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Revenue", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "Planning:Econ Develop": {
@@ -1003,11 +915,11 @@
                 "General Funds:General Fund"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials"
+                "Expense:Supplies & Materials", 
+                "Expense:Allocated Charges"
             ]
         }, 
         "Planning:Planning": {
@@ -1025,13 +937,12 @@
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses", 
                 "Revenue:Rental Income", 
                 "Revenue:Return on Investments", 
-                "Expense:Reserve"
+                "Revenue:From Other Agencies"
             ]
         }, 
         "Planning:Transportation Impact ": {
@@ -1039,7 +950,6 @@
                 "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees"
             ], 
             "ledgers": [
-                "Expense:Reserve", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments"
@@ -1051,19 +961,19 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Revenue:Charges for Services", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses", 
                 "Revenue:Rental Income", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:From Other Agencies", 
                 "Revenue:Charges to Other Funds", 
+                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Expense:Rents & Leases"
             ]
         }, 
@@ -1073,10 +983,10 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials"
+                "Expense:Supplies & Materials", 
+                "Expense:Contract Services"
             ]
         }, 
         "Police:Animal Services": {
@@ -1091,11 +1001,11 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses", 
-                "Revenue:Rental Income"
+                "Revenue:Rental Income", 
+                "Revenue:From Other Agencies"
             ]
         }, 
         "Police:Field Services": {
@@ -1108,13 +1018,13 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
         "Police:Investigations and Crime Prev Serv": {
@@ -1129,8 +1039,8 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Revenue:From Other Agencies"
             ]
         }, 
         "Police:Parking Services": {
@@ -1157,12 +1067,12 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Police:Technical Services": {
@@ -1192,21 +1102,21 @@
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines"
+                "Revenue:Other Taxes and Fines", 
+                "Expense:Supplies & Materials"
             ]
         }, 
         "Public Works": {
             "funds": [
                 "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Enterprise Funds:Wastewater Treatment"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1222,15 +1132,14 @@
                 "Revenue:Property Taxes", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:Rents & Leases", 
+                "Revenue:Return on Investments", 
                 "Expense:Capital Improvement", 
                 "Expense:Debt Service", 
-                "Expense:Reserve", 
                 "Expense:Utility Purchases & Charges", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
                 "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
@@ -1271,17 +1180,16 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Public Works:Refuse Fund-Operation": {
@@ -1290,13 +1198,11 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Expense:Utility Purchases & Charges", 
@@ -1306,8 +1212,9 @@
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
                 "Revenue:Rental Income", 
-                "Revenue:Return on Investments"
+                "Expense:Capital Improvement"
             ]
         }, 
         "Public Works:Storm Drainage - Operation": {
@@ -1316,22 +1223,21 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
+                "Expense:Rents & Leases"
             ]
         }, 
         "Public Works:Streets": {
@@ -1356,12 +1262,12 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds"
+                "Revenue:Charges to Other Funds", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Public Works:Trees": {
@@ -1371,13 +1277,13 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Expense:Facilities & Equip Purchases", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue"
+                "Revenue:Other Revenue", 
+                "Revenue:Charges to Other Funds"
             ]
         }, 
         "Public Works:Wastewater Treatment": {
@@ -1386,12 +1292,10 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
@@ -1400,24 +1304,25 @@
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Utilities": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
+                "Expense:Debt Service", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
@@ -1425,32 +1330,31 @@
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
-                "Expense:Facilities & Equip Purchases", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
-                "Expense:Debt Service", 
-                "Expense:Utility Purchases & Charges", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:Net Sales", 
+                "Revenue:Charges to Other Funds", 
                 "Revenue:Permits and Licenses", 
-                "Expense:Wastewater Treatment"
+                "Expense:Capital Improvement", 
+                "Expense:Wastewater Treatment", 
+                "Expense:Utility Purchases & Charges"
             ]
         }, 
         "Utilities:Administration": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
+                "Expense:Debt Service", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
@@ -1458,28 +1362,24 @@
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Net Sales", 
-                "Expense:Debt Service", 
+                "Revenue:From Other Agencies", 
                 "Expense:Facilities & Equip Purchases", 
-                "Revenue:From Other Agencies"
+                "Expense:Net Sales"
             ]
         }, 
         "Utilities:Capital Improvement Program": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
@@ -1487,35 +1387,37 @@
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
+                "Revenue:Permits and Licenses", 
                 "Expense:Debt Service", 
-                "Revenue:Permits and Licenses"
+                "Expense:Rents & Leases", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Utilities:Customer Service": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
+                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
-                "Expense:Rents & Leases", 
                 "Revenue:Other Revenue"
             ]
         }, 
         "Utilities:Demand Side Mgmt": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund"
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1525,36 +1427,36 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
-                "Revenue:Other Income"
+                "Revenue:Other Income", 
+                "Revenue:From Other Agencies"
             ]
         }, 
         "Utilities:Engineering (Operating)": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges for Services"
+                "Revenue:Charges for Services", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Utilities:Operations & Maintenance": {
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Fiber Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1564,18 +1466,17 @@
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Expense:Wastewater Treatment", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
-                "Revenue:Other Revenue", 
-                "Expense:Wastewater Treatment", 
-                "Expense:Reserve"
+                "Revenue:Other Revenue"
             ]
         }, 
         "Utilities:Resource Management": {
             "funds": [
                 "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Gas Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1594,43 +1495,40 @@
     "funds": {
         "Capital Funds": {
             "divisions": [
-                "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Community Services:CSD - CIP", 
+                "Capital Fund:Capital Improvement"
             ], 
             "ledgers": [
-                "Expense:General Expense", 
-                "Expense:Reserve", 
-                "Expense:Salaries & Benefits", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments", 
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:From Other Agencies"
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Revenue", 
+                "Expense:Capital Improvement", 
+                "Revenue:Return on Investments"
             ]
         }, 
         "Capital Funds:Capital Improvement Fund": {
             "divisions": [
-                "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Community Services:CSD - CIP", 
+                "Capital Fund:Capital Improvement"
             ], 
             "ledgers": [
-                "Expense:General Expense", 
-                "Expense:Reserve", 
-                "Expense:Salaries & Benefits", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments", 
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
+                "Expense:General Expense", 
+                "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:From Other Agencies"
+                "Revenue:From Other Agencies", 
+                "Revenue:Other Revenue", 
+                "Expense:Capital Improvement", 
+                "Revenue:Return on Investments"
             ]
         }, 
         "Enterprise Funds": {
             "divisions": [
-                "Airport:Airport Enterprise ", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -1640,46 +1538,45 @@
                 "Utilities:Resource Management", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment"
+                "Public Works:Wastewater Treatment", 
+                "Airport:Airport Enterprise"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
+                "Expense:Debt Service", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
-                "Expense:Salaries & Benefits", 
-                "Revenue:Return on Investments", 
                 "Expense:Rents & Leases", 
+                "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
-                "Expense:Capital Improvement", 
-                "Expense:Facilities & Equip Purchases", 
-                "Revenue:Charges to Other Funds", 
+                "Revenue:Return on Investments", 
                 "Revenue:From Other Agencies", 
-                "Expense:Debt Service", 
-                "Expense:Utility Purchases & Charges", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:Net Sales", 
+                "Revenue:Charges to Other Funds", 
                 "Revenue:Permits and Licenses", 
+                "Expense:Capital Improvement", 
+                "Expense:Wastewater Treatment", 
+                "Expense:Utility Purchases & Charges", 
                 "Revenue:Rental Income", 
                 "Revenue:Other Taxes and Fines", 
-                "Expense:Wastewater Treatment", 
                 "\"Revenue: Forfeit & Penalities\"\"\""
             ]
         }, 
-        "Enterprise Funds:Airport Enterprise": {
+        "Enterprise Funds:Airport Enterprise Fund": {
             "divisions": [
-                "Airport:Airport Enterprise "
+                "Airport:Airport Enterprise"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Allocated Charges", 
+                "Expense:General Expense"
             ]
         }, 
         "Enterprise Funds:Electric Fund": {
@@ -1695,20 +1592,19 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
+                "Expense:General Expense", 
+                "Expense:Supplies & Materials", 
                 "Expense:Facilities & Equip Purchases", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
+                "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
                 "Expense:Debt Service", 
                 "Expense:Utility Purchases & Charges"
             ]
@@ -1722,19 +1618,18 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:General Expense", 
-                "Expense:Net Sales", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
+                "Expense:General Expense", 
+                "Expense:Net Sales", 
                 "Expense:Contract Services", 
-                "Expense:Supplies & Materials"
+                "Expense:Supplies & Materials", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Enterprise Funds:Gas Fund": {
@@ -1751,19 +1646,18 @@
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
-                "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
+                "Expense:General Expense", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:Permits and Licenses", 
+                "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
                 "Expense:Facilities & Equip Purchases", 
                 "Revenue:From Other Agencies", 
                 "Expense:Utility Purchases & Charges"
@@ -1775,13 +1669,11 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Expense:Utility Purchases & Charges", 
@@ -1791,8 +1683,9 @@
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
                 "Revenue:Rental Income", 
-                "Revenue:Return on Investments"
+                "Expense:Capital Improvement"
             ]
         }, 
         "Enterprise Funds:Storm Drainage": {
@@ -1801,22 +1694,21 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
+                "Expense:Rents & Leases"
             ]
         }, 
         "Enterprise Funds:Utilities Administration Fund": {
@@ -1826,12 +1718,12 @@
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Other Income"
+                "Revenue:Other Income", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Enterprise Funds:Wastewater Collection": {
@@ -1844,23 +1736,22 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:Debt Service", 
-                "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
+                "Expense:General Expense", 
+                "Expense:Contract Services", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Charges to Other Funds", 
                 "Revenue:Permits and Licenses", 
-                "Expense:Facilities & Equip Purchases", 
-                "Expense:Wastewater Treatment"
+                "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
+                "Expense:Wastewater Treatment", 
+                "Expense:Facilities & Equip Purchases"
             ]
         }, 
         "Enterprise Funds:Wastewater Treatment": {
@@ -1869,12 +1760,10 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
@@ -1883,7 +1772,8 @@
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Enterprise Funds:Water Fund": {
@@ -1899,70 +1789,29 @@
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:Debt Service", 
-                "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Revenue:Charges for Services", 
-                "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Capital Improvement", 
+                "Revenue:From Other Agencies", 
+                "Expense:General Expense", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
+                "Expense:Capital Improvement", 
                 "Expense:Utility Purchases & Charges"
             ]
         }, 
         "General Funds": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Legislative Records", 
-                "City Clerk:Public Information", 
-                "City Council:Administration", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -1971,81 +1820,79 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees"
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:Administration", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Revenue:Charges to Other Funds", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
-                "Revenue:Charges to Other Funds", 
-                "Expense:Rents & Leases", 
-                "Revenue:Permits and Licenses", 
-                "Revenue:Sales Taxes", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Rental Income", 
                 "Revenue:Other Taxes and Fines", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Property Taxes", 
+                "Expense:Rents & Leases", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Rental Income", 
+                "Revenue:From Other Agencies", 
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
-                "Expense:Reserve", 
                 "Revenue:Return on Investments", 
-                "Revenue:Property Taxes"
+                "Revenue:Sales Taxes"
             ]
         }, 
         "General Funds:General Fund": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Legislative Records", 
-                "City Clerk:Public Information", 
-                "City Council:Administration", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2054,57 +1901,89 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees"
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:Administration", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Revenue:Charges to Other Funds", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
-                "Revenue:Charges to Other Funds", 
-                "Expense:Rents & Leases", 
-                "Revenue:Permits and Licenses", 
-                "Revenue:Sales Taxes", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Rental Income", 
                 "Revenue:Other Taxes and Fines", 
+                "Revenue:Permits and Licenses", 
+                "Revenue:Property Taxes", 
+                "Expense:Rents & Leases", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Rental Income", 
+                "Revenue:From Other Agencies", 
                 "\"Revenue: Forfeit & Penalities\"\"\"", 
-                "Expense:Reserve", 
                 "Revenue:Return on Investments", 
-                "Revenue:Property Taxes"
+                "Revenue:Sales Taxes"
             ]
         }, 
         "Internal Services Funds": {
             "divisions": [
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management"
+                "Public Works:Equipment Management", 
+                "Information Technology:Information Technology Division", 
+                "Administrative Services:Purchasing"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
-                "Expense:Facilities & Equip Purchases", 
                 "Expense:Capital Improvement", 
                 "Revenue:Charges for Services"
             ]
@@ -2118,7 +1997,6 @@
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
@@ -2128,12 +2006,7 @@
         }, 
         "Internal Services Funds:Technology Fund": {
             "divisions": [
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO"
+                "Information Technology:Information Technology Division"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2141,7 +2014,6 @@
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
@@ -2157,36 +2029,34 @@
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
-                "Expense:Capital Improvement", 
                 "Expense:Contract Services", 
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Rents & Leases", 
-                "Expense:Reserve", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Capital Improvement"
             ]
         }, 
         "Special Revenue Funds": {
             "divisions": [
-                "Planning:Transportation Impact ", 
-                "Planning:Planning"
+                "Planning:Planning", 
+                "Planning:Transportation Impact "
             ], 
             "ledgers": [
-                "Expense:Reserve", 
-                "Revenue:Charges for Services", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments", 
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Salaries & Benefits", 
+                "Revenue:Charges for Services", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments"
             ]
         }, 
         "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees": {
@@ -2194,7 +2064,6 @@
                 "Planning:Transportation Impact "
             ], 
             "ledgers": [
-                "Expense:Reserve", 
                 "Revenue:Charges for Services", 
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments"
@@ -2205,95 +2074,65 @@
                 "Planning:Planning"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Reserve", 
-                "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Permits and Licenses", 
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Salaries & Benefits"
             ]
         }
     }, 
     "ledgers": {
         "\"Revenue": {
             "divisions": [
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Field Services", 
                 "Police:Traffic Services", 
-                "Public Works:Wastewater Treatment"
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Library:Library Services Administration", 
+                "Library:Public Services"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Wastewater Treatment"
+                "Enterprise Funds:Wastewater Treatment", 
+                "General Funds:General Fund"
             ]
         }, 
         "\"Revenue: Forfeit & Penalities\"\"\"": {
             "divisions": [
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Field Services", 
                 "Police:Traffic Services", 
-                "Public Works:Wastewater Treatment"
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Library:Library Services Administration", 
+                "Library:Public Services"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Wastewater Treatment"
+                "Enterprise Funds:Wastewater Treatment", 
+                "General Funds:General Fund"
             ]
         }, 
         "Expense": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Legislative Records", 
-                "City Clerk:Public Information", 
-                "City Council:Administration", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2302,100 +2141,92 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Planning:Transportation Impact ", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:Administration", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Airport:Airport Enterprise", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
                 "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Expense:Allocated Charges": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Legislative Records", 
-                "City Clerk:Public Information", 
-                "City Council:Administration", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2404,292 +2235,284 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
-                "Community Services:CSD - CIP"
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:Administration", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "Airport:Airport Enterprise", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Expense:Capital Improvement": {
             "divisions": [
                 "Utilities:Capital Improvement Program", 
+                "Public Works:Equipment Management", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Information Technology a:Capital Improvement", 
-                "Public Works:Equipment Management", 
+                "Information Technology:Information Technology Division", 
                 "Community Services:CSD - CIP"
             ], 
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Capital Funds:Capital Improvement Fund"
             ]
         }, 
         "Expense:Contract Services": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
+                "Police:Administration", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:City Council Operations", 
                 "City Clerk:Administration", 
                 "City Clerk:Council Support Services", 
                 "City Clerk:Election/Conflict of Interest", 
                 "City Clerk:Legislative Records", 
                 "City Clerk:Public Information", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
-                "Police:Administration", 
-                "Police:Animal Services", 
-                "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
-                "Police:Parking Services", 
-                "Police:Police Personnel Selection", 
-                "Police:Technical Services", 
-                "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
-                "Community Services:CSD - CIP"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
-            ]
-        }, 
-        "Expense:Debt Service": {
-            "divisions": [
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Resource Management", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment"
-            ], 
-            "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund"
-            ]
-        }, 
-        "Expense:Facilities & Equip Purchases": {
-            "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
+                "City Auditor:Audit Services", 
                 "City Attorney:Administration", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Police:Animal Services", 
-                "Police:Police Personnel Selection", 
-                "Police:Technical Services", 
-                "Police:Traffic Services", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Utilities:Administration", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:IT Operations", 
-                "Public Works:Equipment Management"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
-            ]
-        }, 
-        "Expense:General Expense": {
-            "divisions": [
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "Airport:Airport Enterprise", 
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Legislative Records", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
+                "Administrative Services:Treasury"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Fiber Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Internal Services Funds:Technology Fund", 
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
+            ]
+        }, 
+        "Expense:Debt Service": {
+            "divisions": [
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Resource Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment"
+            ]
+        }, 
+        "Expense:Facilities & Equip Purchases": {
+            "divisions": [
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
+                "Police:Animal Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Planning:Building", 
+                "Planning:Planning", 
                 "Library:Collections Management", 
                 "Library:Library Services Administration", 
                 "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Attorney:Administration", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
+            ], 
+            "funds": [
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "General Funds:General Fund", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Internal Services Funds:Technology Fund"
+            ]
+        }, 
+        "Expense:General Expense": {
+            "divisions": [
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2698,47 +2521,68 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Legislative Records", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Airport:Airport Enterprise", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Fiber Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Expense:Net Sales": {
@@ -2751,219 +2595,155 @@
         }, 
         "Expense:Rents & Leases": {
             "divisions": [
-                "Administrative Services:Real Estate", 
-                "City Attorney:Consultation and Advisory", 
-                "City Manager:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Fire:Environmental Safety", 
-                "Human Resources:Employee Development", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Police:Investigations and Crime Prev Serv", 
-                "Public Works:Structure and Grounds", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
                 "Utilities:Engineering (Operating)", 
                 "Utilities:Operations & Maintenance", 
-                "Utilities:Customer Service", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
-            ]
-        }, 
-        "Expense:Reserve": {
-            "divisions": [
-                "Planning:Administration", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Utilities:Operations & Maintenance", 
-                "Planning:Transportation Impact ", 
-                "Planning:Planning", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Information Technology", 
                 "Public Works:Equipment Management", 
-                "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Structure and Grounds", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Planning:Building", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Employee Development", 
+                "Fire:Environmental Safety", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Open Space Parks & Golf", 
+                "City Manager:Administration and City Management", 
+                "City Attorney:Consultation and Advisory", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
+                "General Funds:General Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Expense:Salaries & Benefits": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
+                "Police:Administration", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Planning:Administration", 
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:City Council Operations", 
                 "City Clerk:Administration", 
                 "City Clerk:Administrative Citations", 
                 "City Clerk:Council Support Services", 
                 "City Clerk:Election/Conflict of Interest", 
                 "City Clerk:Legislative Records", 
                 "City Clerk:Public Information", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Administration", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
-                "Police:Administration", 
-                "Police:Animal Services", 
-                "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
-                "Police:Parking Services", 
-                "Police:Police Personnel Selection", 
-                "Police:Technical Services", 
-                "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
-            ]
-        }, 
-        "Expense:Supplies & Materials": {
-            "divisions": [
+                "Airport:Airport Enterprise", 
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Consultation and Advisory", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Economic Development", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Fire:Training & Personnel", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Compensation", 
-                "Human Resources:Employee Development", 
-                "Human Resources:Risk Management", 
-                "Human Resources:Workforce Recruitment", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Econ Develop", 
-                "Planning:Planning", 
+                "Administrative Services:Treasury"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Internal Services Funds:Technology Fund", 
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
+            ]
+        }, 
+        "Expense:Supplies & Materials": {
+            "divisions": [
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Utilities:Operations & Maintenance", 
+                "Utilities:Resource Management", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2972,43 +2752,61 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Customer Service", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Utilities:Operations & Maintenance", 
-                "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Public Works:Equipment Management", 
-                "Community Services:CSD - CIP"
+                "Planning:Building", 
+                "Planning:Econ Develop", 
+                "Planning:Planning", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Compensation", 
+                "Human Resources:Employee Development", 
+                "Human Resources:Risk Management", 
+                "Human Resources:Workforce Recruitment", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Fire:Training & Personnel", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Economic Development", 
+                "City Manager:Public Communication", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Consultation and Advisory", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "funds": [
-                "General Funds:General Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Expense:Utility Purchases & Charges": {
@@ -3017,10 +2815,10 @@
                 "Public Works:Refuse Fund-Operation"
             ], 
             "funds": [
-                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Refuse Fund"
             ]
         }, 
         "Expense:Wastewater Treatment": {
@@ -3033,56 +2831,6 @@
         }, 
         "Revenue": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Public Information", 
-                "City Council:Administration", 
-                "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Human Resources:Administration", 
-                "Human Resources:Employee Development", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Police:Animal Services", 
-                "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
-                "Police:Parking Services", 
-                "Police:Police Personnel Selection", 
-                "Police:Technical Services", 
-                "Police:Traffic Services", 
-                "Public Works:Administration", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Structure and Grounds", 
-                "Public Works:Trees", 
-                "Airport:Airport Enterprise ", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -3090,153 +2838,15 @@
                 "Utilities:Engineering (Operating)", 
                 "Utilities:Operations & Maintenance", 
                 "Utilities:Resource Management", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Planning:Transportation Impact ", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
-                "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
-            ]
-        }, 
-        "Revenue:Charges for Services": {
-            "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Budget", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Administration", 
-                "City Attorney:Official & Administration", 
-                "City Clerk:Administration", 
-                "City Clerk:Administrative Citations", 
-                "City Clerk:Election/Conflict of Interest", 
-                "City Clerk:Public Information", 
-                "City Council:City Council Operations", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
-                "Human Resources:Employee Development", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Police:Animal Services", 
-                "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
-                "Police:Parking Services", 
-                "Police:Technical Services", 
-                "Police:Traffic Services", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Trees", 
-                "Utilities:Administration", 
-                "Utilities:Demand Side Mgmt", 
-                "Utilities:Engineering (Operating)", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Planning:Transportation Impact ", 
-                "Information Technology a:Office of the CIO"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Internal Services Funds:Technology Fund"
-            ]
-        }, 
-        "Revenue:Charges to Other Funds": {
-            "divisions": [
-                "Administrative Services:Administration", 
-                "City Attorney:Administration", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Council:Administration", 
-                "City Manager:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Human Resources:Administration", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Police:Field Services", 
-                "Police:Technical Services", 
                 "Public Works:Administration", 
                 "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
-                "Utilities:Capital Improvement Program", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Capital Improvement", 
-                "Information Technology a:Enterprise Systems", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:IT Project Services", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management"
-            ], 
-            "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Refuse Fund", 
-                "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Water Fund", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
-            ]
-        }, 
-        "Revenue:From Other Agencies": {
-            "divisions": [
-                "Community Services:Arts & Culture", 
-                "Fire:Fire Administration", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
                 "Police:Investigations and Crime Prev Serv", 
@@ -3244,20 +2854,197 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Planning:Transportation Impact ", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Human Resources:Employee Development", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Public Communication", 
+                "City Council:Administration", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
+                "Capital Fund:Capital Improvement", 
+                "Airport:Airport Enterprise", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Wastewater Treatment", 
+                "Special Revenue Funds:Residential Parking Permits Program", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Internal Services Funds:Technology Fund", 
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
+            ]
+        }, 
+        "Revenue:Charges for Services": {
+            "divisions": [
+                "Utilities:Administration", 
+                "Utilities:Demand Side Mgmt", 
+                "Utilities:Engineering (Operating)", 
+                "Public Works:Engineering", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Trees", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Planning:Transportation Impact ", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Employee Development", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Fire:Records & Information Management", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Council:City Council Operations", 
+                "City Clerk:Administration", 
+                "City Clerk:Administrative Citations", 
+                "City Clerk:Election/Conflict of Interest", 
+                "City Clerk:Public Information", 
+                "City Attorney:Administration", 
+                "City Attorney:Official & Administration", 
+                "Administrative Services:Accounting", 
+                "Administrative Services:Budget", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Internal Services Funds:Technology Fund"
+            ]
+        }, 
+        "Revenue:Charges to Other Funds": {
+            "divisions": [
+                "Utilities:Capital Improvement Program", 
+                "Public Works:Administration", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Structure and Grounds", 
+                "Public Works:Trees", 
+                "Police:Field Services", 
+                "Police:Technical Services", 
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Administration", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:Open Space Parks & Golf", 
+                "City Manager:Administration and City Management", 
+                "City Council:Administration", 
+                "City Clerk:Administration", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Administration", 
+                "City Attorney:Official & Administration", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Purchasing"
+            ], 
+            "funds": [
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Enterprise Funds:Refuse Fund", 
+                "Enterprise Funds:Storm Drainage", 
+                "Internal Services Funds:Technology Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
+            ]
+        }, 
+        "Revenue:From Other Agencies": {
+            "divisions": [
+                "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Demand Side Mgmt", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Utilities:Administration", 
+                "Police:Animal Services", 
+                "Police:Field Services", 
+                "Police:Investigations and Crime Prev Serv", 
+                "Police:Parking Services", 
+                "Police:Police Personnel Selection", 
+                "Police:Technical Services", 
+                "Police:Traffic Services", 
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Fire:Fire Administration", 
+                "Community Services:Arts & Culture", 
                 "Community Services:CSD - CIP"
             ], 
             "funds": [
-                "General Funds:General Fund", 
+                "Enterprise Funds:Water Fund", 
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
+                "General Funds:General Fund", 
                 "Capital Funds:Capital Improvement Fund"
             ]
         }, 
@@ -3274,14 +3061,14 @@
                 "Public Works:Wastewater Treatment"
             ], 
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Wastewater Treatment"
             ]
         }, 
         "Revenue:Other Income": {
@@ -3297,105 +3084,102 @@
                 "Public Works:Wastewater Treatment"
             ], 
             "funds": [
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
-                "Enterprise Funds:Wastewater Collection", 
-                "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund"
+                "Enterprise Funds:Wastewater Treatment"
             ]
         }, 
         "Revenue:Other Revenue": {
             "divisions": [
-                "Administrative Services:Accounting", 
-                "Administrative Services:Administration", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Real Estate", 
-                "Administrative Services:Treasury", 
-                "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
-                "City Attorney:Official & Administration", 
-                "City Auditor:Audit Services", 
-                "City Clerk:Administration", 
-                "City Clerk:Council Support Services", 
-                "City Clerk:Public Information", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
-                "City Manager:Public Communication", 
-                "Community Services:Administration", 
-                "Community Services:Arts & Culture", 
-                "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Human Resources:Employee Development", 
-                "Library:Collections Management", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
+                "Utilities:Administration", 
+                "Utilities:Capital Improvement Program", 
+                "Utilities:Customer Service", 
+                "Utilities:Operations & Maintenance", 
+                "Public Works:Engineering", 
+                "Public Works:Equipment Management", 
+                "Public Works:Refuse Fund-Operation", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Streets", 
+                "Public Works:Trees", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
                 "Police:Investigations and Crime Prev Serv", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Traffic Services", 
-                "Public Works:Engineering", 
-                "Public Works:Streets", 
-                "Public Works:Trees", 
-                "Utilities:Administration", 
-                "Utilities:Capital Improvement Program", 
-                "Utilities:Operations & Maintenance", 
-                "Public Works:Refuse Fund-Operation", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Utilities:Customer Service", 
+                "Planning:Building", 
+                "Planning:Planning", 
                 "Planning:Transportation Impact ", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:IT Operations", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
+                "Library:Collections Management", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Information Technology:Information Technology Division", 
+                "Human Resources:Employee Development", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Community Services:Administration", 
+                "Community Services:Arts & Culture", 
+                "Community Services:CSD - CIP", 
+                "Community Services:Cubberley & Human Services", 
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences", 
+                "City Manager:Administration and City Management", 
+                "City Manager:Public Communication", 
+                "City Clerk:Administration", 
+                "City Clerk:Council Support Services", 
+                "City Clerk:Public Information", 
+                "City Auditor:Audit Services", 
+                "City Attorney:Consultation and Advisory", 
+                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Official & Administration", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP"
+                "Administrative Services:Accounting", 
+                "Administrative Services:Administration", 
+                "Administrative Services:Purchasing", 
+                "Administrative Services:Real Estate", 
+                "Administrative Services:Treasury"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "General Funds:General Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Revenue:Other Taxes and Fines": {
             "divisions": [
-                "Community Services:Open Space! Parks! & Golf", 
-                "Fire:Emergency Response", 
-                "Fire:Environmental Safety", 
-                "Library:Library Services Administration", 
-                "Library:Public Services", 
-                "Planning:Planning", 
+                "Public Works:Engineering", 
+                "Public Works:Storm Drainage - Operation", 
+                "Public Works:Wastewater Treatment", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
                 "Police:Parking Services", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Public Works:Engineering", 
-                "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment"
+                "Planning:Planning", 
+                "Library:Library Services Administration", 
+                "Library:Public Services", 
+                "Fire:Emergency Response", 
+                "Fire:Environmental Safety", 
+                "Community Services:Open Space Parks & Golf"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -3406,21 +3190,21 @@
         }, 
         "Revenue:Permits and Licenses": {
             "divisions": [
-                "Administrative Services:Real Estate", 
-                "Fire:Environmental Safety", 
-                "Fire:Fire Administration", 
-                "Planning:Building", 
-                "Planning:Planning", 
+                "Utilities:Capital Improvement Program", 
+                "Public Works:Engineering", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
                 "Police:Parking Services", 
-                "Public Works:Engineering", 
-                "Utilities:Capital Improvement Program"
+                "Planning:Building", 
+                "Planning:Planning", 
+                "Fire:Environmental Safety", 
+                "Fire:Fire Administration", 
+                "Administrative Services:Real Estate"
             ], 
             "funds": [
-                "General Funds:General Fund", 
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Wastewater Collection", 
+                "General Funds:General Fund", 
                 "Special Revenue Funds:Residential Parking Permits Program"
             ]
         }, 
@@ -3434,50 +3218,49 @@
         }, 
         "Revenue:Rental Income": {
             "divisions": [
+                "Public Works:Refuse Fund-Operation", 
+                "Police:Animal Services", 
+                "Planning:Planning", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
-                "Community Services:Recreation & Youth Sciences", 
-                "Planning:Planning", 
-                "Police:Animal Services", 
-                "Public Works:Refuse Fund-Operation"
+                "Community Services:Open Space Parks & Golf", 
+                "Community Services:Recreation & Youth Sciences"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Refuse Fund"
+                "Enterprise Funds:Refuse Fund", 
+                "General Funds:General Fund"
             ]
         }, 
         "Revenue:Return on Investments": {
             "divisions": [
-                "Planning:Planning", 
-                "Airport:Airport Enterprise ", 
                 "Utilities:Administration", 
+                "Public Works:Equipment Management", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
+                "Planning:Planning", 
                 "Planning:Transportation Impact ", 
-                "Administrative Services:Purchasing", 
-                "Administrative Services:Information Technology", 
-                "Information Technology a:Office of the CIO", 
-                "Public Works:Equipment Management", 
-                "Capital Fund:Capital Improvement"
+                "Information Technology:Information Technology Division", 
+                "Capital Fund:Capital Improvement", 
+                "Airport:Airport Enterprise", 
+                "Administrative Services:Purchasing"
             ], 
             "funds": [
-                "General Funds:General Fund", 
-                "Enterprise Funds:Airport Enterprise", 
-                "Enterprise Funds:Electric Fund", 
-                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Water Fund", 
+                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Fiber Fund", 
+                "Enterprise Funds:Electric Fund", 
+                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Enterprise Funds:Water Fund", 
+                "General Funds:General Fund", 
                 "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Capital Funds:Capital Improvement Fund"
+                "Capital Funds:Capital Improvement Fund", 
+                "Enterprise Funds:Airport Enterprise Fund", 
+                "Internal Services Funds:Printing & Mailing Services Fund"
             ]
         }, 
         "Revenue:Sales Taxes": {
