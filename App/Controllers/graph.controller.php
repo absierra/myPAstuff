@@ -119,16 +119,11 @@
                     }
                 }
                 else if($focus == 'title'){
-                    $data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                }
-                else if($focus == 'salary'){
-                    $data[$item->get('title')][$item->get('year')]['revenue'] += (float)$item->get('salary');
+                    $data[$item->get('title')][$item->get('year')]['fte'] += (float)$item->get('fte');
+                    $data[$item->get('title')][$item->get('year')]['salary'] += (float)$item->get('salary');
                 }
             }
-            if(count($data) == 0){
-                $data['No Employees']['2009']['revenue'] = 0;
-                $data['No Employees']['2013']['revenue'] = 0;
-            }
+
             $renderer->assign('data', $data);
         }
         file_put_contents($filename,json_encode($data));

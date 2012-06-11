@@ -306,7 +306,7 @@ BudgetGraph.clearLegend = function(){
 };
 BudgetGraph.clearKeys = function(){
     document.getElements('span.colorkey').removeClass('colorkey');
-    PseudoDOM.clear();
+    //PseudoDOM.clear();
 };
 BudgetGraph.select = function(name){
     if(BudgetGraph.graphs[name]){

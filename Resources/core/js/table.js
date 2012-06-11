@@ -71,7 +71,7 @@ var BudgetTable = new Class({
 		var tr = tbody.getFirst();
 		
 		tbody.empty();
-				
+						
 		Object.each(this.data, function(data, name){
 			var cl = tr.clone();
 			cols = cl.getChildren();
