@@ -236,9 +236,9 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-				document.id('graph_types').hide();
-				document.id('graph_breakdown').hide();
-				document.id('legend').hide();
+				document.id('graph_types').show();
+				document.id('graph_breakdown').show();
+				document.id('legend').show();
 				document.id('graph_fiscal_year').show();
 				document.id('graph_breakdown').set('text', 'Dollars per Year');
                 var titleText = this.get('text');
