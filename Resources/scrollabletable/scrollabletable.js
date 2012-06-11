@@ -70,6 +70,7 @@ var ScrollableTable = new Class({
 		if (this.table.getElement('tbody').getFirst()) {
 			column = 0;
 			this.table.getElement('tbody').getFirst().getChildren().each(function(cell) {
+				console.log(cell);
 				if (column >= widths.length)
 					widths[column] = 0;
 				var w = cell.getWidth();
@@ -78,7 +79,7 @@ var ScrollableTable = new Class({
 				column++;
 			}, this);
 		}
-
+		
 
 		[this.thead, this.tfoot].each(function(tpart) {
 			if (tpart && tpart.getFirst()) {

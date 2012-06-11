@@ -66,6 +66,7 @@
 			$query = implode(' and ', $disc);
 			$results = Data::search('BudgetData', $query);
 			$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
+			$count == 0;
 			foreach($results as $item){
 				if($focus == 'revenue_expense'){
 					$series = ($item->get('ledger_type')=='Expense')?'Expenses':'Revenues';
@@ -97,9 +98,22 @@
 					if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 					$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
 					if($isAFee){
+						$count+=1;
 						$data[$item->get($index)][$item->get('year')]['fee_revenue'] += (float)$item->get('amount');
 					}
 				}
+			}
+			if($count == 0 && $focus != 'revenue_expense'){
+				$data['No Revenue']['2009']['revenue'] = 0;
+				$data['No Revenue']['2010']['revenue'] = 0;
+				$data['No Revenue']['2011']['revenue'] = 0;
+				$data['No Revenue']['2012']['revenue'] = 0;
+				$data['No Revenue']['2013']['revenue'] = 0;
+				$data['No Revenue']['2009']['fee_revenue'] = 0;
+				$data['No Revenue']['2010']['fee_revenue'] = 0;
+				$data['No Revenue']['2011']['fee_revenue'] = 0;
+				$data['No Revenue']['2012']['fee_revenue'] = 0;
+				$data['No Revenue']['2013']['fee_revenue'] = 0;
 			}
 		    $renderer->assign('data', $data);
         }else{
@@ -137,7 +151,23 @@
                     $data[$item->get('title')][$item->get('year')]['salary'] += (float)$item->get('salary');
                 }
             }
-
+			if(count($data) == 0){
+				if($focus == 'title'){
+					$data['No Employees']['2009']['fte'] = 0;
+					$data['No Employees']['2010']['fte'] = 0;
+					$data['No Employees']['2011']['fte'] = 0;
+					$data['No Employees']['2012']['fte'] = 0;
+					$data['No Employees']['2013']['fte'] = 0;
+					$data['No Employees']['2013']['salary'] = 0;
+				}
+				else{
+					$data['No Employees']['2009']['revenue'] = 0;
+					$data['No Employees']['2010']['revenue'] = 0;
+					$data['No Employees']['2011']['revenue'] = 0;
+					$data['No Employees']['2012']['revenue'] = 0;
+					$data['No Employees']['2013']['revenue'] = 0;
+				}
+			}
             $renderer->assign('data', $data);
         }
         file_put_contents($filename,json_encode($data));
