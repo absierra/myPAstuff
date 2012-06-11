@@ -232,8 +232,8 @@ var BudgetGraph = new Class({
 				}
 			}.bind(this)); //*/
 		}
-		console.log(this.options.target);
-		console.log(ySet);
+		//console.log(this.options.target);
+		//console.log(ySet);
 		if(this.options.mode == 'bar'){
 			this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
 				shade: true,
@@ -242,11 +242,10 @@ var BudgetGraph = new Class({
 				colors:this.options.colors
 			});
 		}else if (this.options.mode == 'pie'){
-		   console.log('pie');
 			//window.totalChartValue = 0;
 			var graphSize = document.id('graphs').getScrollSize();
 			var xGraph = graphSize.x / 2 - 45;
-			var yGraph = graphSize.y / 2 - 5;
+			var yGraph = graphSize.y / 2 - 20;
 			var totalValues = [];
 			var yearValues = [];
 			var year = this.options.year;
@@ -270,7 +269,7 @@ var BudgetGraph = new Class({
 				});
 			}
 			var a = this;
-			this.lines = this.raphael.piechart(xGraph, yGraph + 10, yGraph, totalValues, {
+			this.lines = this.raphael.piechart(xGraph, yGraph + 20, yGraph, totalValues, {
 				shade: true,
 				nostroke: false,
 				axis: "0 0 1 1",
