@@ -24,6 +24,15 @@
         }
         return $value;
     }
+    function isFee($value){
+    	if($value == 'Charges for Services') return true;
+    	else if($value == 'Net Sales') return true;
+    	else if($value == 'Permits and Licenses') return true;
+    	else if($value == 'Rental Income') return true;
+    	else if($value == 'From Other Agencies') return true;
+    	else if($value == 'Charges to Other Funds') return true;
+    	else return false;
+    }
     $values = array();
     $values['fund'] = WebApplication::get('fund')?WebApplication::get('fund'):false;
     $values['department'] = WebApplication::get('department')?WebApplication::get('department'):false;
@@ -60,14 +69,19 @@
 			foreach($results as $item){
 				if($focus == 'revenue_expense'){
 					$series = ($item->get('ledger_type')=='Expense')?'Expenses':'Revenues';
-					$data[$series][$item->get('year')]['revenue_expense'] += (float)$item->get('amount');
+					if($series == 'Revenues' && isFee($item->get('ledger_description'))){
+						$data[$series][$item->get('year')]['revenue_expense'] += (float)$item->get('amount');
+					}
+					else if($series == 'Expenses'){
+						$data[$series][$item->get('year')]['revenue_expense'] += (float)$item->get('amount');
+					}
 				}
-				else{					
+				else{			
 					if($item->get('ledger_type') == 'Expense') $transactionType = 'expenses';
 					if($item->get('ledger_type') == 'Transfers In') $transactionType = 'transfersin';
 					if($item->get('ledger_type') == 'Transfers Out') $transactionType = 'transfersout';
 					if($item->get('ledger_type') == 'Revenue') $transactionType = 'revenue';
-					$isTax = preg_match('~[Tt][Aa][Xx]~', $item->get('ledger_description'));
+					$isAFee = isFee($item->get('ledger_description'));
 					switch($depth){
 						case 0:
 							if($focus == 'category') $index = mapInternal($focus, true);
@@ -82,8 +96,8 @@
 					}
 					if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 					$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
-					if($isTax){
-						$data[$item->get($index)][$item->get('year')]['tax_revenue'] += (float)$item->get('amount');
+					if($isAFee){
+						$data[$item->get($index)][$item->get('year')]['fee_revenue'] += (float)$item->get('amount');
 					}
 				}
 			}

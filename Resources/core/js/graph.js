@@ -86,19 +86,26 @@ var BudgetGraph = new Class({
         if(column){
             var isSelected = column.getElement('li span.selected');
             if(isSelected){ 
-                //console.log(['selected', column.getElements('li span.selected')]);
                 return column.getElements('ul li span:not(.disabled)');
             }else {
-                //console.log(['rer', column.getElements('> li > span:not(.disabled)')]);
                 return column.getElements('> li > span:not(.disabled)');
             }
         }else return [];
     },
     getLegendItems : function(){
-        //console.log(['sss', this.data]);
-
-        var keys = Object.keys(this.data).map(function(value){
-            return value.split(':').pop();
+        var keys = [];
+        target = this.options.target;
+        metric = this.options.metric;
+        Object.each(this.data, function(value, key){
+        	key = key.indexOf(":")==-1?key:key.split(":")[1];
+        	if(target == 'category'){
+        		if(value['2013'][metric] != undefined){
+        			keys.push(key);
+        		}
+        	}
+        	else{
+        		keys.push(key);
+        	}
         });
         var result = [];
         var column = document.id(this.options.column);
@@ -106,16 +113,13 @@ var BudgetGraph = new Class({
         if(column){
             var isSelected = column.getElement('li span.selected');
             if(isSelected){ 
-                //console.log(['selected', column.getElements('li span.selected')]);
                 elements = column.getElements('ul li span:not(.disabled)');
             }else {
-                //console.log(['rer', column.getElements('> li > span:not(.disabled)')]);
                 elements = column.getElements('> li > span:not(.disabled)');
             }
             result = [];
             elements.each(function(el){
                 if(keys.contains(el.innerHTML.trim())){
-                    //console.log(['ee', el.innerHTML]);
                     result.push(el.innerHTML);
                     keys.erase(el.innerHTML);
                 }
@@ -136,7 +140,6 @@ var BudgetGraph = new Class({
         activeItems = this.getKeyElements();
         if(activeItems.length == 0) return;
         if(activeItems.length != this.colors.length){
-            //console.log(['Data lengths do not match, something is wrong with the series!',this.data]);
             this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
         }
         activeItems.each(function(item, lcv){
@@ -158,8 +161,8 @@ var BudgetGraph = new Class({
         if(items.length > this.colors.length){
             this.colors = hueShiftedColorSet(items.length, 'hex');
         }
-        //console.log(['items', items, this.colors, this.data, this.options.target, this.options.type]);
         if(items && items.length > 0){
+        	items.sort();
             items.each(function(item, lcv) {
                 var legendItem = new Element('span', {
                     html : item
@@ -183,7 +186,6 @@ var BudgetGraph = new Class({
         }.bind(this));
     },
     display : function(metric){
-
     	this.raphael.clear();
         if(!metric) metric = this.options.metric;
         xSet = [];
@@ -216,19 +218,22 @@ var BudgetGraph = new Class({
 				var ys = [];
 				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]).sort();
 				keys.each(function(key){
-					//console.log(['dd', name, key, metric, this.data[name], this.data[name][key]]);
-					xs.push(key);
-					var v;
-					if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
-					else v = 0;
-					ys.push(v);
+					if(this.data[name][key][metric] != undefined){
+						xs.push(key);
+						var v;
+						if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
+						else v = 0;
+						ys.push(v);
+					}
 				}.bind(this));
-				xSet.push(xs);
-				ySet.push(ys);
+				if(ys.length != 0){
+					xSet.push(xs);
+					ySet.push(ys);
+				}
 			}.bind(this)); //*/
 		}
-
-		//console.log(['diz', xSet, ySet]); return;
+		console.log(this.options.target);
+		console.log(ySet);
 		if(this.options.mode == 'bar'){
 			this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
 				shade: true,
@@ -237,7 +242,7 @@ var BudgetGraph = new Class({
 				colors:this.options.colors
 			});
 		}else if (this.options.mode == 'pie'){
-		   
+		   console.log('pie');
 			//window.totalChartValue = 0;
 			var graphSize = document.id('graphs').getScrollSize();
 			var xGraph = graphSize.x / 2 - 45;
@@ -257,14 +262,14 @@ var BudgetGraph = new Class({
 
 			if (year) {
 				ySet.each(function(arraySet, key) {
-					totalValues.push(Math.floor(arraySet[yearKey]/10000));
+					totalValues.push(Math.floor(arraySet[yearKey]));
 				});
 			} else {
 				ySet.each(function(arraySet, key) {
-					totalValues.push(Math.floor(arraySet.pop()/10000));
+					totalValues.push(Math.floor(arraySet.pop()));
 				});
 			}
-			
+			var a = this;
 			this.lines = this.raphael.piechart(xGraph, yGraph + 10, yGraph, totalValues, {
 				shade: true,
 				nostroke: false,
@@ -273,13 +278,21 @@ var BudgetGraph = new Class({
 				colors:this.options.colors,
 				stacked:this.options.stacked,
 				percent:this.options.percent
+			}).hover(function () {
+				this.sector.stop();
+				this.sector.scale(1.1, 1.1, this.cx, this.cy);
+				this.marker = this.marker || a.raphael.popup(this.mx, this.my, '$'+this.value, "up", 5);
+				this.marker.show();
+			},function (){
+				this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
+				this.marker.hide();
 			});
-
 		}else{
 			var graphSize = document.id('graphs').getScrollSize();
 			var xGraph = graphSize.x - 240;
-			var yGraph = graphSize.y - 41;
 			if (xGraph > 700) xGraph = 700;
+			var yGraph = graphSize.y - 41;
+			
 			var a = this;
 			this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
 				shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
@@ -301,6 +314,8 @@ var BudgetGraph = new Class({
 		}
 	}
 })
+
+
 BudgetGraph.LastSelectionYearsData = {};
 BudgetGraph.lastSelection = {};
 BudgetGraph.graphs = {};
@@ -315,7 +330,6 @@ BudgetGraph.clearKeys = function(){
 };
 BudgetGraph.select = function(name){
     if(BudgetGraph.graphs[name]){
-        //console.log(['selecting', name, BudgetGraph.graphs[name]]);
         window.currentGraph = BudgetGraph.graphs[name];
         BudgetGraph.graphs[name].select();
         if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
