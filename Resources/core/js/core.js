@@ -155,7 +155,11 @@ var initGraphs = function(){
 var loadDefaultGraph = function(type){
     if (!type) type = 'fund';
     window.selected = {}; // start: reset
-    window.panelSelection = {}; 
+    window.panelSelection = {};
+    var financialBreakdown = document.id('financial_breakdown');
+    var employeeBreakdown = document.id('employee_breakdown');
+    financialBreakdown.show();
+    employeeBreakdown.hide();
     document.getElements('.selected').removeClass('selected');
     document.getElements('.colorkey').removeClass('colorkey');
     document.getElements('.disabled').removeClass('disabled');

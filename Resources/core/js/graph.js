@@ -289,7 +289,7 @@ var BudgetGraph = new Class({
 		}else{
 			var graphSize = document.id('graphs').getScrollSize();
 			var xGraph = graphSize.x - 240;
-			if (xGraph > 700) xGraph = 700;
+			if (xGraph > 600) xGraph = 600;
 			var yGraph = graphSize.y - 41;
 			
 			var a = this;
