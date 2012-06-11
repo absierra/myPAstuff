@@ -315,40 +315,70 @@ header{
 
 .graph_tabs {
     display: block;
-    margin: 10px auto 50px;
-    width: @rightColumnWidth; 
+    margin: 12px auto 80px;
+    fieldset{
+        display: none;
+        float:left;
+        margin: 0 15px 0 0;
+    }
+    legend{
+        font-family: @primaryFontBold;
+        color: #58585a;
+        display: block;
+        float: left;
+        height: 15px;
+        border: 1px solid #cdcdcf;
+        border-bottom: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 0.8em;
+        width: 99.5%;
+        .roundedUpperLeftCorner(10px);
+        .roundedUpperRightCorner(10px);
+    }
+    li:first-of-type{
+        clear:both;
+    }
     li{
         display: none;
-        width: 150px;
-        font-size: 0.8em;
-        color: #a3a3a5;
-        background: #373936;
+        font-size: 0.85em;
+        color: #6d6e71;
+        background: #d1d2d4;
         text-align: center;
-        padding: 10px 6px;
+        padding: 5px 10px;
         margin: 0;
         float: left;
         cursor: pointer;
-        &.super {
+        border: 1px solid #e7e7e8;
+        font-family: @primaryFont;
+
+/*
+       &.super {
             width: 370px;
         }
+*/
         &.display {
             display: block;
         }
         &.active{
             color: #fff;
-            background: #919296;
+            background: #00b1eb;
+            border: 1px solid #2cd2f3;
+            cursor: pointer;
             &:hover {
-                background: #adadad;
+                background: #00b1eb;
             }
         }
         &:hover {
-            background: #4f4f4f;
+            background: #e3e4e5;
         }        
     }
 }
 
 #graph_container{
     clear: both;
+    margin: 0 auto;
     position: relative;
     background: #fff;
     border: 1px solid #ccc;
@@ -356,17 +386,19 @@ header{
     min-height: 500px;
     min-width: @rightColumnWidth;
     padding-bottom: 10px;
+    max-width: 750px;
     .shadowed(2px, 0.2);
     .rounded(10px);
     #graphs {
         min-height: 315px;
         .graph{
             height:63%;
-            width: 100%;
+            width: 90%;
             position: absolute;
             top: 35px;
             left: 45px;
             right: 45px;
+            
         }
     }
     .container{

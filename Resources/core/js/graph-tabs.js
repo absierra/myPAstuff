@@ -19,8 +19,12 @@ var DelphiGraphTabs = {
         DelphiGraphTabs.filter();
     },
     filter : function(finance){
+        var financialBreakdown = document.id('financial_breakdown');
+        var employeeBreakdown = document.id('employee_breakdown');
         var graphTabsSelect = new Array();
 			if (window.panelSelection.fund && window.panelSelection.department){ //WTF is 'panelSelection' and why can't we use selection?
+                financialBreakdown.show();
+                employeeBreakdown.hide();
 				if (window.panelSelection.fund == 1 && window.panelSelection.department == 1) {
 					graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab']; // [Fund 1][Dept 1]
 				} else if (window.panelSelection.fund == 1 && window.panelSelection.department == 2) {
@@ -31,6 +35,8 @@ var DelphiGraphTabs = {
 					graphTabsSelect = ['fund_department_tab', 'expenditure_tab', 'fee_revenue_tab'];  // [Fund 2][Dept 2]
 				}
 			} else if (window.panelSelection.fund){
+                financialBreakdown.show();
+                employeeBreakdown.hide();
 				switch(window.panelSelection.fund){
 					case 1: 
 						graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab']; // [Fund 1][Dept 0]
@@ -40,6 +46,8 @@ var DelphiGraphTabs = {
 					break;
 				}
 			} else if (window.panelSelection.department){
+                financialBreakdown.show();
+                employeeBreakdown.show();
 				switch(window.panelSelection.department){
 					case 1:
 						graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab', 'exp_vs_fee_rev_tab', 'employee_department_tab', 'employee_type_tab', 'employee_salary_tab']; // [Fund 0][Dept 1]
