@@ -69,7 +69,7 @@
             </div>
             <div id="years_container">
                 <ul id="years_text"></ul>
-            	<input id="years_slider" type="range" upper="" lower="" step="25" onchange="javascript:yearSliderUpdate(this, this.value);"/>
+            	<input id="years_slider" type="range" upper="" lower="" step="25" value="2013" onchange="javascript:yearSliderUpdate(this, this.value);"/>
             </div>
             <h2 id="graph_fiscal_year">Fiscal Year</h2>
             <ul id="legend"></ul>

@@ -99,7 +99,7 @@ var initGraphs = function(){
     	dataset : 'financial',
         type : 'categories',
         target : 'category',
-        metric : 'tax_revenue',
+        metric : 'fee_revenue',
         id : 'fee_revenue',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
@@ -269,7 +269,7 @@ function panelData(){
                         selectedItems.addClass('colorkey');
                         
                         lastIndex = selectedIndex[0];
-                        window.selected[index] = prevSelectedItem[0];
+                        window.selected[lastIndex] = prevSelectedItem[0];
                         window.lastSelectedColumn = selectedIndex[0];
                         window.lastSelectedItem = prevSelectedItem[0];
                         
@@ -277,8 +277,7 @@ function panelData(){
                         sublistHeight = sublist.getScrollSize();
                         sublist.morph({height:sublistHeight.y});
 
-                        console.log(lastIndex);
-                        return; // being used to prevent the page from locking up after deselection/reselection of an item.
+                        //return; // being used to prevent the page from locking up after deselection/reselection of an item.
 
                         if (!sublistCheck) window.panelSelection[lastIndex] = 1; else window.panelSelection[lastIndex] = 2;
                         selectionRequest.get(window.selected);
@@ -400,8 +399,6 @@ var changeCurrentGraphType = function(type, el){
     el.addClass('active');
     Object.each(window.graphs, function(graph){
         graph.options.mode = type;
-        console.log('window graph: '+window.graphs);
-        console.log('graph: '+graph);
         graph.display();
     });
 }
