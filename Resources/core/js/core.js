@@ -236,6 +236,11 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
+				document.id('graph_types').hide();
+				document.id('graph_breakdown').hide();
+				document.id('legend').hide();
+				document.id('graph_fiscal_year').show();
+				document.id('graph_breakdown').set('text', 'Dollars per Year');
                 var titleText = this.get('text');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
@@ -417,7 +422,68 @@ document.addEvent('domready', function() {
             refreshGUI();
         }
     });
-
+	document.id('emp_type').addEvent('click', function(event){
+		yearSlider('hide');
+		document.id('graph_types').hide();
+		document.id('graph_breakdown').hide();
+		document.id('legend').hide();
+		document.id('graph_fiscal_year').hide();
+	});
+	document.id('emp_dep').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').set('text', 'Number of Employees');
+		document.id('legend').show();
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_fund').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_dep').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_fund_dep').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_exp').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_rev').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_feerev').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
+	document.id('fin_expfee').addEvent('click', function(event){
+		document.id('graph_types').show();
+		document.id('graph_breakdown').show();
+		document.id('legend').show();
+		document.id('graph_breakdown').set('text', 'Dollars per Year');
+		document.id('graph_fiscal_year').show();
+	});
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
         yearSlider('hide');

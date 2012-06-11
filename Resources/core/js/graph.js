@@ -280,7 +280,8 @@ var BudgetGraph = new Class({
 			}).hover(function () {
 				this.sector.stop();
 				this.sector.scale(1.1, 1.1, this.cx, this.cy);
-				this.marker = this.marker || a.raphael.popup(this.mx, this.my, '$'+this.value, "up", 5);
+				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
+				this.marker = this.marker || a.raphael.popup(this.mx, this.my, text, "up", 5);
 				this.marker.show();
 			},function (){
 				this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
@@ -302,8 +303,9 @@ var BudgetGraph = new Class({
 				stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
 				percent:(this.options.mode == 'percentage-line')
 			}).hover(function() {
+						var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
 						this.attr("opacity",1);
-						this.marker = this.marker || a.raphael.popup(this.x, this.y, '$'+this.value, "up", 5).insertAfter(this);
+						this.marker = this.marker || a.raphael.popup(this.x, this.y, text, "up", 5).insertAfter(this);
 						this.marker.show();
 					}, function() {
 						// hide the popup element with an animation and remove the popup element at the end
@@ -314,6 +316,18 @@ var BudgetGraph = new Class({
 	}
 })
 
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
 
 BudgetGraph.LastSelectionYearsData = {};
 BudgetGraph.lastSelection = {};
