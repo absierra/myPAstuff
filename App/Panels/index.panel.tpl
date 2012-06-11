@@ -7,12 +7,12 @@
     </header>
     <div id="left_column">
         <ul>
-        	<h3 id="default_fund">Fund<a class="description_tooltip" href="about/"></a></h3>
+        	<h3 id="default_fund">Fund<a class="description_tooltip"></a></h3>
             <div class="panel_description">Think of a fund like a bank account. Revenue flows into a city in the form of taxes and fees, and is held in various funds. These funds have rules about how their money can be used, and they are drawn on by specific departments, divisions, and programs.<br /><br />Click on a fund to see what sub-funds it has and what departments receive money out of that fund.</div>
         	<ul id="fund"></ul>
         </ul>
         <ul>
-        	<h3 id="default_department">Department<a class="description_tooltip" href="about/"></a></h3>
+        	<h3 id="default_department">Department<a class="description_tooltip"></a></h3>
             <div class="panel_description">Every department is a broad function performed by the city. Each department has its own divisions and programs, which draw money from one or more funds.<br /><br />Click on a department, division, or program to see what funds it draws on.</div>
         	<ul id="department"></ul>
         </ul>

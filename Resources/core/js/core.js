@@ -1,7 +1,9 @@
 //global js here
 var graphs_initialized = false;
 var financial_state = true;
+var loadTimer = 0;
 var refreshGUI = function(includeData){
+    BudgetGraph.timer(1);
     DelphiGraphTabs.filter();
     window.currentGraph.setKeys();
     window.currentGraph.setLegend();
@@ -16,12 +18,11 @@ var refreshGUI = function(includeData){
             	console.log(graph != window.currentGraph);
                 */
                 if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
-
                 //cascade += 800;
             });
         })(); //don't let offscreen graphs choke the onscreen one
 	}
-    window.loadSpinner.hide();
+    BudgetGraph.timer(-1);
 }
 
 var initGraphs = function(){
@@ -85,7 +86,7 @@ var initGraphs = function(){
         type : 'rev_exp',
         target : 'revenue_expense',
         metric : 'revenue_expense',
-        id : 'expenses_vs_fee_revenue',
+        id : 'revenue_expenses',
         select : function(){
             (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
@@ -151,6 +152,7 @@ var initGraphs = function(){
 };
 
 var loadDefaultGraph = function(type){
+    if (!type) type = 'fund';
     window.loadSpinner.show();
     window.selected = {}; // start: reset
     window.panelSelection = {}; 
@@ -174,7 +176,14 @@ var loadDefaultGraph = function(type){
 
 var initialized = false;
 function panelData(){
-	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', onSuccess: function(data){
+	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', 
+    onRequest: function(){
+        BudgetGraph.timer(1);
+    },
+    onComplete: function(){
+        BudgetGraph.timer(-1);
+    },
+    onSuccess: function(data){
         this.dataRequest = data.data;
         window.dataRequest = this.dataRequest;
 	    this.populatePanel('funds');
@@ -196,17 +205,24 @@ function panelData(){
 		});
 	}
 
-	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', onSuccess: function(payload){
+	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', 
+    onRequest: function(){
+        BudgetGraph.timer(1);
+    },
+    onComplete: function(){
+        BudgetGraph.timer(-1);
+    },
+    onSuccess: function(payload){
         var dataSelect = payload.data;
         panelFilter(payload.data);
         refreshGUI(true);
-        window.loadSpinner.hide();
 	}.bind(this)});
 	
     window.selected = {};
     window.panelSelection = {};
 	this.populatePanel = function(panel) {
 		this.dataRequest[panel].each(function(element) {
+            BudgetGraph.timer(1);
             var parts = element.split(":");
             var index;
 			switch (panel){
@@ -216,36 +232,88 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-                window.loadSpinner.show();
                 var titleText = this.get('text');
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
                     window.selected = {};
                     window.panelSelection = {};
-                } else {
-                    panelId.getElements('.selected').removeClass('selected');
-                }
+                }      
+
                 document.getElements('.expanded').removeClass('expanded');
                 document.getElements('li ul.sublist').morph({height:0});
-                window.selected[index] = panelSpan.retrieve('item_identifier');
-                window.lastSelectedPanel = selectedPanel;
-                window.lastSelectedColumn = index;
-                window.lastSelectedItem = element;
-                document.getElements('.colorkey').removeClass('colorkey');
-                this.addClass('selected');
-                this.getElements('a').addClass('expanded');
-                sublistCheck = this.getParent('ul.sublist');
-                if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2;
-                sublist = this.getParent('li ul.sublist');
-                sublistHeight = sublist.getScrollSize();
-                sublist.morph({height:sublistHeight.y});
-                selectionRequest.get(window.selected);
-                document.id('graph_title').set('text', titleText);
-                if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
-                    BudgetGraph.select(index);
-                    //refreshGUI(true);
-                });
+           
+                if (this.hasClass('selected')) {
+                    
+                    this.removeClass('selected');
+                    this.getElements('a.expanded').removeClass('expanded');
+                    
+                    sublist = this.getSiblings('ul.sublist');
+                    sublistHeight = sublist.getScrollSize();
+                    sublist.morph({height:sublistHeight.y});
+                    
+                    var selectedItems = document.getElements('ul li span.selected');
+                    if (selectedItems.length > 0) {
+
+                        window.selected = {};
+                        window.panelSelection={};
+                                        
+                        selectedIndex = selectedItems.getParent().getParent().get('id');
+                        prevSelectedItem = selectedItems.get('text');
+                        document.id('graph_title').set('text', prevSelectedItem);
+
+                        document.getElements('.colorkey').removeClass('colorkey');
+                        document.getElements('.expanded').removeClass('expanded');
+                        document.getElements('.selected').removeClass('selected');
+                       
+                        selectedItems.addClass('selected');
+                        selectedItems.addClass('colorkey');
+                        
+                        lastIndex = selectedIndex[0];
+                        window.selected[index] = prevSelectedItem[0];
+                        window.lastSelectedColumn = selectedIndex[0];
+                        window.lastSelectedItem = prevSelectedItem[0];
+                        
+                        sublist = selectedItems[0].getParent('li ul.sublist');
+                        sublistHeight = sublist.getScrollSize();
+                        sublist.morph({height:sublistHeight.y});
+
+                        console.log(lastIndex);
+                        return; // being used to prevent the page from locking up after deselection/reselection of an item.
+
+                        if (!sublistCheck) window.panelSelection[lastIndex] = 1; else window.panelSelection[lastIndex] = 2;
+                        selectionRequest.get(window.selected);
+                        if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch({}, lastIndex, function(d){
+                            BudgetGraph.select(lastIndex);
+                            //refreshGUI();
+                        });
+                    } else {
+                        loadDefaultGraph(panelId.get('id'));
+                    }
+                } else {
+                    if (!this.hasClass('disabled')) { 
+                        panelId.getElements('.selected').removeClass('selected');
+                    }
+                    
+                    window.selected[index] = panelSpan.retrieve('item_identifier');
+                    window.lastSelectedPanel = selectedPanel;
+                    window.lastSelectedColumn = index;
+                    window.lastSelectedItem = element;
+                    document.getElements('.colorkey').removeClass('colorkey');
+                    this.addClass('selected');
+                    this.getElements('a').addClass('expanded');
+                    sublistCheck = this.getParent('ul.sublist');
+                    if (!sublistCheck) window.panelSelection[index] = 1; else window.panelSelection[index] = 2;
+                    sublist = this.getParent('li ul.sublist');
+                    sublistHeight = sublist.getScrollSize();
+                    sublist.morph({height:sublistHeight.y});
+                    selectionRequest.get(window.selected);
+                    document.id('graph_title').set('text', titleText);
+                    if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
+                        BudgetGraph.select(index);
+                        //refreshGUI(true);
+                    });
+                }
 			};
             var panelArrowClickFunction = function(event) {
                 var expanded = this.getParent('li span a')
@@ -290,6 +358,7 @@ function panelData(){
                 panelUl.appendChild(panelLi);
                 panelSet.appendChild(panelUl);
             }
+            BudgetGraph.timer(-1);
 		}.bind(this));
 	};
 }
@@ -388,22 +457,8 @@ document.addEvent('domready', function() {
         defaultEventType: 'keyup',
         events: {
             'esc': function(){    
-                window.selected = {};
-                window.panelSelection = {}; 
-                document.getElements('.selected').removeClass('selected');
-                document.getElements('.colorkey').removeClass('colorkey');
-                document.getElements('.disabled').removeClass('disabled');
-                document.getElements('.expanded').removeClass('expanded');
-                var sublist = document.getElements('li ul.sublist');
-                if ((sublist) && (sublist.hasClass('expanded'))) {
-                    sublist.set('morph', { unit:'px' });
-                    sublist.morph({height:0});
-                    sublist.removeClass('expanded');
-                }
-                BudgetGraph.deselect();
+              loadDefaultGraph(); 
             }
          }
     });
-    window.loadSpinner = document.id('load_spinner');
-    window.loadSpinner.show();
 });
