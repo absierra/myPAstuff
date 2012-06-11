@@ -21,6 +21,7 @@ var refreshGUI = function(includeData){
                 //cascade += 800;
             });
         })(); //don't let offscreen graphs choke the onscreen one
+        
 	}
     BudgetGraph.timer(-1);
 }
@@ -153,7 +154,6 @@ var initGraphs = function(){
 
 var loadDefaultGraph = function(type){
     if (!type) type = 'fund';
-    window.loadSpinner.show();
     window.selected = {}; // start: reset
     window.panelSelection = {}; 
     document.getElements('.selected').removeClass('selected');
@@ -244,7 +244,6 @@ function panelData(){
                 document.getElements('li ul.sublist').morph({height:0});
            
                 if (this.hasClass('selected')) {
-                    
                     this.removeClass('selected');
                     this.getElements('a.expanded').removeClass('expanded');
                     
@@ -401,6 +400,8 @@ var changeCurrentGraphType = function(type, el){
     el.addClass('active');
     Object.each(window.graphs, function(graph){
         graph.options.mode = type;
+        console.log('window graph: '+window.graphs);
+        console.log('graph: '+graph);
         graph.display();
     });
 }
@@ -456,8 +457,8 @@ document.addEvent('domready', function() {
     var keys = new Keyboard({
         defaultEventType: 'keyup',
         events: {
-            'esc': function(){    
-              loadDefaultGraph(); 
+            'esc': function(){
+                loadDefaultGraph();
             }
          }
     });
