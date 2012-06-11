@@ -137,15 +137,9 @@
             //results is now an arrow of rows, filtered by the selected department/division
             foreach($results as $item){
                 if($focus == 'department'){
-    			//$data['wtf']=$results;
-                    switch($depth){
-                        case 0:
-                            $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                        case 1:
-                            $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                        case 2:
-                            $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                    }
+                    if (depth == 0) $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                    else if (depth == 1) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                	else if (depth == 2) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
                 }
                 else if($focus == 'title'){
                     $data[$item->get('title')][$item->get('year')]['fte'] += (float)$item->get('fte');
