@@ -21,18 +21,18 @@
     	<ul id="tabs" class="graph_tabs">
             <fieldset id="financial_breakdown">
                 <legend>Financial Breakdown</legend>
-            	<li class="tab fund_tab" graph="fund">Fund</li>
-            	<li class="tab department_tab" graph="department">Department</li>
-            	<li class="tab fund_department_tab" graph="fund_department">Fund/Department</li>
-                <li class="tab expenditure_tab" graph="expenses">Expenditure</li>
-                <li class="tab revenue_tab" graph="revenue">Revenue</li>
-                <li class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
-                <li class="tab exp_vs_fee_rev_tab" graph="expenses_vs_fee_revenue">Exp. vs. Fee Rev.</li>
+            	<li id = "fin_fund" class="tab fund_tab" graph="fund">Fund</li>
+            	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
+            	<li id = "fin_fund_dep" class="tab fund_department_tab" graph="fund_department">Fund/Department</li>
+                <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
+                <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
+                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
+                <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Exp. vs. Fee Rev.</li>
             </fieldset>
             <fieldset id="employee_breakdown">
                 <legend>Employee Breakdown</legend>
-    			<li class="tab employee_department_tab" graph="employee_department">Department</li>
-    			<li class="tab employee_type_tab" graph="employee_type">Type</li>
+    			<li id = "emp_dep" class="tab employee_department_tab" graph="employee_department">Department</li>
+    			<li id = "emp_type" class="tab employee_type_tab" graph="employee_type">Type</li>
             </fieldset>
         </ul>
         <div id="graph_container">

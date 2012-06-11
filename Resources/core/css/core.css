@@ -761,7 +761,7 @@ header span.logo_text {
   cursor: pointer;
 }
 .scrollable-container {
-  max-height: 200px;
+  max-height: 300px;
   max-width: 800px;
 }
 .employee_table thead th {
@@ -769,6 +769,7 @@ header span.logo_text {
 }
 .employee_table {
   max-width: 800px;
+  margin-top: 30px;
 }
 .employee_table thead th:last-child,
 .employee_table tfoot td:last-child {
