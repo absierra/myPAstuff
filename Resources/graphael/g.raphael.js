@@ -820,7 +820,7 @@ Raphael.g = {
 			
 			//(labels && labels[j++]) || (Math.round(label) == label ? label : +label.toFixed(rnd))
 			
-            while (Y >= y - length) {
+            while (Y >= y - length - dx) {
             	if (label < 1000){
             		modifiedlabel = Math.round((label)*Math.pow(10,1))/Math.pow(10,1)+'';
             	}
