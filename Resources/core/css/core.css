@@ -446,6 +446,7 @@ header span.logo_text {
 .graph_tabs {
   display: block;
   margin: 12px auto 80px;
+  width: 665px;
 }
 .graph_tabs fieldset {
   display: none;
