@@ -103,12 +103,10 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 blockquote:before,
@@ -181,8 +179,7 @@ html {
 .clear {
   clear: both;
 }
-body,
-html {
+body, html {
   height: 100%;
 }
 body {
@@ -217,24 +214,44 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+#delphilogo {
+  position: absolute;
+  height: 36px;
+  width: 102px;
+  bottom: 5px;
+  right: 10px;
+  background-image: url('/Resources/core/img/logo_powered_by_delphi.png');
+  background-repeat: no-repeat;
+}
 #content_wrapper {
   position: absolute;
-  top: 15px;
+  top: 40px;
   right: 15px;
   bottom: 15px;
   left: 15px;
-  background: #f3f3f4 url('/Resources/core/img/filter-background.png') repeat;
+  background: #f3f3f4 url('/Resources/core/img/bg_diag_s.png') repeat;
   border: 1px solid #d2d2d4;
   overflow: auto;
 }
 header {
-  position: relative;
-  background-color: #151517;
-  width: 460px;
-  height: 55px;
-}
-header.fullwidth {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  background-image: url('/Resources/core/img/logo_palo_alto.png');
+  background-repeat: no-repeat;
+  background-position: 3px center;
+  background-color: #FFFFFF;
   width: 100%;
+  border-style: solid none none none;
+  border-color: #8DC63F;
+  border-width: 2px;
+  /* todo make shadow work in angle & incline */
+
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  height: 38px;
 }
 header img {
   margin-top: 17px;
@@ -250,14 +267,70 @@ header span.logo_text {
   color: #989A9C;
   font-family: "ProximaNova";
 }
+#navlinks {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  right: 10px;
+  width: 400px;
+  height: 38px;
+}
+#navlinks ul {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#navlinks ul li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  line-height: 38px;
+  font-size: 0.8em;
+}
+#navlinks ul li.active {
+  font-family: "ProximaNova-Bold";
+}
+#navlinks ul li a {
+  color: #818285;
+  text-decoration: none;
+}
+#navlinks ul li a:hover {
+  color: #00a1e4;
+}
+#column_header_divider_horizontal {
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  width: 444px;
+  height: 10px;
+  margin: 0px 8px 0px 8px;
+  background-image: url('/Resources/core/img/dots.png');
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-color: #FFFFFF;
+}
+#column_header_divider_vertical {
+  position: absolute;
+  top: 0px;
+  left: 223px;
+  width: 10px;
+  height: 33px;
+  margin: 0px 0px 0px 0px;
+  background-image: url('/Resources/core/img/dots.png');
+  background-repeat: repeat-y;
+  background-position: left center;
+}
 #left_column {
-  margin-top: 10px;
+  margin-top: 0px;
+  background-color: #FFFFFF;
+  width: 460px;
+  height: 100%;
 }
 #left_column ul h3 {
   position: relative;
   width: 230px;
-  color: #fff;
-  background-color: #373936;
+  color: #000000;
+  background-color: #FFFFFF;
   padding-top: 3px;
   line-height: 2em;
   font-family: "ProximaNova-Bold";
@@ -266,8 +339,8 @@ header span.logo_text {
   cursor: pointer;
 }
 #left_column ul h3:hover {
-  color: #b8b9bc;
-  background-color: #4f4f4f;
+  color: #FFFFFF;
+  background-color: #00a1e4;
 }
 #left_column ul h3 a {
   position: absolute;
@@ -276,7 +349,7 @@ header span.logo_text {
   display: block;
   height: 18px;
   width: 20px;
-  background: url('/Resources/core/img/info-icon.png') no-repeat 4px 0;
+  background: url('/Resources/core/img/info_act.png') no-repeat 4px 0;
   cursor: help;
 }
 #left_column ul h3 a:hover {
@@ -294,8 +367,8 @@ header span.logo_text {
   position: absolute;
   white-space: normal;
   width: 200px;
-  color: #b8b9bc;
-  background-color: #4f4f4f;
+  color: #FFFFFF;
+  background-color: #00a1e4;
   line-height: 1.25em;
   padding: 0 15px 10px;
   font-size: 1em;
@@ -305,7 +378,7 @@ header span.logo_text {
   overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
-  top: 98px;
+  top: 43px;
   bottom: 0;
   vertical-align: text-top;
 }
@@ -321,6 +394,10 @@ header span.logo_text {
   padding-left: 15px;
   color: #333;
   font-family: "ProximaNova-Bold";
+}
+#left_column > ul ul li span:hover {
+  background-color: #00a1e4;
+  color: #FFFFFF;
 }
 #left_column > ul ul li span.disabled {
   color: #b8b8b8;
@@ -427,12 +504,10 @@ header span.logo_text {
 }
 #content.fullwidth {
   left: 0;
-  top: 55px;
-  padding: 0 20px 20px;
+  top: 0px;
+  padding: 0 20px 20px 20px;
 }
-#content h1,
-#content h2,
-#content h3 {
+#content h1, #content h2, #content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -506,7 +581,10 @@ header span.logo_text {
   background: #00b1eb;
 }
 .graph_tabs li:hover {
-  background: #e3e4e5;
+  /*background: #e3e4e5;*/
+
+  color: #fff;
+  background: #00b1eb;
 }
 #graph_container {
   clear: both;
@@ -585,8 +663,7 @@ header span.logo_text {
   cursor: pointer;
 }
 /* Graph Type Icons */
-.active.percentage.icon,
-.percentage.icon:hover {
+.active.percentage.icon, .percentage.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -614,8 +691,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.stacked.icon,
-.stacked.icon:hover {
+.active.stacked.icon, .stacked.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -643,8 +719,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.line.icon,
-.line.icon:hover {
+.active.line.icon, .line.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -672,8 +747,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.pie.icon,
-.pie.icon:hover {
+.active.pie.icon, .pie.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -772,12 +846,10 @@ header span.logo_text {
   max-width: 800px;
   margin-top: 30px;
 }
-.employee_table thead th:last-child,
-.employee_table tfoot td:last-child {
+.employee_table thead th:last-child, .employee_table tfoot td:last-child {
   border-right: none;
 }
-.employee_table td,
-.employee_table th {
+.employee_table td, .employee_table th {
   padding-left: 4px;
 }
 .employee_table tbody td {

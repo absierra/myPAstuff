@@ -24,7 +24,7 @@
 
 @primaryFont: "ProximaNova";
 @primaryFontBold: "ProximaNova-Bold";
-@barHeight: 55px;
+@barHeight: 40px;
 @rightColumnWidth: 560px;
 @leftColumnWidth: 460px;
 
@@ -85,25 +85,42 @@ body{
     }
 }
 
+#delphilogo{
+    position: absolute;
+	height: 36px;
+	width: 102px;
+	bottom: 5px;
+	right: 10px;
+	background-image: url('/Resources/core/img/logo_powered_by_delphi.png');
+	background-repeat: no-repeat;
+}
+
 #content_wrapper {
     position: absolute;
-    top: 15px;
+    top: @barHeight;
     right: 15px;
     bottom: 15px;
     left: 15px;
-    background: #f3f3f4 url('/Resources/core/img/filter-background.png') repeat;
+    background: #f3f3f4 url('/Resources/core/img/bg_diag_s.png') repeat;
     border: 1px solid #d2d2d4;
     overflow: auto;
 }
 
 header{
-    position: relative;
-    background-color: #151517;
-    width: @leftColumnWidth;
-    height: @barHeight;
-    &.fullwidth{
-        width: 100%;
-    }
+    position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	background-image: url('/Resources/core/img/logo_palo_alto.png');
+	background-repeat: no-repeat;
+	background-position: 3px center;
+    background-color: #FFFFFF;
+    width: 100%;
+	border-style: solid none none none;
+	border-color: #8DC63F;
+	border-width: 2px;
+	.shadowed(2px, 0.2);
+    height: @barHeight - 2px;
     img{
         margin-top: 17px;
         margin-left: 15px;
@@ -120,13 +137,72 @@ header{
     }
 }
 
+#navlinks{
+    position: absolute;
+	z-index: 3;
+	top: 0px;
+	right: 10px;
+	width: 400px;
+	height: @barHeight - 2px;
+	ul{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		li{
+			display: inline;
+			list-style-type: none;
+			padding-right: 20px;
+			line-height: @barHeight - 2px;
+			font-size: 0.8em;
+			&.active{
+				font-family: @primaryFontBold;
+			}
+			a{
+				color: #818285;
+				text-decoration: none;
+				&:hover{
+					color: #00a1e4;
+				}
+			}
+		}
+	}
+}
+
+#column_header_divider_horizontal{
+	position: absolute;
+	top: 33px;
+	left: 0px;
+	width: @leftColumnWidth - 16px;
+	height: 10px;
+	margin: 0px 8px 0px 8px;
+	background-image: url('/Resources/core/img/dots.png');
+	background-repeat: repeat-x;
+	background-position: left center;
+    background-color: #FFFFFF;
+}
+
+#column_header_divider_vertical{
+	position: absolute;
+	top: 0px;
+	left: @leftColumnWidth / 2 - 7px;
+	width: 10px;
+	height: 33px;
+	margin: 0px 0px 0px 0px;
+	background-image: url('/Resources/core/img/dots.png');
+	background-repeat: repeat-y;
+	background-position: left center;
+}
+
 #left_column{
-    margin-top: 10px;
+    margin-top: 0px;
+	background-color: #FFFFFF;
+	width: @leftColumnWidth;
+	height: 100%;
     ul h3{
         position: relative;
         width: @leftColumnWidth / 2;
-        color: #fff;
-        background-color: #373936;
+        color: #000000;
+        background-color: #FFFFFF;
         padding-top: 3px;
         line-height: 2em;
         font-family: @primaryFontBold;
@@ -134,8 +210,8 @@ header{
         font-size: 1.2em;
         cursor: pointer;
         &:hover{
-            color: #b8b9bc;
-            background-color: #4f4f4f;
+            color: #FFFFFF;
+            background-color: #00a1e4;
         }
         a{
             position: absolute;
@@ -144,7 +220,7 @@ header{
             display: block;
             height: 18px;
             width: 20px;
-            background: url('/Resources/core/img/info-icon.png') no-repeat 4px 0;
+            background: url('/Resources/core/img/info_act.png') no-repeat 4px 0;
             cursor: help;
             &:hover{
                 background-position: 4px -17px;
@@ -162,8 +238,8 @@ header{
             position: absolute;
             white-space: normal;
             width: @leftColumnWidth / 2 - 30;
-            color: #b8b9bc;
-            background-color: #4f4f4f;
+            color: #FFFFFF;
+            background-color: #00a1e4;
             line-height: 1.25em;
             padding: 0 15px 10px;
             font-size: 1em;
@@ -173,7 +249,7 @@ header{
         	overflow-y: scroll;
             overflow-x: hidden;
         	position: absolute;
-    		top: @barHeight + 43px;
+    		top: 43px;
     		bottom: 0;
             vertical-align: text-top;
         }
@@ -188,6 +264,10 @@ header{
             	padding-left: 15px;
             	color: #333;
             	font-family: @primaryFontBold;
+				&:hover{
+					 background-color: #00a1e4;
+					 color: #FFFFFF;
+				}
             	&.disabled{
 	                color: #b8b8b8;
                     &:hover{
@@ -297,8 +377,8 @@ header{
     }
     &.fullwidth{
 	left: 0;
-	top: @barHeight;
-	padding: 0 20px 20px;
+	top: 0px;
+	padding: 0 20px 20px 20px;
     }
     h1, h2, h3 {
 	font-family: @primaryFontBold;
@@ -372,7 +452,9 @@ header{
             }
         }
         &:hover {
-            background: #e3e4e5;
+            /*background: #e3e4e5;*/
+			color: #fff;
+            background: #00b1eb;
         }        
     }
 }
