@@ -103,10 +103,12 @@ section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -179,7 +181,8 @@ html {
 .clear {
   clear: both;
 }
-body, html {
+body,
+html {
   height: 100%;
 }
 body {
@@ -507,7 +510,9 @@ header span.logo_text {
   top: 0px;
   padding: 0 20px 20px 20px;
 }
-#content h1, #content h2, #content h3 {
+#content h1,
+#content h2,
+#content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -536,15 +541,18 @@ header span.logo_text {
   height: 15px;
   border: 1px solid #cdcdcf;
   border-bottom: 0;
-  margin-bottom: 5px;
+  margin: 6px 0 5px 0;
   text-align: center;
-  padding-top: 10px;
+  line-height: 0;
   font-size: 0.8em;
   width: 99.5%;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
+}
+.graph_tabs legend span {
+  background: #fff;
 }
 .graph_tabs li:first-of-type {
   clear: both;
@@ -663,7 +671,8 @@ header span.logo_text {
   cursor: pointer;
 }
 /* Graph Type Icons */
-.active.percentage.icon, .percentage.icon:hover {
+.active.percentage.icon,
+.percentage.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -691,7 +700,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.stacked.icon, .stacked.icon:hover {
+.active.stacked.icon,
+.stacked.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -719,7 +729,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.line.icon, .line.icon:hover {
+.active.line.icon,
+.line.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -747,7 +758,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.pie.icon, .pie.icon:hover {
+.active.pie.icon,
+.pie.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -846,10 +858,12 @@ header span.logo_text {
   max-width: 800px;
   margin-top: 30px;
 }
-.employee_table thead th:last-child, .employee_table tfoot td:last-child {
+.employee_table thead th:last-child,
+.employee_table tfoot td:last-child {
   border-right: none;
 }
-.employee_table td, .employee_table th {
+.employee_table td,
+.employee_table th {
   padding-left: 4px;
 }
 .employee_table tbody td {

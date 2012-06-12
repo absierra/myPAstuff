@@ -19,7 +19,7 @@
     <div id="content">
     	<ul id="tabs" class="graph_tabs">
             <fieldset id="financial_breakdown">
-                <legend>Financial Breakdown</legend>
+                <legend><span>Financial Breakdown</span></legend>
             	<li id = "fin_fund" class="tab fund_tab" graph="fund">Fund</li>
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
             	<li id = "fin_fund_dep" class="tab fund_department_tab" graph="fund_department">Fund/Department</li>
@@ -29,7 +29,7 @@
                 <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Exp. vs. Fee Rev.</li>
             </fieldset>
             <fieldset id="employee_breakdown">
-                <legend>Employee Breakdown</legend>
+                <legend><span>Employee Breakdown</span></legend>
     			<li id = "emp_dep" class="tab employee_department_tab" graph="employee_department">Department</li>
     			<li id = "emp_type" class="tab employee_type_tab" graph="employee_type">Type</li>
             </fieldset>
