@@ -2,9 +2,6 @@
 {require name="mootools,core,header,graphael,tabs,scrollabletable"}
 {panel name="header"}
 <div id="content_wrapper">
-    <header>
-        <img src="/Resources/core/img/logo.png" alt="Delphi Budgets"/>
-    </header>
     <div id="left_column">
         <ul>
         	<h3 id="default_fund">Fund<a class="description_tooltip"></a></h3>
@@ -16,6 +13,8 @@
             <div class="panel_description">Every department is a broad function performed by the city. Each department has its own divisions, which draw money from one or more funds.<br /><br />Click on a department or division to see what funds it draws on.</div>
         	<ul id="department"></ul>
         </ul>
+		<div id="column_header_divider_horizontal"></div>
+		<div id="column_header_divider_vertical"></div>
     </div>
     <div id="content">
     	<ul id="tabs" class="graph_tabs">
@@ -80,6 +79,7 @@
             <h2 id="graph_fiscal_year">Fiscal Year</h2>
             <ul id="legend"></ul>
         </div>
+		<div id="delphilogo"></div>
     </div>
     <div id="load_spinner"><div class="spinner"></div></div>
 </div>
