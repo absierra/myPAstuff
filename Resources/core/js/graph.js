@@ -30,7 +30,21 @@ var BudgetGraph = new Class({
             },
             onSuccess: function(payload){
                 this.data = payload.data;
-                this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
+                if(this.options.target == 'revenue_expense'){
+                	this.colors = hueShiftedColorSet(2, ['Expenses', 'Revenues']);
+                }
+                else if(this.options.target == 'category'){
+                	var categories = [];
+                	var metric = this.options.metric;
+                	data = this.data;
+                	Object.each(this.data, function(value, key){
+                		if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0) categories.push(key);
+                	});
+                	this.colors = hueShiftedColorSet(0, categories);
+                }
+                else{
+	                this.colors = hueShiftedColorSet(Object.getLength(this.data));
+				}
                 this.setColors(this.colors);
                 this.display();
                 this.fetching = false;
@@ -112,7 +126,8 @@ var BudgetGraph = new Class({
         	}
         });
         
-        if(target != 'category'){
+        
+        if(target != 'category' && target != 'revenue_expense'){
 			var result = [];
 			var column = document.id(this.options.column);
 			var elements;
@@ -146,7 +161,7 @@ var BudgetGraph = new Class({
         activeItems = this.getKeyElements();
         if(activeItems.length == 0) return;
         if(activeItems.length != this.colors.length){
-            this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex');
+            this.colors = hueShiftedColorSet(Object.getLength(this.data));
         }
         activeItems.each(function(item, lcv){
             item.addClass('colorkey');
@@ -166,7 +181,7 @@ var BudgetGraph = new Class({
         var items = this.getLegendItems();
 
         if(items.length > this.colors.length){
-            this.colors = hueShiftedColorSet(items.length, 'hex');
+            this.colors = hueShiftedColorSet(items.length);
         }
         if(items && items.length > 0){
         	//items.sort();
