@@ -35,7 +35,7 @@ var initGraphs = function(){
         column : 'fund',
         id : 'fund',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(0);
@@ -49,7 +49,7 @@ var initGraphs = function(){
         column : 'department',
         id : 'department',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(1);
@@ -63,7 +63,7 @@ var initGraphs = function(){
         column : 'department',
         id : 'fund_department',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             this.setKeys();
             this.setLegend();
             window.graphTabs.showSlide(2);
@@ -76,7 +76,7 @@ var initGraphs = function(){
         metric : 'expenses',
         id : 'expenses',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(3);
@@ -89,7 +89,7 @@ var initGraphs = function(){
         metric : 'revenue_expense',
         id : 'revenue_expenses',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(4);
@@ -102,7 +102,7 @@ var initGraphs = function(){
         metric : 'fee_revenue',
         id : 'fee_revenue',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(5);
@@ -116,7 +116,7 @@ var initGraphs = function(){
         metric : 'revenue',
         id : 'revenue',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(6);
@@ -130,7 +130,7 @@ var initGraphs = function(){
         column : 'department',
         id : 'employee_department',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(7);
@@ -143,7 +143,7 @@ var initGraphs = function(){
         target : 'title',
         id : 'employee_type',
         select : function(){
-            (this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
             //this.setKeys();
             //this.setLegend();
             window.graphTabs.showSlide(8);
@@ -370,6 +370,7 @@ function panelData(){
 	};
 }
 
+/*
 var yearSlider = function(display){
     var yearsContainer = document.id('years_container');
     if (display == 'hide') { yearsContainer.hide(); return; }
@@ -402,6 +403,7 @@ var yearSliderUpdate = function(element, value){
         }        
     }    
 }
+*/
 
 var changeCurrentGraphType = function(type, el){
     el.getSiblings().removeClass('active');
@@ -423,7 +425,7 @@ document.addEvent('domready', function() {
         }
     });
 	document.id('emp_type').addEvent('click', function(event){
-		yearSlider('hide');
+		//yearSlider('hide');
 		document.id('graph_types').hide();
 		document.id('graph_breakdown').hide();
 		document.id('legend').hide();
@@ -486,22 +488,22 @@ document.addEvent('domready', function() {
 	});
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
-        yearSlider('hide');
+        //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Dollars per Year');
     });
     document.id('stacked_graph').addEvent('click', function(event){
         changeCurrentGraphType('stacked-line', this);
-        yearSlider('hide');
+        //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Dollars per Year');
     });
     document.id('percentage_graph').addEvent('click', function(event){
         changeCurrentGraphType('percentage-line', this);
-        yearSlider('hide');
+        //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Percent of Budget');
     });
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
-        yearSlider('show');
+        //yearSlider('show');
         document.id('graph_breakdown').empty();
     });
     document.id('default_department').addEvent('click', function(event){

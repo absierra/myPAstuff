@@ -73,10 +73,10 @@
 				</div>
             </div>
             <div id="years_container">
-                <ul id="years_text"></ul>
-            	<input id="years_slider" type="range" upper="" lower="" step="25" value="2013" onchange="javascript:yearSliderUpdate(this, this.value);"/>
+                {*<ul id="years_text"></ul>
+            	<input id="years_slider" type="range" upper="" lower="" step="25" value="2013" onchange="javascript:yearSliderUpdate(this, this.value);"/>*}
             </div>
-            <h2 id="graph_fiscal_year">Fiscal Year</h2>
+            <h2 id="graph_fiscal_year">Fiscal Year 2013</h2>
             <ul id="legend"></ul>
         </div>
 		<div id="delphilogo"></div>
