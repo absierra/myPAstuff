@@ -24,13 +24,13 @@
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
                 <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
-                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
-                <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Exp. vs. Fee Rev.</li>
+                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Revenue</li>
+                <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Expenditure vs Revenue</li>
             </fieldset>
             <fieldset id="employee_breakdown">
                 <legend><span>Employee Breakdown</span></legend>
     			<li id = "emp_dep" class="tab employee_department_tab" graph="employee_department">Department</li>
-    			<li id = "emp_type" class="tab employee_type_tab" graph="employee_type">Type</li>
+    			<li id = "emp_type" class="tab employee_type_tab" graph="employee_type">Job Type</li>
             </fieldset>
         </ul>
         <div id="graph_container">
@@ -76,8 +76,8 @@
             </div>
             <h2 id="graph_fiscal_year">Fiscal Year</h2>
             <ul id="legend"></ul>
+			<div id="delphilogo"></div>
         </div>
-		<div id="delphilogo"></div>
     </div>
     <div id="load_spinner"><div class="spinner"></div></div>
 </div>

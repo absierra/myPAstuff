@@ -296,9 +296,10 @@ var BudgetGraph = new Class({
 				//this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
 			});
 		}else{
+			// this means we're doing a line or stacked graph
 			var graphSize = document.id('graphs').getScrollSize();
 			var xGraph = graphSize.x - 240;
-			if (xGraph > 600) xGraph = 600;
+			//if (xGraph > 600) xGraph = 600;
 			var yGraph = graphSize.y - 41;
 			
 			var a = this;
