@@ -413,6 +413,82 @@ var changeCurrentGraphType = function(type, el){
     });
 }
 
+var rightPanelSizing = function(){
+	var leftColumnWidth = 600;
+	var verticalElementsHeight = 210;
+	var graph_container_min_width = 775;
+	var graph_container_min_height = 500;
+	var graph_container_width = 0;
+	var graph_container_height = 0;
+	var graph_container_ratio = graph_container_min_width / graph_container_min_height;
+
+	// if the window size is big enough to accomodate the graph being bigger than its minimum size
+	if (window.getSize().x - leftColumnWidth > graph_container_min_width && window.getSize().y - verticalElementsHeight > graph_container_min_height)
+	{
+		// if, given our required aspect ratio, the horizontal is the limiting factor, fill the horizontal, and then set the vertical according to the ratio
+		if ((window.getSize().x - leftColumnWidth) / (window.getSize().y - verticalElementsHeight) < graph_container_ratio)
+		{
+			graph_container_width = window.getSize().x - leftColumnWidth;
+			graph_container_height = graph_container_width / graph_container_ratio;
+			//console.log('horizontal was limiting: ' + graph_container_width + ' x ' + graph_container_height);
+		}
+		// else (i.e., the remaining vertical space is the limiting factor), fill the vertical, and then set the horizontal according to the ratio
+		else
+		{
+			graph_container_height = window.getSize().y - verticalElementsHeight;
+			graph_container_width = graph_container_height * graph_container_ratio;
+			//console.log('vertical was limiting: ' + graph_container_width + ' x ' + graph_container_height);
+		}
+	}
+	else
+	{
+		graph_container_width = graph_container_min_width;
+		graph_container_height = graph_container_min_height;
+	}
+	
+	document.id('graph_container').setStyle('width', graph_container_width + 'px');
+	document.id('graph_container').setStyle('height', graph_container_height + 'px');
+	
+	document.id('graphs').setStyle('width', graph_container_width + 'px');
+	document.id('graphs').setStyle('height', (graph_container_height - 180) + 'px');
+		
+	document.getElements('#graphs .graph svg').setStyle('width', graph_container_width + 'px');
+	document.getElements('#graphs .graph svg').setStyle('height', (graph_container_height - 180) + 'px');
+	
+	
+	
+	//document.getElements('#graphs .graph').setStyle('border', '1px solid red');
+	
+	//window.currentGraph.options.height = 1234;
+	//window.currentGraph.options.width = 1234;
+	//console.log('window.currentGraph: ' + window.currentGraph);
+
+}
+
+window.incrementalResize = function(options, callback){
+    if(typeOf(options) == 'number') options = {number:options};
+    if(typeOf(options) == 'function') options = {isCallable:options};
+    var sizes = window.getSize();
+    if(!options.lastX) options.lastX = sizes.x;
+    if(!options.lastY) options.lastY = sizes.y;
+    if(options.number && !options.isCallable){
+        options.isCallable = function(x, y){
+            
+            xDiff = Math.abs(options.lastX - x);
+            yDiff = Math.abs(options.lastY - y);
+            if(options.number <= xDiff || options.number <= yDiff){
+                options.lastX = x;
+                options.lastY = y;
+                return true;
+            }
+            return false;
+        }
+    }
+    window.addEvent('resize', function(event){
+         var dim = window.getSize();
+         if(options.isCallable(dim.x, dim.y)) callback();
+    });
+}
 document.addEvent('domready', function() { 
     window.graphs = {};
     initGraphs();
@@ -497,4 +573,15 @@ document.addEvent('domready', function() {
             }
          }
     });
+	
+	rightPanelSizing();
+	
+	var chainContainer = new Class({ Implements: Chain });
+	
+	window.incrementalResize(45, function(){
+		rightPanelSizing();
+		Object.each(window.graphs, function(graph){
+					graph.display();
+		});
+	});
 });
