@@ -33,6 +33,7 @@
     	else if($value == 'Charges to Other Funds') return true;
     	else return false;
     }
+    Logger::log('hello world');
     $values = array();
     $values['fund'] = WebApplication::get('fund')?WebApplication::get('fund'):false;
     $values['department'] = WebApplication::get('department')?WebApplication::get('department'):false;
@@ -137,9 +138,10 @@
             //results is now an arrow of rows, filtered by the selected department/division
             foreach($results as $item){
                 if($focus == 'department'){
-                    if (depth == 0) $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                    else if (depth == 1) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                	else if (depth == 2) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                    //if (depth == 0) $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                    if (depth == 0) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                	else if (depth == 1 || depth == 2) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
+                	
                 }
                 else if($focus == 'title'){
                     $data[$item->get('title')][$item->get('year')]['fte'] += (float)$item->get('fte');

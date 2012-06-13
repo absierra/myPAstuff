@@ -798,8 +798,7 @@
                 "Expense:Rents & Leases", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Other Taxes and Fines", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Other Taxes and Fines"
             ]
         }, 
         "Library:Collections Management": {
@@ -831,8 +830,7 @@
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Other Taxes and Fines"
             ]
         }, 
         "Library:Public Services": {
@@ -850,8 +848,7 @@
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Other Taxes and Fines"
             ]
         }, 
         "Planning": {
@@ -872,9 +869,8 @@
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Permits and Licenses", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
-                "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
+                "Revenue:Other Revenue", 
                 "Revenue:Rental Income", 
                 "Revenue:Return on Investments"
             ]
@@ -906,7 +902,7 @@
                 "Revenue:Charges to Other Funds", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Permits and Licenses", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:Other Revenue"
             ]
         }, 
@@ -934,11 +930,10 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:Charges for Services", 
                 "Revenue:Charges to Other Funds", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses", 
                 "Revenue:Rental Income", 
                 "Revenue:Return on Investments", 
@@ -973,7 +968,6 @@
                 "Revenue:Rental Income", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Charges to Other Funds", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Expense:Rents & Leases"
             ]
         }, 
@@ -1023,8 +1017,7 @@
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Permits and Licenses"
             ]
         }, 
         "Police:Investigations and Crime Prev Serv": {
@@ -1102,11 +1095,10 @@
                 "Expense:Facilities & Equip Purchases", 
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:Charges for Services", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
                 "Expense:Supplies & Materials"
             ]
         }, 
@@ -1139,8 +1131,7 @@
                 "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
-                "Revenue:Rental Income", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Rental Income"
             ]
         }, 
         "Public Works:Administration": {
@@ -1298,12 +1289,11 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
                 "Revenue:Return on Investments", 
                 "Expense:Capital Improvement"
             ]
@@ -1563,8 +1553,7 @@
                 "Expense:Wastewater Treatment", 
                 "Expense:Utility Purchases & Charges", 
                 "Revenue:Rental Income", 
-                "Revenue:Other Taxes and Fines", 
-                "\"Revenue: Forfeit & Penalities\"\"\""
+                "Revenue:Other Taxes and Fines"
             ]
         }, 
         "Enterprise Funds:Airport Enterprise Fund": {
@@ -1766,12 +1755,11 @@
                 "Expense:General Expense", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:From Other Agencies", 
                 "Revenue:Net Sales", 
                 "Revenue:Other Income", 
                 "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
                 "Revenue:Return on Investments", 
                 "Expense:Capital Improvement"
             ]
@@ -1881,7 +1869,6 @@
                 "Expense:Facilities & Equip Purchases", 
                 "Revenue:Rental Income", 
                 "Revenue:From Other Agencies", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Return on Investments", 
                 "Revenue:Sales Taxes"
             ]
@@ -1962,7 +1949,6 @@
                 "Expense:Facilities & Equip Purchases", 
                 "Revenue:Rental Income", 
                 "Revenue:From Other Agencies", 
-                "\"Revenue: Forfeit & Penalities\"\"\"", 
                 "Revenue:Return on Investments", 
                 "Revenue:Sales Taxes"
             ]
@@ -2085,36 +2071,6 @@
         }
     }, 
     "ledgers": {
-        "\"Revenue": {
-            "divisions": [
-                "Public Works:Wastewater Treatment", 
-                "Police:Field Services", 
-                "Police:Traffic Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Library:Library Services Administration", 
-                "Library:Public Services"
-            ], 
-            "funds": [
-                "Enterprise Funds:Wastewater Treatment", 
-                "General Funds:General Fund"
-            ]
-        }, 
-        "\"Revenue: Forfeit & Penalities\"\"\"": {
-            "divisions": [
-                "Public Works:Wastewater Treatment", 
-                "Police:Field Services", 
-                "Police:Traffic Services", 
-                "Planning:Building", 
-                "Planning:Planning", 
-                "Library:Library Services Administration", 
-                "Library:Public Services"
-            ], 
-            "funds": [
-                "Enterprise Funds:Wastewater Treatment", 
-                "General Funds:General Fund"
-            ]
-        }, 
         "Expense": {
             "divisions": [
                 "Utilities:Administration", 
@@ -3174,6 +3130,7 @@
                 "Police:Parking Services", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
+                "Planning:Building", 
                 "Planning:Planning", 
                 "Library:Library Services Administration", 
                 "Library:Public Services", 

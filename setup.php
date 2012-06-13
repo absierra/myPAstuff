@@ -1,6 +1,7 @@
 <?php
     $start_time = Logger::processing_time(); //let's measure page load time
-    Logger::$logToPHPErrorLog = true; //let's log app events into the PHP error log
+    Logger::$logToPHPErrorLog = false; //let's log app events into the PHP error log
+    Logger::$logFile = '/Users/nlevine/Documents/Git/Budget/phplog.txt';
     
     MongoData::$functionalMode = FALSE;
     
