@@ -89,8 +89,8 @@ body{
     position: absolute;
 	height: 36px;
 	width: 102px;
-	bottom: 5px;
-	right: 10px;
+	bottom: -42px;
+	right: 0px;
 	background-image: url('/Resources/core/img/logo_powered_by_delphi.png');
 	background-repeat: no-repeat;
 }
@@ -323,12 +323,23 @@ header{
             overflow-x:hidden;
             margin-left: 15px;
             span {
+				width: @leftColumnWidth / 2 - 48;
+				padding-right: 10px;
+				text-overflow: ellipsis;
+				text-wrap:none;
+				overflow:hidden;
+				white-space: wrap;
                 font-family: @primaryFont;
             	color: #333;
             	background: none;
             	&:after {
             		content: '';
             	}
+				&:hover {
+					width: @leftColumnWidth / 2;
+					padding-right: 0px;
+					z-index: 200;
+				}
             }
         }
         span{
@@ -396,7 +407,7 @@ header{
 .graph_tabs {
     display: block;
     margin: 12px auto 80px;
-    width: 665px;
+    width: 730px;
     fieldset{
         display: none;
         float:left;
@@ -472,7 +483,7 @@ header{
     min-height: 500px;
     min-width: @rightColumnWidth;
     padding-bottom: 10px;
-    max-width: 750px;
+    /*max-width: 750px;*/
     .shadowed(2px, 0.2);
     .rounded(10px);
     #graphs {
@@ -544,6 +555,8 @@ header{
 .pie.icon{ .spriteIcon(3, @graphTypeIcons, 60px, 4); }
 
 #legend{
+	position: absolute;
+	bottom: 0px;
     display: none;
     white-space: normal;
     margin: 10px 15px;

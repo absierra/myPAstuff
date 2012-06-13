@@ -103,12 +103,10 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 blockquote:before,
@@ -181,8 +179,7 @@ html {
 .clear {
   clear: both;
 }
-body,
-html {
+body, html {
   height: 100%;
 }
 body {
@@ -221,8 +218,8 @@ body {
   position: absolute;
   height: 36px;
   width: 102px;
-  bottom: 5px;
-  right: 10px;
+  bottom: -42px;
+  right: 0px;
   background-image: url('/Resources/core/img/logo_powered_by_delphi.png');
   background-repeat: no-repeat;
 }
@@ -456,12 +453,23 @@ header span.logo_text {
   margin-left: 15px;
 }
 #left_column > ul ul ul li span {
+  width: 182px;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  text-wrap: none;
+  overflow: hidden;
+  white-space: wrap;
   font-family: "ProximaNova";
   color: #333;
   background: none;
 }
 #left_column > ul ul ul li span:after {
   content: '';
+}
+#left_column > ul ul ul li span:hover {
+  width: 230px;
+  padding-right: 0px;
+  z-index: 200;
 }
 #left_column > ul span {
   padding-left: 10px;
@@ -510,9 +518,7 @@ header span.logo_text {
   top: 0px;
   padding: 0 20px 20px 20px;
 }
-#content h1,
-#content h2,
-#content h3 {
+#content h1, #content h2, #content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -526,7 +532,7 @@ header span.logo_text {
 .graph_tabs {
   display: block;
   margin: 12px auto 80px;
-  width: 665px;
+  width: 730px;
 }
 .graph_tabs fieldset {
   display: none;
@@ -604,7 +610,8 @@ header span.logo_text {
   min-height: 500px;
   min-width: 560px;
   padding-bottom: 10px;
-  max-width: 750px;
+  /*max-width: 750px;*/
+
   /* todo make shadow work in angle & incline */
 
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -671,8 +678,7 @@ header span.logo_text {
   cursor: pointer;
 }
 /* Graph Type Icons */
-.active.percentage.icon,
-.percentage.icon:hover {
+.active.percentage.icon, .percentage.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -700,8 +706,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.stacked.icon,
-.stacked.icon:hover {
+.active.stacked.icon, .stacked.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -729,8 +734,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.line.icon,
-.line.icon:hover {
+.active.line.icon, .line.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -758,8 +762,7 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.pie.icon,
-.pie.icon:hover {
+.active.pie.icon, .pie.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -788,6 +791,8 @@ header span.logo_text {
   vertical-align: middle;
 }
 #legend {
+  position: absolute;
+  bottom: 0px;
   display: none;
   white-space: normal;
   margin: 10px 15px;
@@ -858,12 +863,10 @@ header span.logo_text {
   max-width: 800px;
   margin-top: 30px;
 }
-.employee_table thead th:last-child,
-.employee_table tfoot td:last-child {
+.employee_table thead th:last-child, .employee_table tfoot td:last-child {
   border-right: none;
 }
-.employee_table td,
-.employee_table th {
+.employee_table td, .employee_table th {
   padding-left: 4px;
 }
 .employee_table tbody td {
