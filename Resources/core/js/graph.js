@@ -96,47 +96,46 @@ var BudgetGraph = new Class({
         var keys = [];
         target = this.options.target;
         metric = this.options.metric;
-        console.log(this.data);
         
         var index = 0;
         
         Object.each(this.data, function(value, key){
         	
         	key = key.indexOf(":")==-1?key:key.split(":")[1];
-        	console.log("key ", key);
-        	/*if(target == 'category'){
+        	if(target == 'category'){
         		if(value['2013'][metric] != undefined){
         			keys.push(key);
         		}
         	}
-        	else{*/
+        	else{
         		keys.push(key);
-        	//}
-        	console.log("keys ", keys);
+        	}
         });
-
-        var result = [];
-        var column = document.id(this.options.column);
-        var elements;
-        if(column){
-            var isSelected = column.getElement('li span.selected');
-            if(isSelected){ 
-                elements = column.getElements('ul li span:not(.disabled)');
-            }else {
-                elements = column.getElements('> li > span:not(.disabled)');
-            }
-            result = [];
-            elements.each(function(el){
-            	console.log(['blargh', keys.clone(), el.get('text')]);
-            	notags = el.get('text');
-                if(keys.contains(notags)){
-                    result.push(notags);
-                    keys.erase(notags);
-                }
-            });
+        
+        if(target != 'category'){
+			var result = [];
+			var column = document.id(this.options.column);
+			var elements;
+			if(column){
+				var isSelected = column.getElement('li span.selected');
+				if(isSelected){ 
+					elements = column.getElements('ul li span:not(.disabled)');
+				}else {
+					elements = column.getElements('> li > span:not(.disabled)');
+				}
+				result = [];
+				elements.each(function(el){
+					notags = el.get('text');
+					if(keys.contains(notags)){
+						result.push(notags);
+						keys.erase(notags);
+					}
+				});
+			}
+			return result;
+		}else{
+        	return keys;
         }
-        return result;
-        //return keys;
     },
     setKeys : function(){
         if(this.fetching){
@@ -222,8 +221,7 @@ var BudgetGraph = new Class({
 		}else{
 			var keys;
 			Object.each(this.data, function(data, name){
-				console.log(name);
-				console.log(data);
+
 				var xs = [];
 				var ys = [];
 				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]);//.sort();
@@ -288,7 +286,7 @@ var BudgetGraph = new Class({
 			}).hover(function () {
 				//this.sector.stop();
 				//this.sector.scale(1.1, 1.1, this.cx, this.cy);
-				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value)+' Employees';
+				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees';
 				if (!this.marker) {
 					this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);		
 				}
