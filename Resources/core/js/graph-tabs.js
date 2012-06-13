@@ -7,8 +7,6 @@ var DelphiGraphTabs = {
         tabsLi.each(function(el, tabKey){
                 el.addEvent('click', function(event){
                     var g = BudgetGraph.graphs[event.target.getAttribute('graph')];
-                    console.log(BudgetGraph.graphs);
-                    console.log(event.target.getAttribute('graph'));
                     g.setLegend();
                     g.setKeys();
                 });
