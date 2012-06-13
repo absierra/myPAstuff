@@ -452,19 +452,23 @@ document.addEvent('domready', function() {
         changeCurrentGraphType('line', this);
         //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Dollars per Year');
+        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
     });
     document.id('stacked_graph').addEvent('click', function(event){
         changeCurrentGraphType('stacked-line', this);
         //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Dollars per Year');
+        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
     });
     document.id('percentage_graph').addEvent('click', function(event){
         changeCurrentGraphType('percentage-line', this);
         //yearSlider('hide');
         document.id('graph_breakdown').set('text', 'Percent of Budget');
+        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
     });
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
+        document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
         //yearSlider('show');
         document.id('graph_breakdown').empty();
     });
