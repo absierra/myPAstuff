@@ -38,7 +38,7 @@ var BudgetGraph = new Class({
                 	var metric = this.options.metric;
                 	data = this.data;
                 	Object.each(this.data, function(value, key){
-                		if(data[key]['2013'][metric]) categories.push(key);
+                		if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0) categories.push(key);
                 	});
                 	this.colors = hueShiftedColorSet(0, categories);
                 }
