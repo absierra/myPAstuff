@@ -33,7 +33,6 @@
     	else if($value == 'Charges to Other Funds') return true;
     	else return false;
     }
-    Logger::log('hello world');
     $values = array();
     $values['fund'] = WebApplication::get('fund')?WebApplication::get('fund'):false;
     $values['department'] = WebApplication::get('department')?WebApplication::get('department'):false;
@@ -66,6 +65,8 @@
 			}
 			$query = implode(' and ', $disc);
 			$results = Data::search('BudgetData', $query);
+			Logger::log("query: ".$query);
+			Logger::log(json_encode($results));
 			$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
 			$count == 0;
 			foreach($results as $item){
