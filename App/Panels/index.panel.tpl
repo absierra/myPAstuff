@@ -22,7 +22,6 @@
                 <legend><span>Financial Breakdown</span></legend>
             	<li id = "fin_fund" class="tab fund_tab" graph="fund">Fund</li>
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
-            	<li id = "fin_fund_dep" class="tab fund_department_tab" graph="fund_department">Fund/Department</li>
                 <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
                 <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
@@ -47,7 +46,6 @@
                 <div id="graph_spinner"></div>
 				<div id="fund_graph" class="graph"></div>
 				<div id="department_graph" class="graph"></div>
-				<div id="fund_department_graph" class="graph"></div>
 				<div id="expenditure_graph" class="graph"></div>
 				<div id="revenue_graph" class="graph"></div>
 				<div id="fee_revenue_graph" class="graph"></div>

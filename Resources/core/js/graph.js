@@ -96,17 +96,25 @@ var BudgetGraph = new Class({
         var keys = [];
         target = this.options.target;
         metric = this.options.metric;
+        console.log(this.data);
+        
+        var index = 0;
+        
         Object.each(this.data, function(value, key){
+        	
         	key = key.indexOf(":")==-1?key:key.split(":")[1];
-        	if(target == 'category'){
+        	console.log("key ", key);
+        	/*if(target == 'category'){
         		if(value['2013'][metric] != undefined){
         			keys.push(key);
         		}
         	}
-        	else{
+        	else{*/
         		keys.push(key);
-        	}
+        	//}
+        	console.log("keys ", keys);
         });
+
         var result = [];
         var column = document.id(this.options.column);
         var elements;
@@ -119,17 +127,16 @@ var BudgetGraph = new Class({
             }
             result = [];
             elements.each(function(el){
-                if(keys.contains(el.innerHTML.trim())){
-                    result.push(el.innerHTML);
-                    keys.erase(el.innerHTML);
+            	console.log(['blargh', keys.clone(), el.get('text')]);
+            	notags = el.get('text');
+                if(keys.contains(notags)){
+                    result.push(notags);
+                    keys.erase(notags);
                 }
             });
         }
-        //return result;*/
-        keys.each(function(key){
-            result.push(key);
-        });
         return result;
+        //return keys;
     },
     setKeys : function(){
         if(this.fetching){
@@ -158,11 +165,12 @@ var BudgetGraph = new Class({
         var legendElement = document.getElement('#legend');
         legendElement.getElements('li').destroy();
         var items = this.getLegendItems();
+
         if(items.length > this.colors.length){
             this.colors = hueShiftedColorSet(items.length, 'hex');
         }
         if(items && items.length > 0){
-        	items.sort();
+        	//items.sort();
             items.each(function(item, lcv) {
                 var legendItem = new Element('span', {
                     html : item
@@ -214,9 +222,11 @@ var BudgetGraph = new Class({
 		}else{
 			var keys;
 			Object.each(this.data, function(data, name){
+				console.log(name);
+				console.log(data);
 				var xs = [];
 				var ys = [];
-				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]).sort();
+				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]);//.sort();
 				keys.each(function(key){
 					if(this.data[name][key][metric] != undefined){
 						xs.push(key);
@@ -232,14 +242,12 @@ var BudgetGraph = new Class({
 				}
 			}.bind(this)); //*/
 		}
-		//console.log(this.options.target);
-		//console.log(ySet);
 		if(this.options.mode == 'bar'){
 			this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
 				shade: true,
 				nostroke: false,
 				axis: "0 0 1 1",
-				colors:this.options.colors
+				colors:this.colors
 			});
 		}else if (this.options.mode == 'pie'){
 			//window.totalChartValue = 0;
@@ -261,11 +269,11 @@ var BudgetGraph = new Class({
 
 			if (year) {
 				ySet.each(function(arraySet, key) {
-					totalValues.push(Math.floor(arraySet[yearKey]));
+					totalValues.push(arraySet[yearKey]*1000);
 				});
 			} else {
 				ySet.each(function(arraySet, key) {
-					totalValues.push(Math.floor(arraySet.pop()));
+					totalValues.push(arraySet.pop()*1000);
 				});
 			}
 			var a = this;
@@ -274,18 +282,20 @@ var BudgetGraph = new Class({
 				nostroke: false,
 				axis: "0 0 1 1",
 				axisxstep : 4,
-				colors:this.options.colors,
+				colors:this.colors,
 				stacked:this.options.stacked,
 				percent:this.options.percent
 			}).hover(function () {
-				this.sector.stop();
-				this.sector.scale(1.1, 1.1, this.cx, this.cy);
-				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
-				this.marker = this.marker || a.raphael.popup(this.mx, this.my, text, "up", 5);
+				//this.sector.stop();
+				//this.sector.scale(1.1, 1.1, this.cx, this.cy);
+				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value)+' Employees';
+				if (!this.marker) {
+					this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);		
+				}
 				this.marker.show();
 			},function (){
-				this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
 				this.marker.hide();
+				//this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
 			});
 		}else{
 			var graphSize = document.id('graphs').getScrollSize();
@@ -299,7 +309,7 @@ var BudgetGraph = new Class({
 				nostroke: false,
 				axis: "0 0 1 1",
 				axisxstep : 4,
-				colors:this.options.colors,
+				colors:this.colors,
 				stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
 				percent:(this.options.mode == 'percentage-line')
 			}).hover(function() {

@@ -32,7 +32,7 @@ var DelphiGraphTabs = {
 				} else if (window.panelSelection.fund == 2 && window.panelSelection.department == 1) {
 					graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab']; // [Fund 2][Dept 1]
 				} else if (window.panelSelection.fund == 2 && window.panelSelection.department == 2) {
-					graphTabsSelect = ['fund_department_tab', 'expenditure_tab', 'fee_revenue_tab'];  // [Fund 2][Dept 2]
+					graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab'];  // [Fund 2][Dept 2]
 				}
 			} else if (window.panelSelection.fund){
                 financialBreakdown.show();
