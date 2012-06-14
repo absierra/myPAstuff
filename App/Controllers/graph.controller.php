@@ -105,7 +105,7 @@
 					}
 				}
 			}
-			if($count == 0 && $focus != 'revenue_expense'){
+			/*if($count == 0 && $focus != 'revenue_expense'){
 				$data['No Revenue']['2009']['revenue'] = 0;
 				$data['No Revenue']['2010']['revenue'] = 0;
 				$data['No Revenue']['2011']['revenue'] = 0;
@@ -116,7 +116,7 @@
 				$data['No Revenue']['2011']['fee_revenue'] = 0;
 				$data['No Revenue']['2012']['fee_revenue'] = 0;
 				$data['No Revenue']['2013']['fee_revenue'] = 0;
-			}
+			}*/
 		    $renderer->assign('data', $data);
         }else{
             $disc = array();
@@ -149,7 +149,7 @@
                     $data[$item->get('title')][$item->get('year')]['salary'] = (float)$item->get('salary');
                 }
             }
-			if(count($data) == 0){
+			/*if(count($data) == 0){
 				if($focus == 'title'){
 					$data['No Employees']['2009']['fte'] = 0;
 					$data['No Employees']['2010']['fte'] = 0;
@@ -165,7 +165,7 @@
 					$data['No Employees']['2012']['revenue'] = 0;
 					$data['No Employees']['2013']['revenue'] = 0;
 				}
-			}
+			}*/
             $renderer->assign('data', $data);
         }
         file_put_contents($filename,json_encode($data));
