@@ -836,10 +836,10 @@ Raphael.g = {
                 Y -= dx;
             }
 
-            if (Math.round(Y + dx - (y - length))) {
+            /*if (Math.round(Y + dx - (y - length))) {
                 type != "-" && type != " " && (path = path.concat(["M", x - (type == "+" || type == "|" ? dashsize : !(orientation - 1) * dashsize * 2), y - length + .5, "l", dashsize * 2 + 1, 0]));
                 text.push(paper.text(x + addon, y - length, (labels && labels[j]) || (Math.round(label) == label ? label : +label.toFixed(rnd))).attr(txtattr).attr({ "text-anchor": orientation - 1 ? "start" : "end" }));
-            }
+            }*/
         } else {
             label = f;
             rnd = (i > 0) * i;

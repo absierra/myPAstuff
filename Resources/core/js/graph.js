@@ -318,24 +318,29 @@ var BudgetGraph = new Class({
 			var yGraph = graphSize.y - 41;
 			
 			var a = this;
-			this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
-				shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-				nostroke: false,
-				axis: "0 0 1 1",
-				axisxstep : 4,
-				colors:this.colors,
-				stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-				percent:(this.options.mode == 'percentage-line')
-			}).hover(function() {
-						var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
-						this.attr("opacity",1);
-						this.marker = this.marker || a.raphael.popup(this.x, this.y, text, "up", 5).insertAfter(this);
-						this.marker.show();
-					}, function() {
-						// hide the popup element with an animation and remove the popup element at the end
-						this.attr("opacity",0);
-						this.marker && this.marker.hide();}
-			);
+			if(ySet.length != 0){
+				this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
+					shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+					nostroke: false,
+					axis: "0 0 1 1",
+					axisxstep : 4,
+					colors:this.colors,
+					stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+					percent:(this.options.mode == 'percentage-line')
+				}).hover(function() {
+							var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
+							this.attr("opacity",1);
+							this.marker = this.marker || a.raphael.popup(this.x, this.y, text, "up", 5).insertAfter(this);
+							this.marker.show();
+						}, function() {
+							// hide the popup element with an animation and remove the popup element at the end
+							this.attr("opacity",0);
+							this.marker && this.marker.hide();}
+				);
+			}
+			else{
+				console.log('hi');
+			}
 		}
 	}
 })
