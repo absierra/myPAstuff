@@ -290,26 +290,31 @@ var BudgetGraph = new Class({
 				});
 			}
 			var a = this;
-			this.lines = this.raphael.piechart(xGraph, yGraph + 20, yGraph, totalValues, {
-				shade: true,
-				nostroke: false,
-				axis: "0 0 1 1",
-				axisxstep : 4,
-				colors:this.colors,
-				stacked:this.options.stacked,
-				percent:this.options.percent
-			}).hover(function () {
-				//this.sector.stop();
-				//this.sector.scale(1.1, 1.1, this.cx, this.cy);
-				var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees';
-				if (!this.marker) {
-					this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);		
-				}
-				this.marker.show();
-			},function (){
-				this.marker.hide();
-				//this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
-			});
+			if(ySet.length != 0){
+				this.lines = this.raphael.piechart(xGraph, yGraph + 20, yGraph, totalValues, {
+					shade: true,
+					nostroke: false,
+					axis: "0 0 1 1",
+					axisxstep : 4,
+					colors:this.colors,
+					stacked:this.options.stacked,
+					percent:this.options.percent
+				}).hover(function () {
+					//this.sector.stop();
+					//this.sector.scale(1.1, 1.1, this.cx, this.cy);
+					var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees';
+					if (!this.marker) {
+						this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);		
+					}
+					this.marker.show();
+				},function (){
+					this.marker.hide();
+					//this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
+				});
+			}else{
+				a.raphael.popup(xGraph - graphSize.x / 2, yGraph - graphSize.y / 2, 'This Selection Has No Data', "up", 20);
+				BudgetGraph.clearLegend();
+			}
 		}else{
 			// this means we're doing a line or stacked graph
 			var graphSize = document.id('graphs').getScrollSize();
@@ -339,7 +344,8 @@ var BudgetGraph = new Class({
 				);
 			}
 			else{
-				console.log('hi');
+				a.raphael.popup(xGraph - graphSize.x / 2, yGraph - graphSize.y / 2, 'This Selection Has No Data');
+				BudgetGraph.clearLegend();
 			}
 		}
 	}

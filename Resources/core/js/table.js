@@ -71,20 +71,21 @@ var BudgetTable = new Class({
 		var tr = tbody.getFirst();
 		
 		tbody.empty();
-						
-		Object.each(this.data, function(data, name){
-			var cl = tr.clone();
-			cols = cl.getChildren();
-			cols[0].set('html', name);
-			cols[1].set('html', this.data[name]['2009']['fte']);
-			cols[2].set('html', this.data[name]['2010']['fte']);
-			cols[3].set('html', this.data[name]['2011']['fte']);
-			cols[4].set('html', this.data[name]['2012']['fte']);
-			cols[5].set('html', this.data[name]['2013']['fte']);
-			cols[6].set('html', this.data[name]['2013']['salary']);
-			cl.inject(tbody);
-		}.bind(this));
-				
+		
+			if(this.data.length != 0){					
+			Object.each(this.data, function(data, name){
+				var cl = tr.clone();
+				cols = cl.getChildren();
+				cols[0].set('html', name);
+				cols[1].set('html', this.data[name]['2009']['fte']);
+				cols[2].set('html', this.data[name]['2010']['fte']);
+				cols[3].set('html', this.data[name]['2011']['fte']);
+				cols[4].set('html', this.data[name]['2012']['fte']);
+				cols[5].set('html', this.data[name]['2013']['fte']);
+				cols[6].set('html', this.data[name]['2013']['salary']);
+				cl.inject(tbody);
+			}.bind(this));
+		}
 		table.update();
 	}
 })

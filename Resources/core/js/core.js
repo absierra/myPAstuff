@@ -12,7 +12,8 @@ var refreshGUI = function(includeData){
         cascade = 200;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
-
+            	console.log(window.selected);
+				console.log(window.lastSelectedColumn);
                 if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
                 //cascade += 800;
             });
@@ -267,9 +268,13 @@ function panelData(){
                         //return; // being used to prevent the page from locking up after deselection/reselection of an item.
 
                         if (!sublistCheck) window.panelSelection[lastIndex] = 1; else window.panelSelection[lastIndex] = 2;
+                        
+                        
                         selectionRequest.get(window.selected);
-                        if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch({}, lastIndex, function(d){
-                            BudgetGraph.select(lastIndex);
+                        console.log(lastIndex);
+                        //refreshGUI(true);
+                        if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch(window.selected, lastIndex, function(d){
+                            //BudgetGraph.select(lastIndex);
                             //refreshGUI();
                         });
                     } else {
@@ -279,7 +284,6 @@ function panelData(){
                     if (!this.hasClass('disabled')) { 
                         panelId.getElements('.selected').removeClass('selected');
                     }
-                    
                     window.selected[index] = panelSpan.retrieve('item_identifier');
                     window.lastSelectedPanel = selectedPanel;
                     window.lastSelectedColumn = index;
@@ -300,6 +304,7 @@ function panelData(){
                     });
                 }
 			};
+			
             var panelArrowClickFunction = function(event) {
                 var expanded = this.getParent('li span a')
                 var sublist = this.getParent('li ul.sublist');
@@ -502,27 +507,52 @@ document.addEvent('domready', function() {
 	document.id('emp_type').addEvent('click', function(event){
 		//yearSlider('hide');
 		tableFormat(true);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('emp_dep').addEvent('click', function(event){
 		tableFormat(false, true);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_fund').addEvent('click', function(event){
 		tableFormat(false, false);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_dep').addEvent('click', function(event){
 		tableFormat(false, false);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_exp').addEvent('click', function(event){
 		tableFormat(false, false);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_rev').addEvent('click', function(event){
 		tableFormat(false, false);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_feerev').addEvent('click', function(event){
 		tableFormat(false, false);
+		document.id('stacked_graph').show();
+		document.id('percentage_graph').show();
+		document.id('pie_chart').show();
 	});
 	document.id('fin_expfee').addEvent('click', function(event){
 		tableFormat(false, false);
+		changeCurrentGraphType('line', this);
+		document.id('stacked_graph').hide();
+		document.id('percentage_graph').hide();
+		document.id('pie_chart').hide();
 	});
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
@@ -570,6 +600,10 @@ document.addEvent('domready', function() {
         events: {
             'esc': function(){
                 loadDefaultGraph();
+                tableFormat(false, false);
+				document.id('stacked_graph').show();
+				document.id('percentage_graph').show();
+				document.id('pie_chart').show();
             }
          }
     });
