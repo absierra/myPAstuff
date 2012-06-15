@@ -306,15 +306,16 @@ function panelData(){
 			};
 			
             var panelArrowClickFunction = function(event) {
-                var expanded = this.getParent('li span a')
+				var expanded = this.getParent('li span a')
                 var sublist = this.getParent('li ul.sublist');
                     if (!expanded.hasClass('expanded')) { // expand item
-                        sublistHeight = sublist.getScrollSize();
+                        expanded.addClass('expanded'); // moved up by 2 lines by Arthur 2012-06-14 to accomodate checking of "expanded" class inside of the function that deals with the overflow tooltip before the morphing (so as to fix fast mouse movement by user)
+						sublistHeight = sublist.getScrollSize();
                         sublist.morph({height:sublistHeight.y});
-                        expanded.addClass('expanded');
+                        
                     } else { // collapse item
-                        sublist.morph({height:0});
-                        expanded.removeClass('expanded');
+                        expanded.removeClass('expanded'); // moved up by 1 line by Arthur 2012-06-14 to accomodate checking of "expanded" class inside of the function that deals with the overflow tooltip before the morphing (so as to fix fast mouse movement by user)
+						sublist.morph({height:0});
                     }
                 event.stopPropagation();
             };
@@ -337,7 +338,75 @@ function panelData(){
                 var panelLi = new Element('li', { class: parts[1].replace(/ /g, '') });
                 var panelSpan = new Element('span', { html: name });
                 panelSpan.store('item_identifier', element);
-                panelSpan.addEvent('click', panelSpanClickFunction);		
+                panelSpan.addEvent('click', panelSpanClickFunction); // if this is changed, make sure to change it below as well
+				
+				panelSpan.addEvent('mouseenter', function(){
+					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
+					if (panelUl.getParent('li span a').hasClass('expanded'))
+					{
+						//console.log(this.getPosition());
+						
+						// get the position of the existing LI element
+						mouseoverDIVpos = this.getParent().getPosition();
+						
+						// grab the DIV that's supposed to hold the cloned span
+						var DIVelement = document.getElement('#secondLevelMouseOver');
+						
+						//create a copy of the current span into the div element we created for this
+						var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
+						
+						// shove the style of the previous span into the new span
+						newSpan.setStyles(this.getStyles('background-color', 'color'));
+
+						// make the DIV element visible and set its position on top of the current LI
+						DIVelement.setStyles({
+							'display': 'block',
+							'top': mouseoverDIVpos.y,
+							'left': mouseoverDIVpos.x
+						});
+						
+						console.log('DIVelement.getSize().x: ' + DIVelement.getSize().x);
+						console.log('this.getParent().getSize().x - 45 + 23: ' + (this.getParent().getSize().x - 45 + 23));
+						
+						// this next if-else condition makes the width of the DIV element no less than the width of the LI/span that it's sitting on top of
+						if (DIVelement.getSize().x < (this.getParent().getSize().x - 45 + 23))
+						{
+							DIVelement.setStyle('width', this.getParent().getSize().x - 45 + 30 + 'px');
+						}
+						else
+						{
+							DIVelement.setStyle('width', 'auto');
+						}
+						
+						// for some reason, it seems like we sometimes need this. weird.
+						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
+						
+						console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
+						console.log('');
+						
+						// add the click event that the span it's on top of had, and make it look like panelSpan had called it
+						newSpan.addEvent('click', function(event){
+							panelSpanClickFunction.call(panelSpan, event);
+							
+							// let's also hide the DIV element, since we don't need it after a click (especially since other groups may collapse)
+							DIVelement.set('html', '');
+							DIVelement.setStyles({
+								'display': 'none',
+								'width': 'auto'
+							});
+						});
+						
+						// clear the contents of the DIV and make it invisible when the mouse leaves *it* (not the original span)
+						DIVelement.addEvent('mouseleave', function(){
+							this.set('html', '');
+							this.setStyles({
+								'display': 'none',
+								'width': 'auto'
+							});
+						});
+						//newSpan.cloneEvents(this);
+					}
+				});
                  if(!panelUl){
 			        panelUl = new Element('ul', {
 			            class: 'sublist'
@@ -494,6 +563,7 @@ window.incrementalResize = function(options, callback){
          if(options.isCallable(dim.x, dim.y)) callback();
     });
 }
+
 document.addEvent('domready', function() { 
     window.graphs = {};
     initGraphs();

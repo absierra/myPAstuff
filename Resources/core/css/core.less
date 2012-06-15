@@ -335,11 +335,13 @@ header{
             	&:after {
             		content: '';
             	}
+				/*
 				&:hover {
 					width: @leftColumnWidth / 2;
 					padding-right: 0px;
 					z-index: 200;
 				}
+				*/
             }
         }
         span{
@@ -370,6 +372,26 @@ header{
 			width: 7px;
 		}
     }
+}
+
+#secondLevelMouseOver{
+	display: none;
+	position: absolute;
+	/*border: 1px solid red;*/
+	background-color: #00a1e4;
+	z-index: 500;
+	
+	cursor: pointer;
+	span{
+		display: block;
+		width: 100%;
+		padding: 0px 15px;
+		height: 30px;
+		line-height: 30px;
+		font-family: @primaryFont;
+		font-size: 0.8em;
+		color: #FFFFFF;
+	}
 }
 
 #content{

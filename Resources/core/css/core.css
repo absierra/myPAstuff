@@ -462,14 +462,17 @@ header span.logo_text {
   font-family: "ProximaNova";
   color: #333;
   background: none;
+  /*
+				&:hover {
+					width: @leftColumnWidth / 2;
+					padding-right: 0px;
+					z-index: 200;
+				}
+				*/
+
 }
 #left_column > ul ul ul li span:after {
   content: '';
-}
-#left_column > ul ul ul li span:hover {
-  width: 230px;
-  padding-right: 0px;
-  z-index: 200;
 }
 #left_column > ul span {
   padding-left: 10px;
@@ -497,6 +500,25 @@ header span.logo_text {
   display: block;
   height: 30px;
   width: 7px;
+}
+#secondLevelMouseOver {
+  display: none;
+  position: absolute;
+  /*border: 1px solid red;*/
+
+  background-color: #00a1e4;
+  z-index: 500;
+  cursor: pointer;
+}
+#secondLevelMouseOver span {
+  display: block;
+  width: 100%;
+  padding: 0px 15px;
+  height: 30px;
+  line-height: 30px;
+  font-family: "ProximaNova";
+  font-size: 0.8em;
+  color: #FFFFFF;
 }
 #content {
   clear: both;
