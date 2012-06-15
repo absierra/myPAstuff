@@ -400,13 +400,6 @@ function panelData(){
 							'left': mouseoverDIVpos.x
 						});
 						
-<<<<<<< Updated upstream
-
-=======
-						//console.log('DIVelement.getSize().x: ' + DIVelement.getSize().x);
-						//console.log('this.getParent().getSize().x - 45 + 23: ' + (this.getParent().getSize().x - 45 + 23));
-						
->>>>>>> Stashed changes
 						// this next if-else condition makes the width of the DIV element no less than the width of the LI/span that it's sitting on top of
 						if (DIVelement.getSize().x < (this.getParent().getSize().x - 45 + 23))
 						{
@@ -419,13 +412,9 @@ function panelData(){
 						
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
-<<<<<<< Updated upstream
-
-=======
 						
 						//console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
 						//console.log('');
->>>>>>> Stashed changes
 						
 						// add the click event that the span it's on top of had, and make it look like panelSpan had called it
 						newSpan.addEvent('click', function(event){
