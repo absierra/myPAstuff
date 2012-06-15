@@ -103,10 +103,12 @@ section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -179,7 +181,8 @@ html {
 .clear {
   clear: both;
 }
-body, html {
+body,
+html {
   height: 100%;
 }
 body {
@@ -540,7 +543,9 @@ header span.logo_text {
   top: 0px;
   padding: 0 20px 20px 20px;
 }
-#content h1, #content h2, #content h3 {
+#content h1,
+#content h2,
+#content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -656,8 +661,8 @@ header span.logo_text {
   width: 90%;
   position: absolute;
   top: 35px;
-  left: 45px;
-  right: 45px;
+  left: 40px;
+  right: 40px;
 }
 #graph_container .container {
   display: inline-block;
@@ -669,7 +674,6 @@ header span.logo_text {
   margin-top: 15px;
   font-size: 18px;
   color: #00abe3;
-  text-transform: capitalize;
 }
 #graph_container h2#graph_breakdown {
   position: absolute;
@@ -700,7 +704,8 @@ header span.logo_text {
   cursor: pointer;
 }
 /* Graph Type Icons */
-.active.percentage.icon, .percentage.icon:hover {
+.active.percentage.icon,
+.percentage.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -728,7 +733,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.stacked.icon, .stacked.icon:hover {
+.active.stacked.icon,
+.stacked.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -756,7 +762,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.line.icon, .line.icon:hover {
+.active.line.icon,
+.line.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -784,7 +791,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.pie.icon, .pie.icon:hover {
+.active.pie.icon,
+.pie.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -874,27 +882,37 @@ header span.logo_text {
   display: block;
   cursor: pointer;
 }
+#employee_table_container {
+  margin: 15px auto 0;
+  width: 710px;
+}
 .scrollable-container {
-  max-height: 300px;
-  max-width: 800px;
+  height: 405px;
+  width: 710px;
 }
 .employee_table thead th {
-  font-size: 15px;
+  background-color: #d1d2d4;
+  color: #6D6E71;
+  border-right: 1px solid #fff;
+  height: 2em;
+  line-height: 2em;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0;
+  vertical-align: middle;
 }
-.employee_table {
-  max-width: 800px;
-  margin-top: 30px;
-}
-.employee_table thead th:last-child, .employee_table tfoot td:last-child {
+.employee_table thead th:last-child,
+.employee_table tfoot td:last-child {
   border-right: none;
 }
-.employee_table td, .employee_table th {
-  padding-left: 4px;
+.employee_table td {
+  padding: 5px 25px;
+}
+.employee_table td:last-child {
+  padding-right: 0;
 }
 .employee_table tbody td {
-  font-size: 16px;
-  min-width: 50px;
-  padding-right: 15px;
+  font-size: 0.8em;
 }
 .employee_table tbody tr:nth-child(odd) {
   background-color: #E8E8E8;

@@ -59,7 +59,7 @@ var ScrollableTable = new Class({
 				for (var x = 0; x<tds.length; x++) {
 					if (x >= widths.length)
 						widths[x] = 0;
-					tds[x].setStyle('width', '50px');
+					tds[x].setStyle('width', '');
 					var w = tds[x].getWidth();
 					if (widths[x] < w)
 						widths[x] = w;

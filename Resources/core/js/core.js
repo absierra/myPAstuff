@@ -12,8 +12,6 @@ var refreshGUI = function(includeData){
         cascade = 200;
         (function(){
             Object.each(window.graphs, function(graph, graphType){
-            	console.log(window.selected);
-				console.log(window.lastSelectedColumn);
                 if(graph != window.currentGraph) graph.fetch.delay(cascade, graph, [window.selected, window.lastSelectedColumn, function(){ }]);
                 //cascade += 800;
             });
@@ -153,7 +151,8 @@ var loadDefaultGraph = function(type){
         sublist.morph({height:0});
         sublist.removeClass('expanded');
     }
-    document.id('graph_title').set('text', type);
+    graphTitle = type.capitalize();
+    document.id('graph_title').set('text', graphTitle);
     BudgetGraph.deselect(); // end: reset
     if(window.graphs[type]) window.graphs[type].fetch({}, type, function(d){
         BudgetGraph.select(type);
@@ -220,7 +219,7 @@ function panelData(){
             
 			var panelSpanClickFunction = function(event) {
 				tableFormat(false, false);
-                var titleText = this.get('text');
+                
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
                 if (this.hasClass('disabled')) { 
                     document.getElements('.selected').removeClass('selected');
@@ -271,7 +270,7 @@ function panelData(){
                         
                         
                         selectionRequest.get(window.selected);
-                        console.log(lastIndex);
+                        //console.log(lastIndex);
                         //refreshGUI(true);
                         if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch(window.selected, lastIndex, function(d){
                             //BudgetGraph.select(lastIndex);
@@ -297,7 +296,19 @@ function panelData(){
                     sublistHeight = sublist.getScrollSize();
                     sublist.morph({height:sublistHeight.y});
                     selectionRequest.get(window.selected);
+                    
+                    var titleText; // Graph Title
+                    if (window.selected.fund && window.selected.department) {
+                        titleText = window.selected.department+' within '+window.selected.fund;
+                    } else if (window.selected.fund) {
+                        titleText = window.selected.fund;
+                    } else if (window.selected.department) {
+                        titleText = window.selected.department;
+                    } else {
+                        titleText = this.get('text').capitalize();
+                    }
                     document.id('graph_title').set('text', titleText);
+
                     if(window.graphs[index]) window.graphs[index].fetch(window.selected, index, function(d){
                         BudgetGraph.select(index);
                         //refreshGUI(true);
