@@ -243,10 +243,18 @@ function panelData(){
 
                         window.selected = {};
                         window.panelSelection={};
-                                        
-                        selectedIndex = selectedItems.getParent().getParent().get('id');
-                        prevSelectedItem = selectedItems.get('text');
-                        document.id('graph_title').set('text', prevSelectedItem);
+                                                
+                        selectedIndex = selectedItems.getParent().getParent().get('id')[0] != null ? selectedItems.getParent().getParent().get('id') : selectedItems.getParent().getParent().getParent().getParent().get('id');
+                        
+                        if(selectedItems[0].get('class').indexOf('colorkey')==-1){
+                        	prevSelectedItem = selectedItems.get('text')[0];
+                        }else{
+                        	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+selectedItems.get('text');
+                        }
+						
+						console.log(prevSelectedItem);
+						                        
+                        document.id('graph_title').set('text', prevSelectedItem.indexOf(':')==-1?prevSelectedItem:prevSelectedItem.split(":")[1]);
 
                         document.getElements('.colorkey').removeClass('colorkey');
                         document.getElements('.expanded').removeClass('expanded');
@@ -254,9 +262,10 @@ function panelData(){
                        
                         selectedItems.addClass('selected');
                         selectedItems.addClass('colorkey');
-                        
+
                         lastIndex = selectedIndex[0];
-                        window.selected[lastIndex] = prevSelectedItem[0];
+
+                        window.selected[lastIndex] = prevSelectedItem;
                         window.lastSelectedColumn = selectedIndex[0];
                         window.lastSelectedItem = prevSelectedItem[0];
                         
@@ -272,9 +281,10 @@ function panelData(){
                         selectionRequest.get(window.selected);
                         //console.log(lastIndex);
                         //refreshGUI(true);
+
                         if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch(window.selected, lastIndex, function(d){
-                            //BudgetGraph.select(lastIndex);
-                            //refreshGUI();
+                            BudgetGraph.select(lastIndex);
+                            refreshGUI();
                         });
                     } else {
                         loadDefaultGraph(panelId.get('id'));
@@ -298,12 +308,15 @@ function panelData(){
                     selectionRequest.get(window.selected);
                     
                     var titleText; // Graph Title
+                    if(window.selected.department) var windowDepartment = window.selected.department.indexOf(':')==-1?window.selected.department:window.selected.department.split(":")[1];
+                    if(window.selected.fund) var windowFund = window.selected.fund.indexOf(':')==-1?window.selected.fund:window.selected.fund.split(':')[1];
+                    
                     if (window.selected.fund && window.selected.department) {
-                        titleText = window.selected.department+' within '+window.selected.fund;
+                        titleText = windowDepartment+' within '+windowFund;
                     } else if (window.selected.fund) {
-                        titleText = window.selected.fund;
+                        titleText = windowFund;
                     } else if (window.selected.department) {
-                        titleText = window.selected.department;
+                        titleText = windowDepartment;
                     } else {
                         titleText = this.get('text').capitalize();
                     }
@@ -376,9 +389,7 @@ function panelData(){
 							'left': mouseoverDIVpos.x
 						});
 						
-						console.log('DIVelement.getSize().x: ' + DIVelement.getSize().x);
-						console.log('this.getParent().getSize().x - 45 + 23: ' + (this.getParent().getSize().x - 45 + 23));
-						
+
 						// this next if-else condition makes the width of the DIV element no less than the width of the LI/span that it's sitting on top of
 						if (DIVelement.getSize().x < (this.getParent().getSize().x - 45 + 23))
 						{
@@ -391,9 +402,7 @@ function panelData(){
 						
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
-						
-						console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
-						console.log('');
+
 						
 						// add the click event that the span it's on top of had, and make it look like panelSpan had called it
 						newSpan.addEvent('click', function(event){
@@ -696,7 +705,7 @@ document.addEvent('domready', function() {
 	window.incrementalResize(45, function(){
 		rightPanelSizing();
 		Object.each(window.graphs, function(graph){
-					graph.display();
+				graph.display();
 		});
 	});
 });
