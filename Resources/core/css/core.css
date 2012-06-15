@@ -829,7 +829,9 @@ header span.logo_text {
   padding: 0 3px;
   color: #373739;
   overflow: auto;
-  height: 118px;
+  /*height: 118px; changed by Arthur 2012-06-15 to get the legend away from the axis label*/
+
+  height: 100px;
 }
 #legend li {
   display: inline-block;
@@ -850,10 +852,10 @@ header span.logo_text {
 #legend li span:before {
   position: absolute;
   left: 0px;
-  top: 6px;
+  top: 5px;
   content: '';
   display: block;
-  height: 11px;
+  height: 10px;
   width: 10px;
   color: blue;
 }
