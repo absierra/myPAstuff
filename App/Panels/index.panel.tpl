@@ -52,22 +52,24 @@
 				<div id="exp_vs_fee_rev_graph" class="graph"></div>
 				<div id="employee_department_graph" class="graph"></div>
 				<div id="employee_type_graph" class="graph">
-					<table id="employee_type_table" class="employee_table">
-						<thead>
-							<tr>
-							<th>Job Title</th>
-							<th>2009 FTEs</th>
-							<th>2010 FTEs</th>
-							<th>2011 FTEs</th>
-							<th>2012 FTEs</th>
-							<th>2013 FTEs</th>
-							<th>2013 Salary</th>
-							</tr>
-						</thead>
-						<tbody>
-        					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    					</tbody>
-					</table>
+                    <div id="employee_table_container">
+        				<table id="employee_type_table" class="employee_table">
+        					<thead>
+        						<tr>
+        						<th>Job Title</th>
+        						<th>2009 FTEs</th>
+        						<th>2010 FTEs</th>
+        						<th>2011 FTEs</th>
+        						<th>2012 FTEs</th>
+        						<th>2013 FTEs</th>
+        						<th>2013 Salary</th>
+        						</tr>
+        					</thead>
+        					<tbody>
+            					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        					</tbody>
+        				</table>
+                    </div>
 				</div>
             </div>
             <div id="years_container">
