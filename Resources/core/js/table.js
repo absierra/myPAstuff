@@ -65,13 +65,10 @@ var BudgetTable = new Class({
        
     },
     display : function(metric){
-		
-    	var table = new ScrollableTable('employee_type_table');
-		var tbody = $(table).getElement('tbody');
+        if (!this.table) this.table = document.id('employee_type_table');
+		var tbody = document.id(this.table).getElement('tbody');
 		var tr = tbody.getFirst();
-		
 		tbody.empty();
-		
 			if(this.data.length != 0){					
 			Object.each(this.data, function(data, name){
 				var cl = tr.clone();
@@ -86,21 +83,5 @@ var BudgetTable = new Class({
 				cl.inject(tbody);
 			}.bind(this));
 		}
-		table.update();
 	}
-})
-BudgetGraph.LastSelectionYearsData = {};
-BudgetGraph.lastSelection = {};
-BudgetGraph.graphs = {};
-
-BudgetGraph.select = function(name){
-    if(BudgetGraph.graphs[name]){
-        window.currentGraph = BudgetGraph.graphs[name];
-        BudgetGraph.graphs[name].select();
-        if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
-    }
-};
-BudgetGraph.deselect = function(){
-    delete window.currentGraph;
-    BudgetGraph.clearLegend();
-};
+});
