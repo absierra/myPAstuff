@@ -230,19 +230,18 @@ function panelData(){
                     document.getElements('.selected').removeClass('selected');
                     window.selected = {};
                     window.panelSelection = {};
+                    document.getElements('span:not(.selected)').each(function(disabledItem){
+                        disabledItem.getElements('.expanded').removeClass('expanded');
+                        disabledItem.getSiblings('ul.sublist').morph({height:0});
+                    });
                 }      
-
-                document.getElements('.expanded').removeClass('expanded');
-                document.getElements('li ul.sublist').morph({height:0});
            
                 if (this.hasClass('selected')) {
                     this.removeClass('selected');
-                    this.getElements('a.expanded').removeClass('expanded');
-                    
-                    sublist = this.getSiblings('ul.sublist');
-                    sublistHeight = sublist.getScrollSize();
-                    sublist.morph({height:sublistHeight.y});
-                    
+                    panelId.getElements('a.expanded').removeClass('expanded');
+                    if (this.getSiblings('ul.sublist')) this.getSiblings('ul.sublist').morph({height:0});
+                    if (this.getParent('li ul.sublist')) this.getParent('li ul.sublist').morph({height:0});
+
                     var selectedItems = document.getElements('ul li span.selected');
                     if (selectedItems.length > 0) {
 
@@ -257,13 +256,9 @@ function panelData(){
                         }else{
                         	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+(selectedItems[0].get('text') || selectedItems[0].innerHTML);
                         }
-						
-						//console.log(prevSelectedItem);
 						                        
                         document.id('graph_title').set('text', prevSelectedItem.indexOf(':')==-1?prevSelectedItem:prevSelectedItem.split(":")[1]);
-
                         document.getElements('.colorkey').removeClass('colorkey');
-                        document.getElements('.expanded').removeClass('expanded');
                         document.getElements('.selected').removeClass('selected');
                        
                         selectedItems.addClass('selected');
@@ -279,14 +274,9 @@ function panelData(){
                         sublistHeight = sublist.getScrollSize();
                         sublist.morph({height:sublistHeight.y});
 
-                        //return; // being used to prevent the page from locking up after deselection/reselection of an item.
-
                         if (!sublistCheck) window.panelSelection[lastIndex] = 1; else window.panelSelection[lastIndex] = 2;
-                        
-                        
+
                         selectionRequest.get(window.selected);
-                        //console.log(lastIndex);
-                        //refreshGUI(true);
 
                         if(window.graphs[lastIndex]) window.graphs[lastIndex].fetch(window.selected, lastIndex, function(d){
                             BudgetGraph.select(lastIndex);
