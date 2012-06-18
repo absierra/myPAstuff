@@ -233,7 +233,7 @@
                 C;
                 
             yearsum = [];
-
+            
             for (var i = 0, ii = valuesy.length; i < ii; i++) {
                 for (var j = 0, jj = valuesy[i].length; j < jj; j++) {
                 
@@ -262,6 +262,8 @@
                     f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, 7.4).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
                     C.x = X;
                     C.y = Y;
+                    C.year = valuesx[i][j];
+                    C.name = opts.names[i];
                     C.value = valuesy[i][j];
                     C.line = chart.lines[i];
                     C.shade = chart.shades[i];

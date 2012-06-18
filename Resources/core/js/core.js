@@ -151,13 +151,18 @@ var loadDefaultGraph = function(type){
         sublist.morph({height:0});
         sublist.removeClass('expanded');
     }
-    graphTitle = type.capitalize();
+    graphTitle = 'Citywide';
     document.id('graph_title').set('text', graphTitle);
     BudgetGraph.deselect(); // end: reset
     if(window.graphs[type]) window.graphs[type].fetch({}, type, function(d){
         BudgetGraph.select(type);
-        refreshGUI();
+        refreshGUI(true);
     });
+}
+
+var isSuper = function(name){
+	var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
+	return (supers.indexOf(name) != -1);
 }
 
 var initialized = false;
@@ -245,14 +250,14 @@ function panelData(){
                         window.panelSelection={};
                                                 
                         selectedIndex = selectedItems.getParent().getParent().get('id')[0] != null ? selectedItems.getParent().getParent().get('id') : selectedItems.getParent().getParent().getParent().getParent().get('id');
-                        
-                        if(selectedItems[0].get('class').indexOf('colorkey')==-1){
-                        	prevSelectedItem = selectedItems.get('text')[0];
+                                                
+                        if(isSuper(selectedItems[0].innerHTML)){
+                        	prevSelectedItem = selectedItems[0].innerHTML;
                         }else{
-                        	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+selectedItems.get('text');
+                        	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+selectedItems[0].innerHTML;
                         }
 						
-						console.log(prevSelectedItem);
+						//console.log(prevSelectedItem);
 						                        
                         document.id('graph_title').set('text', prevSelectedItem.indexOf(':')==-1?prevSelectedItem:prevSelectedItem.split(":")[1]);
 
@@ -287,7 +292,7 @@ function panelData(){
                             refreshGUI();
                         });
                     } else {
-                        loadDefaultGraph(panelId.get('id'));
+                        loadDefaultGraph();
                     }
                 } else {
                     if (!this.hasClass('disabled')) { 
