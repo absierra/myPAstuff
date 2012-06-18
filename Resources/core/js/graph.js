@@ -419,7 +419,7 @@ var BudgetGraph = new Class({
 				}).hover(function() {
 							var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
 							this.attr("opacity",1);
-							this.marker = this.marker || a.raphael.popup(this.x, this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
+							this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
 							this.marker.show();
 						}, function() {
 							// hide the popup element with an animation and remove the popup element at the end
@@ -450,7 +450,7 @@ function addCommas(nStr)
 	nStr += '';
 	x = nStr.split('.');
 	x1 = x[0];
-	x2 = x.length > 1 ? '.' + x[1] : '';
+	x2 = x.length > 1 ? '.' + (x[1].length == 1 ? x[1] + '0' : x[1]) : '';
 	var rgx = /(\d+)(\d{3})/;
 	while (rgx.test(x1)) {
 		x1 = x1.replace(rgx, '$1' + ',' + '$2');
