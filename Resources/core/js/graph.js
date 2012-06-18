@@ -307,7 +307,6 @@ var BudgetGraph = new Class({
 		}else{
 			var keys;
 			Object.each(this.data, function(data, name){
-
 				var xs = [];
 				var ys = [];
 				if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]);//.sort();
@@ -415,9 +414,10 @@ var BudgetGraph = new Class({
 					axisxstep : 4,
 					colors:this.colors,
 					stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-					percent:(this.options.mode == 'percentage-line')
+					percent:(this.options.mode == 'percentage-line'),
+					names: this.getLegendItems()
 				}).hover(function() {
-							var text = a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees';
+							var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
 							this.attr("opacity",1);
 							this.marker = this.marker || a.raphael.popup(this.x, this.y, text, "up", 5).insertAfter(this);
 							this.marker.show();
