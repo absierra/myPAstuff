@@ -223,6 +223,11 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
+				document.id('stacked_graph').show();
+				document.id('percentage_graph').show();
+				document.id('pie_chart').show();
+				document.id('standard_graph').show();
+				
 				tableFormat(false, false);
                 
                 if (panelId.hasClass('panelSelected')) window.selected = {}, window.panelSelection={};
@@ -611,42 +616,52 @@ document.addEvent('domready', function() {
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('emp_dep').addEvent('click', function(event){
 		tableFormat(false, true);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
+		document.id('stacked_graph').hide();
+		document.id('percentage_graph').hide();
+		document.id('standard_graph').hide();
 		document.id('pie_chart').show();
+		changeCurrentGraphType('pie', this);
+		document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
+        document.id('graph_breakdown').empty();
 	});
 	document.id('fin_fund').addEvent('click', function(event){
 		tableFormat(false, false);
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('fin_dep').addEvent('click', function(event){
 		tableFormat(false, false);
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('fin_exp').addEvent('click', function(event){
 		tableFormat(false, false);
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('fin_rev').addEvent('click', function(event){
 		tableFormat(false, false);
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('fin_feerev').addEvent('click', function(event){
 		tableFormat(false, false);
 		document.id('stacked_graph').show();
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
+		document.id('standard_graph').show();
 	});
 	document.id('fin_expfee').addEvent('click', function(event){
 		tableFormat(false, false);
@@ -654,6 +669,7 @@ document.addEvent('domready', function() {
 		document.id('stacked_graph').hide();
 		document.id('percentage_graph').hide();
 		document.id('pie_chart').hide();
+		document.id('standard_graph').show();
 	});
     document.id('standard_graph').addEvent('click', function(event){
         changeCurrentGraphType('line', this);
@@ -676,7 +692,6 @@ document.addEvent('domready', function() {
     document.id('pie_chart').addEvent('click', function(event){
         changeCurrentGraphType('pie', this);
         document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
-        //yearSlider('show');
         document.id('graph_breakdown').empty();
     });
     document.id('default_department').addEvent('click', function(event){
