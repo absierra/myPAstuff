@@ -250,11 +250,12 @@ function panelData(){
                         window.panelSelection={};
                                                 
                         selectedIndex = selectedItems.getParent().getParent().get('id')[0] != null ? selectedItems.getParent().getParent().get('id') : selectedItems.getParent().getParent().getParent().getParent().get('id');
+                        
                                                 
-                        if(isSuper(selectedItems[0].innerHTML)){
-                        	prevSelectedItem = selectedItems[0].innerHTML;
+                        if(isSuper(selectedItems[0].get('text') || selectedItems[0].innerHTML)){
+                        	prevSelectedItem = (selectedItems[0].get('text') || selectedItems[0].innerHTML);
                         }else{
-                        	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+selectedItems[0].innerHTML;
+                        	prevSelectedItem = selectedItems.getParent().getParent().getParent().getElements('span')[0][0].get('text')+':'+(selectedItems[0].get('text') || selectedItems[0].innerHTML);
                         }
 						
 						//console.log(prevSelectedItem);

@@ -69,7 +69,7 @@ var BudgetTable = new Class({
 		var tbody = document.id(this.table).getElement('tbody');
 		var tr = tbody.getFirst();
 		tbody.empty();
-			if(this.data.length != 0){					
+		if(tr != null){					
 			Object.each(this.data, function(data, name){
 				var cl = tr.clone();
 				cols = cl.getChildren();
