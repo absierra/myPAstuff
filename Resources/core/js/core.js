@@ -365,6 +365,19 @@ function panelData(){
                 panelSpan.addEvent('click', panelSpanClickFunction); // if this is changed, make sure to change it below as well
 				
 				panelSpan.addEvent('mouseenter', function(){
+					// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
+					var DIVelement = document.getElement('#secondLevelMouseOver');
+					
+					// This is necessary to account for certain mouse-moving-too-fast bugs. we want to clear the DIV at the outset so as to avoid the "mouseleave" function never getting called. this lets us for sure start with a clean slate.
+					DIVelement.set('html', '');
+					DIVelement.setStyles({
+						'display': 'none',
+						'width': 'auto',
+						'padding': '0px',
+						'margin': '0px',
+						'background-color': 'transparent'
+					});
+				
 					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
 					if (panelUl.getParent('li span a').hasClass('expanded'))
 					{
@@ -373,23 +386,20 @@ function panelData(){
 						// get the position of the existing LI element
 						mouseoverDIVpos = this.getParent().getPosition();
 						
-						// grab the DIV that's supposed to hold the cloned span
-						var DIVelement = document.getElement('#secondLevelMouseOver');
-						
 						//create a copy of the current span into the div element we created for this
 						var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
 						
-						// shove the style of the previous span into the new span
+						// shove the style of the previous span into the new span (this is to mimic the selected/deselected state)
 						newSpan.setStyles(this.getStyles('background-color', 'color'));
 
 						// make the DIV element visible and set its position on top of the current LI
 						DIVelement.setStyles({
 							'display': 'block',
+							'cursor': 'pointer',
 							'top': mouseoverDIVpos.y,
 							'left': mouseoverDIVpos.x
 						});
 						
-
 						// this next if-else condition makes the width of the DIV element no less than the width of the LI/span that it's sitting on top of
 						if (DIVelement.getSize().x < (this.getParent().getSize().x - 45 + 23))
 						{
@@ -402,7 +412,9 @@ function panelData(){
 						
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
-
+						
+						//console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
+						//console.log('');
 						
 						// add the click event that the span it's on top of had, and make it look like panelSpan had called it
 						newSpan.addEvent('click', function(event){
@@ -421,7 +433,10 @@ function panelData(){
 							this.set('html', '');
 							this.setStyles({
 								'display': 'none',
-								'width': 'auto'
+								'width': 'auto',
+								'padding': '0px',
+								'margin': '0px',
+								'background-color': 'transparent'							
 							});
 						});
 						//newSpan.cloneEvents(this);
@@ -698,14 +713,33 @@ document.addEvent('domready', function() {
          }
     });
 	
+	// this is kind of a dirty hack, but it's to clear the DIV element that we're using for mouseover expansion of ellipsis-shortened legend items. because the underlying LI is sometimes bigger than the DIV element, its mouseenter event is triggered, and there's no elegant way to clear it. so we're going to create an event on the legend canvas itself to clear it.
+	
+	//*
+	var legendCanvas = document.getElement('#legend');
+	legendCanvas.addEvent('mouseover', function(){
+		
+		var DIVelement = document.getElement('#secondLevelMouseOver');
+		
+		DIVelement.set('html', '');
+		DIVelement.setStyles({
+			'display': 'none',
+			'width': 'auto'
+		});
+
+	});
+	//*/
+	
+	// this resizes the graph based on the window size
 	rightPanelSizing();
 	
-	var chainContainer = new Class({ Implements: Chain });
-	
+	// this dynamically resizes the graph when the window resizes
 	window.incrementalResize(45, function(){
 		rightPanelSizing();
 		Object.each(window.graphs, function(graph){
 				graph.display();
 		});
 	});
+	
+	
 });

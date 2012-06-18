@@ -186,6 +186,9 @@ var BudgetGraph = new Class({
         if(items && items.length > 0){
         	//items.sort();
             items.each(function(item, lcv) {
+				// this next line added by Arthur so that it could be used in the legendItem.addevent('mouseenter' function below (2012-06-15)
+				var legendDotColor = this.colors[lcv];
+				
                 var legendItem = new Element('span', {
                     html : item
                 });
@@ -195,6 +198,74 @@ var BudgetGraph = new Class({
                 var legendLi = new Element('li');
                 legendElement.appendChild(legendLi);
                 legendLi.appendChild(legendItem);
+				
+				// this is how we're going to show the text hidden by the ellipses (see a similar function in core.js for items in the columns that are too long)
+				legendItem.addEvent('mouseenter', function(e){
+					mouseoverDIVpos = this.getParent().getPosition();
+					
+					var DIVelement = document.getElement('#secondLevelMouseOver');
+					
+					// like in the columns, we need to start with a clean slate in case mouse movements happen too fast
+					DIVelement.set('html', '');
+					DIVelement.setStyles({
+						'display': 'none',
+						'width': 'auto'
+					});
+					
+					var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
+					var legendDot = new Element('div', {
+						styles: {
+							'position': 'absolute',
+							'left': '10px',
+							'top': '7px',
+							'content': '',
+							'display': 'block',
+							'height': '10px',
+							'width': '10px',
+							'z-index': '500',
+							'background-color': legendDotColor
+						}
+					});
+
+					legendDot.inject(DIVelement, 'bottom');
+					
+					newSpan.setStyles(this.getStyles('color', 'margin', 'padding', 'font-size', 'display', 'position')); // might need to copy over a few more styles here
+					newSpan.setStyles({
+						'background-color': '#E6E7E8',
+						'height': 'auto',
+						'line-height': '0.9em',
+						'width': 'auto',
+						'margin': '0px',
+						'padding': '0px 10px 0px 0px',
+						'cursor': 'default',
+					});
+
+					DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
+					DIVelement.setStyles({
+						'background-color': '#E6E7E8',
+						'height': 'auto',
+						'width': 'auto',
+						'margin': '0px',
+						'padding': '5px 0px 5px 24px',
+						'cursor': 'default'
+					});					
+
+					DIVelement.setStyles({
+						'display': 'block',
+						'top': (mouseoverDIVpos.y - 2),
+						'left': (mouseoverDIVpos.x - 10)
+					});
+
+					DIVelement.addEvent('mouseleave', function(){
+						this.set('html', '');
+						this.setStyles({
+							'display': 'none',
+							'width': 'auto'
+						});
+					});
+					
+					e.stop();
+				});
             }.bind(this));
             legendElement.reveal();
         }else{
