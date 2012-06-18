@@ -67,11 +67,14 @@ var BudgetTable = new Class({
     display : function(metric){
         if (!this.table) this.table = document.id('employee_type_table');
 		var tbody = document.id(this.table).getElement('tbody');
-		var tr = tbody.getFirst();
+
+		if(!this.tr) this.tr = tbody.getFirst();
+
 		tbody.empty();
-		if(tr != null){					
+		
+		if(this.tr != null){					
 			Object.each(this.data, function(data, name){
-				var cl = tr.clone();
+				var cl = this.tr.clone();
 				cols = cl.getChildren();
 				cols[0].set('html', name);
 				cols[1].set('html', this.data[name]['2009']['fte']);
