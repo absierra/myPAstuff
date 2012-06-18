@@ -382,8 +382,21 @@ var BudgetGraph = new Class({
 					this.marker.hide();
 					//this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
 				});
-			}else{
-				a.raphael.popup(xGraph - graphSize.x / 2, yGraph - graphSize.y / 2, 'This Selection Has No Data', "up", 20);
+			}else{ //zero data
+    			var graphSize = document.id('graphs').getScrollSize();
+    			var xGraph = graphSize.x - 240;
+    			var yGraph = graphSize.y - 41;
+                a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                    stroke: "#ccc",
+                    fill: "#fff",
+                    height: 75,
+                    width: 200
+                });
+                a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                    fill: "#818285",
+                    'font-size': 13,
+                    'font-weight': 'bold'
+                });
 				BudgetGraph.clearLegend();
 			}
 		}else{
@@ -414,8 +427,18 @@ var BudgetGraph = new Class({
 							this.marker && this.marker.hide();}
 				);
 			}
-			else{
-				a.raphael.popup(xGraph - graphSize.x / 2, yGraph - graphSize.y / 2, 'This Selection Has No Data');
+			else{ //zero data
+                a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                    stroke: "#ccc",
+                    fill: "#fff",
+                    height: 75,
+                    width: 200
+                });
+                a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                    fill: "#818285",
+                    'font-size': 13,
+                    'font-weight': 'bold'
+                });
 				BudgetGraph.clearLegend();
 			}
 		}

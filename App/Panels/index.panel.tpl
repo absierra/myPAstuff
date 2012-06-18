@@ -1,5 +1,5 @@
 {page wrapper="application" title="Delphi Solutions" meta_description="Delphi Solutions provides solutions to analyzing and visualizing big distributed data"}
-{require name="mootools,core,header,graphael,tabs,scrollabletable"}
+{require name="mootools,core,header,graphael,tabs"}
 {panel name="header"}
 <div id="content_wrapper">
     <div id="left_column">
@@ -52,8 +52,8 @@
 				<div id="exp_vs_fee_rev_graph" class="graph"></div>
 				<div id="employee_department_graph" class="graph"></div>
 				<div id="employee_type_graph" class="graph">
-                    <div id="employee_table_container">
-        				<table id="employee_type_table" class="employee_table">
+                    <div id="employee_type_container">
+        				<table id="employee_type_table_titles">
         					<thead>
         						<tr>
         						<th>Job Title</th>
@@ -65,10 +65,14 @@
         						<th>2013 Salary</th>
         						</tr>
         					</thead>
-        					<tbody>
-            					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        					</tbody>
-        				</table>
+                        </table>
+                        <div id="employee_type_table_container">
+                            <table id="employee_type_table">
+            					<tbody>
+                					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            					</tbody>
+            				</table>
+                        </div>
                     </div>
 				</div>
             </div>
