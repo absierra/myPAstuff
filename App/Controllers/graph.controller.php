@@ -146,7 +146,7 @@
                 }
                 else if($focus == 'title'){
                     $data[$item->get('title')][$item->get('year')]['fte'] += (float)$item->get('fte');
-                    $data[$item->get('title')][$item->get('year')]['salary'] = (float)$item->get('salary');
+                    $data[$item->get('title')][$item->get('year')]['salary'] += (float)$item->get('salary');
                 }
             }
 			/*if(count($data) == 0){
