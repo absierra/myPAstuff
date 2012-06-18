@@ -223,7 +223,8 @@ header{
             background: url('/Resources/core/img/info_act.png') no-repeat 4px 0;
             cursor: help;
             &:hover{
-                background-position: 4px -17px;
+                /*background-position: 4px -17px;*/
+				background: url('/Resources/core/img/info_white.png') no-repeat 4px 0;
             }
         }
     }
@@ -586,8 +587,10 @@ header{
     overflow: auto;
     /*height: 118px; changed by Arthur 2012-06-15 to get the legend away from the axis label*/
 	height: 100px;
+	/*text-align: center;*/
 	
     li {
+		text-align: left;
         display: inline-block;
         margin: 0 5px;
         line-height: 24px;

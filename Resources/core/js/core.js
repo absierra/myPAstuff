@@ -531,8 +531,8 @@ var changeCurrentGraphType = function(type, el){
 var rightPanelSizing = function(){
 	var leftColumnWidth = 600;
 	var verticalElementsHeight = 210;
-	var graph_container_min_width = 775;
-	var graph_container_min_height = 500;
+	var graph_container_min_width = 680; //775
+	var graph_container_min_height = 475; //500
 	var graph_container_width = 0;
 	var graph_container_height = 0;
 	var graph_container_ratio = graph_container_min_width / graph_container_min_height;
@@ -718,10 +718,20 @@ document.addEvent('domready', function() {
             }
          }
     });
+
+	// this snippet makes the description_tooltip (on the "Fund" and "Department" columns) white when you mouseover anywhere in the header
+	document.getElements("#left_column ul h3").each(function(headerElement){
+		headerElement.addEvent('mouseover', function(){
+			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_white.png\') no-repeat 4px 0');
+		});
+		
+		headerElement.addEvent('mouseleave', function(){
+			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_act.png\') no-repeat 4px 0');
+		});
+	});
+
 	
 	// this is kind of a dirty hack, but it's to clear the DIV element that we're using for mouseover expansion of ellipsis-shortened legend items. because the underlying LI is sometimes bigger than the DIV element, its mouseenter event is triggered, and there's no elegant way to clear it. so we're going to create an event on the legend canvas itself to clear it.
-	
-	//*
 	var legendCanvas = document.getElement('#legend');
 	legendCanvas.addEvent('mouseover', function(){
 		
@@ -734,7 +744,8 @@ document.addEvent('domready', function() {
 		});
 
 	});
-	//*/
+
+	
 	
 	// this resizes the graph based on the window size
 	rightPanelSizing();
