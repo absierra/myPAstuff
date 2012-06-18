@@ -82,7 +82,7 @@ var BudgetTable = new Class({
 				cols[3].set('html', this.data[name]['2011']['fte']);
 				cols[4].set('html', this.data[name]['2012']['fte']);
 				cols[5].set('html', this.data[name]['2013']['fte']);
-				cols[6].set('html', this.data[name]['2013']['salary']);
+				cols[6].set('html', '$' + addCommas(this.data[name]['2013']['salary']));
 				cl.inject(tbody);
 			}.bind(this));
 		}
