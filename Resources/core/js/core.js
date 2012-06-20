@@ -104,6 +104,7 @@ var initGraphs = function(){
             
         }
     });
+    //PALO ALTO SPECIFIC
 	window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
 		dataset : 'employee',
         type : 'departments',
@@ -131,6 +132,7 @@ var initGraphs = function(){
             
         }
     });
+    //END PALO ALTO
 };
 
 var loadDefaultGraph = function(type){
@@ -160,10 +162,12 @@ var loadDefaultGraph = function(type){
     });
 }
 
+//PALO ALTO
 var isSuper = function(name){
 	var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
 	return (supers.indexOf(name) != -1);
 }
+//END PALO ALTO
 
 var initialized = false;
 function panelData(){
@@ -624,7 +628,7 @@ document.addEvent('domready', function() {
 		document.id('percentage_graph').hide();
 		document.id('standard_graph').hide();
 		document.id('pie_chart').show();
-		changeCurrentGraphType('pie', this);
+		changeCurrentGraphType('pie', document.id('pie_chart'));
 		document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
         document.id('graph_breakdown').empty();
 	});
@@ -665,7 +669,7 @@ document.addEvent('domready', function() {
 	});
 	document.id('fin_expfee').addEvent('click', function(event){
 		tableFormat(false, false);
-		changeCurrentGraphType('line', this);
+		changeCurrentGraphType('line', document.id('standard_graph'));
 		document.id('stacked_graph').hide();
 		document.id('percentage_graph').hide();
 		document.id('pie_chart').hide();
