@@ -429,12 +429,12 @@ header{
 
 .graph_tabs {
     display: block;
+    width: 680px;
     margin: 12px auto 80px;
-    width: 730px;
     fieldset{
         display: none;
         float:left;
-        margin: 0 15px 0 0;
+        margin: 0 3px 0 0;
     }
     legend{
         font-family: @primaryFontBold;
@@ -643,6 +643,7 @@ header{
     }
 }
 
+
 #graph_container #graphs #employee_type_graph{
     left: 0;
     width: 100%;
@@ -653,36 +654,46 @@ header{
             width: 100%;
         }
         #employee_type_table_titles thead tr th{
-            background-color: #d1d2d4;
-            color: #6D6E71;
-            border: 1px solid #fff;
-            border-width: 0 1px 1px 0;
+            background-color: #19b3e2;
+            color: #fff;
             height: 1.5em;
             line-height: 1em;
-            font-size: 0.9em;
+            font-size: 0.8em;
             font-weight: bold;
             vertical-align: middle;
             padding: 5px 10px 5px;
-            width: 10%;
-            &:last-child{border-right: 0;}
-            &:first-child{width:40%;}
+            width: 9%;
+            border: 0 ;
+            border-left: 2px dotted #fff;
+            border-bottom-style: solid;
+            border-top: 1px solid #fff;
+            border-top: 1px solid #fff;
+            &:first-child{width:40%;border-left-width: 0;}
+            &:last-child{border-right: 0;width: 12%}
         }
         #employee_type_table_container{
             height: 397px;
             width:100%;
             overflow:auto;
             #employee_type_table tbody tr td{
-                padding: 5px 5px 5px 15px;
+                padding: 5px 10px;
                 font-size: 0.8em;
-                width: 10%;
-				text-align: center;
-                &:first-child{text-align: left; width:40%;}
-				&:last-child{text-align: right;}
+                width: 9%;
+				text-align: center; 
+                border: 0 dotted #dfdfe0;
+                border-width: 0 0 0 2px;
+                border-top: 2px solid #fff;
+                &:first-child{text-align: left; width:40%;border-left-width: 0;}
+                &:last-child{width:12%;}
             }
-            #employee_type_table tbody tr:nth-child(odd){ background-color: #E8E8E8; }
+            #employee_type_table tbody tr {
+                background-color: #dcf2fd;
+                &:nth-child(odd){ background-color: #ecf8fe; }
+            }
         }
     }
 }
+
 
 /* Scroll Bars */
 ::-webkit-scrollbar{
