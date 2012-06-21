@@ -393,12 +393,12 @@ var BudgetGraph = new Class({
                                        axisxstep : 4,
                                        colors:this.colors,
                                        stacked:this.options.stacked,
-                                       percent:this.options.percent
+                                       percent:this.options.percent,
+                                       names: this.displayOrder
                                }).hover(function () {
                                        //this.sector.stop();
                                        //this.sector.scale(1.1, 1.1, this.cx, this.cy);
-                                       var text = a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees';
-                                       if (!this.marker) {
+												var text = (a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees');                                       if (!this.marker) {
                                                this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);
                                        }
                                        this.marker.show();
@@ -440,7 +440,7 @@ var BudgetGraph = new Class({
                                        colors:this.colors,
                                        stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                                        percent:(this.options.mode == 'percentage-line'),
-                                       names: this.legendItems//getLegendItems()
+                                       names: this.displayOrder//getLegendItems()
                                }).hover(function() {
                                                        var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
                                                        this.attr("opacity",1);
