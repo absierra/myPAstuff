@@ -621,6 +621,15 @@ document.addEvent('domready', function() {
 		document.id('percentage_graph').show();
 		document.id('pie_chart').show();
 		document.id('standard_graph').show();
+
+        var tableSize = document.id('employee_type_table_container').getSize().y; // 397px
+        var tableFullSize = document.id('employee_type_table').getScrollSize().y; // 398px+
+        if (tableSize >= tableFullSize) {
+            var employee_type_table = document.id('employee_type_table').getElements('tbody tr');
+            employee_type_table.each(function(tablerow){
+                tablerow.getLast('td').setStyle('width','12%');
+            });
+        }
 	});
 	document.id('emp_dep').addEvent('click', function(event){
 		tableFormat(false, true);
