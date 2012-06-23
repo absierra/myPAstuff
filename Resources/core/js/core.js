@@ -361,6 +361,14 @@ function panelData(){
                 panelSpan.appendChild(panelArrow);
                 panelLi.appendChild(panelSpan);
                 panelId.appendChild(panelLi);
+				
+				// to account for some weird mouse-moving-too-fast action, which doesn't ever register the mouse as being in the DIV element (so it can never leave, and thus clear the DIV element by triggering the mouseleve event), we'll just clear the DIV if the mouse hits any adjacent elements, which can conveniently be captured here
+				panelSpan.addEvent('mouseenter', function(){
+					var DIVelement = document.getElement('#secondLevelMouseOver');
+					DIVelement.set('html', '');
+					if (!DIVelement.hasClass('hidden'))
+						DIVelement.addClass('hidden');
+				});
             } else { // 2nd level
                 var panelSet = panelId.getElement('li.'+parts[0].replace(/ /g, ''));
                 var panelUl = panelId.getElement('li.'+parts[0].replace(/ /g, '')+' ul');
@@ -368,13 +376,15 @@ function panelData(){
                 var panelSpan = new Element('span', { html: name });
                 panelSpan.store('item_identifier', element);
                 panelSpan.addEvent('click', panelSpanClickFunction); // if this is changed, make sure to change it below as well
-				
+
+				// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
+				var DIVelement = document.getElement('#secondLevelMouseOver');				
 				panelSpan.addEvent('mouseenter', function(){
-					// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
-					var DIVelement = document.getElement('#secondLevelMouseOver');
-					
 					// This is necessary to account for certain mouse-moving-too-fast bugs. we want to clear the DIV at the outset so as to avoid the "mouseleave" function never getting called. this lets us for sure start with a clean slate.
 					DIVelement.set('html', '');
+					if (!DIVelement.hasClass('hidden'))
+						DIVelement.addClass('hidden');
+					/*
 					DIVelement.setStyles({
 						'display': 'none',
 						'width': 'auto',
@@ -382,6 +392,7 @@ function panelData(){
 						'margin': '0px',
 						'background-color': 'transparent'
 					});
+					*/
 				
 					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
 					if (panelUl.getParent('li span a').hasClass('expanded'))
@@ -398,6 +409,7 @@ function panelData(){
 						newSpan.setStyles(this.getStyles('background-color', 'color'));
 
 						// make the DIV element visible and set its position on top of the current LI
+						DIVelement.removeClass('hidden');
 						DIVelement.setStyles({
 							'display': 'block',
 							'cursor': 'pointer',
@@ -418,6 +430,7 @@ function panelData(){
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
 						
+						
 						//console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
 						//console.log('');
 						
@@ -427,10 +440,14 @@ function panelData(){
 							
 							// let's also hide the DIV element, since we don't need it after a click (especially since other groups may collapse)
 							DIVelement.set('html', '');
+							if (!DIVelement.hasClass('hidden'))
+								DIVelement.addClass('hidden');
+							/*
 							DIVelement.setStyles({
 								'display': 'none',
 								'width': 'auto'
 							});
+							*/
 						});
 						
 						// clear the contents of the DIV and make it invisible when the mouse leaves *it* (not the original span)
@@ -531,7 +548,7 @@ var rightPanelSizing = function(){
 	var leftColumnWidth = 600;
 	var verticalElementsHeight = 210;
 	var graph_container_min_width = 680; //775
-	var graph_container_min_height = 475; //500
+	var graph_container_min_height = 485; //500
 	var graph_container_width = 0;
 	var graph_container_height = 0;
 	var graph_container_ratio = graph_container_min_width / graph_container_min_height;
@@ -604,168 +621,3 @@ window.incrementalResize = function(options, callback){
     });
 }
 
-document.addEvent('domready', function() { 
-    window.graphs = {};
-    initGraphs();
-    new panelData();
-    DelphiGraphTabs.initialize({
-        select : function(event){
-            BudgetGraph.select(event.target.getAttribute('graph').toLowerCase());
-            refreshGUI();
-        }
-    });
-	document.id('emp_type').addEvent('click', function(event){
-		//yearSlider('hide');
-		tableFormat(true);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('emp_dep').addEvent('click', function(event){
-		tableFormat(false, true);
-		document.id('stacked_graph').hide();
-		document.id('percentage_graph').hide();
-		document.id('standard_graph').hide();
-		document.id('pie_chart').show();
-		changeCurrentGraphType('pie', document.id('pie_chart'));
-		document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
-        document.id('graph_breakdown').empty();
-	});
-	document.id('fin_fund').addEvent('click', function(event){
-		tableFormat(false, false);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('fin_dep').addEvent('click', function(event){
-		tableFormat(false, false);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('fin_exp').addEvent('click', function(event){
-		tableFormat(false, false);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('fin_rev').addEvent('click', function(event){
-		tableFormat(false, false);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('fin_feerev').addEvent('click', function(event){
-		tableFormat(false, false);
-		document.id('stacked_graph').show();
-		document.id('percentage_graph').show();
-		document.id('pie_chart').show();
-		document.id('standard_graph').show();
-	});
-	document.id('fin_expfee').addEvent('click', function(event){
-		tableFormat(false, false);
-		changeCurrentGraphType('line', document.id('standard_graph'));
-		document.id('stacked_graph').hide();
-		document.id('percentage_graph').hide();
-		document.id('pie_chart').hide();
-		document.id('standard_graph').show();
-	});
-    document.id('standard_graph').addEvent('click', function(event){
-        changeCurrentGraphType('line', this);
-        //yearSlider('hide');
-        document.id('graph_breakdown').set('text', 'Dollars per Year');
-        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
-    });
-    document.id('stacked_graph').addEvent('click', function(event){
-        changeCurrentGraphType('stacked-line', this);
-        //yearSlider('hide');
-        document.id('graph_breakdown').set('text', 'Dollars per Year');
-        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
-    });
-    document.id('percentage_graph').addEvent('click', function(event){
-        changeCurrentGraphType('percentage-line', this);
-        //yearSlider('hide');
-        document.id('graph_breakdown').set('text', 'Percent of Budget');
-        document.id('graph_fiscal_year').set('text', 'Fiscal Year');
-    });
-    document.id('pie_chart').addEvent('click', function(event){
-        changeCurrentGraphType('pie', this);
-        document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
-        document.id('graph_breakdown').empty();
-    });
-    document.id('default_department').addEvent('click', function(event){
-        loadDefaultGraph('department');
-    });
-    document.id('default_fund').addEvent('click', function(event){
-        loadDefaultGraph('fund');
-    });
-    new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
-    var descriptionTooltip = document.getElements('.description_tooltip');
-        descriptionTooltip.addEvents({
-        mouseover: function(){
-            this.getParent().getSiblings('.panel_description').reveal();
-        },
-        mouseout: function(){
-            this.getParent().getSiblings('.panel_description').dissolve();
-        }
-    });
-    new Fx.Reveal(('.panel_description'), {duration: 500, mode: 'horizontal'});
-    var keys = new Keyboard({
-        defaultEventType: 'keyup',
-        events: {
-            'esc': function(){
-                loadDefaultGraph();
-                tableFormat(false, false);
-				document.id('stacked_graph').show();
-				document.id('percentage_graph').show();
-				document.id('pie_chart').show();
-            }
-         }
-    });
-
-	// this snippet makes the description_tooltip (on the "Fund" and "Department" columns) white when you mouseover anywhere in the header
-	document.getElements("#left_column ul h3").each(function(headerElement){
-		headerElement.addEvent('mouseover', function(){
-			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_white.png\') no-repeat 4px 0');
-		});
-		
-		headerElement.addEvent('mouseleave', function(){
-			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_act.png\') no-repeat 4px 0');
-		});
-	});
-
-	
-	// this is kind of a dirty hack, but it's to clear the DIV element that we're using for mouseover expansion of ellipsis-shortened legend items. because the underlying LI is sometimes bigger than the DIV element, its mouseenter event is triggered, and there's no elegant way to clear it. so we're going to create an event on the legend canvas itself to clear it.
-	var legendCanvas = document.getElement('#legend');
-	legendCanvas.addEvent('mouseover', function(){
-		
-		var DIVelement = document.getElement('#secondLevelMouseOver');
-		
-		DIVelement.set('html', '');
-		DIVelement.setStyles({
-			'display': 'none',
-			'width': 'auto'
-		});
-
-	});
-
-	
-	
-	// this resizes the graph based on the window size
-	rightPanelSizing();
-	
-	// this dynamically resizes the graph when the window resizes
-	window.incrementalResize(45, function(){
-		rightPanelSizing();
-		Object.each(window.graphs, function(graph){
-				graph.display();
-		});
-	});
-	
-	
-});

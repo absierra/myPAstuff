@@ -393,6 +393,21 @@ header{
 		font-size: 0.8em;
 		color: #FFFFFF;
 	}
+	.hidden{
+		display: none;
+		width: auto;
+		height: auto;
+		margin: 0px;
+		padding: 0px;
+		background-color: transparent;
+	}
+}
+
+#pie_hole{
+	.rounded(999px);
+	width: 100px;
+	height: 100px;
+	background: white;
 }
 
 #content{
@@ -425,6 +440,62 @@ header{
         font-size: 25px;
 	font-style: italic;
     }
+}
+
+#about{
+    clear: both;
+    position: absolute;
+    top: 0;
+	left: 0;
+    padding: 0 20px 20px 20px;
+    overflow: auto;
+    p {
+		width: 80%;
+		margin: 20px 10%;
+    	white-space: pre-wrap;
+    	line-height: 18px;
+    }
+    h1, h2, h3 {
+	font-family: @primaryFontBold;
+	margin-top: 40px;
+	margin-left: 10%;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+	font-style: italic;
+    }
+	table {
+		width: 80%;
+		margin: 0px 10%;
+		tr{
+			/*margin: 30px 0px;*/
+			td {
+				width: 50%;
+				margin: 0px;
+				padding: 0px 2%;
+				vertical-align: middle;
+				img{
+					margin: 20px 0px;
+					width: 100%;
+				}
+				#img1, #img2, #img3, #img4, #img5, #img6, #img7  {
+					display: none;
+				}
+				p {
+					margin: 20px 0px;
+				}
+				.left{
+					text-align: left;
+				}
+				.right{
+					text-align: right;
+				}
+			}
+		}
+	}
 }
 
 .graph_tabs {
