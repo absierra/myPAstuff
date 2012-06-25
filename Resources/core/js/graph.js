@@ -174,7 +174,7 @@ var BudgetGraph = new Class({
                                        elements = column.getElements('> li > span:not(.disabled)');
                                }
                                result = [];
-                               console.log('els', this.options.column, elements.clone());
+                               //console.log('els', this.options.column, elements.clone());
                                elements.each(function(el){
                                        notags = el.get('text');
                                        if(keys.contains(notags)){
@@ -215,9 +215,31 @@ var BudgetGraph = new Class({
        }
        var column = document.id(this.options.column);
        var legendElement = document.getElement('#legend');
+		
+
+		//this is to deal with the mouse moving too fast, so that we clear the tooltip if it enters the legend area
+	   var DIVelement = document.getElement('#secondLevelMouseOver');
+	   legendElement.addEvent('mouseenter', function(){
+			DIVelement.set('html', '');
+			if (!DIVelement.hasClass('hidden'))
+			{
+				DIVelement.setStyle('display', 'none');
+				DIVelement.addClass('hidden');
+			}
+	   });
+	   var graphElement = document.getElement('#graphs');
+	   graphElement.addEvent('mouseenter', function(){
+			DIVelement.set('html', '');
+			if (!DIVelement.hasClass('hidden'))
+			{
+				DIVelement.addClass('hidden');
+				DIVelement.setStyle('display', 'none');
+			}
+	   });
+
        legendElement.getElements('li').destroy();
        var items = this.getLegendItems();//this.getLegendItems();
-       console.log('legend items', items, this.legendItems);
+       //console.log('legend items', items, this.legendItems);
        //console.log('items', items);
        if(items.length > this.colors.length){
            this.colors = hueShiftedColorSet(items.length);
@@ -246,10 +268,7 @@ var BudgetGraph = new Class({
 
                                        // like in the columns, we need to start with a clean slate in case mouse movements happen too fast
                                        DIVelement.set('html', '');
-                                       DIVelement.setStyles({
-                                               'display': 'none',
-                                               'width': 'auto'
-                                       });
+                                       DIVelement.addClass('hidden');
 
                                        var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
                                        var legendDot = new Element('div', {
@@ -278,7 +297,7 @@ var BudgetGraph = new Class({
                                                'padding': '0px 10px 0px 0px',
                                                'cursor': 'default',
                                        });
-
+										DIVelement.removeClass('hidden');
                                        DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
                                        DIVelement.setStyles({
                                                'background-color': '#E6E7E8',
@@ -297,10 +316,7 @@ var BudgetGraph = new Class({
 
                                        DIVelement.addEvent('mouseleave', function(){
                                                this.set('html', '');
-                                               this.setStyles({
-                                                       'display': 'none',
-                                                       'width': 'auto'
-                                               });
+                                               this.setStyle('display', 'none');
                                        });
 
                                        e.stop();
@@ -429,7 +445,7 @@ var BudgetGraph = new Class({
                        var xGraph = graphSize.x - 240;
                        //if (xGraph > 600) xGraph = 600;
                        var yGraph = graphSize.y - 41;
-						console.log(this.legendItems);
+						//console.log(this.legendItems);
                        var a = this;
                        if(ySet.length != 0){
                                this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {

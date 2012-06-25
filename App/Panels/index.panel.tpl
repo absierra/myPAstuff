@@ -1,6 +1,174 @@
 {page wrapper="application" title="Delphi Solutions" meta_description="Delphi Solutions provides solutions to analyzing and visualizing big distributed data"}
 {require name="mootools,core,header,graphael,tabs"}
 {panel name="header"}
+{literal}
+<script>
+	document.addEvent('domready', function() { 
+		window.graphs = {};
+		initGraphs();
+		new panelData();
+		DelphiGraphTabs.initialize({
+			select : function(event){
+				BudgetGraph.select(event.target.getAttribute('graph').toLowerCase());
+				refreshGUI();
+			}
+		});
+		document.id('emp_type').addEvent('click', function(event){
+			//yearSlider('hide');
+			tableFormat(true);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('emp_dep').addEvent('click', function(event){
+			tableFormat(false, true);
+			document.id('stacked_graph').hide();
+			document.id('percentage_graph').hide();
+			document.id('standard_graph').hide();
+			document.id('pie_chart').show();
+			changeCurrentGraphType('pie', document.id('pie_chart'));
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
+			document.id('graph_breakdown').empty();
+		});
+		document.id('fin_fund').addEvent('click', function(event){
+			tableFormat(false, false);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('fin_dep').addEvent('click', function(event){
+			tableFormat(false, false);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('fin_exp').addEvent('click', function(event){
+			tableFormat(false, false);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('fin_rev').addEvent('click', function(event){
+			tableFormat(false, false);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('fin_feerev').addEvent('click', function(event){
+			tableFormat(false, false);
+			document.id('stacked_graph').show();
+			document.id('percentage_graph').show();
+			document.id('pie_chart').show();
+			document.id('standard_graph').show();
+		});
+		document.id('fin_expfee').addEvent('click', function(event){
+			tableFormat(false, false);
+			changeCurrentGraphType('line', document.id('standard_graph'));
+			document.id('stacked_graph').hide();
+			document.id('percentage_graph').hide();
+			document.id('pie_chart').hide();
+			document.id('standard_graph').show();
+		});
+		document.id('standard_graph').addEvent('click', function(event){
+			changeCurrentGraphType('line', this);
+			//yearSlider('hide');
+			document.id('graph_breakdown').set('text', 'Dollars per Year');
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year');
+		});
+		document.id('stacked_graph').addEvent('click', function(event){
+			changeCurrentGraphType('stacked-line', this);
+			//yearSlider('hide');
+			document.id('graph_breakdown').set('text', 'Dollars per Year');
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year');
+		});
+		document.id('percentage_graph').addEvent('click', function(event){
+			changeCurrentGraphType('percentage-line', this);
+			//yearSlider('hide');
+			document.id('graph_breakdown').set('text', 'Percent of Budget');
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year');
+		});
+		document.id('pie_chart').addEvent('click', function(event){
+			changeCurrentGraphType('pie', this);
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
+			document.id('graph_breakdown').empty();
+		});
+		document.id('default_department').addEvent('click', function(event){
+			loadDefaultGraph('department');
+		});
+		document.id('default_fund').addEvent('click', function(event){
+			loadDefaultGraph('fund');
+		});
+		new Fx.Reveal(('#legend'), {duration: 500, mode: 'horizontal'});  
+		var descriptionTooltip = document.getElements('.description_tooltip');
+			descriptionTooltip.addEvents({
+			mouseover: function(){
+				this.getParent().getSiblings('.panel_description').reveal();
+			},
+			mouseout: function(){
+				this.getParent().getSiblings('.panel_description').dissolve();
+			}
+		});
+		new Fx.Reveal(('.panel_description'), {duration: 500, mode: 'horizontal'});
+		var keys = new Keyboard({
+			defaultEventType: 'keyup',
+			events: {
+				'esc': function(){
+					loadDefaultGraph();
+					tableFormat(false, false);
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+				}
+			 }
+		});
+
+		// this snippet makes the description_tooltip (on the "Fund" and "Department" columns) white when you mouseover anywhere in the header
+		document.getElements("#left_column ul h3").each(function(headerElement){
+			headerElement.addEvent('mouseover', function(){
+				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_white.png\') no-repeat 4px 0');
+			});
+			
+			headerElement.addEvent('mouseleave', function(){
+				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_act.png\') no-repeat 4px 0');
+			});
+		});
+
+		
+		// this is kind of a dirty hack, but it's to clear the DIV element that we're using for mouseover expansion of ellipsis-shortened legend items. because the underlying LI is sometimes bigger than the DIV element, its mouseenter event is triggered, and there's no elegant way to clear it. so we're going to create an event on the legend canvas itself to clear it.
+		var legendCanvas = document.getElement('#legend');
+		legendCanvas.addEvent('mouseover', function(){
+			
+			var DIVelement = document.getElement('#secondLevelMouseOver');
+			
+			DIVelement.set('html', '');
+			DIVelement.setStyles({
+				'display': 'none',
+				'width': 'auto'
+			});
+
+		});
+		
+		
+		// this resizes the graph based on the window size
+		rightPanelSizing();
+		
+		// this dynamically resizes the graph when the window resizes
+		window.incrementalResize(45, function(){
+			rightPanelSizing();
+			Object.each(window.graphs, function(graph){
+					graph.display();
+			});
+		});
+		
+		
+	});
+</script>
+{/literal}
 <div id="content_wrapper">
     <div id="left_column">
         <ul>
@@ -13,8 +181,6 @@
             <div class="panel_description">Every department is a broad function performed by the city. Each department has its own divisions, which draw money from one or more funds.<br /><br />Click on a department or division to see what funds it draws on.</div>
         	<ul id="department"></ul>
         </ul>
-		<div id="column_header_divider_horizontal"></div>
-		<div id="column_header_divider_vertical"></div>
     </div>
     <div id="content">
     	<ul id="tabs" class="graph_tabs">
@@ -24,7 +190,7 @@
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
                 <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
-                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Revenue</li>
+                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
                 <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Expenditure vs Revenue</li>
             </fieldset>
             <fieldset id="employee_breakdown">

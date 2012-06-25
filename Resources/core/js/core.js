@@ -139,10 +139,6 @@ var loadDefaultGraph = function(type){
     if (!type) type = 'fund';
     window.selected = {}; // start: reset
     window.panelSelection = {};
-    var financialBreakdown = document.id('financial_breakdown');
-    var employeeBreakdown = document.id('employee_breakdown');
-    financialBreakdown.show();
-    employeeBreakdown.hide();
     document.getElements('.selected').removeClass('selected');
     document.getElements('.colorkey').removeClass('colorkey');
     document.getElements('.disabled').removeClass('disabled');
@@ -361,6 +357,14 @@ function panelData(){
                 panelSpan.appendChild(panelArrow);
                 panelLi.appendChild(panelSpan);
                 panelId.appendChild(panelLi);
+				
+				// to account for some weird mouse-moving-too-fast action, which doesn't ever register the mouse as being in the DIV element (so it can never leave, and thus clear the DIV element by triggering the mouseleve event), we'll just clear the DIV if the mouse hits any adjacent elements, which can conveniently be captured here
+				panelSpan.addEvent('mouseenter', function(){
+					var DIVelement = document.getElement('#secondLevelMouseOver');
+					DIVelement.set('html', '');
+					if (!DIVelement.hasClass('hidden'))
+						DIVelement.addClass('hidden');
+				});
             } else { // 2nd level
                 var panelSet = panelId.getElement('li.'+parts[0].replace(/ /g, ''));
                 var panelUl = panelId.getElement('li.'+parts[0].replace(/ /g, '')+' ul');
@@ -368,13 +372,15 @@ function panelData(){
                 var panelSpan = new Element('span', { html: name });
                 panelSpan.store('item_identifier', element);
                 panelSpan.addEvent('click', panelSpanClickFunction); // if this is changed, make sure to change it below as well
-				
+
+				// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
+				var DIVelement = document.getElement('#secondLevelMouseOver');				
 				panelSpan.addEvent('mouseenter', function(){
-					// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
-					var DIVelement = document.getElement('#secondLevelMouseOver');
-					
 					// This is necessary to account for certain mouse-moving-too-fast bugs. we want to clear the DIV at the outset so as to avoid the "mouseleave" function never getting called. this lets us for sure start with a clean slate.
 					DIVelement.set('html', '');
+					if (!DIVelement.hasClass('hidden'))
+						DIVelement.addClass('hidden');
+					/*
 					DIVelement.setStyles({
 						'display': 'none',
 						'width': 'auto',
@@ -382,6 +388,7 @@ function panelData(){
 						'margin': '0px',
 						'background-color': 'transparent'
 					});
+					*/
 				
 					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
 					if (panelUl.getParent('li span a').hasClass('expanded'))
@@ -398,6 +405,7 @@ function panelData(){
 						newSpan.setStyles(this.getStyles('background-color', 'color'));
 
 						// make the DIV element visible and set its position on top of the current LI
+						DIVelement.removeClass('hidden');
 						DIVelement.setStyles({
 							'display': 'block',
 							'cursor': 'pointer',
@@ -418,6 +426,7 @@ function panelData(){
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
 						
+						
 						//console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
 						//console.log('');
 						
@@ -427,10 +436,14 @@ function panelData(){
 							
 							// let's also hide the DIV element, since we don't need it after a click (especially since other groups may collapse)
 							DIVelement.set('html', '');
+							if (!DIVelement.hasClass('hidden'))
+								DIVelement.addClass('hidden');
+							/*
 							DIVelement.setStyles({
 								'display': 'none',
 								'width': 'auto'
 							});
+							*/
 						});
 						
 						// clear the contents of the DIV and make it invisible when the mouse leaves *it* (not the original span)
@@ -531,7 +544,7 @@ var rightPanelSizing = function(){
 	var leftColumnWidth = 600;
 	var verticalElementsHeight = 210;
 	var graph_container_min_width = 680; //775
-	var graph_container_min_height = 475; //500
+	var graph_container_min_height = 485; //500
 	var graph_container_width = 0;
 	var graph_container_height = 0;
 	var graph_container_ratio = graph_container_min_width / graph_container_min_height;
@@ -744,7 +757,7 @@ document.addEvent('domready', function() {
 		});
 		
 		headerElement.addEvent('mouseleave', function(){
-			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_act.png\') no-repeat 4px 0');
+			this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_white.png\') no-repeat 4px 0');
 		});
 	});
 
