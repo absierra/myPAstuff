@@ -68,7 +68,6 @@
 			Logger::log("query: ".$query);
 			Logger::log(json_encode($results));
 			$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
-			$count == 0;
 			foreach($results as $item){
 				if($focus == 'revenue_expense'){
 					$series = ($item->get('ledger_type')=='Expense')?'Expenses':'Revenues';
@@ -99,24 +98,13 @@
 					}
 					if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 					$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
+					$data[$item->get($index)][$item->get('year')]['expenses'] += 0;
 					if($isAFee){
-						$count+=1;
 						$data[$item->get($index)][$item->get('year')]['fee_revenue'] += (float)$item->get('amount');
 					}
 				}
 			}
-			/*if($count == 0 && $focus != 'revenue_expense'){
-				$data['No Revenue']['2009']['revenue'] = 0;
-				$data['No Revenue']['2010']['revenue'] = 0;
-				$data['No Revenue']['2011']['revenue'] = 0;
-				$data['No Revenue']['2012']['revenue'] = 0;
-				$data['No Revenue']['2013']['revenue'] = 0;
-				$data['No Revenue']['2009']['fee_revenue'] = 0;
-				$data['No Revenue']['2010']['fee_revenue'] = 0;
-				$data['No Revenue']['2011']['fee_revenue'] = 0;
-				$data['No Revenue']['2012']['fee_revenue'] = 0;
-				$data['No Revenue']['2013']['fee_revenue'] = 0;
-			}*/
+
 		    $renderer->assign('data', $data);
         }else{
             $disc = array();
