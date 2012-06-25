@@ -181,8 +181,6 @@
             <div class="panel_description">Every department is a broad function performed by the city. Each department has its own divisions, which draw money from one or more funds.<br /><br />Click on a department or division to see what funds it draws on.</div>
         	<ul id="department"></ul>
         </ul>
-		<div id="column_header_divider_horizontal"></div>
-		<div id="column_header_divider_vertical"></div>
     </div>
     <div id="content">
     	<ul id="tabs" class="graph_tabs">
@@ -192,7 +190,7 @@
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
                 <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
-                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Revenue</li>
+                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
                 <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Expenditure vs Revenue</li>
             </fieldset>
             <fieldset id="employee_breakdown">

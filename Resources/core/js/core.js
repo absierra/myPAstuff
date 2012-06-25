@@ -141,8 +141,6 @@ var loadDefaultGraph = function(type){
     window.panelSelection = {};
     var financialBreakdown = document.id('financial_breakdown');
     var employeeBreakdown = document.id('employee_breakdown');
-    financialBreakdown.show();
-    employeeBreakdown.hide();
     document.getElements('.selected').removeClass('selected');
     document.getElements('.colorkey').removeClass('colorkey');
     document.getElements('.disabled').removeClass('disabled');
@@ -620,4 +618,3 @@ window.incrementalResize = function(options, callback){
          if(options.isCallable(dim.x, dim.y)) callback();
     });
 }
-

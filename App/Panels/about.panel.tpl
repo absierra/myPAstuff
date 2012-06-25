@@ -74,7 +74,7 @@
 
 		<table>
 			<tr>
-				<td>
+				<td class="img_left">
 					<img id="img0" src="Resources/core/img/howto0.png" />
 					<img id="img1" src="Resources/core/img/howto1.png" />
 					<img id="img2" src="Resources/core/img/howto2.png" />
