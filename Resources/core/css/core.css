@@ -103,10 +103,12 @@ section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -179,7 +181,8 @@ html {
 .clear {
   clear: both;
 }
-body, html {
+body,
+html {
   height: 100%;
 }
 body {
@@ -533,8 +536,6 @@ header span.logo_text {
   display: none;
   width: auto;
   height: auto;
-  top: 0px;
-  left: 0px;
   margin: 0px;
   padding: 0px;
   background-color: transparent;
@@ -572,7 +573,9 @@ header span.logo_text {
   top: 0px;
   padding: 0 20px 20px 20px;
 }
-#content h1, #content h2, #content h3 {
+#content h1,
+#content h2,
+#content h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 20px;
 }
@@ -597,12 +600,15 @@ header span.logo_text {
   white-space: pre-wrap;
   line-height: 18px;
 }
-#about h1, #about h2, #about h3 {
+#about h1,
+#about h2,
+#about h3 {
   font-family: "ProximaNova-Bold";
   margin-top: 40px;
   margin-left: 10%;
 }
 #about h1 {
+  color: #b3b3b3;
   font-size: 30px;
 }
 #about h2 {
@@ -644,6 +650,9 @@ header span.logo_text {
 }
 #about table tr td .right {
   text-align: right;
+}
+#about table tr td.img_left {
+  vertical-align: top;
 }
 .graph_tabs {
   display: block;
@@ -779,7 +788,8 @@ header span.logo_text {
   cursor: pointer;
 }
 /* Graph Type Icons */
-.active.percentage.icon, .percentage.icon:hover {
+.active.percentage.icon,
+.percentage.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -807,7 +817,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.stacked.icon, .stacked.icon:hover {
+.active.stacked.icon,
+.stacked.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -835,7 +846,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.line.icon, .line.icon:hover {
+.active.line.icon,
+.line.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -863,7 +875,8 @@ header span.logo_text {
   width: 60px;
   vertical-align: middle;
 }
-.active.pie.icon, .pie.icon:hover {
+.active.pie.icon,
+.pie.icon:hover {
   display: block;
   display: inline-block;
   background-image: url('/Resources/core/img/graph-type-icons-active.png');
@@ -967,7 +980,8 @@ header span.logo_text {
 #graph_container #graphs #employee_type_graph #employee_type_container {
   margin: 15px 25px;
 }
-#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles, #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table {
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles,
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table {
   width: 100%;
 }
 #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles thead tr th {
@@ -1001,7 +1015,7 @@ header span.logo_text {
   font-size: 0.8em;
   width: 9%;
   text-align: center;
-  border: 0 dotted #dfdfe0;
+  border: 0 dotted #787878;
   border-width: 0 0 0 2px;
 }
 #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr td:first-child {
@@ -1014,10 +1028,11 @@ header span.logo_text {
   width: 11%;
 }
 #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr {
-  background-color: #dcf2fd;
+  color: #e6e7e8;
+  background: url('/Resources/core/img/background_40_percent_white.png');
 }
 #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr:nth-child(odd) {
-  background-color: #ecf8fe;
+  background: transparent;
 }
 /* Scroll Bars */
 ::-webkit-scrollbar {

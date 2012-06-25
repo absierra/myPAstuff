@@ -472,6 +472,7 @@ header{
 	margin-left: 10%;
     }
     h1 {
+        color: #b3b3b3;
         font-size: 30px;
     }
     h2 {
@@ -504,6 +505,9 @@ header{
 				.right{
 					text-align: right;
 				}
+                &.img_left{
+                    vertical-align: top;
+                }
 			}
 		}
 	}
@@ -757,14 +761,15 @@ header{
                 font-size: 0.8em;
                 width: 9%;
 				text-align: center; 
-                border: 0 dotted #dfdfe0;
+                border: 0 dotted #787878;
                 border-width: 0 0 0 2px;
                 &:first-child{text-align: left; width:40%;border-left-width: 0;padding: 0 10px;}
                 &:last-child{width:11%;}
             }
             #employee_type_table tbody tr {
-                background-color: #dcf2fd;
-                &:nth-child(odd){ background-color: #ecf8fe; }
+                color: #e6e7e8;
+                background: url('/Resources/core/img/background_40_percent_white.png');
+                &:nth-child(odd){ background: transparent; }
             }
         }
     }
