@@ -51,7 +51,7 @@ MGFX.Tabs = new Class({
 				that.showSlide(index);
 				that.stop(true);
 				if (that.options.callback) {
-						that.options.callback();
+						that.options.callback.call(this);
 				}
 			});
 		});

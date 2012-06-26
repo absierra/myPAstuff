@@ -9,6 +9,7 @@ var DelphiGraphTabs = {
                                               var g = BudgetGraph.graphs[event.target.getAttribute('graph')];
                                               g.setLegend();
                                               g.setKeys();
+                                              window.tabSettings[this.get('id')]();
                                           }
                                         });
     },
