@@ -517,6 +517,7 @@ var tableFormat = function(yes, employee){
 		document.id('graph_types').hide();
 		document.id('graph_breakdown').hide();
 		document.id('legend').hide();
+		console.log('here 1');
 		document.id('graph_fiscal_year').hide();
 	}
 	else{

@@ -77,21 +77,10 @@
                 "Revenue:Charges for Services"
             ]
         }, 
-        "Administrative Services:Non-Departmental": {
-            "funds": [
-                "General Funds:Stores Inventory"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Income", 
-                "Revenue:Other Revenue"
-            ]
-        }, 
         "Administrative Services:Non-Departmental Division": {
             "funds": [
-                "General Funds:General Fund"
+                "General Funds:General Fund", 
+                "General Funds:Stores Inventory"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -113,7 +102,10 @@
                 "Revenue:Sales Taxes", 
                 "Revenue:Trans In", 
                 "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax"
+                "Revenue:Utility Users Tax", 
+                "Expense:Allocated Charges", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Other Income"
             ]
         }, 
         "Administrative Services:Purchasing": {
@@ -264,7 +256,7 @@
                 "Revenue:Other Revenue"
             ]
         }, 
-        "City Attorney:Litigation and Dispute Resolution": {
+        "City Attorney:Litigation/Dispute Resolution": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -526,7 +518,7 @@
                 "General Funds:Family Resource", 
                 "Capital Funds:Capital Improvement Fund", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Parkland Dedication"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -583,7 +575,7 @@
                 "Revenue:Rental Income"
             ]
         }, 
-        "Community Services:CSD - CIP": {
+        "Community Services:CSD - Capital Improvement": {
             "funds": [
                 "Capital Funds:Capital Improvement Fund"
             ], 
@@ -627,7 +619,7 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Community Services:Open Space! Parks! & Golf": {
+        "Community Services:Open Space/Parks and Golf": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -649,7 +641,7 @@
         }, 
         "Community Services:Parkland Dedication": {
             "funds": [
-                "Special Revenue Funds:Parkland Dedication"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Revenue:Charges for Services", 
@@ -776,7 +768,7 @@
                 "Revenue:Permits and Licenses"
             ]
         }, 
-        "Fire:Records & Information Management": {
+        "Fire:Records & Info. Management": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -807,7 +799,7 @@
                 "General Funds:General Fund", 
                 "Internal Services Funds:General Benefits & Insurance", 
                 "Internal Services Funds:Liability Insurance", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Worker's Comp"
             ], 
             "ledgers": [
@@ -869,7 +861,7 @@
                 "Revenue:Other Revenue"
             ]
         }, 
-        "Human Resources:General Benefits Fun": {
+        "Human Resources:General Benefits Fund": {
             "funds": [
                 "Internal Services Funds:General Benefits & Insurance"
             ], 
@@ -894,9 +886,9 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Human Resources:Retiree Health Benef": {
+        "Human Resources:Retiree Health Benefits": {
             "funds": [
-                "Internal Services Funds:Retiree Health Benefits"
+                "Internal Services Funds:Retiree Health Benefits Fund"
             ], 
             "ledgers": [
                 "Expense:Salaries & Benefits", 
@@ -918,7 +910,7 @@
                 "Expense:Supplies & Materials"
             ]
         }, 
-        "Human Resources:Workers' Compensatio": {
+        "Human Resources:Workers' Compensation": {
             "funds": [
                 "Internal Services Funds:Worker's Comp"
             ], 
@@ -964,7 +956,7 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Information Technology:Information Technology Division": {
+        "Information Technology:Information Technology Divisions": {
             "funds": [
                 "Internal Services Funds:Technology Fund"
             ], 
@@ -1076,21 +1068,16 @@
                 "Debt Service Funds:Library Projects", 
                 "Debt Service Funds:Parking 02 COP Taxable", 
                 "Internal Services Funds:Payroll Clearing", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:GASB 34 Conversion", 
-                "Special Revenue Funds:General Fixed Assets", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Special District", 
-                "Special Revenue Funds:Stanford Medical Center Development", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
+                "Special Revenue Funds:Stanford Medical Center", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Traffic Mitigation and Parking", 
+                "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1125,21 +1112,16 @@
                 "Debt Service Funds:Library Projects", 
                 "Debt Service Funds:Parking 02 COP Taxable", 
                 "Internal Services Funds:Payroll Clearing", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:GASB 34 Conversion", 
-                "Special Revenue Funds:General Fixed Assets", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Special District", 
-                "Special Revenue Funds:Stanford Medical Center Development", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
+                "Special Revenue Funds:Stanford Medical Center", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Traffic Mitigation and Parking", 
+                "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1167,8 +1149,7 @@
             "funds": [
                 "General Funds:General Fund", 
                 "Capital Funds:Capital Improvement Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Residential Parking Permits Program"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1257,7 +1238,7 @@
         "Planning:Planning": {
             "funds": [
                 "General Funds:General Fund", 
-                "Special Revenue Funds:Residential Parking Permits Program"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1280,7 +1261,7 @@
         }, 
         "Planning:Transportation Impact ": {
             "funds": [
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Revenue:Charges for Services", 
@@ -1292,8 +1273,8 @@
             "funds": [
                 "General Funds:General Fund", 
                 "Capital Funds:Capital Improvement Fund", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Recovery Act JAG"
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1365,7 +1346,7 @@
                 "Revenue:Permits and Licenses"
             ]
         }, 
-        "Police:Investigations and Crime Prev Serv": {
+        "Police:Investigation/Crime Prevention": {
             "funds": [
                 "General Funds:General Fund"
             ], 
@@ -1384,7 +1365,7 @@
         "Police:Other Funds": {
             "funds": [
                 "Capital Funds:Capital Improvement Fund", 
-                "Special Revenue Funds:Fed & State Revenue"
+                "Special Revenue Funds:Federal and State Revenue"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -1432,7 +1413,7 @@
         }, 
         "Police:Recovery Act JAG": {
             "funds": [
-                "Special Revenue Funds:Recovery Act JAG"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -1481,7 +1462,7 @@
                 "Enterprise Funds:Storm Drainage", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Capital Funds:Capital Improvement Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Internal Services Funds:Vehicle Maintenance Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1543,7 +1524,7 @@
         }, 
         "Public Works:Equipment Management": {
             "funds": [
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Internal Services Funds:Vehicle Maintenance Fund"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1717,7 +1698,7 @@
                 "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Eyerly Trust"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -1864,7 +1845,7 @@
         }, 
         "Utilities:Eyerly Trust": {
             "funds": [
-                "Special Revenue Funds:Eyerly Trust"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ], 
             "ledgers": [
                 "Expense:General Expense", 
@@ -1920,7 +1901,7 @@
         "Capital Funds": {
             "divisions": [
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Non-Departmental:Non-Departmental Divisions", 
@@ -1950,7 +1931,7 @@
         "Capital Funds:Capital Improvement Fund": {
             "divisions": [
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Non-Departmental:Non-Departmental Divisions", 
@@ -2342,7 +2323,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -2360,12 +2341,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -2382,7 +2363,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -2393,8 +2374,7 @@
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
-                "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental"
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2469,7 +2449,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -2487,12 +2467,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -2509,7 +2489,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -2564,7 +2544,7 @@
         }, 
         "General Funds:Stores Inventory": {
             "divisions": [
-                "Administrative Services:Non-Departmental"
+                "Administrative Services:Non-Departmental Division"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2576,14 +2556,14 @@
         }, 
         "Internal Services Funds": {
             "divisions": [
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Administrative Services:Purchasing", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio"
+                "Human Resources:Workers' Compensation"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -2605,7 +2585,7 @@
         }, 
         "Internal Services Funds:General Benefits & Insurance": {
             "divisions": [
-                "Human Resources:General Benefits Fun"
+                "Human Resources:General Benefits Fund"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -2653,9 +2633,9 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Internal Services Funds:Retiree Health Benefits": {
+        "Internal Services Funds:Retiree Health Benefits Fund": {
             "divisions": [
-                "Human Resources:Retiree Health Benef"
+                "Human Resources:Retiree Health Benefits"
             ], 
             "ledgers": [
                 "Expense:Salaries & Benefits", 
@@ -2667,7 +2647,7 @@
         }, 
         "Internal Services Funds:Technology Fund": {
             "divisions": [
-                "Information Technology:Information Technology Division"
+                "Information Technology:Information Technology Divisions"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2686,7 +2666,7 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Internal Services Funds:Vehicle Replacement & Maintenance Fund": {
+        "Internal Services Funds:Vehicle Maintenance Fund": {
             "divisions": [
                 "Public Works:Equipment Management"
             ], 
@@ -2708,7 +2688,7 @@
         }, 
         "Internal Services Funds:Worker's Comp": {
             "divisions": [
-                "Human Resources:Workers' Compensatio"
+                "Human Resources:Workers' Compensation"
             ], 
             "ledgers": [
                 "Expense:Contract Services", 
@@ -2751,17 +2731,7 @@
                 "Revenue:Permits and Licenses"
             ]
         }, 
-        "Special Revenue Funds:Administration": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "ledgers": [
-                "Expense:Contract Services", 
-                "Expense:Trans Out", 
-                "Revenue:Trans In"
-            ]
-        }, 
-        "Special Revenue Funds:BID": {
+        "Special Revenue Funds:Business Improvement": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -2769,39 +2739,6 @@
                 "Expense:General Expense", 
                 "Revenue:Other Revenue", 
                 "Revenue:Property Taxes", 
-                "Revenue:Return on Investments"
-            ]
-        }, 
-        "Special Revenue Funds:Cable - JPA": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "ledgers": [
-                "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
-            ]
-        }, 
-        "Special Revenue Funds:California Ave Parking Assessment": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "ledgers": [
-                "Expense:Debt Service", 
-                "Revenue:Property Taxes"
-            ]
-        }, 
-        "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions", 
-                "Planning:Transportation Impact "
-            ], 
-            "ledgers": [
-                "Expense:Contract Services", 
-                "Expense:Trans to CIP", 
-                "Revenue:Charges for Services", 
-                "Revenue:Other Revenue", 
                 "Revenue:Return on Investments"
             ]
         }, 
@@ -2817,17 +2754,7 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Special Revenue Funds:Eyerly Trust": {
-            "divisions": [
-                "Utilities:Eyerly Trust"
-            ], 
-            "ledgers": [
-                "Expense:General Expense", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
-            ]
-        }, 
-        "Special Revenue Funds:Fed & State Revenue": {
+        "Special Revenue Funds:Federal and State Revenue": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Police:Other Funds"
@@ -2847,23 +2774,6 @@
                 "Expense:Trans to CIP"
             ]
         }, 
-        "Special Revenue Funds:GASB 34 Conversion": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "ledgers": [
-                "Expense:Debt Service"
-            ]
-        }, 
-        "Special Revenue Funds:General Fixed Assets": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "ledgers": [
-                "Expense:Debt Service", 
-                "Expense:General Expense"
-            ]
-        }, 
         "Special Revenue Funds:Housing In-Lieu": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
@@ -2880,17 +2790,36 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Special Revenue Funds:Parkland Dedication": {
+        "Special Revenue Funds:Other Special Revenue Funds": {
             "divisions": [
-                "Community Services:Parkland Dedication"
+                "Non-Departmental:Non-Departmental Divisions", 
+                "Planning:Transportation Impact ", 
+                "Utilities:Eyerly Trust", 
+                "Community Services:Parkland Dedication", 
+                "Police:Recovery Act JAG", 
+                "Planning:Planning"
             ], 
             "ledgers": [
-                "Revenue:Charges for Services", 
+                "Expense:Contract Services", 
+                "Expense:Trans Out", 
+                "Revenue:Trans In", 
+                "Expense:Facilities & Equip Purchases", 
                 "Revenue:Other Revenue", 
-                "Revenue:Return on Investments"
+                "Revenue:Return on Investments", 
+                "Expense:Debt Service", 
+                "Revenue:Property Taxes", 
+                "Expense:Trans to CIP", 
+                "Revenue:Charges for Services", 
+                "Expense:General Expense", 
+                "Revenue:From Other Agencies", 
+                "Expense:Allocated Charges", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Permits and Licenses"
             ]
         }, 
-        "Special Revenue Funds:Public Benefits": {
+        "Special Revenue Funds:Public Benefit": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -2901,32 +2830,7 @@
                 "Revenue:Return on Investments"
             ]
         }, 
-        "Special Revenue Funds:Recovery Act JAG": {
-            "divisions": [
-                "Police:Recovery Act JAG"
-            ], 
-            "ledgers": [
-                "Expense:Contract Services", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Return on Investments"
-            ]
-        }, 
-        "Special Revenue Funds:Residential Parking Permits Program": {
-            "divisions": [
-                "Planning:Planning"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Permits and Licenses", 
-                "Revenue:Trans In"
-            ]
-        }, 
-        "Special Revenue Funds:Special District": {
+        "Special Revenue Funds:Special Districts": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -2942,7 +2846,7 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Special Revenue Funds:Stanford Medical Center Development": {
+        "Special Revenue Funds:Stanford Medical Center": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -2965,7 +2869,7 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu": {
+        "Special Revenue Funds:Traffic Mitigation and Parking": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -2976,7 +2880,7 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Special Revenue Funds:University Ave Parking Assessment Agency": {
+        "Special Revenue Funds:University Avenue Parking": {
             "divisions": [
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -3001,7 +2905,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3019,12 +2923,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3041,7 +2945,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3053,7 +2957,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3066,17 +2969,17 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Utilities:Eyerly Trust", 
                 "Police:Recovery Act JAG"
@@ -3106,28 +3009,20 @@
                 "Internal Services Funds:General Benefits & Insurance", 
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Business Improvement", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Eyerly Trust", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:GASB 34 Conversion", 
-                "Special Revenue Funds:General Fixed Assets", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Recovery Act JAG", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District", 
-                "Special Revenue Funds:Stanford Medical Center Development", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
+                "Special Revenue Funds:Stanford Medical Center", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Expense:Allocated Charges": {
@@ -3140,7 +3035,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3158,12 +3053,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3180,7 +3075,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3191,7 +3086,7 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3203,10 +3098,10 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -3228,10 +3123,10 @@
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Residential Parking Permits Program"
+                "Special Revenue Funds:Other Special Revenue Funds"
             ]
         }, 
         "Expense:Capital Improvement": {
@@ -3240,12 +3135,12 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -3259,7 +3154,7 @@
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Internal Services Funds:Vehicle Maintenance Fund"
             ]
         }, 
         "Expense:Contract Services": {
@@ -3273,7 +3168,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3289,12 +3184,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3311,7 +3206,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3333,16 +3228,16 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Police:Recovery Act JAG"
             ], 
             "funds": [
@@ -3365,17 +3260,13 @@
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Recovery Act JAG", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District", 
-                "Special Revenue Funds:Stanford Medical Center Development"
+                "Special Revenue Funds:Special Districts", 
+                "Special Revenue Funds:Stanford Medical Center"
             ]
         }, 
         "Expense:Debt Service": {
@@ -3403,11 +3294,9 @@
                 "Debt Service Funds:Golf Course Improvement", 
                 "Debt Service Funds:Library Projects", 
                 "Debt Service Funds:Parking 02 COP Taxable", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:GASB 34 Conversion", 
-                "Special Revenue Funds:General Fixed Assets", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Expense:Facilities & Equip Purchases": {
@@ -3420,12 +3309,12 @@
                 "City Attorney:Administration", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3457,7 +3346,7 @@
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -3472,9 +3361,9 @@
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu"
             ]
         }, 
@@ -3489,7 +3378,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3504,7 +3393,7 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
@@ -3525,7 +3414,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3536,7 +3425,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3549,14 +3437,14 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Utilities:Eyerly Trust"
             ], 
             "funds": [
@@ -3580,16 +3468,14 @@
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Eyerly Trust", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:General Fixed Assets", 
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Expense:Net Sales": {
@@ -3607,13 +3493,13 @@
                 "City Attorney:Consultation and Advisory", 
                 "City Manager:Administration", 
                 "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Fire:Environmental Safety", 
                 "Human Resources:Employee Development", 
                 "Library:Library Services Administration", 
                 "Library:Public Services", 
                 "Planning:Building", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Public Works:Structure and Grounds", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3624,7 +3510,7 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Other Funds", 
                 "Administrative Services:Purchasing", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -3640,7 +3526,7 @@
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Internal Services Funds:Vehicle Maintenance Fund"
             ]
         }, 
         "Expense:Salaries & Benefits": {
@@ -3654,7 +3540,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3671,12 +3557,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3693,7 +3579,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3716,15 +3602,15 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio"
+                "Human Resources:Workers' Compensation"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -3742,14 +3628,14 @@
                 "Internal Services Funds:General Benefits & Insurance", 
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District", 
-                "Special Revenue Funds:Stanford Medical Center Development"
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Special Districts", 
+                "Special Revenue Funds:Stanford Medical Center"
             ]
         }, 
         "Expense:Supplies & Materials": {
@@ -3773,12 +3659,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Fire:Training & Personnel", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Compensation", 
@@ -3794,7 +3680,7 @@
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3805,7 +3691,7 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -3816,10 +3702,10 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
                 "Police:Other Funds"
             ], 
@@ -3840,10 +3726,10 @@
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Stanford Medical Center Development"
+                "Internal Services Funds:Vehicle Maintenance Fund", 
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Stanford Medical Center"
             ]
         }, 
         "Expense:Trans Out": {
@@ -3852,7 +3738,7 @@
                 "City Auditor:Audit Services", 
                 "City Manager:Administration", 
                 "City Manager:City Management", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Planning:Planning", 
                 "Public Works:Trees", 
                 "Community Services:Recreation & Youth Sciences", 
@@ -3862,13 +3748,13 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
                 "Administrative Services:Purchasing", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -3886,12 +3772,12 @@
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Special District", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement"
             ]
         }, 
@@ -3914,10 +3800,10 @@
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement"
             ]
         }, 
@@ -3952,7 +3838,7 @@
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -3968,12 +3854,12 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Human Resources:Administration", 
                 "Human Resources:Employee Development", 
                 "Library:Collections Management", 
@@ -3983,7 +3869,7 @@
                 "Planning:Planning", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -3994,7 +3880,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -4007,18 +3892,18 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Utilities:Eyerly Trust", 
@@ -4051,27 +3936,20 @@
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Payroll Clearing", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:Administration", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Business Improvement", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Eyerly Trust", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Parkland Dedication", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Recovery Act JAG", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Traffic Mitigation and Parking", 
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Revenue:Charges for Services": {
@@ -4090,12 +3968,12 @@
                 "City Council:City Council Operations", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
-                "Fire:Records & Information Management", 
+                "Fire:Records & Info. Management", 
                 "Human Resources:Employee Development", 
                 "Library:Library Services Administration", 
                 "Library:Public Services", 
@@ -4103,7 +3981,7 @@
                 "Planning:Planning", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
@@ -4116,7 +3994,7 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
@@ -4133,10 +4011,9 @@
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Parkland Dedication", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu"
+                "Special Revenue Funds:Traffic Mitigation and Parking"
             ]
         }, 
         "Revenue:Charges to Other Funds": {
@@ -4150,7 +4027,7 @@
                 "City Council:Administration", 
                 "City Manager:Administration", 
                 "Community Services:Arts & Culture", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Fire:Fire Administration", 
@@ -4169,7 +4046,7 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Human Resources:Liability Insurance", 
                 "Administrative Services:Purchasing", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management"
             ], 
             "funds": [
@@ -4183,7 +4060,7 @@
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund"
+                "Internal Services Funds:Vehicle Maintenance Fund"
             ]
         }, 
         "Revenue:Documentary Transfer Tax": {
@@ -4205,7 +4082,7 @@
                 "Planning:Planning", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
@@ -4215,11 +4092,11 @@
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Utilities:Administration", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
-                "Human Resources:Retiree Health Benef", 
+                "Human Resources:Retiree Health Benefits", 
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Police:Other Funds", 
                 "Police:Recovery Act JAG"
@@ -4232,10 +4109,10 @@
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Recovery Act JAG", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Street Improvement"
             ]
         }, 
@@ -4269,7 +4146,7 @@
         }, 
         "Revenue:Other Income": {
             "divisions": [
-                "Administrative Services:Non-Departmental", 
+                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -4292,7 +4169,7 @@
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
-                "Special Revenue Funds:Public Benefits"
+                "Special Revenue Funds:Public Benefit"
             ]
         }, 
         "Revenue:Other Revenue": {
@@ -4304,7 +4181,7 @@
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
                 "City Attorney:Consultation and Advisory", 
-                "City Attorney:Litigation and Dispute Resolution", 
+                "City Attorney:Litigation/Dispute Resolution", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
                 "City Clerk:Administration", 
@@ -4316,7 +4193,7 @@
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
@@ -4329,7 +4206,7 @@
                 "Planning:Planning", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
-                "Police:Investigations and Crime Prev Serv", 
+                "Police:Investigation/Crime Prevention", 
                 "Police:Parking Services", 
                 "Police:Police Personnel Selection", 
                 "Police:Traffic Services", 
@@ -4337,7 +4214,6 @@
                 "Public Works:Streets", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Operations & Maintenance", 
@@ -4346,18 +4222,18 @@
                 "Public Works:Wastewater Treatment", 
                 "Utilities:Customer Service", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Utilities:Eyerly Trust", 
@@ -4386,29 +4262,26 @@
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Payroll Clearing", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Eyerly Trust", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Parkland Dedication", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Traffic Mitigation and Parking", 
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Revenue:Other Taxes and Fines": {
             "divisions": [
                 "Administrative Services:Non-Departmental Division", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
                 "Library:Library Services Administration", 
@@ -4429,8 +4302,8 @@
                 "General Funds:General Fund", 
                 "Enterprise Funds:Storm Drainage", 
                 "Enterprise Funds:Wastewater Treatment", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District"
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Special Districts"
             ]
         }, 
         "Revenue:Permits and Licenses": {
@@ -4451,8 +4324,8 @@
                 "General Funds:General Fund", 
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Wastewater Collection", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District"
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:Special Districts"
             ]
         }, 
         "Revenue:Property Taxes": {
@@ -4464,9 +4337,9 @@
             "funds": [
                 "General Funds:General Fund", 
                 "Debt Service Funds:Library Projects", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:California Ave Parking Assessment", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Revenue:Rental Income": {
@@ -4474,7 +4347,7 @@
                 "Administrative Services:Non-Departmental Division", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
-                "Community Services:Open Space! Parks! & Golf", 
+                "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Planning:Planning", 
                 "Police:Animal Services", 
@@ -4500,13 +4373,13 @@
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
                 "Public Works:Other Funds", 
-                "Human Resources:General Benefits Fun", 
+                "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
                 "Administrative Services:Purchasing", 
-                "Human Resources:Retiree Health Benef", 
-                "Information Technology:Information Technology Division", 
+                "Human Resources:Retiree Health Benefits", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
-                "Human Resources:Workers' Compensatio", 
+                "Human Resources:Workers' Compensation", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Utilities:Eyerly Trust", 
@@ -4533,24 +4406,20 @@
                 "Internal Services Funds:General Benefits & Insurance", 
                 "Internal Services Funds:Liability Insurance", 
                 "Internal Services Funds:Printing & Mailing Services Fund", 
-                "Internal Services Funds:Retiree Health Benefits", 
+                "Internal Services Funds:Retiree Health Benefits Fund", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
                 "Internal Services Funds:Worker's Comp", 
-                "Special Revenue Funds:BID", 
-                "Special Revenue Funds:Cable - JPA", 
-                "Special Revenue Funds:Charleston-Arastradero Develop Impact Fees", 
+                "Special Revenue Funds:Business Improvement", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Eyerly Trust", 
-                "Special Revenue Funds:Fed & State Revenue", 
+                "Special Revenue Funds:Federal and State Revenue", 
                 "Special Revenue Funds:Housing In-Lieu", 
-                "Special Revenue Funds:Parkland Dedication", 
-                "Special Revenue Funds:Public Benefits", 
-                "Special Revenue Funds:Recovery Act JAG", 
-                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Public Benefit", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu", 
-                "Special Revenue Funds:University Ave Parking Assessment Agency"
+                "Special Revenue Funds:Traffic Mitigation and Parking", 
+                "Special Revenue Funds:University Avenue Parking"
             ]
         }, 
         "Revenue:Sales Taxes": {
@@ -4579,12 +4448,12 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
-                "Community Services:CSD - CIP", 
+                "Community Services:CSD - Capital Improvement", 
                 "FIR:Other Funds", 
                 "Planning:Other Funds", 
                 "Police:Other Funds", 
                 "Public Works:Other Funds", 
-                "Information Technology:Information Technology Division", 
+                "Information Technology:Information Technology Divisions", 
                 "Public Works:Equipment Management", 
                 "Community Services:CSD - Development Impact Fees"
             ], 
@@ -4604,14 +4473,13 @@
                 "Debt Service Funds:Golf Course Improvement", 
                 "Debt Service Funds:Parking 02 COP Taxable", 
                 "Internal Services Funds:Technology Fund", 
-                "Internal Services Funds:Vehicle Replacement & Maintenance Fund", 
-                "Special Revenue Funds:Administration", 
+                "Internal Services Funds:Vehicle Maintenance Fund", 
+                "Special Revenue Funds:Other Special Revenue Funds", 
                 "Special Revenue Funds:Community Development", 
-                "Special Revenue Funds:Fed & State Revenue", 
-                "Special Revenue Funds:Residential Parking Permits Program", 
-                "Special Revenue Funds:Special District", 
+                "Special Revenue Funds:Federal and State Revenue", 
+                "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement", 
-                "Special Revenue Funds:Traffic Mitigation & Parking In-Lieu"
+                "Special Revenue Funds:Traffic Mitigation and Parking"
             ]
         }, 
         "Revenue:Transient Occupancy Tax": {

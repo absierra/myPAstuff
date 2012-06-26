@@ -116,7 +116,7 @@ Raphael.el.popup = function (dir, size, x, y) {
     }[dir];
 
     this.translate(xy.x, xy.y);
-    return paper.path(paths[dir]).attr({ fill: "#FFF", stroke: "#CCC", }).insertBefore(this.node ? this : this[0]);
+    return paper.path(paths[dir]).attr({ opacity: .6, fill: "#414042", stroke: "#A7A7A7", }).insertBefore(this.node ? this : this[0]);
 };
 
 /*\
@@ -721,7 +721,7 @@ Raphael.g = {
      > Default value
      | { font: '12px Arial, sans-serif', fill: '#fff' }
      \*/  
-    txtattr: { font: '12px Arial, sans-serif', fill: '#000' },
+    txtattr: { font: '12px Arial, sans-serif', fill: '#FFF' },
 
     /*\
      * g.colors
