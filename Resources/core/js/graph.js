@@ -444,7 +444,7 @@ var BudgetGraph = new Class({
                        var graphSize = document.id('graphs').getScrollSize();
                        var xGraph = graphSize.x - 240;
                        //if (xGraph > 600) xGraph = 600;
-                       var yGraph = graphSize.y - 41;
+                       var yGraph = graphSize.y - 61;
 						//console.log(this.legendItems);
                        var a = this;
                        if(ySet.length != 0){
