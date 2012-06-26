@@ -174,7 +174,6 @@ var BudgetGraph = new Class({
                                        elements = column.getElements('> li > span:not(.disabled)');
                                }
                                result = [];
-                               //console.log('els', this.options.column, elements.clone());
                                elements.each(function(el){
                                        notags = el.get('text');
                                        if(keys.contains(notags)){
@@ -236,11 +235,9 @@ var BudgetGraph = new Class({
 				DIVelement.setStyle('display', 'none');
 			}
 	   });
-
        legendElement.getElements('li').destroy();
        var items = this.getLegendItems();//this.getLegendItems();
-       //console.log('legend items', items, this.legendItems);
-       //console.log('items', items);
+
        if(items.length > this.colors.length){
            this.colors = hueShiftedColorSet(items.length);
        }
@@ -423,21 +420,21 @@ var BudgetGraph = new Class({
                                        //this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
                                });
                        }else{ //zero data
-                       var graphSize = document.id('graphs').getScrollSize();
-                       var xGraph = graphSize.x - 240;
-                       var yGraph = graphSize.y - 41;
-               a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
-                   stroke: "#ccc",
-                   fill: "#fff",
-                   height: 75,
-                   width: 200
-               });
-               a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
-                   fill: "#818285",
-                   'font-size': 13,
-                   'font-weight': 'bold'
-               });
-                               BudgetGraph.clearLegend();
+                       		var graphSize = document.id('graphs').getScrollSize();
+                       		var xGraph = graphSize.x - 240;
+                       		var yGraph = graphSize.y - 41;
+               				a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                  				stroke: "#ccc",
+                				fill: "#fff",
+                   				height: 75,
+                   				width: 200
+               				});
+               				a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                   				fill: "#818285",
+                   				'font-size': 13,
+                   				'font-weight': 'bold'
+               				});
+                            //BudgetGraph.clearLegend();
                        }
                }else{
                        // this means we're doing a line or stacked graph
@@ -469,18 +466,18 @@ var BudgetGraph = new Class({
                                );
                        }
                        else{ //zero data
-               a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
-                   stroke: "#ccc",
-                   fill: "#fff",
-                   height: 75,
-                   width: 200
-               });
-               a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
-                   fill: "#818285",
-                   'font-size': 13,
-                   'font-weight': 'bold'
-               });
-                               BudgetGraph.clearLegend();
+               				a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                   				stroke: "#ccc",
+                   				fill: "#fff",
+                   				height: 75,
+                   				width: 200
+               				});
+               				a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                   				fill: "#818285",
+                   				'font-size': 13,
+                   				'font-weight': 'bold'
+               				});				
+                            //BudgetGraph.clearLegend();
                        }
                }
        }

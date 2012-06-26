@@ -44,7 +44,7 @@
         chart.covers = covers;
 
         if (len == 1) {
-            series.push(paper.circle(cx, cy, r).attr({ fill: chartinst.colors[0], stroke: opts.stroke || "#fff", "stroke-width": opts.strokewidth == null ? 1 : opts.strokewidth }));
+            series.push(paper.circle(cx, cy, r).attr({ opacity: .6, fill: opts.colors[0], stroke: opts.stroke || "#fff", "stroke-width": opts.strokewidth == null ? 1 : opts.strokewidth }));
             covers.push(paper.circle(cx, cy, r).attr(chartinst.shim));
             total = values[0];
             values[0] = { value: values[0], order: 0, valueOf: function () { return this.value; } };
@@ -90,7 +90,7 @@
                 }
 
                 var path = sector(cx, cy, r, angle, angle -= 360 * values[i] / total);
-                var p = paper.path(opts.init ? ipath : path).attr({ fill: opts.colors && opts.colors[values[i].order] || chartinst.colors[i] || "#666", stroke: opts.stroke || "#fff", "stroke-width": (opts.strokewidth == null ? 1 : opts.strokewidth), "stroke-linejoin": "round" });
+                var p = paper.path(opts.init ? ipath : path).attr({ opacity: .6, fill: opts.colors && opts.colors[values[i].order] || chartinst.colors[i] || "#666", stroke: opts.stroke || "#fff", "stroke-width": (opts.strokewidth == null ? 1 : opts.strokewidth), "stroke-linejoin": "round" });
 
                 p.value = values[i];
                 p.middle = path.middle;

@@ -52,7 +52,7 @@ var DelphiGraphTabs = {
 			} else {
 				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab']; // [Fund 0][Dept 0]
 			}
-        //you know, show/hide is way better than shuffling custom classes, and you could use first/last to handle rounding
+        //you know, show/ is way better than shuffling custom classes, and you could use first/last to handle rounding
         var tabsContainer = document.getElement('#tabs');
         var tabsLi = tabsContainer.getElements('#tabs li');
         tabsLi.removeClass('display'); //.removeClass('roundedLeft').removeClass('roundedRight');
