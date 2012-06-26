@@ -41,10 +41,18 @@ MGFX.Tabs = new Class({
 		var that = this;
 		this.tabs.forEach(function(tab,index){
 			//need index, thats why theres the forEach
-			tab.addEvent('click', function(event){ 
+			tab.addEvent('click', function(event){
+				if (that.options.clickable) {
+					if (!this.match(that.options.clickable)) {
+						return false;
+					}
+				}
 				event.preventDefault();
 				that.showSlide(index);
 				that.stop(true);
+				if (that.options.callback) {
+						that.options.callback.call(this);
+				}
 			});
 		});
 	}.protect(),

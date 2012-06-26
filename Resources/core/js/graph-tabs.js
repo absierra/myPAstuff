@@ -1,16 +1,17 @@
 var DelphiGraphTabs = {
     selected : false,
     initialize : function(options){
-        window.graphTabs = new MGFX.Tabs('#tabs .tab', '#graph_container .graph');
         var tabsContainer = document.getElement('#tabs');
-        var tabsLi = tabsContainer.getElements('#tabs li');
-        tabsLi.each(function(el, tabKey){
-                el.addEvent('click', function(event){
-                    var g = BudgetGraph.graphs[event.target.getAttribute('graph')];
-                    g.setLegend();
-                    g.setKeys();
-                });
-        });
+        window.graphTabs = new MGFX.Tabs( '#tabs .tab'
+                                        , '#graph_container .graph'
+                                        , { clickable: '.display'
+                                          , callback: function () {
+                                              var g = BudgetGraph.graphs[event.target.getAttribute('graph')];
+                                              g.setLegend();
+                                              g.setKeys();
+                                              window.tabSettings[this.get('id')]();
+                                          }
+                                        });
     },
     select : function(tab){
         DelphiGraphTabs.selected = tab;
