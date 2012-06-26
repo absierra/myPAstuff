@@ -2,7 +2,7 @@
 {require name="mootools,core,header,graphael,tabs"}
 {panel name="header"}
 {literal}
-<script>
+<script type="text/javascript">
 	document.addEvent('domready', function() { 
 		window.graphs = {};
 		initGraphs();
@@ -130,11 +130,11 @@
 		// this snippet makes the description_tooltip (on the "Fund" and "Department" columns) white when you mouseover anywhere in the header
 		document.getElements("#left_column ul h3").each(function(headerElement){
 			headerElement.addEvent('mouseover', function(){
-				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_white.png\') no-repeat 4px 0');
+				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_active.png\') no-repeat 4px 0');
 			});
 			
 			headerElement.addEvent('mouseleave', function(){
-				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_act.png\') no-repeat 4px 0');
+				this.getElement("a").setStyle('background', 'url(\'Resources/core/img/info_inactive.png\') no-repeat 5px 0');
 			});
 		});
 

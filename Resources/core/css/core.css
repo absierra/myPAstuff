@@ -359,13 +359,13 @@ header span.logo_text {
   display: block;
   height: 18px;
   width: 20px;
-  background: url('/Resources/core/img/info_white.png') no-repeat 4px 0;
+  background: url('/Resources/core/img/info_inactive.png') no-repeat 5px 0;
   cursor: help;
 }
 #left_column ul h3 a:hover {
   /*background-position: 4px -17px;*/
 
-  background: url('/Resources/core/img/info_white.png') no-repeat 4px 0;
+  background: url('/Resources/core/img/info_active.png') no-repeat 4px 0;
 }
 #left_column > ul {
   float: left;
@@ -385,6 +385,7 @@ header span.logo_text {
   padding: 0 15px 10px;
   font-size: 1em;
   z-index: 20;
+  opacity: 0.9;
 }
 #left_column > ul > ul {
   overflow-y: scroll;
@@ -556,7 +557,7 @@ header span.logo_text {
 #content {
   clear: both;
   position: absolute;
-  top: 0;
+  top: 10px;
   bottom: 0;
   left: 460px;
   right: 0;
@@ -584,7 +585,6 @@ header span.logo_text {
 }
 #content h2 {
   font-size: 25px;
-  font-style: italic;
 }
 #about {
   clear: both;
@@ -755,14 +755,14 @@ header span.logo_text {
 #graph_container h1#graph_title {
   text-align: center;
   font-family: "ProximaNova-Bold";
-  margin-top: 15px;
+  padding-top: 13px;
   font-size: 18px;
   color: #00abe3;
 }
 #graph_container h2#graph_breakdown {
   position: absolute;
-  top: 38%;
-  left: -22px;
+  top: 34%;
+  left: -4px;
   font-family: "ProximaNova-Bold";
   font-size: 15px;
   -webkit-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
@@ -772,14 +772,14 @@ header span.logo_text {
   transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
 }
 #graph_container h2#graph_fiscal_year {
-  margin-top: 10px;
+  margin-top: 6px;
   text-align: center;
   font-family: "ProximaNova-Bold";
   font-size: 15px;
 }
 #graph_types {
   position: absolute;
-  right: 15px;
+  right: 52px;
   top: 15%;
   z-index: 20;
 }
@@ -909,13 +909,13 @@ header span.logo_text {
   bottom: 0px;
   display: none;
   white-space: normal;
-  margin: 10px 15px;
+  margin: 0 15px;
   padding: 0 3px;
   color: #373739;
   overflow: auto;
   /*height: 118px; changed by Arthur 2012-06-15 to get the legend away from the axis label*/
 
-  height: 100px;
+  height: 117px;
   /*text-align: center;*/
 
 }
