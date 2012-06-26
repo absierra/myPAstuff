@@ -82,7 +82,7 @@
 
         for (i = 0, ii = valuesy.length; i < ii; i++) {
             if (opts.shade) {
-                shades.push(paper.path().attr({ stroke: "none", fill: colors[i], opacity: opts.nostroke ? 1 : .3 }));
+                shades.push(paper.path().attr({ stroke: "none", fill: colors[i], opacity: opts.nostroke ? 1 : .5 }));
             }
 
             if (valuesy[i].length > width - 2 * gutter) {
@@ -94,15 +94,17 @@
                 valuesx[i] = shrink(valuesx[i], width - 2 * gutter);
             }
         }
-
+		
+		//console.log(Math.max.apply(Math, ally)
+		
         var allx = Array.prototype.concat.apply([], valuesx),
             ally = Array.prototype.concat.apply([], valuesy),
             xdim = chartinst.snapEnds(Math.min.apply(Math, allx), Math.max.apply(Math, allx), valuesx[0].length - 1),
             minx = xdim.from,
             maxx = xdim.to,
             ydim = chartinst.snapEnds(Math.min.apply(Math, ally), Math.max.apply(Math, ally), valuesy[0].length - 1),
-            miny = 0,//ydim.from,
-            maxy = ydim.to,
+            miny = Math.min.apply(Math, ally)<0 ? Math.min.apply(Math, ally)*1.1 : 0,//ydim.from,
+            maxy = Math.max.apply(Math, ally)*1.1,//ydim.to,
             kx = (width - gutter * 2) / ((maxx - minx) || 1),
             ky = (height - gutter * 2) / ((maxy - miny) || 1);
         
@@ -128,13 +130,12 @@
 		
         var axis = paper.set();
 		
-		//ADDS AXES
         if (opts.axis) {
             var ax = (opts.axis + "").split(/[,\s]+/);
             +ax[0] && axis.push(chartinst.axis(x + gutter, y + gutter, width - 2 * gutter, minx, maxx, opts.axisxstep || Math.floor((width - 2 * gutter) / 20), 2, paper));
-            +ax[1] && axis.push(chartinst.axis(x + width - gutter, y + height - gutter, height - 2 * gutter, miny, maxy, opts.axisystep || Math.floor((height - 2 * gutter) / 20), 3, paper));
+            +ax[1] && axis.push(chartinst.axis(x + width - gutter, y + height - gutter, height - 2 * gutter, miny, maxy, opts.axisystep || Math.floor((height - 2 * gutter) / 5), 3, paper));
             +ax[2] && axis.push(chartinst.axis(x + gutter, y + height - gutter, width - 2 * gutter, minx, maxx, opts.axisxstep || Math.floor((width - 2 * gutter) / 20), 0, paper));
-            +ax[3] && axis.push(chartinst.axis(x + gutter, y + height - gutter, height - 2 * gutter, miny, maxy, opts.axisystep || Math.floor((height - 2 * gutter) / 20), 1, paper));
+            +ax[3] && axis.push(chartinst.axis(x + gutter, y + height - gutter, height - 2 * gutter, miny, maxy, 5 || Math.floor((height - 2 * gutter) / 50), 1, paper));
         }
 
         var lines = paper.set(),
@@ -148,10 +149,10 @@
             if (!opts.nostroke) {
                 lines.push(line = paper.path().attr({
                     stroke: colors[i],
-                    "stroke-width": opts.width || 2,
+                    "stroke-width": opts.width || 3,
                     "stroke-linejoin": "round",
-                    "stroke-linecap": "round",
-                    "stroke-dasharray": opts.dash || ""
+                    "stroke-linecap": "butt",
+                    "stroke-dasharray": opts.dash || "",
                 }));
             }
 
@@ -224,7 +225,7 @@
                         
             lastpath = backpath.concat(["z"]);
 
-            !opts.nostroke && line.attr({ path: path.join(",") });
+            !opts.nostroke && line.attr({ path: path.join(",")});
         }
         
         function createDots(f) {
@@ -232,7 +233,7 @@
                 C;
                 
             yearsum = [];
-
+            
             for (var i = 0, ii = valuesy.length; i < ii; i++) {
                 for (var j = 0, jj = valuesy[i].length; j < jj; j++) {
                 
@@ -258,9 +259,11 @@
                     //    nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
                     //    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
 
-                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, Math.abs(nearX - X) / 40).attr({ stroke: "none", fill: "#000", opacity: 1 }));
+                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, 7.4).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
                     C.x = X;
                     C.y = Y;
+                    C.year = valuesx[i][j];
+                    C.name = opts.names[i];
                     C.value = valuesy[i][j];
                     C.line = chart.lines[i];
                     C.shade = chart.shades[i];

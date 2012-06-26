@@ -116,7 +116,7 @@ Raphael.el.popup = function (dir, size, x, y) {
     }[dir];
 
     this.translate(xy.x, xy.y);
-    return paper.path(paths[dir]).attr({ fill: "#000", stroke: "none" }).insertBefore(this.node ? this : this[0]);
+    return paper.path(paths[dir]).attr({ fill: "#FFF", stroke: "#CCC", }).insertBefore(this.node ? this : this[0]);
 };
 
 /*\
@@ -721,7 +721,7 @@ Raphael.g = {
      > Default value
      | { font: '12px Arial, sans-serif', fill: '#fff' }
      \*/  
-    txtattr: { font: '12px Arial, sans-serif', fill: '#fff' },
+    txtattr: { font: '12px Arial, sans-serif', fill: '#000' },
 
     /*\
      * g.colors
@@ -790,8 +790,8 @@ Raphael.g = {
     },
 
     axis: function (x, y, length, from, to, steps, orientation, labels, type, dashsize, paper) {
-        dashsize = dashsize == null ? 2 : dashsize;
-        type = type || "t";
+        dashsize = dashsize == null ? 5 : dashsize;
+        type = type || "-";
         steps = steps || 10;
         paper = arguments[arguments.length-1] //paper is always last argument
 
@@ -801,9 +801,12 @@ Raphael.g = {
             t = ends.to,
             i = ends.power,
             j = 0,
-            txtattr = { font: "11px 'Fontin Sans', Fontin-Sans, sans-serif" },
+            txtattr = { font: "11px 'Fontin Sans', Fontin-Sans, sans-serif", fill: '#999' },
             text = paper.set(),
             d;
+            
+        
+        
 
         d = (t - f) / steps;
 
@@ -813,23 +816,34 @@ Raphael.g = {
 
         if (+orientation == 1 || +orientation == 3) {
             var Y = y,
-                addon = (orientation - 1 ? 1 : -1) * (dashsize + 3 + !!(orientation - 1));
-
-            while (Y >= y - length) {
-                type != "-" && type != " " && (path = path.concat(["M", x - (type == "+" || type == "|" ? dashsize : !(orientation - 1) * dashsize * 2), Y + .5, "l", dashsize * 2 + 1, 0]));
-                text.push(paper.text(x + addon, Y, (labels && labels[j++]) || (Math.round(label) == label ? label : +label.toFixed(rnd))).attr(txtattr).attr({ "text-anchor": orientation - 1 ? "start" : "end" }));
+                addon = (orientation - 1 ? 1 : -1) * (dashsize + 3 + !!(orientation - 1))-10;
+			
+			//(labels && labels[j++]) || (Math.round(label) == label ? label : +label.toFixed(rnd))
+			
+            while (Y >= y - length - dx) {
+            	if (label < 1000){
+            		modifiedlabel = Math.round((label)*Math.pow(10,1))/Math.pow(10,1)+'';
+            	}
+            	else if (label < 1000000){
+            		modifiedlabel = Math.round((label/1000)*Math.pow(10,1))/Math.pow(10,1)+'K';
+            	}
+            	else {
+            		modifiedlabel = Math.round((label/1000000)*Math.pow(10,1))/Math.pow(10,1)+'M';
+            	}
+                type != "-" && type != " " && (path = path.concat(["M", x - (type == "+" || type == "|" ? dashsize : !(orientation - 1) * dashsize * 2), Y + .5, "l", dashsize * 2 + 1, 0]).attr({fill: "#000"}));
+                text.push(paper.text(x + addon, Y, modifiedlabel).attr(txtattr).attr({ "text-anchor": orientation - 1 ? "start" : "end" }));
                 label += d;
                 Y -= dx;
             }
 
-            if (Math.round(Y + dx - (y - length))) {
+            /*if (Math.round(Y + dx - (y - length))) {
                 type != "-" && type != " " && (path = path.concat(["M", x - (type == "+" || type == "|" ? dashsize : !(orientation - 1) * dashsize * 2), y - length + .5, "l", dashsize * 2 + 1, 0]));
                 text.push(paper.text(x + addon, y - length, (labels && labels[j]) || (Math.round(label) == label ? label : +label.toFixed(rnd))).attr(txtattr).attr({ "text-anchor": orientation - 1 ? "start" : "end" }));
-            }
+            }*/
         } else {
             label = f;
             rnd = (i > 0) * i;
-            addon = (orientation ? -1 : 1) * (dashsize + 9 + !orientation);
+            addon = (orientation ? -1 : 1) * (dashsize + 9 + !orientation)+10;
 
             var X = x,
                 dx = length / steps,
@@ -858,8 +872,10 @@ Raphael.g = {
             }
         }
 
-        var res = paper.path(path);
-
+        var res = paper.path(path).attr({stroke: '#CCC', "stroke-width": 2});
+        
+    	//console.log(res);
+        
         res.text = text;
         res.all = paper.set([res, text]);
         res.remove = function () {

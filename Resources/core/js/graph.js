@@ -1,246 +1,537 @@
 var BudgetGraph = new Class({
-    Implements: Options,
-    options: {
-        color: '#fff',
-        size: {
-            width: 100,
-            height: 100
-        },
-        type : 'none',
-        target : false,
-        name : 'Debt Service Funds',
-        //we really need to switch graph types to 1 option, rather than a bunch of weirdly intersecting booleans
-        stacked : true,
-        percent : false,
-        bar : false,
-        pie : false,
-        metric : 'revenue'
-    },
-    initialize : function(element, options){
-        this.element = element;
-        this.setOptions(options);
-        if(!this.options.requestor) this.options.requestor = new Request.JSON({
-            url: '/data/graph',
-            onSuccess: function(payload){
-                this.data = payload.data;
-                this.colors = hueShiftedColorSet(Object.getLength(this.data), 'hex').shuffle();
-                this.setColors(this.colors);
-                this.display();
-                if(this.fetchCallback){
-                    this.fetchCallback(this.data);
-                    delete this.fetchCallback;
-                }
-            }.bind(this)
-        });
-        if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
-        if(this.options.select) this.options.select = this.options.select.bind(this)
-        this.raphael = Raphael(element);
-        a = this; //?
-    },
-    fetch : function(data, type, callback){
-        if(typeOf(type) == 'function'){
-            callback = type;
-            delete type;
-        }
-        if(type) this.options.type = type;
-        var requestData = Object.clone(data);
-        BudgetGraph.lastSelection = requestData;
-        BudgetGraph.lastSelectionType = this.options.type;
-        requestData.type = this.options.type;
-        if(this.options.target) requestData.target = this.options.target;
-        this.options.requestor.get(requestData);
-        if(callback) this.fetchCallback = callback;
-    },
-    setColors : function(colors) {
-        this.options.colors = colors;
-    },
-    select : function(colors) {
-        window.selectedGraph = this;
-        this.setLegend();
-        this.setKeys();
-    },
-    getKeyElements : function(){
-        var column = document.id(this.options.column);
-        if(column){
-            var isSelected = column.getElement('li span.selected');
-            if(isSelected){ 
-                //console.log(['selected', column.getElements('li span.selected')]);
-                return column.getElements('ul li span:not(.disabled)');
-            }else {
-                //console.log(['rer', column.getElements('> li > span:not(.disabled)')]);
-                return column.getElements('> li > span:not(.disabled)');
-            }
-        }else return [];
-    },
-    getLegendItems : function(){
-        //console.log(['sss', this.data]);
-        var keys = Object.keys(this.data).map(function(value){
-            return value.split(':').pop();
-        });
-        var result = [];
-        /*var column = document.id(this.options.column);
-        var elements = column.getElements('ul li span:not(.disabled)');
-        elements.each(function(el){
-            result.push(el.innerHTML);
-        });
-        return result;*/
-        return keys;
-    },
-    setKeys : function(){
-        document.getElements('span.colorkey').removeClass('colorkey');
-        PseudoDOM.clear();
-        activeItems = this.getKeyElements();
-        activeItems.each(function(item, lcv){
-            item.addClass('colorkey');
-            PseudoDOM.before(item, {
-                'background-color' : this.colors[lcv]
-            });
-        }.bind(this));
-    },
-    setLegend : function(){
-        var column = document.id(this.options.column);
-        var legendElement = document.getElement('#legend');
-        legendElement.getElements('li').destroy();
-        var items = this.getLegendItems();
-        //console.log(['items', items, this.colors]);
-        if(items && items.length > 0){
-            items.each(function(item, lcv) {
-                var legendItem = new Element('span', {
-                    html : item
-                });
-                PseudoDOM.before(legendItem, {
-                    'background-color' : this.colors[lcv]
-                });
-                var legendLi = new Element('li');
-                legendElement.appendChild(legendLi);
-                legendLi.appendChild(legendItem);
-            }.bind(this));
-            legendElement.reveal();
-        }else{
-            legendElement.dissolve();
-        }
-        var legendElements = document.getElements('#legend li span');
-        legendElements.each(function(item, lcv){
-            PseudoDOM.before(item, {
-                'background-color' : this.colors[lcv]
-            })
-        }.bind(this));
-    },
-    display : function(metric){
-    	this.raphael.clear();
-        if(!metric) metric = this.options.metric;
-        xSet = [];
-        ySet = [];
+   Implements: Options,
+   options: {
+       color: '#fff',
+       size: {
+           width: 100,
+           height: 100
+       },
+       type : 'none',
+       dataset : 'test',
+       target : false,
+       name : 'Debt Service Funds',
+       //we really need to switch graph types to 1 option, rather than a bunch of weirdly intersecting booleans
+       stacked : false,
+       percent : false,
+       bar : false,
+       pie : false,
+       metric : 'revenue'
+   },
+   initialize : function(element, options){
+       this.element = element;
+       this.setOptions(options);
+       if(!this.options.requestor) this.options.requestor = new Request.JSON({
+           url: '/data/graph',
+           onRequest: function(){
+              BudgetGraph.timer(1);
+           },
+           onComplete: function(){
+              BudgetGraph.timer(-1);
+           },
+           onSuccess: function(payload){
+               this.data = payload.data;
+               var column = document.id(this.options.column);
+               var keys = Object.keys(this.data);
+			   this.displayOrder = []; //The short name
+			   this.dataOrder = []; //The full ':' delimited name
+			   if(column){
+					var isSelected = column.getElement('li span.selected');
+					if(isSelected){
+						elements = column.getElements('ul li span:not(.disabled)');
+					}else {
+						elements = column.getElements('> li > span:not(.disabled)');
+					}
+					result = [];
+					elements.each(function(el){
+						var notags = el.get('text');
+						keys.each(function(value){
+							var displayValue = value.split(':').pop();
+							if(displayValue === notags){
+								this.dataOrder.push(value);
+								this.displayOrder.push(displayValue);
+								keys.erase(notags);
+							}
+						}.bind(this));
+					}.bind(this));
+				}
+				this.dataOrder =  Object.merge(keys,this.dataOrder);
+				// ♪♫ In the ghetto... ♫♪
+				this.displayOrder =  Object.merge(keys.map(function(value){return value.split(':').pop()}),this.displayOrder);
 
-        var key;
-        switch(this.options.type){
-            case 'fund': key = 'funds'; break;
-            case 'category': key = 'categories'; break;
-            case 'department': key = 'departments'; break;
-        }
-        if(!this.options.target){
-            window.dataRequest[key].each(function(data, index){
-                if(this.data[data]){
-                    var xs = [];
-                    var ys = [];
-                    Object.each(this.data[data], function(item, year){
-                        xs.push(year);
-                        ys.push((item[metric]?item[metric]:0));
+            	if(this.options.target == 'revenue_expense'){
+        		this.colors = hueShiftedColorSet(2, ['Expenses', 'Revenues']);
+               }
+               else if(this.options.target == 'category'){
+            		var categories = [];
+                    var metric = this.options.metric;
+                    data = this.data;
+                    Object.each(this.data, function(value, key){
+                        if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0) categories.push(key);
                     });
-                    xSet.push(xs);
-                    ySet.push(ys);
-                }
-            }.bind(this));
-        }else{
-            Object.each(this.data, function(data, name){
-                var xs = [];
-                var ys = [];
-                Object.each(data, function(item, year){
-                    xs.push(year);
-                    ys.push((item[metric]?item[metric]:0));
-                });
-                xSet.push(xs);
-                ySet.push(ys);
-            }); //*/
-        }
-        //console.log(['diz', xSet, ySet]);
-        if(this.options.mode == 'bar'){
-            this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
-                shade: true,
-                nostroke: false,
-                axis: "0 0 1 1",
-                colors:this.options.colors
-            });
-        }else if (this.options.mode == 'pie'){
-           
-            //window.totalChartValue = 0;
+                    this.colors = hueShiftedColorSet(0, categories);
+               }
+               else{
+                    this.colors = hueShiftedColorSet(Object.getLength(this.data));
+				}
+				this.setColors(this.colors);
+		   
+				this.fetching = false;
+				if(this.setKeysOnLoad){
+					this.setKeys();
+					this.setKeysOnLoad = false;
+				}
+               if(this.setLegendOnLoad){
+                   this.setLegend();
+                   this.setLegendOnLoad = false;
+               }
+               if(this.fetchCallback){
+                   this.fetchCallback(this.data);
+                   delete this.fetchCallback;
+               }
+               if(window.currentGraph == this){
+                       this.setKeys();
+                       this.setLegend();
+               }
+               this.legendItems = this.getLegendItems();
+               this.display();
+               //this.options.watch('column', function(){
+               //		throw('THERE HAS BEEN A CHANGE');
+               //})
+           }.bind(this)
+       });
+       if(this.options.id) BudgetGraph.graphs[this.options.id] = this;
+       if(this.options.select) this.options.select = this.options.select.bind(this)
+           this.raphael = Raphael(element);
+       //a = this; //?
+   },
+   fetch : function(data, type, callback){
+       if(typeOf(type) == 'function'){
+           callback = type;
+           delete type;
+       }
+       if(type) this.options.type = type;
+       var requestData = Object.clone(data);
+       BudgetGraph.lastSelection = requestData;
+       BudgetGraph.lastSelectionType = this.options.type;
+       requestData.type = this.options.type;
+       if(this.options.target) requestData.target = this.options.target;
+       requestData.dataset = this.options.dataset;
+       this.fetching = true;
+       this.displayOrder = []; //The short name
+               this.dataOrder = []; //The full ':' delimited name
+       this.options.requestor.get(requestData);
+       if(callback) this.fetchCallback = callback;
+   },
+   setColors : function(colors) {
+       this.options.colors = colors;
+   },
+   select : function(colors) {
+       window.selectedGraph = this;
+       this.setLegend();
+       this.setKeys();
+   },
+   getKeyElements : function(){
+       var column = document.id(this.options.column);
+       if(column){
+           var isSelected = column.getElement('li span.selected');
+           if(isSelected){
+               return column.getElements('ul li span:not(.disabled)');
+           }else {
+               return column.getElements('> li > span:not(.disabled)');
+           }
+       }else return [];
+   },
+   getLegendItems : function(){
+       var keys = [];
+       target = this.options.target;
+       metric = this.options.metric;
 
-            var totalValues = [];
-            ySet.each(function(arraySet, key) {
-                totalValues.push(Math.floor(arraySet.pop()/10000));
-            });
-            //console.log(totalValues);
+       var index = 0;
 
-            /* Year Values
-            xSet.each(function(element, key) {
-                if (key == 0) {
-                    element.each(function(elementValue, keyValue) {
-                        if (keyValue == 0) {
-                            //console.log("Element: "+elementValue); // Year
-                        }
-                    });
-                };
-            });
-            */
-            //console.log(totalValues.clone());
+       Object.each(this.data, function(value, key){
 
-            this.lines = this.raphael.piechart(320, 215, 185, totalValues, {
-                shade: true,
-                nostroke: false,
-                axis: "0 0 1 1",
-                axisxstep : 4,
-                colors:this.options.colors,
-                stacked:this.options.stacked,
-                percent:this.options.percent
-            });
+               key = key.indexOf(":")==-1?key:key.split(":")[1];
+               if(target == 'category'){
+                       if(value['2013'][metric] != undefined){
+                               keys.push(key);
+                       }
+               }
+               else{
+                       keys.push(key);
+               }
+       });
 
-        }else{
-            this.lines = this.raphael.linechart(75, 10, 570, 400, xSet, ySet, {
-                shade: this.options.stacked,
-                nostroke: false,
-                axis: "0 0 1 1",
-                axisxstep : 4,
-                colors:this.options.colors,
-                stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
-                percent:(this.options.mode == 'percentage-line')
-            }).hover(function() {
-            			this.attr("opacity",1);
-            			this.marker = this.marker || a.raphael.popup(this.x, this.y, this.value, "up", 5).insertBefore(this);
-            			this.marker.show();
-    				}, function() {
-        				// hide the popup element with an animation and remove the popup element at the end
-        				this.attr("opacity",0);
-        				this.marker && this.marker.hide();}
-        	);
-        }
-    }
+
+       if(target != 'category' && target != 'revenue_expense'){
+                       var result = [];
+                       var column = document.id(this.options.column);
+                       var elements;
+                       if(column){
+                               var isSelected = column.getElement('li span.selected');
+                               if(isSelected){
+                                       elements = column.getElements('ul li span:not(.disabled)');
+                               }else {
+                                       elements = column.getElements('> li > span:not(.disabled)');
+                               }
+                               result = [];
+                               //console.log('els', this.options.column, elements.clone());
+                               elements.each(function(el){
+                                       notags = el.get('text');
+                                       if(keys.contains(notags)){
+                                               result.push(notags);
+                                               keys.erase(notags);
+                                       }
+                               });
+                       }
+                    this.legendItems = result;
+                    return result;
+               }else{
+            this.legendItems = keys;
+            return keys;
+       }
+   },
+   setKeys : function(){
+       if(this.fetching){
+           this.setKeysOnLoad = true;
+           return;
+       }
+       BudgetGraph.clearKeys();
+       activeItems = this.getKeyElements();
+       if(activeItems.length == 0) return;
+       if(activeItems.length != this.colors.length){
+           this.colors = hueShiftedColorSet(Object.getLength(this.data));
+       }
+       activeItems.each(function(item, lcv){
+           item.addClass('colorkey');
+           PseudoDOM.before(item, {
+               'background-color' : this.colors[lcv]
+           });
+       }.bind(this));
+   },
+   setLegend : function(){
+       if(this.fetching){
+           this.setLegendOnLoad = true;
+           return;
+       }
+       var column = document.id(this.options.column);
+       var legendElement = document.getElement('#legend');
+		
+
+		//this is to deal with the mouse moving too fast, so that we clear the tooltip if it enters the legend area
+	   var DIVelement = document.getElement('#secondLevelMouseOver');
+	   legendElement.addEvent('mouseenter', function(){
+			DIVelement.set('html', '');
+			if (!DIVelement.hasClass('hidden'))
+			{
+				DIVelement.setStyle('display', 'none');
+				DIVelement.addClass('hidden');
+			}
+	   });
+	   var graphElement = document.getElement('#graphs');
+	   graphElement.addEvent('mouseenter', function(){
+			DIVelement.set('html', '');
+			if (!DIVelement.hasClass('hidden'))
+			{
+				DIVelement.addClass('hidden');
+				DIVelement.setStyle('display', 'none');
+			}
+	   });
+
+       legendElement.getElements('li').destroy();
+       var items = this.getLegendItems();//this.getLegendItems();
+       //console.log('legend items', items, this.legendItems);
+       //console.log('items', items);
+       if(items.length > this.colors.length){
+           this.colors = hueShiftedColorSet(items.length);
+       }
+       if(items && items.length > 0){
+               //items.sort();
+           items.each(function(item, lcv) {
+            	// this next line added by Arthur so that it could be used in the legendItem.addevent('mouseenter' function below (2012-06-15)
+                var legendDotColor = this.colors[lcv];
+
+               var legendItem = new Element('span', {
+                   html : item
+               });
+               PseudoDOM.before(legendItem, {
+                   'background-color' : this.colors[lcv]
+               });
+               var legendLi = new Element('li');
+               legendElement.appendChild(legendLi);
+               legendLi.appendChild(legendItem);
+
+                               // this is how we're going to show the text hidden by the ellipses (see a similar function in core.js for items in the columns that are too long)
+                               legendItem.addEvent('mouseenter', function(e){
+                                       mouseoverDIVpos = this.getParent().getPosition();
+
+                                       var DIVelement = document.getElement('#secondLevelMouseOver');
+
+                                       // like in the columns, we need to start with a clean slate in case mouse movements happen too fast
+                                       DIVelement.set('html', '');
+                                       DIVelement.addClass('hidden');
+
+                                       var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
+                                       var legendDot = new Element('div', {
+                                               styles: {
+                                                       'position': 'absolute',
+                                                       'left': '10px',
+                                                       'top': '7px',
+                                                       'content': '',
+                                                       'display': 'block',
+                                                       'height': '10px',
+                                                       'width': '10px',
+                                                       'z-index': '500',
+                                                       'background-color': legendDotColor
+                                               }
+                                       });
+
+                                       legendDot.inject(DIVelement, 'bottom');
+
+                                       newSpan.setStyles(this.getStyles('color', 'margin', 'padding', 'font-size', 'display', 'position')); // might need to copy over a few more styles here
+                                       newSpan.setStyles({
+                                               'background-color': '#E6E7E8',
+                                               'height': 'auto',
+                                               'line-height': '0.9em',
+                                               'width': 'auto',
+                                               'margin': '0px',
+                                               'padding': '0px 10px 0px 0px',
+                                               'cursor': 'default',
+                                       });
+										DIVelement.removeClass('hidden');
+                                       DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
+                                       DIVelement.setStyles({
+                                               'background-color': '#E6E7E8',
+                                               'height': 'auto',
+                                               'width': 'auto',
+                                               'margin': '0px',
+                                               'padding': '5px 0px 5px 24px',
+                                               'cursor': 'default'
+                                       });
+
+                                       DIVelement.setStyles({
+                                               'display': 'block',
+                                               'top': (mouseoverDIVpos.y - 2),
+                                               'left': (mouseoverDIVpos.x - 10)
+                                       });
+
+                                       DIVelement.addEvent('mouseleave', function(){
+                                               this.set('html', '');
+                                               this.setStyle('display', 'none');
+                                       });
+
+                                       e.stop();
+                               });
+           }.bind(this));
+           legendElement.reveal();
+       }else{
+           legendElement.dissolve();
+       }
+       var legendElements = document.getElements('#legend li span');
+       legendElements.each(function(item, lcv){
+           PseudoDOM.before(item, {
+               'background-color' : this.colors[lcv]
+           })
+       }.bind(this));
+   },
+   display : function(metric){
+       this.raphael.clear();
+       if(!metric) metric = this.options.metric;
+       xSet = [];
+       ySet = [];
+               var key;
+               switch(this.options.type){
+                       case 'fund': key = 'funds'; break;
+                       case 'category': key = 'categories'; break;
+                       case 'department': key = 'departments'; break;
+               }
+
+
+       var keys;
+        this.dataOrder.each(function(name){
+           var xs = [];
+           var ys = [];
+
+           if( (!keys) || this.data[name].length > keys.length) keys = Object.keys(this.data[name]);//.sort();
+           keys.each(function(key){
+               if(this.data[name][key][metric] != undefined){
+                   xs.push(key);
+                   var v;
+                   if(this.data[name][key] && this.data[name][key][metric]) v = this.data[name][key][metric];
+                   else v = 0;
+                   ys.push(v);
+               }
+           }.bind(this));
+           if(ys.length != 0){
+               xSet.push(xs);
+               ySet.push(ys);
+           }
+       }.bind(this)); //*/
+               if(this.options.mode == 'bar'){
+                       this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
+                               shade: true,
+                               nostroke: false,
+                               axis: "0 0 1 1",
+                               colors:this.colors
+                       });
+               }else if (this.options.mode == 'pie'){
+                       //window.totalChartValue = 0;
+                       var graphSize = document.id('graphs').getScrollSize();
+                       var xGraph = graphSize.x / 2 - 45;
+                       var yGraph = graphSize.y / 2 - 20;
+                       var totalValues = [];
+                       var yearValues = [];
+                       var year = this.options.year;
+                       var yearKey;
+                       this.availableYears = [];
+                       xSet.each(function(yearsArray) {
+                               yearsArray.each(function(value, key) {
+                                       if (year == value) yearKey = key;
+                                       if (!this.availableYears.contains(value)) this.availableYears.push(value);
+                               }.bind(this));
+                               BudgetGraph.LastSelectionYearsData = this.availableYears.sort();
+                       }.bind(this));
+
+                       if (year) {
+                               ySet.each(function(arraySet, key) {
+                                       totalValues.push(arraySet[yearKey]*1000);
+                               });
+                       } else {
+                               ySet.each(function(arraySet, key) {
+                                       totalValues.push(arraySet.pop()*1000);
+                               });
+                       }
+                       var a = this;
+                       if(ySet.length != 0){
+                               this.lines = this.raphael.piechart(xGraph, yGraph + 20, yGraph, totalValues, {
+                                       shade: true,
+                                       nostroke: false,
+                                       axis: "0 0 1 1",
+                                       axisxstep : 4,
+                                       colors:this.colors,
+                                       stacked:this.options.stacked,
+                                       percent:this.options.percent,
+                                       names: this.displayOrder
+                               }).hover(function () {
+                                       //this.sector.stop();
+                                       //this.sector.scale(1.1, 1.1, this.cx, this.cy);
+												var text = (a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees');                                       if (!this.marker) {
+                                               this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);
+                                       }
+                                       this.marker.show();
+                               },function (){
+                                       this.marker.hide();
+                                       //this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
+                               });
+                       }else{ //zero data
+                       var graphSize = document.id('graphs').getScrollSize();
+                       var xGraph = graphSize.x - 240;
+                       var yGraph = graphSize.y - 41;
+               a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                   stroke: "#ccc",
+                   fill: "#fff",
+                   height: 75,
+                   width: 200
+               });
+               a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                   fill: "#818285",
+                   'font-size': 13,
+                   'font-weight': 'bold'
+               });
+                               BudgetGraph.clearLegend();
+                       }
+               }else{
+                       // this means we're doing a line or stacked graph
+                       var graphSize = document.id('graphs').getScrollSize();
+                       var xGraph = graphSize.x - 240;
+                       //if (xGraph > 600) xGraph = 600;
+                       var yGraph = graphSize.y - 61;
+						//console.log(this.legendItems);
+                       var a = this;
+                       if(ySet.length != 0){
+                               this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
+                                       shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+                                       nostroke: false,
+                                       axis: "0 0 1 1",
+                                       axisxstep : 4,
+                                       colors:this.colors,
+                                       stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
+                                       percent:(this.options.mode == 'percentage-line'),
+                                       names: this.displayOrder//getLegendItems()
+                               }).hover(function() {
+                                                       var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
+                                                       this.attr("opacity",1);
+                                                       this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
+                                                       this.marker.show();
+                                               }, function() {
+                                                       // hide the popup element with an animation and remove the popup element at the end
+                                                       this.attr("opacity",0);
+                                                       this.marker && this.marker.hide();}
+                               );
+                       }
+                       else{ //zero data
+               a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
+                   stroke: "#ccc",
+                   fill: "#fff",
+                   height: 75,
+                   width: 200
+               });
+               a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
+                   fill: "#818285",
+                   'font-size': 13,
+                   'font-weight': 'bold'
+               });
+                               BudgetGraph.clearLegend();
+                       }
+               }
+       }
 })
+
+function addCommas(nStr)
+{
+       nStr += '';
+       x = nStr.split('.');
+       x1 = x[0];
+       x2 = x.length > 1 ? '.' + (x[1].length == 1 ? x[1] + '0' : x[1]) : '';
+       var rgx = /(\d+)(\d{3})/;
+       while (rgx.test(x1)) {
+               x1 = x1.replace(rgx, '$1' + ',' + '$2');
+       }
+       return x1 + x2;
+}
+
+BudgetGraph.LastSelectionYearsData = {};
 BudgetGraph.lastSelection = {};
 BudgetGraph.graphs = {};
 BudgetGraph.clearLegend = function(){
-    var legendElement = document.getElement('#legend');
-    legendElement.getElements('li').destroy();
-    legendElement.dissolve();
+   var legendElement = document.getElement('#legend');
+   legendElement.getElements('li').destroy();
+   legendElement.dissolve();
+};
+BudgetGraph.clearKeys = function(){
+   document.getElements('span.colorkey').removeClass('colorkey');
+   //PseudoDOM.clear();
 };
 BudgetGraph.select = function(name){
-    if(BudgetGraph.graphs[name]){
-        //console.log(['selecting', name, BudgetGraph.graphs[name]]);
-        window.currentGraph = BudgetGraph.graphs[name];
-        BudgetGraph.graphs[name].select();
-        if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
-    }
+   if(BudgetGraph.graphs[name]){
+       window.currentGraph = BudgetGraph.graphs[name];
+       BudgetGraph.graphs[name].select();
+       if(BudgetGraph.graphs[name].options.select) BudgetGraph.graphs[name].options.select(name);
+   }
 };
 BudgetGraph.deselect = function(){
-    delete window.currentGraph;
-    BudgetGraph.clearLegend();
+   delete window.currentGraph;
+   BudgetGraph.clearLegend();
 };
+BudgetGraph.timer = function(value){
+   if (value == 1) {
+       loadTimer++;
+   } else if (value == -1) {
+       loadTimer--;
+   }
+   loadSpinner = document.id('load_spinner');
+   if (loadTimer <= 0) {
+       loadSpinner.hide();
+   } else {
+       loadSpinner.show();
+   }
+}
