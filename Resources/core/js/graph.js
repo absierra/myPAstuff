@@ -478,13 +478,14 @@ var BudgetGraph = new Class({
                                        }
                                    }
 
-                                   this.attr("opacity",1);
+                                   //this.attr("opacity",1);
                                    this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
                                    this.marker.show();
                                }, function() {
                                    // hide the popup element with an animation and remove the popup element at the end
-                                   this.attr("opacity",0);
-                                   this.marker && this.marker.hide();}
+                                   //this.attr("opacity",0);
+                                   this.marker && this.marker.hide();
+                                   }
                                );
                        }
                        else{ //zero data

@@ -259,7 +259,7 @@
                     //    nearX = x + gutter + ((valuesx[i] || valuesx[0])[j ? j - 1 : 1] - minx) * kx,
                     //    Y = y + height - gutter - (valuesy[i][j] - miny) * ky;
 
-                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, 7.4).attr({ stroke: "none", fill: colors[i], opacity: 0 }));
+                    f ? (C = {}) : cvrs.push(C = paper.circle(X, Y, 3.5).attr({ stroke: "none", fill: colors[i], opacity: 1 }));
                     C.x = X;
                     C.y = Y;
                     C.year = valuesx[i][j];

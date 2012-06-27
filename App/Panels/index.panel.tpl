@@ -202,7 +202,7 @@
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
                 <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
-                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Fee Revenue</li>
+                <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Revenue</li>
                 <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Expenditure vs Revenue</li>
             </fieldset>
             <fieldset id="employee_breakdown">
