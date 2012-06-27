@@ -239,6 +239,9 @@ var BudgetGraph = new Class({
 			{
 				DIVelement.setStyle('display', 'none');
 				DIVelement.addClass('hidden');
+				document.getElements('#legend li span').each(function(legendSpan){
+					legendSpan.setStyle('opacity', '1');
+				});
 			}
 	   });
 	   var graphElement = document.getElement('#graphs');
@@ -248,6 +251,22 @@ var BudgetGraph = new Class({
 			{
 				DIVelement.addClass('hidden');
 				DIVelement.setStyle('display', 'none');
+				document.getElements('#legend li span').each(function(legendSpan){
+					legendSpan.setStyle('opacity', '1');
+				});
+			}
+	   });
+	   
+	   var contentElement = document.getElement('#content');
+	   contentElement.addEvent('mouseover', function(){
+			DIVelement.set('html', '');
+			if (!DIVelement.hasClass('hidden'))
+			{
+				DIVelement.addClass('hidden');
+				DIVelement.setStyle('display', 'none');
+				document.getElements('#legend li span').each(function(legendSpan){
+					legendSpan.setStyle('opacity', '1');
+				});
 			}
 	   });
        legendElement.getElements('li').destroy();
@@ -283,52 +302,65 @@ var BudgetGraph = new Class({
 
 					   var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
 					   var legendDot = new Element('div', {
-						   styles: {
-								   'position': 'absolute',
-								   'left': '10px',
-								   'top': '7px',
-								   'content': '',
-								   'display': 'block',
-								   'height': '10px',
-								   'width': '10px',
-								   'z-index': '500',
-								   'background-color': legendDotColor
-						   }
+							   styles: {
+									   'position': 'absolute',
+									   'left': '9px',
+									   'top': '5px',
+									   'content': '',
+									   'display': 'block',
+									   'height': '24px',
+									   'width': '5px',
+									   'z-index': '500',
+									   'background-color': legendDotColor
+							   }
 					   });
 
 					   legendDot.inject(DIVelement, 'bottom');
 
 					   newSpan.setStyles(this.getStyles('color', 'margin', 'padding', 'font-size', 'display', 'position')); // might need to copy over a few more styles here
 					   newSpan.setStyles({
-							   'background-color': '#E6E7E8',
+							   'background-color': 'transparent',
 							   'height': 'auto',
 							   'line-height': '0.9em',
 							   'width': 'auto',
 							   'margin': '0px',
 							   'padding': '0px 10px 0px 0px',
 							   'cursor': 'default',
+							   'top': '3px',
+							   'left': '-1px',
+							   'opacity': '1'
 					   });
 						DIVelement.removeClass('hidden');
 					   DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
 					   DIVelement.setStyles({
-							   'background-color': '#E6E7E8',
-							   'height': 'auto',
+							   'background-color': '#3B3B3C',
+							   'opacity': '0.9',
+							   'height': '24px',
 							   'width': 'auto',
 							   'margin': '0px',
 							   'padding': '5px 0px 5px 24px',
-							   'cursor': 'default'
+							   'cursor': 'default',
+							   'border': '1px solid #808285'
+					   });
+					   
+					   document.getElements('#legend li span').each(function(legendSpan){
+							legendSpan.setStyle('opacity', '0.3');
 					   });
 
 					   DIVelement.setStyles({
 							   'display': 'block',
-							   'top': (mouseoverDIVpos.y - 2),
+							   'top': (mouseoverDIVpos.y - 1),
 							   'left': (mouseoverDIVpos.x - 10)
 					   });
 
 					   DIVelement.addEvent('mouseleave', function(){
 							   this.set('html', '');
 							   this.setStyle('display', 'none');
+																														document.getElements('#legend li span').each(function(legendSpan){
+									legendSpan.setStyle('opacity', '1');
+								});
 					   });
+
 
 					   e.stop();
 			   });
@@ -471,7 +503,8 @@ var BudgetGraph = new Class({
                        var yGraph = graphSize.y - 61;
                        var a = this;
                        if(ySet.length != 0){
-                               this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
+								// the second parameter below, the y coordinate of the center (25 as of 2012-06-25) was modified from "20" to stop tooltips from being clipped. this doesn't seem to create any other spacing issues.
+                               this.lines = this.raphael.linechart(75, 25, xGraph, yGraph, xSet, ySet, {
                                        shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                                        nostroke: false,
                                        axis: "0 0 1 1",
@@ -492,7 +525,9 @@ var BudgetGraph = new Class({
                                    }
 
                                    //this.attr("opacity",1);
-                                   this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
+                                   this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this).toFront();
+								   console.log(this.marker[0]);
+								   // 2012-06-26 by Arthur: the insertAfter(this) in the line above causes dots drawn on the canvas after the dot that's being hovered over to come out on top of the tooltip. perhaps the insertAfter should take the last dot as a parameter. the addition of "toFront()" brings it to the front.
                                    this.marker.show();
                                    this.scale(1.75, 1.75, this.x, this.y);
                                }, function() {

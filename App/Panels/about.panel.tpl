@@ -3,42 +3,242 @@
 {panel name="header"}
 {literal}
 <script>
-	document.addEvent('domready', function() { 
-		// this is for the about page, in the how to use delphi budgets section
-		var howtoimgs = [
-			document.getElement('#img0'),
-			document.getElement('#img1'),
-			document.getElement('#img2'),
-			document.getElement('#img3'),
-			document.getElement('#img4'),
-			document.getElement('#img5'),
-			document.getElement('#img6'),
-			document.getElement('#img7')
-			];
-		var howtops = [
-			document.getElement('#p0'),
-			document.getElement('#p1'),
-			document.getElement('#p2'),
-			document.getElement('#p3'),
-			document.getElement('#p4'),
-			document.getElement('#p5'),
-			document.getElement('#p6'),
-			document.getElement('#p7')
-			];
-		howtops.each(function(p, index){
-			if (p != null){
-				p.addEvent('mouseover', function(){
-					howtoimgs.each(function(img){
-						img.setStyle('display', 'none');
+	var howworks = new Array();
+	howworks[0] = 'You can think of a typical city budget as a flow of funds, not unlike your own personal finances. You have income, bank accounts, and expenses. A city has revenue, funds, and expenses.';
+	howworks[1] = 'A city\'s revenue comes in the form of taxes and fees. That revenue is organized into funds, upon which specific departments and divisions can draw for their expenses. Funds and departments have their own hierarchical structures. For example, the Refuse Fund, the Electric Fund, the Gas Fund, and others are all grouped together as Enterprise Funds. Departments are broken down into divisions. For example, The City Attorney department has an Administrative division, a Consultation and Advisory division, and others.';
+	howworks[2] = 'A division or program (and hence the department to which it belongs) can draw on multiple funds. For example, the Purchasing division of the Administrative Services department gets money from the General Fund and the Printing & Mailing Services Fund.';
+	howworks[3] = 'Similarly, the same revenue stream can feed into multiple funds. For example, the \'Return on Investments\' revenue type provides money for the General Fund, the Water Fund, and the Capital Improvement Fund, among others.';
+	howworks[4] = 'Moreover, a city\'s various departments have the same types of expenses. For example, departments spend money on salaries and benefits for their employees (which is the largest city expenditure category). This allows a budget to offer an additional perspective on a city\'s finances: how much money is being spent on various categories of expenses, instead of a breakdown merely by department or division.';
+
+	var howtops = new Array();
+	howtops[0] = 'Delphi Budgets offers the ability to explore a budget in a simple graphical user interface, making it easier than pouring through hundreds of pages of a budget document to get at the information you want about your city\'s finances.';
+	howtops[1] = 'The interface is organized into two main panels. The panel on the left contains two columns: one for Fund and the other for Department. These panels filter one another as you make selections, indicating which departments recieve money from which funds, or, conversely, which funds grant money to which departments. You can select a fund first or a department first&mdash;it all depends on what information you need.';
+	howtops[2] = 'The right panel displays the data that represents the selections you made in the left panel. Financial data is vizualized in graph form, while employee data (available when only a department is selected) is presented in both graph and tabular forms.';
+	howtops[3] = 'Above the graph, you\'ll notice selector buttons that allow you to change the graph breakdown. For example, if you want the graph lines (or pie slices) to represent the different funds, select "Funds", or if you want them to represent different expense types, select "Expenses". This is also where you can choose between financial and employee breakdowns.';
+	howtops[4] = 'You can also choose different graph types. There are the traditional pie and line charts, as well as a stacked (or area) chart to illustrate each component\'s contribution to the total, in both absolute numbers and percentages.';
+	howtops[5] = 'Hover your mouse over graph data points to get more information.';
+	
+	// these next two variables will let us know which way we want to swipe the slideshow, by letting functions know where we are now (since where we're going is passed in as arguments)
+	var currentSection = -1;
+	var currentSlide = -1;
+	var numSlides = 0;
+	
+	// we assume that the howto images are of the form Resources/core/img/howto0.png
+	// and the how budgets work images are of the form Resources/core/img/howworks0.png
+
+	function activateSectionTab(section){
+		var sectionTabs = document.getElements('#sectionTabs li a');
+		sectionTabs.each(function(sectionTab, index){
+			if (sectionTab.hasClass('active'))
+			{
+				sectionTab.removeClass('active');
+			}
+			if (index == section)
+			{
+				sectionTab.addClass('active');
+			}
+		});
+	}
+	
+	function swapImage(section, slide, direction){
+		var imgDiv = document.getElement('#slideImg');
+		var imgElement = document.getElement('#slideImg img');
+		
+		// we only want the image to have the sliding transition effect if we're not moving within the how to use section. the reason is that the how to use images are very similar, so it makes more sense to just replace them.
+		if (section == 0 && section == currentSection)
+		{
+			imgElement.setProperty('src', '/Resources/core/img/howto' + slide + '.png');
+		}
+		else
+		{
+			var slideOut = new Fx.Tween(imgDiv, {
+				property: 'left',
+				duration: '500',
+				unit: '%',
+				transition: Fx.Transitions.Quad.easeInOut
+			});
+			slideOut.start((direction == 'forward' ? '-100%' : '100%')).chain(function(){
+				imgDiv.destroy();
+			});
+			
+			var newImgDiv = imgDiv.clone(true, true).inject(imgDiv.getParent(), 'top');
+			
+			newImgDiv.setStyle('left', (direction == 'forward' ? '100%' : '-100%'));
+			var newImgElement = newImgDiv.getElement('img');
+			newImgElement.setProperty('src', '/Resources/core/img/' + (section == 1 ? 'howworks' : 'howto') + slide + '.png');
+			
+			var slideIn = new Fx.Tween(newImgDiv, {
+				property: 'left',
+				duration: '500',
+				unit: '%',
+				transition: Fx.Transitions.Quad.easeInOut
+			});
+			slideIn.start('5%');
+		}
+		
+	}
+	
+	function swapText(section, slide, direction){
+		var textDiv = document.getElement('#slideText');
+		var textElement = document.getElement('#slideText p');
+		
+		var slideOut = new Fx.Tween(textDiv, {
+			property: 'left',
+			duration: '500',
+			unit: '%',
+			transition: Fx.Transitions.Quad.easeInOut
+		});
+		slideOut.start((direction == 'forward' ? '-100%' : '100%')).chain(function(){
+			textDiv.destroy();
+		});
+		
+		var newTextDiv = textDiv.clone(true, true).inject(textDiv.getParent(), 'top');
+		
+		newTextDiv.setStyle('left', (direction == 'forward' ? '100%' : '-100%'));
+		var newTextElement = newTextDiv.getElement('p');
+		if (section == 1)
+		{
+			newTextElement.setProperty('html', howworks[slide]);
+		}
+		else
+		{
+			newTextElement.setProperty('html', howtops[slide]);
+		}
+		
+		var slideIn = new Fx.Tween(newTextDiv, {
+			property: 'left',
+			duration: '500',
+			unit: '%',
+			transition: Fx.Transitions.Quad.easeInOut
+		});
+		slideIn.start('5%');
+	}
+	
+	function initializeDots(section, slide){
+		var progressDotsElement = document.getElement('#progressDots');
+		
+		// kill all the existing dots
+		progressDotsElement.getChildren().each(function(child){child.destroy();});
+		
+		// recreate what's necessary
+		numDots = (section == 1 ? howworks.length : howtops.length);
+		for (var i = 0; i < numDots; i++)
+		{
+			var newDot = new Element('li').inject(progressDotsElement);
+			if (i == slide)
+			{
+				newDot.addClass('active');
+			}
+			(function(){
+				var index = i;
+				newDot.addEvent('click', function(){
+					activateSlide(section, index);
 					});
-					howtoimgs[index].setStyle('display', 'inline');
-				});
-				p.addEvent('mouseleave', function(){
-					howtoimgs.each(function(img){
-						img.setStyle('display', 'none');
-					});
-					howtoimgs[0].setStyle('display', 'inline');
-				});
+			})();
+		}
+	}
+	
+	function initializeNavArrow(whichOne, section, slide){
+		navArrow = document.getElement('#' + whichOne);
+		
+		// clear everything
+		navArrow.removeEvents();
+		if (navArrow.hasClass('disabled'))
+		{
+			navArrow.removeClass('disabled');
+		}
+		
+		if ((slide == 0 && whichOne == 'goLeft') || (slide == (numSlides - 1) && whichOne == 'goRight'))
+		{
+			navArrow.addClass('disabled')
+		}
+		else
+		{
+			navArrow.addEvent('click', function(){
+				activateSlide(section, (whichOne == 'goLeft' ? (slide - 1) : (slide + 1)));
+			});
+		}
+	}
+	
+	function forwardOrBackward(section, slide)
+	{
+		if (section > currentSection)
+			return 'forward';
+		else if (section < currentSection)
+			return 'backward';
+		else if (section == currentSection){
+			if (slide >= currentSlide)
+				return 'forward';
+			else
+				return 'backward';
+		}
+	}
+	
+	function activateSlide(section, slide){
+			/*  things that need to happen:
+				
+				1. set the correct section tab to active and deactivate the other tabs
+				
+				2. swipe away the previous image and swipe in the correct image
+				
+				3. swipe away the previous text and swipe in the correct text
+				
+				4. clear the dots and re-create them (since we may have switched to a different section), with the right active/inactive states
+				
+				5. update the action associated with the left and right arrows
+			
+			*/
+			
+		var direction = forwardOrBackward(section, slide);
+		numSlides = (section == 1 ? howworks.length : howtops.length);
+		
+		activateSectionTab(section);
+		swapImage(section, slide, direction);
+		swapText(section, slide, direction);
+		initializeDots(section, slide);
+		initializeNavArrow('goLeft', section, slide);
+		initializeNavArrow('goRight', section, slide);
+		
+		currentSection = section;
+		currentSlide = slide;
+	}
+	
+	document.addEvent('domready', function() {
+		// first, we need to add some click events to the section tabs
+		var sectionTabs = document.getElements('#sectionTabs li a');
+		sectionTabs.each(function(sectionTab, index){
+			sectionTab.addEvent('click', function(){
+				activateSlide(index, 0);
+			});
+		});
+		
+		activateSlide(0, 0);
+		
+		//this snippet adds functionality to the mouse scroll wheel
+		document.addEvent('mousewheel', function(event){
+			var event = new Event(event);
+			
+			// mouse wheel up
+			if (event.wheel > 0 && currentSlide > 0)
+			{
+				activateSlide(currentSection, (currentSlide - 1));
+			}
+			// mouse wheel down
+			else if (event.wheel < 0 && currentSlide < (numSlides - 1))
+			{
+				activateSlide(currentSection, (currentSlide + 1));
+			}
+		});
+		
+		//this snippet adds functionality to the keyboard left and right arrows
+		document.addEvent('keyup', function(event){
+			if (event.key == 'left' && currentSlide > 0)
+			{
+				activateSlide(currentSection, (currentSlide - 1));
+			}
+			else if (event.key == 'right' && currentSlide < (numSlides - 1))
+			{
+				activateSlide(currentSection, (currentSlide + 1));
 			}
 		});
 	});
@@ -46,60 +246,25 @@
 {/literal}
 <div id="content_wrapper">
     <div id="about">
-		<h1>How City Budgets Work</h1>
-        <table>
-            <tr>
-                <td><p class="right">You can think of a typical city budget as a flow of funds, not unlike your own personal finances. You have income, bank accounts, and expenses. A city has revenue, funds, and expenditures.</p></td>
-                <td><img src="Resources/core/img/about_1.png" /></td>
-            </tr>
-            <tr>
-                <td><img src="Resources/core/img/about_2.png" /></td>
-                <td><p>A city's revenue comes in the form of taxes and fees. That revenue is organized into funds, upon which specific departments, divisions, and city programs can draw for their expendictures. Funds and departments have their own hierarchical structures. For example, the Refuse Fund, the Electric Fund, the Gas Fund, and others are all grouped together under the category of Enterprise Funds. Departments are broken down into divisions (sometimes called programs). For example, The City Attorney Department has an Administrative division, a Consultation and Advisory division, and others.</p></td>
-            </tr>
-            <tr>
-                <td><p class="right">A division or program (and hence the department to which it belongs) can draw on multiple funds.</p></td>
-                <td><img src="Resources/core/img/about_3.png" /></td>
-            </tr>
-			<tr>
-				<td><img src="Resources/core/img/about_4.png" /></td>
-				<td><p>Similarly, the same revenue stream can feed into multiple funds.</p></td>
-			</tr>
-            <tr>
-                <td><p class="right">Moreover, a city's various departments have the same types of expenditures. For example, departments spend money on salaries and benefits for their employees (which is the largest city expenditure category). This allows a budget to offer an additional perspective on a city's finances: how much money is being spent on various categories of expenditures, instead of a breakdown merely by department, division, or program.</p></td>
-                <td><img src="Resources/core/img/about_5.png" /></td>
-			</tr>
-        </table>
-		
-		<h1>How to use Delphi Budgets</h1>
-
-		<table>
-			<tr>
-				<td class="img_left">
-					<img id="img0" src="Resources/core/img/howto0.png" />
-					<img id="img1" src="Resources/core/img/howto1.png" />
-					<img id="img2" src="Resources/core/img/howto2.png" />
-					<img id="img3" src="Resources/core/img/howto3.png" />
-					<img id="img4" src="Resources/core/img/howto4.png" />
-					<img id="img5" src="Resources/core/img/howto5.png" />
-					<img id="img6" src="Resources/core/img/howto6.png" />
-					<img id="img7" src="Resources/core/img/howto7.png" />
-				</td>
-				<td>
-					<p id="p0">Delphi Budgets offers the ability to explore a budget in a simple graphical user interface, making it easier than pouring through hundreds of pages of a budget document to get at the information you want about your city's finances.</p>
-
-					<p id="p1">The interface is organized into two main panels. The panel on the left contains two columns--one for Fund and the other for Department. These panels filter one another as you make selections, indicating which departments recieve money from which funds, or, conversely, which funds grant money to which departments. You can select a fund first or a department first--it all depends on what information you need.</p>
-					
-					<p id="p2">The right panel is the resulting graph that represents the seletions you made in the left panel.</p>
-
-					<p id="p5">Above the graph, you'll notice selector buttons that allow you to change the graph breakdown. For example, if you want the graph lines (or pie slices) to represent the different funds, select "Funds", or if you want them to represent different expenditure types, select "Expenditures".</p>
-					
-					<!--There are several options for viewing financial data, and if you've only selected a department, you can view employee data. Financial breakdowns are by fund (showing how much money is spent out of each fund), department (showing how much money is spent by each department), expenditure (showing how much money is spent in each expenditure category type), revenue (showing how much money is taken in), fee revenue (showing how much money is taken in in the form of non-tax fees), and expenditure versus revenue. Employee breakdowns include number of employees by what department (or division) they are in, number of employees by each type of employee, and salary of each employee type.-->
-
-					<p id="p6">You can also choose different graph types. There are the traditional pie and line charts, as well as a stacked (or area) chart to illustrate each component's contribution to the total, in both absolute numbers and percentages.</p>
-
-					<p id="p7">Hover your mouse over graph data points to get more information.</p>
-				</td>
-			</tr>
-		</table>
+		<div id="slideshow">
+			<ul id="sectionTabs">
+				<li><a href="#">How to use Delphi Budgets</a></li>
+				<li><a href="#">How City Budgets Work</a></li>
+			</ul>
+			<div id="slide">
+				<div id="slideImg">
+					<img />
+				</div>
+				<div id="slideText">
+					<p></p>
+				</div>
+			</div>
+			<ul id="progressDots">
+				<li></li>
+				<li></li>
+			</ul>
+			<div id="goLeft"></div>
+			<div id="goRight"></div>
+		</div>
     </div>
 </div>
