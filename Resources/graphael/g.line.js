@@ -270,7 +270,12 @@
                     C.symbol = chart.symbols[i][j];
                     C.symbols = chart.symbols[i];
                     C.axis = (valuesx[i] || valuesx[0])[j];
+                    C.percent = (valuesy[i][j]/totals[valuesx[i][j]])*100;
                     f && f.call(C);
+
+                    if (i === valuesy.length - 1) {
+                        C.cumulativeTotal = yearsum[valuesx[i][j]];
+                    }
                 }
             }
 

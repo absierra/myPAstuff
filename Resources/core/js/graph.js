@@ -409,12 +409,24 @@ var BudgetGraph = new Class({
                                        percent:this.options.percent,
                                        names: this.displayOrder
                                }).hover(function () {
-                                       //this.sector.stop();
-                                       //this.sector.scale(1.1, 1.1, this.cx, this.cy);
-												var text = (a.options.dataset == 'financial'?'$'+addCommas(this.value/1000):addCommas(this.value/1000)+' Employees');                                       if (!this.marker) {
-                                               this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);
-                                       }
-                                       this.marker.show();
+                                   //this.sector.stop();
+                                   //this.sector.scale(1.1, 1.1, this.cx, this.cy);
+                                   var amountText;
+                                   if (a.options.dataset == 'financial') {
+                                       amountText = '$' + addCommas(this.value/1000);
+                                   } else {
+                                       amountText = addCommas(this.value/1000) + ' Employees';
+                                   }
+                                   var nameText = a.displayOrder[this.value.order] || '';
+                                   var yearText = (year || yearKey) ? ('Year: ' + year) : '';
+
+                                   text =  nameText + '\n' + yearText + '\n\n' + amountText;
+
+
+                                   if (!this.marker) {
+                                       this.marker = a.raphael.popup(this.mx, this.my, text, "up", 5);
+                                   }
+                                   this.marker.show();
                                },function (){
                                        this.marker.hide();
                                        //this.sector.animate({transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, 'bounce');
@@ -455,14 +467,23 @@ var BudgetGraph = new Class({
                                        percent:(this.options.mode == 'percentage-line'),
                                        names: this.displayOrder//getLegendItems()
                                }).hover(function() {
-                                                       var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
-                                                       this.attr("opacity",1);
-                                                       this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
-                                                       this.marker.show();
-                                               }, function() {
-                                                       // hide the popup element with an animation and remove the popup element at the end
-                                                       this.attr("opacity",0);
-                                                       this.marker && this.marker.hide();}
+                                   var text = this.name+'\nYear: '+this.year +'\n\n'+(a.options.dataset == 'financial'?'$'+addCommas(this.value):addCommas(this.value)+' Employees');
+                                   if (a.options.mode == 'percentage-line') {
+                                       text += '\n' + this.percent.toFixed(2) + ' %';
+                                   }
+                                   if (a.options.mode == 'stacked-line') {
+                                       if (this.cumulativeTotal) {
+                                          text += '\n\n Total: $' + addCommas(Math.floor(this.cumulativeTotal));
+                                       }
+                                   }
+
+                                   this.attr("opacity",1);
+                                   this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
+                                   this.marker.show();
+                               }, function() {
+                                   // hide the popup element with an animation and remove the popup element at the end
+                                   this.attr("opacity",0);
+                                   this.marker && this.marker.hide();}
                                );
                        }
                        else{ //zero data
