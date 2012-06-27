@@ -33,39 +33,49 @@
                 document.id('graph_breakdown').empty();
             },
             fin_fund: function(event){
-                tableFormat(false, false);
-                document.id('stacked_graph').show();
-                document.id('percentage_graph').show();
-                document.id('pie_chart').show();
-                document.id('standard_graph').show();
+            	if(!in_negative_state){
+                	tableFormat(false, false);
+                	document.id('stacked_graph').show();
+                	document.id('percentage_graph').show();
+                	document.id('pie_chart').show();
+                	document.id('standard_graph').show();
+                }
             },
             fin_dep: function(event){
-                tableFormat(false, false);
-                document.id('stacked_graph').show();
-                document.id('percentage_graph').show();
-                document.id('pie_chart').show();
-                document.id('standard_graph').show();
+            	if(!in_negative_state){
+					tableFormat(false, false);
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+					document.id('standard_graph').show();
+				}
             },
             fin_exp: function(event){
-                tableFormat(false, false);
-                document.id('stacked_graph').show();
-                document.id('percentage_graph').show();
-                document.id('pie_chart').show();
-                document.id('standard_graph').show();
+            	if(!in_negative_state){
+					tableFormat(false, false);
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+					document.id('standard_graph').show();
+				}
             },
             fin_rev: function(event){
-                tableFormat(false, false);
-                document.id('stacked_graph').show();
-                document.id('percentage_graph').show();
-                document.id('pie_chart').show();
-                document.id('standard_graph').show();
+            	if(!in_negative_state){
+					tableFormat(false, false);
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+					document.id('standard_graph').show();
+				}
             },
             fin_feerev: function(event){
-                tableFormat(false, false);
-                document.id('stacked_graph').show();
-                document.id('percentage_graph').show();
-                document.id('pie_chart').show();
-                document.id('standard_graph').show();
+                if(!in_negative_state){
+					tableFormat(false, false);
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+					document.id('standard_graph').show();
+				}
             },
             fin_expfee: function(event){
                 tableFormat(false, false);
