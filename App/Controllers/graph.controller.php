@@ -103,7 +103,7 @@
 					if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 					$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
 					
-					if($numExpenses > 0){
+					if($numExpenses > 0 && $focus != 'category'){
 						$data[$item->get($index)][$item->get('year')]['expenses'] += 0;
 					}
 					if($isAFee){

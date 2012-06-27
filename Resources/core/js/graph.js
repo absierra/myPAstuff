@@ -34,32 +34,47 @@ var BudgetGraph = new Class({
                var keys = Object.keys(this.data);
 			   this.displayOrder = []; //The short name
 			   this.dataOrder = []; //The full ':' delimited name
-			   if(column){
-					var isSelected = column.getElement('li span.selected');
-					if(isSelected){
-						elements = column.getElements('ul li span:not(.disabled)');
-					}else {
-						elements = column.getElements('> li > span:not(.disabled)');
-					}
-					result = [];
-					elements.each(function(el){
-						var notags = el.get('text');
-						keys.each(function(value){
-							var displayValue = value.split(':').pop();
-							if(displayValue === notags){
-								this.dataOrder.push(value);
-								this.displayOrder.push(displayValue);
-								keys.erase(notags);
-							}
+			   if(this.options.target != 'category'){
+				   if(column){
+						var isSelected = column.getElement('li span.selected');
+						if(isSelected){
+							elements = column.getElements('ul li span:not(.disabled)');
+						}else {
+							elements = column.getElements('> li > span:not(.disabled)');
+						}
+						result = [];
+						elements.each(function(el){
+							var notags = el.get('text');
+							keys.each(function(value){
+								var displayValue = value.split(':').pop();
+								if(displayValue === notags){
+									this.dataOrder.push(value);
+									this.displayOrder.push(displayValue);
+									keys.erase(notags);
+								}
+							}.bind(this));
 						}.bind(this));
-					}.bind(this));
-				}
-				this.dataOrder =  Object.merge(keys,this.dataOrder);
-				// ♪♫ In the ghetto... ♫♪
-				this.displayOrder =  Object.merge(keys.map(function(value){return value.split(':').pop()}),this.displayOrder);
-
-            	if(this.options.target == 'revenue_expense'){
-        		this.colors = hueShiftedColorSet(2, ['Expenses', 'Revenues']);
+					}
+				   this.dataOrder =  Object.merge(keys,this.dataOrder);
+	
+					// ♪♫ In the ghetto... ♫♪
+				   this.displayOrder =  Object.merge(keys.map(function(value){return value.split(':').pop()}),this.displayOrder);
+			   }
+			   else{
+			   		data = this.data;
+					var dataOrderTemp = [];
+					var displayOrderTemp = [];
+					var metric = this.options.metric;
+					b=this;
+			   		Object.each(this.data, function(value, key){
+			   			if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0){
+			   				b.dataOrder.push(key);
+			   				b.displayOrder.push(key);
+			   			}
+			   		});
+			   }
+               if(this.options.target == 'revenue_expense'){
+        			this.colors = hueShiftedColorSet(2, ['Expenses', 'Revenues']);
                }
                else if(this.options.target == 'category'){
             		var categories = [];
@@ -147,47 +162,47 @@ var BudgetGraph = new Class({
        metric = this.options.metric;
 
        var index = 0;
-
+        
        Object.each(this.data, function(value, key){
+		   key = key.indexOf(":")==-1?key:key.split(":")[1];
+		   if(target == 'category'){
 
-               key = key.indexOf(":")==-1?key:key.split(":")[1];
-               if(target == 'category'){
-                       if(value['2013'][metric] != undefined){
-                               keys.push(key);
-                       }
-               }
-               else{
-                       keys.push(key);
-               }
+				if(value['2013'][metric] != undefined){
+					keys.push(key);
+				}
+		   }
+		   else{
+				keys.push(key);
+		   }
        });
 
 
        if(target != 'category' && target != 'revenue_expense'){
-                       var result = [];
-                       var column = document.id(this.options.column);
-                       var elements;
-                       if(column){
-                               var isSelected = column.getElement('li span.selected');
-                               if(isSelected){
-                                       elements = column.getElements('ul li span:not(.disabled)');
-                               }else {
-                                       elements = column.getElements('> li > span:not(.disabled)');
-                               }
-                               result = [];
-                               elements.each(function(el){
-                                       notags = el.get('text');
-                                       if(keys.contains(notags)){
-                                               result.push(notags);
-                                               keys.erase(notags);
-                                       }
-                               });
-                       }
-                    this.legendItems = result;
-                    return result;
-               }else{
-            this.legendItems = keys;
-            return keys;
-       }
+			var result = [];
+			var column = document.id(this.options.column);
+			var elements;
+			if(column){
+				   var isSelected = column.getElement('li span.selected');
+				   if(isSelected){
+						elements = column.getElements('ul li span:not(.disabled)');
+				   }else {
+						elements = column.getElements('> li > span:not(.disabled)');
+				   }
+				   result = [];
+				   elements.each(function(el){
+					   notags = el.get('text');
+					   if(keys.contains(notags)){
+							   result.push(notags);
+							   keys.erase(notags);
+					   }
+				   });
+			}
+			this.legendItems = result;
+			return result;
+        }else{
+        	this.legendItems = keys;
+        	return keys;
+        }
    },
    setKeys : function(){
        if(this.fetching){
@@ -237,7 +252,6 @@ var BudgetGraph = new Class({
 	   });
        legendElement.getElements('li').destroy();
        var items = this.getLegendItems();//this.getLegendItems();
-
        if(items.length > this.colors.length){
            this.colors = hueShiftedColorSet(items.length);
        }
@@ -257,67 +271,67 @@ var BudgetGraph = new Class({
                legendElement.appendChild(legendLi);
                legendLi.appendChild(legendItem);
 
-                               // this is how we're going to show the text hidden by the ellipses (see a similar function in core.js for items in the columns that are too long)
-                               legendItem.addEvent('mouseenter', function(e){
-                                       mouseoverDIVpos = this.getParent().getPosition();
+			   // this is how we're going to show the text hidden by the ellipses (see a similar function in core.js for items in the columns that are too long)
+			   legendItem.addEvent('mouseenter', function(e){
+					   mouseoverDIVpos = this.getParent().getPosition();
 
-                                       var DIVelement = document.getElement('#secondLevelMouseOver');
+					   var DIVelement = document.getElement('#secondLevelMouseOver');
 
-                                       // like in the columns, we need to start with a clean slate in case mouse movements happen too fast
-                                       DIVelement.set('html', '');
-                                       DIVelement.addClass('hidden');
+					   // like in the columns, we need to start with a clean slate in case mouse movements happen too fast
+					   DIVelement.set('html', '');
+					   DIVelement.addClass('hidden');
 
-                                       var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
-                                       var legendDot = new Element('div', {
-                                               styles: {
-                                                       'position': 'absolute',
-                                                       'left': '10px',
-                                                       'top': '7px',
-                                                       'content': '',
-                                                       'display': 'block',
-                                                       'height': '10px',
-                                                       'width': '10px',
-                                                       'z-index': '500',
-                                                       'background-color': legendDotColor
-                                               }
-                                       });
+					   var newSpan = this.clone().inject('secondLevelMouseOver', 'bottom');
+					   var legendDot = new Element('div', {
+						   styles: {
+								   'position': 'absolute',
+								   'left': '10px',
+								   'top': '7px',
+								   'content': '',
+								   'display': 'block',
+								   'height': '10px',
+								   'width': '10px',
+								   'z-index': '500',
+								   'background-color': legendDotColor
+						   }
+					   });
 
-                                       legendDot.inject(DIVelement, 'bottom');
+					   legendDot.inject(DIVelement, 'bottom');
 
-                                       newSpan.setStyles(this.getStyles('color', 'margin', 'padding', 'font-size', 'display', 'position')); // might need to copy over a few more styles here
-                                       newSpan.setStyles({
-                                               'background-color': '#E6E7E8',
-                                               'height': 'auto',
-                                               'line-height': '0.9em',
-                                               'width': 'auto',
-                                               'margin': '0px',
-                                               'padding': '0px 10px 0px 0px',
-                                               'cursor': 'default',
-                                       });
-										DIVelement.removeClass('hidden');
-                                       DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
-                                       DIVelement.setStyles({
-                                               'background-color': '#E6E7E8',
-                                               'height': 'auto',
-                                               'width': 'auto',
-                                               'margin': '0px',
-                                               'padding': '5px 0px 5px 24px',
-                                               'cursor': 'default'
-                                       });
+					   newSpan.setStyles(this.getStyles('color', 'margin', 'padding', 'font-size', 'display', 'position')); // might need to copy over a few more styles here
+					   newSpan.setStyles({
+							   'background-color': '#E6E7E8',
+							   'height': 'auto',
+							   'line-height': '0.9em',
+							   'width': 'auto',
+							   'margin': '0px',
+							   'padding': '0px 10px 0px 0px',
+							   'cursor': 'default',
+					   });
+						DIVelement.removeClass('hidden');
+					   DIVelement.setStyles(this.getParent().getStyles('background-color', 'color', 'margin', 'padding'));
+					   DIVelement.setStyles({
+							   'background-color': '#E6E7E8',
+							   'height': 'auto',
+							   'width': 'auto',
+							   'margin': '0px',
+							   'padding': '5px 0px 5px 24px',
+							   'cursor': 'default'
+					   });
 
-                                       DIVelement.setStyles({
-                                               'display': 'block',
-                                               'top': (mouseoverDIVpos.y - 2),
-                                               'left': (mouseoverDIVpos.x - 10)
-                                       });
+					   DIVelement.setStyles({
+							   'display': 'block',
+							   'top': (mouseoverDIVpos.y - 2),
+							   'left': (mouseoverDIVpos.x - 10)
+					   });
 
-                                       DIVelement.addEvent('mouseleave', function(){
-                                               this.set('html', '');
-                                               this.setStyle('display', 'none');
-                                       });
+					   DIVelement.addEvent('mouseleave', function(){
+							   this.set('html', '');
+							   this.setStyle('display', 'none');
+					   });
 
-                                       e.stop();
-                               });
+					   e.stop();
+			   });
            }.bind(this));
            legendElement.reveal();
        }else{
@@ -357,19 +371,19 @@ var BudgetGraph = new Class({
                    else v = 0;
                    ys.push(v);
                }
-           }.bind(this));
-           if(ys.length != 0){
-               xSet.push(xs);
-               ySet.push(ys);
-           }
+        }.bind(this));
+        if(ys.length != 0){
+            xSet.push(xs);
+            ySet.push(ys);
+        }
        }.bind(this)); //*/
                if(this.options.mode == 'bar'){
-                       this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
-                               shade: true,
-                               nostroke: false,
-                               axis: "0 0 1 1",
-                               colors:this.colors
-                       });
+				   this.lines = this.raphael.barchart(75, 10, 570, 400, xSet, ySet, {
+						   shade: true,
+						   nostroke: false,
+						   axis: "0 0 1 1",
+						   colors:this.colors
+				   });
                }else if (this.options.mode == 'pie'){
                        //window.totalChartValue = 0;
                        var graphSize = document.id('graphs').getScrollSize();
@@ -455,7 +469,6 @@ var BudgetGraph = new Class({
                        var xGraph = graphSize.x - 240;
                        //if (xGraph > 600) xGraph = 600;
                        var yGraph = graphSize.y - 61;
-						//console.log(this.legendItems);
                        var a = this;
                        if(ySet.length != 0){
                                this.lines = this.raphael.linechart(75, 20, xGraph, yGraph, xSet, ySet, {
@@ -481,10 +494,12 @@ var BudgetGraph = new Class({
                                    //this.attr("opacity",1);
                                    this.marker = this.marker || a.raphael.popup(this.x + (this.x > xGraph * 4/5 ? -7 : 7), this.y, text, (this.x > xGraph * 4/5 ? "left" : "right"), 5).insertAfter(this);
                                    this.marker.show();
+                                   this.scale(1.75, 1.75, this.x, this.y);
                                }, function() {
                                    // hide the popup element with an animation and remove the popup element at the end
                                    //this.attr("opacity",0);
                                    this.marker && this.marker.hide();
+                                   this.animate({transform: 's1 1 ' + this.x + ' ' + this.y }, 150);
                                    }
                                );
                        }
