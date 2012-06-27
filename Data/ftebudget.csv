@@ -118,14 +118,14 @@
 2013,Capital Funds,Capital Improvement Fund,Capital Fund,Capital Improvement,Cement Finisher,0,0
 2013,Capital Funds,Capital Improvement Fund,Capital Fund,Capital Improvement,Heavy Equip Oper,0,0
 2013,Capital Funds,Capital Improvement Fund,Capital Fund,Capital Improvement,Assoc Engineer,0,0
-2009,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0,0
-2010,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0,0
-2011,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0,0
-2012,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0,0
-2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0.28,17552
-2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0.1,6269
-2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0.1,6269
-2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - CIP,Program Assistant I,0.52,32597
+2009,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0,0
+2010,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0,0
+2011,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0,0
+2012,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0,0
+2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0.28,17552
+2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0.1,6269
+2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0.1,6269
+2013,Capital Funds,Capital Improvement Fund,Community Services,CSD - Capital Improvement,Program Assistant I,0.52,32597
 2009,Enterprise Funds,Airport Enterprise,Airport,Airport Enterprise ,Asst Director Adm Svcs,0,0
 2009,Enterprise Funds,Airport Enterprise,Airport,Airport Enterprise ,Airport Manager,0,0
 2010,Enterprise Funds,Airport Enterprise,Airport,Airport Enterprise ,Asst Director Adm Svcs,0,0
@@ -4357,52 +4357,52 @@
 2013,General Funds,General Fund,City Attorney,Consultation and Advisory,Sr. Deputy City Attorney,0.06,6083
 2013,General Funds,General Fund,City Attorney,Consultation and Advisory,Sr. Deputy City Attorney,0,0
 2013,General Funds,General Fund,City Attorney,Consultation and Advisory,Sr. Deputy City Attorney,0.85,86172
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Deputy City Attorney,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Secretary To City Attorney,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Claims Investigator,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0,0
-2009,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Asst City Atty,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Deputy City Attorney,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Secretary To City Attorney,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Claims Investigator,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0,0
-2010,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Asst City Atty,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Deputy City Attorney,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Secretary To City Attorney,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Claims Investigator,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0,0
-2011,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Asst City Atty,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Deputy City Attorney,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Secretary To City Attorney,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Claims Investigator,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0,0
-2012,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Asst City Atty,0,0
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0.05,6773
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Asst City Atty,0.17,23026
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0.02,4254
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0.04,8508
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,City Attorney,0.01,2127
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Claims Investigator,0.84,68510
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0.15,12421
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0.03,2484
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Legal Administrator,0.02,1656
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Secretary To City Attorney,0.05,3621
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0.1,7856
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Senior Legal Secretary - Confidential,0.05,3928
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Asst City Atty,0.06,8234
-2013,General Funds,General Fund,City Attorney,Litigation and Dispute Resolution,Sr. Deputy City Attorney,0.02,2028
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Deputy City Attorney,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Secretary To City Attorney,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Claims Investigator,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0,0
+2009,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Asst City Atty,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Deputy City Attorney,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Secretary To City Attorney,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Claims Investigator,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0,0
+2010,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Asst City Atty,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Deputy City Attorney,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Secretary To City Attorney,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Claims Investigator,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0,0
+2011,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Asst City Atty,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Deputy City Attorney,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Secretary To City Attorney,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Claims Investigator,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0,0
+2012,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Asst City Atty,0,0
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0.05,6773
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Asst City Atty,0.17,23026
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0.02,4254
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0.04,8508
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,City Attorney,0.01,2127
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Claims Investigator,0.84,68510
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0.15,12421
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0.03,2484
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Legal Administrator,0.02,1656
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Secretary To City Attorney,0.05,3621
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0.1,7856
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Senior Legal Secretary - Confidential,0.05,3928
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Asst City Atty,0.06,8234
+2013,General Funds,General Fund,City Attorney,Litigation/Dispute Resolution,Sr. Deputy City Attorney,0.02,2028
 2009,General Funds,General Fund,City Attorney,Official & Administration,Sr. Deputy City Attorney,0,0
 2009,General Funds,General Fund,City Attorney,Official & Administration,City Attorney,0,0
 2009,General Funds,General Fund,City Attorney,Official & Administration,Asst City Atty,0,0
@@ -5026,102 +5026,102 @@
 2013,General Funds,General Fund,Community Services,Cubberley & Human Services,Management Assistant,0.25,18616
 2013,General Funds,General Fund,Community Services,Cubberley & Human Services,Program Assistant II,0.2,13480
 2013,General Funds,General Fund,Community Services,Cubberley & Human Services,Supv Rec Prog,0.65,58816
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Dir Comm Svcs,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Division Manager Recreations & Golf,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,0,0
-2009,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Dir Comm Svcs,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Division Manager Recreations & Golf,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,0,0
-2010,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Dir Comm Svcs,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Division Manager Recreations & Golf,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,0,0
-2011,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Dir Comm Svcs,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Division Manager Recreations & Golf,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,0,0
-2012,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0,0
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Dir Comm Svcs,0.1,15177
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Division Manager Recreations & Golf,0.15,18414
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,1,70054
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0.7,49038
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0.15,10508
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Inspector Field Svc,0.15,10508
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0.4,53564
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0.45,60260
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Open Spc & Parks Div Mgr,0.15,20087
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0.5,34143
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint - Lead,0.5,34143
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,58896
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,52582
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,52582
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,52582
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,52582
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Maint Person,1,58896
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,1,60216
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,1,60216
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,1,60216
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,1,60216
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Park Ranger,1,60216
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,1,57241
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0.75,42931
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Parks/Golf Crew-Lead,0.25,14310
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0.1,6740
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0.8,53920
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Program Assistant II,0.1,6740
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,1,53435
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,1,59851
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0.5,26718
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,0.5,26718
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Sprinkler Sys Repr,1,53435
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.55,58819
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.7,70223
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.1,10694
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.1,10694
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.25,26736
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supt Parks,0.3,30095
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,1,78840
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Open Space,1,78840
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0.25,20701
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0.4,33122
-2013,General Funds,General Fund,Community Services,Open Space! Parks! & Golf,Supv Parks,0.35,28981
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Dir Comm Svcs,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Division Manager Recreations & Golf,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,0,0
+2009,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Dir Comm Svcs,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Division Manager Recreations & Golf,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,0,0
+2010,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Dir Comm Svcs,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Division Manager Recreations & Golf,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,0,0
+2011,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Dir Comm Svcs,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Division Manager Recreations & Golf,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,0,0
+2012,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0,0
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Dir Comm Svcs,0.1,15177
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Division Manager Recreations & Golf,0.15,18414
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,1,70054
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0.7,49038
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0.15,10508
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Inspector Field Svc,0.15,10508
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0.4,53564
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0.45,60260
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Open Spc & Parks Div Mgr,0.15,20087
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0.5,34143
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint - Lead,0.5,34143
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,58896
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,52582
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,52582
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,52582
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,52582
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Maint Person,1,58896
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,1,60216
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,1,60216
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,1,60216
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,1,60216
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Park Ranger,1,60216
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,1,57241
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0.75,42931
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Parks/Golf Crew-Lead,0.25,14310
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0.1,6740
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0.8,53920
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Program Assistant II,0.1,6740
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,1,53435
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,1,59851
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0.5,26718
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,0.5,26718
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Sprinkler Sys Repr,1,53435
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.55,58819
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.7,70223
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.1,10694
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.1,10694
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.25,26736
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supt Parks,0.3,30095
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,1,78840
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Open Space,1,78840
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0.25,20701
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0.4,33122
+2013,General Funds,General Fund,Community Services,Open Space/Parks and Golf,Supv Parks,0.35,28981
 2009,General Funds,General Fund,Community Services,Recreation & Youth Sciences,Bldg Serviceperson-L,0,0
 2009,General Funds,General Fund,Community Services,Recreation & Youth Sciences,Supv Rec Prog,0,0
 2009,General Funds,General Fund,Community Services,Recreation & Youth Sciences,Management Assistant,0,0
@@ -5598,37 +5598,37 @@
 2013,General Funds,General Fund,Fire,Fire Administration,Deputy Chief/Fire Marshall,0,0
 2013,General Funds,General Fund,Fire,Fire Administration,Deputy Fire Chief - Emt,0,0
 2013,General Funds,General Fund,Fire,Fire Administration,Fire Captain,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,Public Safety Dispatcher - Lead,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,GIS Specialist,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,Business Analyst,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,Coord Pol Tech Svcs,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0,0
-2009,General Funds,General Fund,Fire,Records & Information Management,Fire Fighter,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,Public Safety Dispatcher - Lead,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,GIS Specialist,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,Business Analyst,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,Coord Pol Tech Svcs,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0,0
-2010,General Funds,General Fund,Fire,Records & Information Management,Fire Fighter,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,Public Safety Dispatcher - Lead,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,GIS Specialist,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,Business Analyst,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,Coord Pol Tech Svcs,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0,0
-2011,General Funds,General Fund,Fire,Records & Information Management,Fire Fighter,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,Public Safety Dispatcher - Lead,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,GIS Specialist,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,Business Analyst,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,Coord Pol Tech Svcs,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0,0
-2012,General Funds,General Fund,Fire,Records & Information Management,Fire Fighter,0,0
-2013,General Funds,General Fund,Fire,Records & Information Management,Business Analyst,0.4,42432
-2013,General Funds,General Fund,Fire,Records & Information Management,Coord Pol Tech Svcs,0.2,22465
-2013,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0.04,4396
-2013,General Funds,General Fund,Fire,Records & Information Management,Fire Captain,0.01,1099
-2013,General Funds,General Fund,Fire,Records & Information Management,Fire Fighter,0.01,866
-2013,General Funds,General Fund,Fire,Records & Information Management,GIS Specialist,1,72800
-2013,General Funds,General Fund,Fire,Records & Information Management,Public Safety Dispatcher - Lead,0.4,31666
+2009,General Funds,General Fund,Fire,Records & Info. Management,Public Safety Dispatcher - Lead,0,0
+2009,General Funds,General Fund,Fire,Records & Info. Management,GIS Specialist,0,0
+2009,General Funds,General Fund,Fire,Records & Info. Management,Business Analyst,0,0
+2009,General Funds,General Fund,Fire,Records & Info. Management,Coord Pol Tech Svcs,0,0
+2009,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0,0
+2009,General Funds,General Fund,Fire,Records & Info. Management,Fire Fighter,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,Public Safety Dispatcher - Lead,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,GIS Specialist,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,Business Analyst,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,Coord Pol Tech Svcs,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0,0
+2010,General Funds,General Fund,Fire,Records & Info. Management,Fire Fighter,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,Public Safety Dispatcher - Lead,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,GIS Specialist,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,Business Analyst,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,Coord Pol Tech Svcs,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0,0
+2011,General Funds,General Fund,Fire,Records & Info. Management,Fire Fighter,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,Public Safety Dispatcher - Lead,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,GIS Specialist,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,Business Analyst,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,Coord Pol Tech Svcs,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0,0
+2012,General Funds,General Fund,Fire,Records & Info. Management,Fire Fighter,0,0
+2013,General Funds,General Fund,Fire,Records & Info. Management,Business Analyst,0.4,42432
+2013,General Funds,General Fund,Fire,Records & Info. Management,Coord Pol Tech Svcs,0.2,22465
+2013,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0.04,4396
+2013,General Funds,General Fund,Fire,Records & Info. Management,Fire Captain,0.01,1099
+2013,General Funds,General Fund,Fire,Records & Info. Management,Fire Fighter,0.01,866
+2013,General Funds,General Fund,Fire,Records & Info. Management,GIS Specialist,1,72800
+2013,General Funds,General Fund,Fire,Records & Info. Management,Public Safety Dispatcher - Lead,0.4,31666
 2009,General Funds,General Fund,Fire,Training & Personnel,Fire Captain,0,0
 2009,General Funds,General Fund,Fire,Training & Personnel,Fire Fighter,0,0
 2009,General Funds,General Fund,Fire,Training & Personnel,Deputy Fire Chief,0,0
@@ -6916,54 +6916,54 @@
 2013,General Funds,General Fund,Police,Field Services,Police Sergeant,1,95358
 2013,General Funds,General Fund,Police,Field Services,Police Sergeant,1,95358
 2013,General Funds,General Fund,Police,Field Services,Police Sergeant,1,95358
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Captain-Adv,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Assistant Police Chief - Adv,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Administrative Associate II,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,0,0
-2009,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Captain-Adv,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Assistant Police Chief - Adv,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Administrative Associate II,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,0,0
-2010,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Captain-Adv,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Assistant Police Chief - Adv,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Administrative Associate II,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,0,0
-2011,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Captain-Adv,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Assistant Police Chief - Adv,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Administrative Associate II,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,0,0
-2012,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0,0
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Administrative Associate II,1,61787
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Assistant Police Chief - Adv,0.3,45260
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,1,86403
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,1,86403
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,1,86403
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Agent,1,105581
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Captain-Adv,0.9,0
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0.5,39131
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,78262
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,91292
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,78262
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,78262
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,91292
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,1,78262
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Officer,0.5,39131
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0.75,71519
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,1,95358
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Police Sergeant,0.25,23840
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,1,53019
-2013,General Funds,General Fund,Police,Investigations and Crime Prev Serv,Property Evid Tech,1,53019
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Captain-Adv,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Assistant Police Chief - Adv,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Administrative Associate II,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,0,0
+2009,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Captain-Adv,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Assistant Police Chief - Adv,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Administrative Associate II,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,0,0
+2010,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Captain-Adv,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Assistant Police Chief - Adv,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Administrative Associate II,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,0,0
+2011,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Captain-Adv,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Assistant Police Chief - Adv,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Administrative Associate II,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,0,0
+2012,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0,0
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Administrative Associate II,1,61787
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Assistant Police Chief - Adv,0.3,45260
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,1,86403
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,1,86403
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,1,86403
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Agent,1,105581
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Captain-Adv,0.9,0
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0.5,39131
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,78262
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,91292
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,78262
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,78262
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,91292
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,1,78262
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Officer,0.5,39131
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0.75,71519
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,1,95358
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Police Sergeant,0.25,23840
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,1,53019
+2013,General Funds,General Fund,Police,Investigation/Crime Prevention,Property Evid Tech,1,53019
 2009,General Funds,General Fund,Police,Parking Services,Community Serv Offcr,0,0
 2009,General Funds,General Fund,Police,Parking Services,Police Lieut-Adv,0,0
 2009,General Funds,General Fund,Police,Parking Services,Supv Police Service,0,0
@@ -7773,261 +7773,261 @@
 2013,Internal Services Funds,Printing & Mailing Services Fund,Administrative Services,Purchasing,Offset Equip Op-Lead,0,0
 2013,Internal Services Funds,Printing & Mailing Services Fund,Administrative Services,Purchasing,Mailing Svcs Spec,0,0
 2013,Internal Services Funds,Printing & Mailing Services Fund,Administrative Services,Purchasing,Supv Repro & Mail,0,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Admin Assistant,0.07,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate II,1,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate III,0.04,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Asst Director Adm Svcs,0.4,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Business Analyst,0.9,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Chief Information Officer,1,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,5,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.35,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Management Analyst,0,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,3,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,1.8,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Financial Anlyst,0.09,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,13,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,4,0
-2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Information Technology Security Manager,0,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Admin Assistant,0.07,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate II,1,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate III,0.04,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Asst Director Adm Svcs,0.4,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Business Analyst,0.9,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Chief Information Officer,1,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,5,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.35,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Management Analyst,0,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,3,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,1.8,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Financial Anlyst,0.09,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,13,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,4,0
-2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Information Technology Security Manager,0,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Admin Assistant,0.07,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate II,1,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate III,0,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Asst Director Adm Svcs,0.4,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Business Analyst,1,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Chief Information Officer,1,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,5,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.35,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Management Analyst,0.5,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,3,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,2,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Financial Anlyst,0.09,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,13,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,3,0
-2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Information Technology Security Manager,0,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Admin Assistant,1.07,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate II,0,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate III,0,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Asst Director Adm Svcs,0.4,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Business Analyst,1,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Chief Information Officer,1,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,5,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.35,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Management Analyst,0.5,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,3,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,2,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Financial Anlyst,0.09,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,13,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,3,0
-2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Information Technology Security Manager,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Business Analyst,1,106080
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,1,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,1,103314
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,1,103314
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Business Analyst,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,1,68453
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,1,68453
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,1,68453
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,1,68453
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,1,68453
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Desktop Technician,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.05,7779
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.05,7779
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,1,106777
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,110673
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,1,106080
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Asst Director Adm Svcs,0.3,43162
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.1,15558
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Management Analyst,1,95035
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,1,106777
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,1,106080
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Technologist,1,102495
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Admin Assistant,1,75900
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Chief Information Officer,1,174221
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Dir Adm Svcs/Chief Financial Officer,0.05,7779
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Information Technology Security Manager,1,122574
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Mgr It,1,122574
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Technologist,1,96429
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate II,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Sr. Financial Anlyst,0,0
-2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Division,Administrative Associate III,0,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Project Engineer,0.1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0.1,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
-2009,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
-2010,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
-2011,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
-2012,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.2,13244
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.05,3311
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.25,16556
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.2,13244
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0.25,31831
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.5,40384
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.1,8077
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.1,8077
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.15,12115
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.65,31944
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.65,31944
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.05,2457
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.05,2457
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.2,9829
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.2,9829
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.1,4914
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.1,4914
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.3,28929
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.15,14464
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.05,4821
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.1,9643
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.05,4821
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.1,9643
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.25,24107
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.15,9553
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.75,47767
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.1,6369
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.2,12738
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.05,3184
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Management Analyst,0.2,17227
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,0.9,71998
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,0.1,8000
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,59567
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.8,48688
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6619
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.1,6494
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.55,35715
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.15,9741
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,6794
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
-2013,Internal Services Funds,Vehicle Replacement & Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
-2009,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Acct Spec,0,0
-2009,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0,0
-2009,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Management Analyst,0,0
-2010,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Acct Spec,0,0
-2010,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0,0
-2010,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Management Analyst,0,0
-2011,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Acct Spec,0,0
-2011,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0,0
-2011,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Management Analyst,0,0
-2012,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Acct Spec,0,0
-2012,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0,0
-2012,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Management Analyst,0,0
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Acct Spec,0.5,0
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.07,3653
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.07,3653
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0.06,3131
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Community Serv Offcr,0,0
-2013,Special Revenue Funds,Residential Parking Permits Program,Planning,Planning,Management Analyst,0.5,43722
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Admin Assistant,0.07,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate II,1,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate III,0.04,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Asst Director Adm Svcs,0.4,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Business Analyst,0.9,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Chief Information Officer,1,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,5,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.35,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Management Analyst,0,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,3,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,1.8,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Financial Anlyst,0.09,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,13,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,4,0
+2009,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Information Technology Security Manager,0,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Admin Assistant,0.07,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate II,1,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate III,0.04,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Asst Director Adm Svcs,0.4,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Business Analyst,0.9,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Chief Information Officer,1,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,5,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.35,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Management Analyst,0,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,3,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,1.8,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Financial Anlyst,0.09,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,13,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,4,0
+2010,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Information Technology Security Manager,0,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Admin Assistant,0.07,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate II,1,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate III,0,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Asst Director Adm Svcs,0.4,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Business Analyst,1,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Chief Information Officer,1,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,5,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.35,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Management Analyst,0.5,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,3,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,2,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Financial Anlyst,0.09,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,13,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,3,0
+2011,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Information Technology Security Manager,0,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Admin Assistant,1.07,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate II,0,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate III,0,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Asst Director Adm Svcs,0.4,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Business Analyst,1,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Chief Information Officer,1,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,5,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.35,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Management Analyst,0.5,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,3,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,2,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Financial Anlyst,0.09,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,13,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,3,0
+2012,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Information Technology Security Manager,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Business Analyst,1,106080
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,1,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,1,103314
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,1,103314
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Business Analyst,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,1,68453
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,1,68453
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,1,68453
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,1,68453
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,1,68453
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Desktop Technician,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.05,7779
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.05,7779
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,1,106777
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,110673
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,1,106080
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Asst Director Adm Svcs,0.3,43162
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.1,15558
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Management Analyst,1,95035
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,1,106777
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,1,106080
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Technologist,1,102495
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Admin Assistant,1,75900
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Chief Information Officer,1,174221
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Dir Adm Svcs/Chief Financial Officer,0.05,7779
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Information Technology Security Manager,1,122574
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Mgr It,1,122574
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Technologist,1,96429
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate II,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Sr. Financial Anlyst,0,0
+2013,Internal Services Funds,Technology Fund,Information Technology,Information Technology Divisions,Administrative Associate III,0,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Project Engineer,0.1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0.1,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
+2009,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
+2010,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
+2011,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,1,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,1,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,2,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,1,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,2,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,1,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,7,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,1,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0,0
+2012,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Management Analyst,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.2,13244
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.05,3311
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.25,16556
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.1,6622
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Administrative Associate III,0.2,13244
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Dir Public Wrks,0.25,31831
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.5,40384
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.1,8077
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.05,4038
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.1,8077
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Asst Fleet Mgr,0.15,12115
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.65,31944
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.65,31944
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.05,2457
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.05,2457
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.2,9829
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.2,9829
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.1,4914
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Equip Maint Serv Per,0.1,4914
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.3,28929
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.15,14464
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.05,4821
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.1,9643
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.05,4821
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.1,9643
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Manager,0.25,24107
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.15,9553
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.75,47767
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.1,6369
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.25,15922
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.2,12738
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Fleet Svcs Coord,0.05,3184
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Management Analyst,0.2,17227
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,0.9,71998
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Mobile Service Tech,0.1,8000
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,59567
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.8,48688
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.9,54774
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6619
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic II,0.1,6086
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.1,6494
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.55,35715
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.15,9741
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Senior Fleet Services Coordinator,0.05,3247
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Financial Anlyst,0.08,6794
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Sr. Engineer,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Project Engineer,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equip Mech-L,0,0
+2013,Internal Services Funds,Vehicle Maintenance Fund,Public Works,Equipment Management,Motor Equipment Mechanic I,0,0
+2009,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Acct Spec,0,0
+2009,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0,0
+2009,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Management Analyst,0,0
+2010,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Acct Spec,0,0
+2010,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0,0
+2010,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Management Analyst,0,0
+2011,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Acct Spec,0,0
+2011,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0,0
+2011,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Management Analyst,0,0
+2012,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Acct Spec,0,0
+2012,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0,0
+2012,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Management Analyst,0,0
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Acct Spec,0.5,0
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.07,3653
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.07,3653
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0.06,3131
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Community Serv Offcr,0,0
+2013,Special Revenue Funds,Other Special Revenue Funds,Planning,Planning,Management Analyst,0.5,43722

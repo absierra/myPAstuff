@@ -68,6 +68,10 @@
 			Logger::log("query: ".$query);
 			Logger::log(json_encode($results));
 			$depth = (!$values[$focus])? 0 : (strstr($values[$focus], ':') ? 2 : 1);
+			$numExpenses = 0;
+			foreach($results as $item){
+				if($item->get('ledger_type') == 'Expense') $numExpenses += 1;
+			}
 			foreach($results as $item){
 				if($focus == 'revenue_expense'){
 					$series = ($item->get('ledger_type')=='Expense')?'Expenses':'Revenues';
@@ -98,7 +102,10 @@
 					}
 					if($focus == 'category') $index = mapInternal($focus, true); //(make sure we have deep data for categories)
 					$data[$item->get($index)][$item->get('year')][$transactionType] += (float)$item->get('amount');
-					$data[$item->get($index)][$item->get('year')]['expenses'] += 0;
+					
+					if($numExpenses > 0){
+						$data[$item->get($index)][$item->get('year')]['expenses'] += 0;
+					}
 					if($isAFee){
 						$data[$item->get($index)][$item->get('year')]['fee_revenue'] += (float)$item->get('amount');
 					}
@@ -130,7 +137,7 @@
                     //if (depth == 0) $data[$item->get('department')][$item->get('year')]['revenue'] += (float)$item->get('fte');
                     if (depth == 0) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
                 	else if (depth == 1 || depth == 2) $data[$item->get('division')][$item->get('year')]['revenue'] += (float)$item->get('fte');
-                	
+                	$data[$item->get('division')][$item->get('year')]['revenue'] += 0;
                 }
                 else if($focus == 'title'){
                     $data[$item->get('title')][$item->get('year')]['fte'] += (float)$item->get('fte');

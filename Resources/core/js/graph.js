@@ -436,13 +436,14 @@ var BudgetGraph = new Class({
                        		var xGraph = graphSize.x - 240;
                        		var yGraph = graphSize.y - 41;
                				a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
-                  				stroke: "#ccc",
-                				fill: "#fff",
+                  				stroke: "#A7A7A7",
+                				fill: "#414042",
+                				opacity: .6,
                    				height: 75,
                    				width: 200
                				});
                				a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
-                   				fill: "#818285",
+                   				fill: "#FFF",
                    				'font-size': 13,
                    				'font-weight': 'bold'
                				});
@@ -488,13 +489,14 @@ var BudgetGraph = new Class({
                        }
                        else{ //zero data
                				a.raphael.rect(xGraph - graphSize.x / 2 + 100, yGraph - graphSize.y / 2, 50, 50, 10).attr({
-                   				stroke: "#ccc",
-                   				fill: "#fff",
+                   				stroke: "#A7A7A7",
+                   				fill: "#414042",
+                   				opacity: .6,
                    				height: 75,
                    				width: 200
                				});
                				a.raphael.text(xGraph - graphSize.x / 2 + 200, yGraph - graphSize.y / 2 + 37, 'This Selection Has No Data').attr({
-                   				fill: "#818285",
+                   				fill: "#FFF",
                    				'font-size': 13,
                    				'font-weight': 'bold'
                				});				

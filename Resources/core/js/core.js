@@ -1,6 +1,7 @@
 //global js here
 var graphs_initialized = false;
 var financial_state = true;
+var in_negative_state = false;
 var loadTimer = 0;
 var refreshGUI = function(includeData){
     BudgetGraph.timer(1);
@@ -162,7 +163,7 @@ var loadDefaultGraph = function(type){
 
 //PALO ALTO
 var isSuper = function(name){
-	var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
+	var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Debt Service Funds', 'Non-Departmental', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'FIR', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
 	return (supers.indexOf(name) != -1);
 }
 //END PALO ALTO
@@ -225,10 +226,12 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-				document.id('stacked_graph').show();
-				document.id('percentage_graph').show();
-				document.id('pie_chart').show();
-				document.id('standard_graph').show();
+				if(!in_negative_state){
+					document.id('stacked_graph').show();
+					document.id('percentage_graph').show();
+					document.id('pie_chart').show();
+					document.id('standard_graph').show();
+				}
 				
 				tableFormat(false, false);
                 
@@ -251,6 +254,14 @@ function panelData(){
 
                     var selectedItems = document.getElements('ul li span.selected');
                     if (selectedItems.length > 0) {
+                    
+                    	if(this.get('text') == 'Capital Funds' || this.get('text') == 'Capital Improvement Fund'){
+							in_negative_state = false;
+							document.id('stacked_graph').show();
+							document.id('percentage_graph').show();
+							document.id('pie_chart').show();
+							document.id('standard_graph').show();
+						}
 
                         window.selected = {};
                         window.panelSelection={};
@@ -293,6 +304,15 @@ function panelData(){
                         loadDefaultGraph();
                     }
                 } else {
+                	//PALO ALTO
+					if(this.get('text') == 'Capital Funds' || this.get('text') == 'Capital Improvement Fund'){
+						document.id('stacked_graph').hide();
+						document.id('percentage_graph').hide();
+						document.id('pie_chart').hide();
+						changeCurrentGraphType('line', document.id('standard_graph'));
+						in_negative_state = true;
+					}
+					
                     if (!this.hasClass('disabled')) { 
                         panelId.getElements('.selected').removeClass('selected');
                     }
@@ -395,7 +415,6 @@ function panelData(){
 					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
 					if (panelUl.getParent('li span a').hasClass('expanded'))
 					{
-						//console.log(this.getPosition());
 						
 						// get the position of the existing LI element
 						mouseoverDIVpos = this.getParent().getPosition();
@@ -427,10 +446,7 @@ function panelData(){
 						
 						// for some reason, it seems like we sometimes need this. weird.
 						DIVelement.setStyle('width', DIVelement.getSize().x - 30 + 'px');
-						
-						
-						//console.log('DIVelement.getStyle(\'width\'): ' + DIVelement.getStyle('width'));
-						//console.log('');
+
 						
 						// add the click event that the span it's on top of had, and make it look like panelSpan had called it
 						newSpan.addEvent('click', function(event){
@@ -517,7 +533,6 @@ var tableFormat = function(yes, employee){
 		document.id('graph_types').hide();
 		document.id('graph_breakdown').hide();
 		document.id('legend').hide();
-		console.log('here 1');
 		document.id('graph_fiscal_year').hide();
 	}
 	else{
@@ -560,14 +575,12 @@ var rightPanelSizing = function(){
 		{
 			graph_container_width = window.getSize().x - leftColumnWidth;
 			graph_container_height = graph_container_width / graph_container_ratio;
-			//console.log('horizontal was limiting: ' + graph_container_width + ' x ' + graph_container_height);
 		}
 		// else (i.e., the remaining vertical space is the limiting factor), fill the vertical, and then set the horizontal according to the ratio
 		else
 		{
 			graph_container_height = window.getSize().y - verticalElementsHeight;
 			graph_container_width = graph_container_height * graph_container_ratio;
-			//console.log('vertical was limiting: ' + graph_container_width + ' x ' + graph_container_height);
 		}
 	}
 	else
@@ -591,7 +604,6 @@ var rightPanelSizing = function(){
 	
 	//window.currentGraph.options.height = 1234;
 	//window.currentGraph.options.width = 1234;
-	//console.log('window.currentGraph: ' + window.currentGraph);
 
 }
 
