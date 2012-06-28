@@ -17,21 +17,10 @@
                 "Revenue:Other Revenue", 
                 "Revenue:Charges to Other Funds", 
                 "Expense:Rents & Leases", 
-                "Expense:Trans Out", 
-                "Expense:Trans to CIP", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
-                "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
-                "Revenue:Sales Taxes", 
-                "Revenue:Trans In", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
                 "Revenue:Permits and Licenses", 
-                "Revenue:Other Income"
+                "Revenue:Other Income", 
+                "Expense:Trans Out", 
+                "Revenue:Return on Investments"
             ]
         }, 
         "Administrative Services:Accounting": {
@@ -79,33 +68,14 @@
         }, 
         "Administrative Services:Non-Departmental Division": {
             "funds": [
-                "General Funds:General Fund", 
                 "General Funds:Stores Inventory"
             ], 
             "ledgers": [
-                "Expense:Contract Services", 
-                "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Trans Out", 
-                "Expense:Trans to CIP", 
-                "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
-                "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
-                "Revenue:Sales Taxes", 
-                "Revenue:Trans In", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
                 "Expense:Allocated Charges", 
+                "Expense:General Expense", 
                 "Expense:Supplies & Materials", 
-                "Revenue:Other Income"
+                "Revenue:Other Income", 
+                "Revenue:Other Revenue"
             ]
         }, 
         "Administrative Services:Purchasing": {
@@ -449,12 +419,12 @@
                 "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
+                "Revenue:Other Revenue", 
+                "Expense:Rents & Leases", 
                 "Expense:Trans Out", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Other Revenue"
+                "Revenue:Charges to Other Funds"
             ]
         }, 
         "City Manager:Administration": {
@@ -1059,6 +1029,7 @@
         }, 
         "Non-Departmental": {
             "funds": [
+                "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
@@ -1080,29 +1051,37 @@
                 "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments", 
-                "Revenue:Trans In", 
-                "Expense:Debt Service", 
-                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Property Taxes", 
                 "Expense:Trans Out", 
                 "Expense:Trans to CIP", 
                 "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Documentary Transfer Tax", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Rental Income", 
-                "Revenue:Other Income", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
+                "Revenue:Property Taxes", 
+                "Revenue:Rental Income", 
+                "Revenue:Return on Investments", 
+                "Revenue:Sales Taxes", 
+                "Revenue:Trans In", 
+                "Revenue:Transient Occupancy Tax", 
+                "Revenue:Utility Users Tax", 
+                "Expense:Allocated Charges", 
+                "Expense:Supplies & Materials", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Other Income", 
                 "Revenue:Permits and Licenses"
             ]
         }, 
         "Non-Departmental:Non-Departmental Divisions": {
             "funds": [
+                "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
@@ -1124,24 +1103,31 @@
                 "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
-                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Revenue", 
-                "Revenue:Return on Investments", 
-                "Revenue:Trans In", 
-                "Expense:Debt Service", 
-                "Expense:Facilities & Equip Purchases", 
+                "Expense:Rents & Leases", 
                 "Expense:Salaries & Benefits", 
-                "Revenue:Property Taxes", 
                 "Expense:Trans Out", 
                 "Expense:Trans to CIP", 
                 "Revenue:Charges for Services", 
+                "Revenue:Charges to Other Funds", 
+                "Revenue:Documentary Transfer Tax", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Rental Income", 
-                "Revenue:Other Income", 
+                "Revenue:Net Sales", 
+                "Revenue:Other Revenue", 
                 "Revenue:Other Taxes and Fines", 
+                "Revenue:Property Taxes", 
+                "Revenue:Rental Income", 
+                "Revenue:Return on Investments", 
+                "Revenue:Sales Taxes", 
+                "Revenue:Trans In", 
+                "Revenue:Transient Occupancy Tax", 
+                "Revenue:Utility Users Tax", 
+                "Expense:Allocated Charges", 
+                "Expense:Supplies & Materials", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
+                "Revenue:Other Income", 
                 "Revenue:Permits and Licenses"
             ]
         }, 
@@ -1695,7 +1681,6 @@
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Other Special Revenue Funds"
@@ -1731,7 +1716,6 @@
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund"
             ], 
@@ -1752,7 +1736,6 @@
                 "Revenue:Trans In", 
                 "Expense:Net Sales", 
                 "Expense:Debt Service", 
-                "Expense:Facilities & Equip Purchases", 
                 "Revenue:From Other Agencies"
             ]
         }, 
@@ -2210,22 +2193,6 @@
                 "Revenue:Trans In"
             ]
         }, 
-        "Enterprise Funds:Utilities Administration Fund": {
-            "divisions": [
-                "Utilities:Administration"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:Contract Services", 
-                "Expense:Facilities & Equip Purchases", 
-                "Expense:General Expense", 
-                "Expense:Rents & Leases", 
-                "Expense:Salaries & Benefits", 
-                "Expense:Supplies & Materials", 
-                "Expense:Trans Out", 
-                "Revenue:Other Income"
-            ]
-        }, 
         "Enterprise Funds:Wastewater Collection": {
             "divisions": [
                 "Utilities:Administration", 
@@ -2317,7 +2284,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -2334,10 +2300,10 @@
                 "City Clerk:Public Information", 
                 "City Council:Administration", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -2358,8 +2324,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2370,11 +2336,12 @@
                 "Police:Traffic Services", 
                 "Public Works:Administration", 
                 "Public Works:Engineering", 
-                "Public Works:Other Funds", 
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "Public Works:Other Funds", 
+                "Non-Departmental:Non-Departmental Divisions", 
+                "Administrative Services:Non-Departmental Division"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2387,20 +2354,20 @@
                 "Revenue:Other Revenue", 
                 "Revenue:Charges to Other Funds", 
                 "Expense:Rents & Leases", 
+                "Revenue:Permits and Licenses", 
                 "Expense:Trans Out", 
-                "Expense:Trans to CIP", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
-                "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
                 "Revenue:Sales Taxes", 
                 "Revenue:Trans In", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Rental Income", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Return on Investments", 
+                "Revenue:Property Taxes", 
+                "Expense:Trans to CIP", 
+                "Revenue:Documentary Transfer Tax", 
+                "Revenue:Net Sales", 
                 "Revenue:Transient Occupancy Tax", 
                 "Revenue:Utility Users Tax", 
-                "Revenue:Permits and Licenses", 
                 "Revenue:Other Income"
             ]
         }, 
@@ -2443,7 +2410,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -2460,10 +2426,10 @@
                 "City Clerk:Public Information", 
                 "City Council:Administration", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -2484,8 +2450,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2496,10 +2462,11 @@
                 "Police:Traffic Services", 
                 "Public Works:Administration", 
                 "Public Works:Engineering", 
-                "Public Works:Other Funds", 
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
-                "Public Works:Trees"
+                "Public Works:Trees", 
+                "Public Works:Other Funds", 
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2512,20 +2479,20 @@
                 "Revenue:Other Revenue", 
                 "Revenue:Charges to Other Funds", 
                 "Expense:Rents & Leases", 
+                "Revenue:Permits and Licenses", 
                 "Expense:Trans Out", 
-                "Expense:Trans to CIP", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
-                "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
                 "Revenue:Sales Taxes", 
                 "Revenue:Trans In", 
+                "Revenue:From Other Agencies", 
+                "Revenue:Rental Income", 
+                "Revenue:Other Taxes and Fines", 
+                "Revenue:Return on Investments", 
+                "Revenue:Property Taxes", 
+                "Expense:Trans to CIP", 
+                "Revenue:Documentary Transfer Tax", 
+                "Revenue:Net Sales", 
                 "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
-                "Revenue:Permits and Licenses"
+                "Revenue:Utility Users Tax"
             ]
         }, 
         "General Funds:Public Services Donation": {
@@ -2899,7 +2866,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -2916,10 +2882,10 @@
                 "City Clerk:Public Information", 
                 "City Council:Administration", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -2940,8 +2906,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -2952,11 +2918,12 @@
                 "Police:Traffic Services", 
                 "Public Works:Administration", 
                 "Public Works:Engineering", 
-                "Public Works:Other Funds", 
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
+                "Public Works:Other Funds", 
                 "Non-Departmental:Non-Departmental Divisions", 
+                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -2997,7 +2964,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3046,10 +3012,10 @@
                 "City Clerk:Public Information", 
                 "City Council:Administration", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3070,8 +3036,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -3116,7 +3082,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3162,7 +3127,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -3177,10 +3141,10 @@
                 "City Clerk:Legislative Records", 
                 "City Clerk:Public Information", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3201,8 +3165,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -3251,7 +3215,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3338,7 +3301,6 @@
                 "Utilities:Resource Management", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
-                "Utilities:Administration", 
                 "Public Works:Wastewater Treatment", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
@@ -3355,7 +3317,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3372,7 +3333,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -3386,10 +3346,10 @@
                 "City Clerk:Election/Conflict of Interest", 
                 "City Clerk:Legislative Records", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3409,8 +3369,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -3425,6 +3385,7 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
+                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3459,7 +3420,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3488,7 +3448,6 @@
         }, 
         "Expense:Rents & Leases": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Real Estate", 
                 "City Attorney:Consultation and Advisory", 
                 "City Manager:Administration", 
@@ -3501,6 +3460,7 @@
                 "Planning:Building", 
                 "Police:Investigation/Crime Prevention", 
                 "Public Works:Structure and Grounds", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Engineering (Operating)", 
@@ -3520,7 +3480,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
@@ -3534,7 +3493,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -3550,10 +3508,10 @@
                 "City Clerk:Legislative Records", 
                 "City Clerk:Public Information", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3574,8 +3532,8 @@
                 "Library:Public Services", 
                 "Planning:Administration", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -3586,10 +3544,11 @@
                 "Police:Traffic Services", 
                 "Public Works:Administration", 
                 "Public Works:Engineering", 
-                "Public Works:Other Funds", 
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
+                "Public Works:Other Funds", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3603,7 +3562,6 @@
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - Capital Improvement", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Other Funds", 
                 "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
@@ -3620,7 +3578,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3652,10 +3609,10 @@
                 "City Clerk:Administrative Citations", 
                 "City Clerk:Council Support Services", 
                 "City Council:City Council Operations", 
-                "City Manager:Administration", 
-                "City Manager:City Management", 
                 "City Manager:Economic Development", 
                 "City Manager:Public Communication", 
+                "City Manager:Administration", 
+                "City Manager:City Management", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3675,8 +3632,8 @@
                 "Library:Library Services Administration", 
                 "Library:Public Services", 
                 "Planning:Building", 
-                "Planning:Econ Develop", 
                 "Planning:Planning", 
+                "Planning:Econ Develop", 
                 "Police:Administration", 
                 "Police:Animal Services", 
                 "Police:Field Services", 
@@ -3719,7 +3676,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3734,13 +3690,13 @@
         }, 
         "Expense:Trans Out": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "City Auditor:Audit Services", 
                 "City Manager:Administration", 
                 "City Manager:City Management", 
                 "Community Services:Open Space/Parks and Golf", 
                 "Planning:Planning", 
                 "Public Works:Trees", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Utilities:Administration", 
                 "Utilities:Operations & Maintenance", 
@@ -3755,8 +3711,7 @@
                 "Administrative Services:Purchasing", 
                 "Human Resources:Retiree Health Benefits", 
                 "Information Technology:Information Technology Divisions", 
-                "Public Works:Equipment Management", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "Public Works:Equipment Management"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -3766,7 +3721,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3783,12 +3737,11 @@
         }, 
         "Expense:Trans to CIP": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Demand Side Mgmt", 
                 "Public Works:Refuse Fund-Operation", 
                 "Utilities:Capital Improvement Program", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Police:Other Funds"
             ], 
@@ -3832,7 +3785,6 @@
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -3848,9 +3800,9 @@
                 "City Clerk:Public Information", 
                 "City Council:Administration", 
                 "City Council:City Council Operations", 
+                "City Manager:Public Communication", 
                 "City Manager:Administration", 
                 "City Manager:City Management", 
-                "City Manager:Public Communication", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -3880,6 +3832,7 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
+                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3923,7 +3876,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3956,7 +3908,6 @@
             "divisions": [
                 "Administrative Services:Accounting", 
                 "Administrative Services:Budget", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
                 "City Attorney:Administration", 
@@ -3988,6 +3939,7 @@
                 "Public Works:Engineering", 
                 "Public Works:Streets", 
                 "Public Works:Trees", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Demand Side Mgmt", 
                 "Utilities:Engineering (Operating)", 
@@ -3995,7 +3947,6 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Other Funds", 
                 "Information Technology:Information Technology Divisions", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Community Services:Parkland Dedication"
@@ -4019,7 +3970,6 @@
         "Revenue:Charges to Other Funds": {
             "divisions": [
                 "Administrative Services:Administration", 
-                "Administrative Services:Non-Departmental Division", 
                 "City Attorney:Administration", 
                 "City Attorney:Official & Administration", 
                 "City Auditor:Audit Services", 
@@ -4041,6 +3991,7 @@
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Capital Improvement Program", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
@@ -4065,7 +4016,7 @@
         }, 
         "Revenue:Documentary Transfer Tax": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division"
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund"
@@ -4073,7 +4024,6 @@
         }, 
         "Revenue:From Other Agencies": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Community Services:Arts & Culture", 
                 "Fire:Fire Administration", 
                 "Library:Library Services Administration", 
@@ -4087,6 +4037,7 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Demand Side Mgmt", 
                 "Public Works:Refuse Fund-Operation", 
@@ -4097,7 +4048,6 @@
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
                 "Human Resources:Retiree Health Benefits", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Police:Other Funds", 
                 "Police:Recovery Act JAG"
             ], 
@@ -4118,7 +4068,7 @@
         }, 
         "Revenue:Net Sales": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -4165,7 +4115,6 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
-                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -4176,7 +4125,6 @@
             "divisions": [
                 "Administrative Services:Accounting", 
                 "Administrative Services:Administration", 
-                "Administrative Services:Non-Departmental Division", 
                 "Administrative Services:Purchasing", 
                 "Administrative Services:Real Estate", 
                 "Administrative Services:Treasury", 
@@ -4187,9 +4135,9 @@
                 "City Clerk:Administration", 
                 "City Clerk:Council Support Services", 
                 "City Clerk:Public Information", 
+                "City Manager:Public Communication", 
                 "City Manager:Administration", 
                 "City Manager:City Management", 
-                "City Manager:Public Communication", 
                 "Community Services:Administration", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
@@ -4214,6 +4162,7 @@
                 "Public Works:Streets", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
+                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Operations & Maintenance", 
@@ -4280,7 +4229,6 @@
         }, 
         "Revenue:Other Taxes and Fines": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Community Services:Open Space/Parks and Golf", 
                 "Fire:Emergency Response", 
                 "Fire:Environmental Safety", 
@@ -4294,9 +4242,9 @@
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
                 "Public Works:Engineering", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "Public Works:Wastewater Treatment"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -4330,7 +4278,6 @@
         }, 
         "Revenue:Property Taxes": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Public Works:Engineering", 
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
@@ -4344,15 +4291,14 @@
         }, 
         "Revenue:Rental Income": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Community Services:Arts & Culture", 
                 "Community Services:Cubberley & Human Services", 
                 "Community Services:Open Space/Parks and Golf", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Planning:Planning", 
                 "Police:Animal Services", 
-                "Public Works:Refuse Fund-Operation", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "Non-Departmental:Non-Departmental Divisions", 
+                "Public Works:Refuse Fund-Operation"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -4362,7 +4308,6 @@
         }, 
         "Revenue:Return on Investments": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Planning:Planning", 
                 "Non-Departmental:Non-Departmental Divisions", 
                 "Community Services:Recreation & Youth Sciences", 
@@ -4424,8 +4369,8 @@
         }, 
         "Revenue:Sales Taxes": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
-                "City Auditor:Audit Services"
+                "City Auditor:Audit Services", 
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund"
@@ -4433,7 +4378,6 @@
         }, 
         "Revenue:Trans In": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "City Auditor:Audit Services", 
                 "Community Services:Cubberley & Human Services", 
                 "Planning:Planning", 
@@ -4484,7 +4428,7 @@
         }, 
         "Revenue:Transient Occupancy Tax": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division"
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund"
@@ -4492,7 +4436,7 @@
         }, 
         "Revenue:Utility Users Tax": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division"
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund"
