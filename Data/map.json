@@ -3,7 +3,6 @@
         "Administrative Services": {
             "funds": [
                 "General Funds:General Fund", 
-                "General Funds:Stores Inventory", 
                 "Internal Services Funds:Printing & Mailing Services Fund"
             ], 
             "ledgers": [
@@ -18,7 +17,6 @@
                 "Revenue:Charges to Other Funds", 
                 "Expense:Rents & Leases", 
                 "Revenue:Permits and Licenses", 
-                "Revenue:Other Income", 
                 "Expense:Trans Out", 
                 "Revenue:Return on Investments"
             ]
@@ -64,18 +62,6 @@
                 "Expense:Salaries & Benefits", 
                 "Expense:Supplies & Materials", 
                 "Revenue:Charges for Services"
-            ]
-        }, 
-        "Administrative Services:Non-Departmental Division": {
-            "funds": [
-                "General Funds:Stores Inventory"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Income", 
-                "Revenue:Other Revenue"
             ]
         }, 
         "Administrative Services:Purchasing": {
@@ -1029,7 +1015,6 @@
         }, 
         "Non-Departmental": {
             "funds": [
-                "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
@@ -1051,37 +1036,29 @@
                 "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
+                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Revenue:Trans In", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:Salaries & Benefits", 
+                "Revenue:Property Taxes", 
                 "Expense:Trans Out", 
                 "Expense:Trans to CIP", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Documentary Transfer Tax", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
                 "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
-                "Revenue:Sales Taxes", 
-                "Revenue:Trans In", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
-                "Expense:Allocated Charges", 
-                "Expense:Supplies & Materials", 
-                "Expense:Debt Service", 
-                "Expense:Facilities & Equip Purchases", 
                 "Revenue:Other Income", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses"
             ]
         }, 
         "Non-Departmental:Non-Departmental Divisions": {
             "funds": [
-                "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
@@ -1103,31 +1080,24 @@
                 "Special Revenue Funds:University Avenue Parking"
             ], 
             "ledgers": [
+                "Expense:Allocated Charges", 
                 "Expense:Contract Services", 
                 "Expense:General Expense", 
-                "Expense:Rents & Leases", 
+                "Expense:Supplies & Materials", 
+                "Revenue:Other Revenue", 
+                "Revenue:Return on Investments", 
+                "Revenue:Trans In", 
+                "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
                 "Expense:Salaries & Benefits", 
+                "Revenue:Property Taxes", 
                 "Expense:Trans Out", 
                 "Expense:Trans to CIP", 
                 "Revenue:Charges for Services", 
-                "Revenue:Charges to Other Funds", 
-                "Revenue:Documentary Transfer Tax", 
                 "Revenue:From Other Agencies", 
-                "Revenue:Net Sales", 
-                "Revenue:Other Revenue", 
-                "Revenue:Other Taxes and Fines", 
-                "Revenue:Property Taxes", 
                 "Revenue:Rental Income", 
-                "Revenue:Return on Investments", 
-                "Revenue:Sales Taxes", 
-                "Revenue:Trans In", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
-                "Expense:Allocated Charges", 
-                "Expense:Supplies & Materials", 
-                "Expense:Debt Service", 
-                "Expense:Facilities & Equip Purchases", 
                 "Revenue:Other Income", 
+                "Revenue:Other Taxes and Fines", 
                 "Revenue:Permits and Licenses"
             ]
         }, 
@@ -1681,6 +1651,7 @@
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
                 "Special Revenue Funds:Other Special Revenue Funds"
@@ -1716,6 +1687,7 @@
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund"
             ], 
@@ -1736,6 +1708,7 @@
                 "Revenue:Trans In", 
                 "Expense:Net Sales", 
                 "Expense:Debt Service", 
+                "Expense:Facilities & Equip Purchases", 
                 "Revenue:From Other Agencies"
             ]
         }, 
@@ -2193,6 +2166,22 @@
                 "Revenue:Trans In"
             ]
         }, 
+        "Enterprise Funds:Utilities Administration Fund": {
+            "divisions": [
+                "Utilities:Administration"
+            ], 
+            "ledgers": [
+                "Expense:Allocated Charges", 
+                "Expense:Contract Services", 
+                "Expense:Facilities & Equip Purchases", 
+                "Expense:General Expense", 
+                "Expense:Rents & Leases", 
+                "Expense:Salaries & Benefits", 
+                "Expense:Supplies & Materials", 
+                "Expense:Trans Out", 
+                "Revenue:Other Income"
+            ]
+        }, 
         "Enterprise Funds:Wastewater Collection": {
             "divisions": [
                 "Utilities:Administration", 
@@ -2340,8 +2329,7 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Public Works:Other Funds", 
-                "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division"
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2362,13 +2350,7 @@
                 "Revenue:Rental Income", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Return on Investments", 
-                "Revenue:Property Taxes", 
-                "Expense:Trans to CIP", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:Net Sales", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax", 
-                "Revenue:Other Income"
+                "Revenue:Property Taxes"
             ]
         }, 
         "General Funds:Child Care Fund": {
@@ -2465,8 +2447,7 @@
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
-                "Public Works:Other Funds", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "Public Works:Other Funds"
             ], 
             "ledgers": [
                 "Expense:Allocated Charges", 
@@ -2487,12 +2468,7 @@
                 "Revenue:Rental Income", 
                 "Revenue:Other Taxes and Fines", 
                 "Revenue:Return on Investments", 
-                "Revenue:Property Taxes", 
-                "Expense:Trans to CIP", 
-                "Revenue:Documentary Transfer Tax", 
-                "Revenue:Net Sales", 
-                "Revenue:Transient Occupancy Tax", 
-                "Revenue:Utility Users Tax"
+                "Revenue:Property Taxes"
             ]
         }, 
         "General Funds:Public Services Donation": {
@@ -2507,18 +2483,6 @@
                 "Revenue:Other Revenue", 
                 "Revenue:Return on Investments", 
                 "Revenue:Trans In"
-            ]
-        }, 
-        "General Funds:Stores Inventory": {
-            "divisions": [
-                "Administrative Services:Non-Departmental Division"
-            ], 
-            "ledgers": [
-                "Expense:Allocated Charges", 
-                "Expense:General Expense", 
-                "Expense:Supplies & Materials", 
-                "Revenue:Other Income", 
-                "Revenue:Other Revenue"
             ]
         }, 
         "Internal Services Funds": {
@@ -2923,7 +2887,6 @@
                 "Public Works:Trees", 
                 "Public Works:Other Funds", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -2954,7 +2917,6 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
                 "General Funds:Family Resource", 
@@ -2964,6 +2926,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3052,7 +3015,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3073,7 +3035,6 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Family Resource", 
                 "Enterprise Funds:Airport Enterprise Fund", 
@@ -3082,6 +3043,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3215,6 +3177,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3301,6 +3264,7 @@
                 "Utilities:Resource Management", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
+                "Utilities:Administration", 
                 "Public Works:Wastewater Treatment", 
                 "FIR:Other Funds", 
                 "Library:Library Other Funds", 
@@ -3317,6 +3281,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3385,7 +3350,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3411,7 +3375,6 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
                 "Enterprise Funds:Airport Enterprise Fund", 
@@ -3420,6 +3383,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3460,7 +3424,6 @@
                 "Planning:Building", 
                 "Police:Investigation/Crime Prevention", 
                 "Public Works:Structure and Grounds", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Engineering (Operating)", 
@@ -3480,6 +3443,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Water Fund", 
                 "Capital Funds:Capital Improvement Fund", 
@@ -3548,7 +3512,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Public Works:Other Funds", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3562,6 +3525,7 @@
                 "Public Works:Wastewater Treatment", 
                 "Capital Fund:Capital Improvement", 
                 "Community Services:CSD - Capital Improvement", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Other Funds", 
                 "Human Resources:General Benefits Fund", 
                 "Human Resources:Liability Insurance", 
@@ -3578,6 +3542,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3648,7 +3613,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -3669,13 +3633,13 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Emergency Preparedness", 
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3696,7 +3660,6 @@
                 "Community Services:Open Space/Parks and Golf", 
                 "Planning:Planning", 
                 "Public Works:Trees", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Community Services:Recreation & Youth Sciences", 
                 "Utilities:Administration", 
                 "Utilities:Operations & Maintenance", 
@@ -3711,7 +3674,8 @@
                 "Administrative Services:Purchasing", 
                 "Human Resources:Retiree Health Benefits", 
                 "Information Technology:Information Technology Divisions", 
-                "Public Works:Equipment Management"
+                "Public Works:Equipment Management", 
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -3721,6 +3685,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3737,16 +3702,15 @@
         }, 
         "Expense:Trans to CIP": {
             "divisions": [
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Demand Side Mgmt", 
                 "Public Works:Refuse Fund-Operation", 
                 "Utilities:Capital Improvement Program", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Police:Other Funds"
             ], 
             "funds": [
-                "General Funds:General Fund", 
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
@@ -3832,7 +3796,6 @@
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Airport:Airport Enterprise", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
@@ -3866,7 +3829,6 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
                 "General Funds:Family Resource", 
@@ -3876,6 +3838,7 @@
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -3939,7 +3902,6 @@
                 "Public Works:Engineering", 
                 "Public Works:Streets", 
                 "Public Works:Trees", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Demand Side Mgmt", 
                 "Utilities:Engineering (Operating)", 
@@ -3947,6 +3909,7 @@
                 "Public Works:Storm Drainage - Operation", 
                 "Public Works:Other Funds", 
                 "Information Technology:Information Technology Divisions", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Planning:Transportation Impact ", 
                 "Community Services:CSD - Development Impact Fees", 
                 "Community Services:Parkland Dedication"
@@ -3991,7 +3954,6 @@
                 "Public Works:Streets", 
                 "Public Works:Structure and Grounds", 
                 "Public Works:Trees", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Capital Improvement Program", 
                 "Public Works:Refuse Fund-Operation", 
                 "Public Works:Storm Drainage - Operation", 
@@ -4014,14 +3976,6 @@
                 "Internal Services Funds:Vehicle Maintenance Fund"
             ]
         }, 
-        "Revenue:Documentary Transfer Tax": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "funds": [
-                "General Funds:General Fund"
-            ]
-        }, 
         "Revenue:From Other Agencies": {
             "divisions": [
                 "Community Services:Arts & Culture", 
@@ -4037,7 +3991,6 @@
                 "Police:Police Personnel Selection", 
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Demand Side Mgmt", 
                 "Public Works:Refuse Fund-Operation", 
@@ -4048,6 +4001,7 @@
                 "Planning:Other Funds", 
                 "Public Works:Other Funds", 
                 "Human Resources:Retiree Health Benefits", 
+                "Non-Departmental:Non-Departmental Divisions", 
                 "Police:Other Funds", 
                 "Police:Recovery Act JAG"
             ], 
@@ -4068,7 +4022,6 @@
         }, 
         "Revenue:Net Sales": {
             "divisions": [
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -4082,7 +4035,6 @@
                 "Public Works:Other Funds"
             ], 
             "funds": [
-                "General Funds:General Fund", 
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
@@ -4096,7 +4048,6 @@
         }, 
         "Revenue:Other Income": {
             "divisions": [
-                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Customer Service", 
@@ -4109,12 +4060,12 @@
                 "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
-                "General Funds:Stores Inventory", 
                 "Enterprise Funds:Electric Fund", 
                 "Enterprise Funds:Fiber Fund", 
                 "Enterprise Funds:Gas Fund", 
                 "Enterprise Funds:Refuse Fund", 
                 "Enterprise Funds:Storm Drainage", 
+                "Enterprise Funds:Utilities Administration Fund", 
                 "Enterprise Funds:Wastewater Collection", 
                 "Enterprise Funds:Wastewater Treatment", 
                 "Enterprise Funds:Water Fund", 
@@ -4162,7 +4113,6 @@
                 "Public Works:Streets", 
                 "Public Works:Trees", 
                 "Non-Departmental:Non-Departmental Divisions", 
-                "Administrative Services:Non-Departmental Division", 
                 "Utilities:Administration", 
                 "Utilities:Capital Improvement Program", 
                 "Utilities:Operations & Maintenance", 
@@ -4191,7 +4141,6 @@
             "funds": [
                 "General Funds:General Fund", 
                 "General Funds:Public Services Donation", 
-                "General Funds:Stores Inventory", 
                 "General Funds:Child Care Fund", 
                 "General Funds:Emergency Preparedness", 
                 "General Funds:Family Resource", 
@@ -4242,9 +4191,9 @@
                 "Police:Technical Services", 
                 "Police:Traffic Services", 
                 "Public Works:Engineering", 
-                "Non-Departmental:Non-Departmental Divisions", 
                 "Public Works:Storm Drainage - Operation", 
-                "Public Works:Wastewater Treatment"
+                "Public Works:Wastewater Treatment", 
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -4297,8 +4246,8 @@
                 "Community Services:Recreation & Youth Sciences", 
                 "Planning:Planning", 
                 "Police:Animal Services", 
-                "Non-Departmental:Non-Departmental Divisions", 
-                "Public Works:Refuse Fund-Operation"
+                "Public Works:Refuse Fund-Operation", 
+                "Non-Departmental:Non-Departmental Divisions"
             ], 
             "funds": [
                 "General Funds:General Fund", 
@@ -4369,8 +4318,7 @@
         }, 
         "Revenue:Sales Taxes": {
             "divisions": [
-                "City Auditor:Audit Services", 
-                "Non-Departmental:Non-Departmental Divisions"
+                "City Auditor:Audit Services"
             ], 
             "funds": [
                 "General Funds:General Fund"
@@ -4424,22 +4372,6 @@
                 "Special Revenue Funds:Special Districts", 
                 "Special Revenue Funds:Street Improvement", 
                 "Special Revenue Funds:Traffic Mitigation and Parking"
-            ]
-        }, 
-        "Revenue:Transient Occupancy Tax": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "funds": [
-                "General Funds:General Fund"
-            ]
-        }, 
-        "Revenue:Utility Users Tax": {
-            "divisions": [
-                "Non-Departmental:Non-Departmental Divisions"
-            ], 
-            "funds": [
-                "General Funds:General Fund"
             ]
         }
     }
