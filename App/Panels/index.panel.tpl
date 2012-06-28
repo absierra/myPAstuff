@@ -152,6 +152,7 @@
 
 		
 		// this is kind of a dirty hack, but it's to clear the DIV element that we're using for mouseover expansion of ellipsis-shortened legend items. because the underlying LI is sometimes bigger than the DIV element, its mouseenter event is triggered, and there's no elegant way to clear it. so we're going to create an event on the legend canvas itself to clear it.
+		/*
 		var legendCanvas = document.getElement('#legend');
 		legendCanvas.addEvent('mouseover', function(){
 			
@@ -164,7 +165,7 @@
 			});
 
 		});
-		
+		*/
 		
 		// this resizes the graph based on the window size
 		rightPanelSizing();
@@ -176,7 +177,6 @@
 					graph.display();
 			});
 		});
-		
 		
 	});
 </script>
@@ -200,7 +200,7 @@
                 <legend><span>Financial Breakdown</span></legend>
             	<li id = "fin_fund" class="tab fund_tab" graph="fund">Fund</li>
             	<li id = "fin_dep" class="tab department_tab" graph="department">Department</li>
-                <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenditure</li>
+                <li id = "fin_exp" class="tab expenditure_tab" graph="expenses">Expenses</li>
                 <li id = "fin_rev" class="tab revenue_tab" graph="revenue">Revenue</li>
                 <li id = "fin_feerev" class="tab fee_revenue_tab" graph="fee_revenue">Revenue</li>
                 <li id = "fin_expfee" class="tab exp_vs_fee_rev_tab" graph="revenue_expenses">Expenditure vs Revenue</li>

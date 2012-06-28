@@ -381,12 +381,14 @@ function panelData(){
                 panelId.appendChild(panelLi);
 				
 				// to account for some weird mouse-moving-too-fast action, which doesn't ever register the mouse as being in the DIV element (so it can never leave, and thus clear the DIV element by triggering the mouseleve event), we'll just clear the DIV if the mouse hits any adjacent elements, which can conveniently be captured here
+				/*
 				panelSpan.addEvent('mouseenter', function(){
 					var DIVelement = document.getElement('#secondLevelMouseOver');
 					DIVelement.set('html', '');
 					if (!DIVelement.hasClass('hidden'))
 						DIVelement.addClass('hidden');
 				});
+				*/
             } else { // 2nd level
                 var panelSet = panelId.getElement('li.'+parts[0].replace(/ /g, ''));
                 var panelUl = panelId.getElement('li.'+parts[0].replace(/ /g, '')+' ul');
@@ -396,21 +398,13 @@ function panelData(){
                 panelSpan.addEvent('click', panelSpanClickFunction); // if this is changed, make sure to change it below as well
 
 				// grab the DIV that's supposed to hold the cloned span -- we're doing this in this scope (instead of the if condition below) because we need the next snippet of code
+				/*
 				var DIVelement = document.getElement('#secondLevelMouseOver');				
 				panelSpan.addEvent('mouseenter', function(){
 					// This is necessary to account for certain mouse-moving-too-fast bugs. we want to clear the DIV at the outset so as to avoid the "mouseleave" function never getting called. this lets us for sure start with a clean slate.
 					DIVelement.set('html', '');
 					if (!DIVelement.hasClass('hidden'))
 						DIVelement.addClass('hidden');
-					/*
-					DIVelement.setStyles({
-						'display': 'none',
-						'width': 'auto',
-						'padding': '0px',
-						'margin': '0px',
-						'background-color': 'transparent'
-					});
-					*/
 				
 					// this next if condition is necessary because we don't want this mouseover to fire if the parent group is collapsed. usually, this wouldn't even be a problem, but without this if condition, it's possible to get a bug where the DIV element activates as the group is collapsing (since it's an animation), and then if the mouse stays in the DIV element, it will persist after the group is collapsed
 					if (panelUl.getParent('li span a').hasClass('expanded'))
@@ -456,12 +450,6 @@ function panelData(){
 							DIVelement.set('html', '');
 							if (!DIVelement.hasClass('hidden'))
 								DIVelement.addClass('hidden');
-							/*
-							DIVelement.setStyles({
-								'display': 'none',
-								'width': 'auto'
-							});
-							*/
 						});
 						
 						// clear the contents of the DIV and make it invisible when the mouse leaves *it* (not the original span)
@@ -476,8 +464,10 @@ function panelData(){
 							});
 						});
 						//newSpan.cloneEvents(this);
+
 					}
 				});
+				*/
                  if(!panelUl){
 			        panelUl = new Element('ul', {
 			            class: 'sublist'
@@ -597,8 +587,8 @@ var rightPanelSizing = function(){
 		
 	document.getElements('#graphs .graph svg').setStyle('width', graph_container_width + 'px');
 	document.getElements('#graphs .graph svg').setStyle('height', (graph_container_height - 180) + 'px');
-	
-	
+	//document.getElements('#graphs .graph svg').setStyle('padding-top', '20px');
+
 	
 	//document.getElements('#graphs .graph').setStyle('border', '1px solid red');
 	
