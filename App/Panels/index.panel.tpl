@@ -166,7 +166,7 @@
 
 		});
 		*/
-		
+
 		// this resizes the graph based on the window size
 		rightPanelSizing();
 		
