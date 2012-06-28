@@ -3,6 +3,7 @@ var graphs_initialized = false;
 var financial_state = true;
 var in_negative_state = false;
 var loadTimer = 0;
+var first_load = true;
 var refreshGUI = function(includeData){
     BudgetGraph.timer(1);
     DelphiGraphTabs.filter();
@@ -20,6 +21,7 @@ var refreshGUI = function(includeData){
         
 	}
     BudgetGraph.timer(-1);
+    
 }
 
 var initGraphs = function(){
@@ -159,6 +161,12 @@ var loadDefaultGraph = function(type){
         BudgetGraph.select(type);
         refreshGUI(true);
     });
+    /*if(first_load){
+		console.log('this happened');
+		window.graphTabs.showSlide(1);
+		document.getElement('li.GeneralFunds span').fireEvent('click');
+		first_load = false;
+	}*/
 }
 
 //PALO ALTO
@@ -200,17 +208,18 @@ function panelData(){
 	}
 
 	var selectionRequest = new Request.JSON({url : '/data/categorization_dependencies', 
-    onRequest: function(){
-        BudgetGraph.timer(1);
-    },
-    onComplete: function(){
-        BudgetGraph.timer(-1);
-    },
-    onSuccess: function(payload){
-        var dataSelect = payload.data;
-        panelFilter(payload.data);
-        refreshGUI(true);
-	}.bind(this)});
+		onRequest: function(){
+			BudgetGraph.timer(1);
+		},
+		onComplete: function(){
+			BudgetGraph.timer(-1);
+		},
+		onSuccess: function(payload){
+			var dataSelect = payload.data;
+			panelFilter(payload.data);
+			refreshGUI(true);
+		}.bind(this)
+	});
 	
     window.selected = {};
     window.panelSelection = {};
@@ -226,7 +235,7 @@ function panelData(){
 			var panelId = document.id(index);
             
 			var panelSpanClickFunction = function(event) {
-				if(!in_negative_state){
+				if(!in_negative_state || index == 'fund' || this.hasClass('disabled')){
 					document.id('stacked_graph').show();
 					document.id('percentage_graph').show();
 					document.id('pie_chart').show();
@@ -478,6 +487,7 @@ function panelData(){
                 panelUl.appendChild(panelLi);
                 panelSet.appendChild(panelUl);
             }
+            
             BudgetGraph.timer(-1);
 		}.bind(this));
 	};
