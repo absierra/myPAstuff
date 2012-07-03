@@ -436,11 +436,13 @@ var BudgetGraph = new Class({
 
                        if (year) {
                                ySet.each(function(arraySet, key) {
-                                       totalValues.push(arraySet[yearKey]*1000);
+                                       val = arraySet[yearKey];
+                                       val && totalValues.push(arraySet[yearKey]*1000);
                                });
                        } else {
                                ySet.each(function(arraySet, key) {
-                                       totalValues.push(arraySet.pop()*1000);
+                                       var val = arraySet.pop()
+                                       val && totalValues.push(arraySet.pop()*1000);
                                });
                        }
                        var a = this;
