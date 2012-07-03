@@ -61,8 +61,50 @@ function hueShiftedColorSet(num, categories){
     }
     console.log(result);
     return result;*/
-    var colorMap = {'Expenses':'#F3715B', 'Revenues':'#00B039', 'Allocated Charges':'#5578B4', 'Contract Services':'#AB72A6', 'Debt Service':'#F3715B', 'General Expense':'#00B039', 'Rents & Leases':'#F79750', 'Salaries & Benefits':'#A9CEEC', 'Supplies & Materials':'#CACEC3', 'Facilities & Equip Purchases':'#AAA7CA', 'Wastewater Treatment':'#66C190', 'Utility Purchases & Charges':'#DF8B96', 'Capital Improvement':'#68B3E2', 'Charges for Services':'#5578B4', 'Net Sales':'#AB72A6', 'Other Income':'#F3715B', 'Other Revenue':'#00B039', 'Return on Investments':'#F79750', 'Charges to Other Funds':'#A9CEEC', 'From Other Agencies':'#CACEC3', 'Permits and Licenses':'#AAA7CA', 'Other Taxes and Fines':'#66C190', 'Property Taxes':'#DF8B96', 'Rental Income':'#68B3E2', 'Sales Taxes':'#FFDB4E', 'Documentary Transfer Tax':'#FFDB4E', 'Transient Occupancy Tax':'#96D4C3', 'Utility Users Tax':'#A7A9AC', 'Trans In':'#BBBA59', 'Trans Out':'#E7A7CB', 'Trans to CIP':'#996633'};
     
+    //CITY SWITCH
+    if(window.city == 'palo alto'){
+    	var colorMap = {'Expenses':'#F3715B', 'Revenues':'#00B039', 'Allocated Charges':'#5578B4', 'Contract Services':'#AB72A6', 'Debt Service':'#F3715B', 'General Expense':'#00B039', 'Rents & Leases':'#F79750', 'Salaries & Benefits':'#A9CEEC', 'Supplies & Materials':'#CACEC3', 'Facilities & Equip Purchases':'#AAA7CA', 'Wastewater Treatment':'#66C190', 'Utility Purchases & Charges':'#DF8B96', 'Capital Improvement':'#68B3E2', 'Charges for Services':'#5578B4', 'Net Sales':'#AB72A6', 'Other Income':'#F3715B', 'Other Revenue':'#00B039', 'Return on Investments':'#F79750', 'Charges to Other Funds':'#A9CEEC', 'From Other Agencies':'#CACEC3', 'Permits and Licenses':'#AAA7CA', 'Other Taxes and Fines':'#66C190', 'Property Taxes':'#DF8B96', 'Rental Income':'#68B3E2', 'Sales Taxes':'#FFDB4E', 'Documentary Transfer Tax':'#FFDB4E', 'Transient Occupancy Tax':'#96D4C3', 'Utility Users Tax':'#A7A9AC', 'Trans In':'#BBBA59', 'Trans Out':'#E7A7CB', 'Trans to CIP':'#996633'};
+    }else if(window.city == 'salinas'){
+    	var colorMap = {'Expenses':'#F3715B', 
+    					'Revenues':'#00B039', 
+    					'Administration/Contingencies':'#5578B4', 
+    					'Utilities':'#AB72A6', 
+    					'Contract Maintenance Services':'#F3715B', 
+    					'Training/Conferences/Meetings':'#00B039', 
+    					'Advertising':'#F79750', 
+    					'Special Dept Supplies':'#A9CEEC', 
+    					'Employee Services':'#CACEC3', 
+    					'Bond-Principal':'#AAA7CA', 
+    					'Paying Agent Fees':'#66C190', 
+    					'Professional Services':'#DF8B96', 
+    					'Contribution to Other Agencies':'#68B3E2', 
+    					'Communications':'#5578B4', 
+    					'Rents & Leases':'#AB72A6', 
+    					'Capital Outlay':'#F3715B', 
+    					'Office Supplies & Materials':'#00B039', 
+    					'Outside Services':'#F79750', 
+    					'Public Assistance':'#A9CEEC', 
+    					'Small Tools & Equipment':'#CACEC3', 
+    					'Membership & Dues':'#AAA7CA', 
+    					'Books and Publications':'#66C190', 
+    					'Financial Assistance':'#DF8B96', 
+    					'Bldg/Veh/Equip Maint/Supplies':'#68B3E2', 
+    					'Taxes':'#FFDB4E', 
+    					'Clothing & Personal Equip':'#FFDB4E', 
+    					'Vehicle Fuels & Lubricants':'#96D4C3', 
+    					'Impvt Other Than Buildings':'#A7A9AC', 
+    					'Chemicals':'#BBBA59', 
+    					'Insurance and Bonds':'#E7A7CB', 
+    					'Recognition-Award-Protocol':'#996633',
+    					'Street Materials':'#F3715B', 
+    					'Refunds & Reimb Damages':'#00B039', 
+    					'Stores Sales':'#5578B4', 
+    					'Buildings':'#AB72A6', 
+    					'Stores Purchases':'#F3715B', 
+    					'Relocation Payments':'#00B039',
+    					'Bond-Interest':'#FFDB4E'};
+    }
     if (categories){
     	var catColors = [];
     	Object.each(categories, function(category){

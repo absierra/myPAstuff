@@ -18,6 +18,10 @@ var BudgetGraph = new Class({
        metric : 'revenue'
    },
    initialize : function(element, options){
+   		//CITY SWITCH
+   	   if(window.city == 'palo alto' || window.city == 'salinas'){
+   	   		var lastYear = '2013';
+   	   }
        this.element = element;
        this.setOptions(options);
        if(!this.options.requestor) this.options.requestor = new Request.JSON({
@@ -67,7 +71,7 @@ var BudgetGraph = new Class({
 					var metric = this.options.metric;
 					b=this;
 			   		Object.each(this.data, function(value, key){
-			   			if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0){
+			   			if(data[key][lastYear][metric] || data[key][lastYear][metric] === 0){
 			   				b.dataOrder.push(key);
 			   				b.displayOrder.push(key);
 			   			}
@@ -81,7 +85,7 @@ var BudgetGraph = new Class({
                     var metric = this.options.metric;
                     data = this.data;
                     Object.each(this.data, function(value, key){
-                        if(data[key]['2013'][metric] || data[key]['2013'][metric] === 0) categories.push(key);
+                        if(data[key][lastYear][metric] || data[key][lastYear][metric] === 0) categories.push(key);
                     });
                     this.colors = hueShiftedColorSet(0, categories);
                }
@@ -157,6 +161,10 @@ var BudgetGraph = new Class({
        }else return [];
    },
    getLegendItems : function(){
+   		//CITY SWITCH
+   	   if(window.city == 'palo alto' || window.city == 'salinas'){
+   	   		var lastYear = '2013';
+   	   }
        var keys = [];
        target = this.options.target;
        metric = this.options.metric;
@@ -167,7 +175,7 @@ var BudgetGraph = new Class({
 		   key = key.indexOf(":")==-1?key:key.split(":")[1];
 		   if(target == 'category'){
 
-				if(value['2013'][metric] != undefined){
+				if(value[lastYear][metric] != undefined){
 					keys.push(key);
 				}
 		   }
@@ -356,7 +364,7 @@ var BudgetGraph = new Class({
 					   DIVelement.addEvent('mouseleave', function(){
 							   this.set('html', '');
 							   this.setStyle('display', 'none');
-																														document.getElements('#legend li span').each(function(legendSpan){
+							   document.getElements('#legend li span').each(function(legendSpan){
 									legendSpan.setStyle('opacity', '1');
 								});
 					   });
