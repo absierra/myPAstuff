@@ -25,7 +25,6 @@
             return $db;
         }
         protected static function performSearch($subject, $predicate, $db){
-        	Logger::log('#####db:'.$db);
             //print_r($predicate); exit();
             //$type = $subject['type'];
             $object = $subject['object'];
@@ -95,7 +94,9 @@
                     Logger::log('MongoDB:'.MongoData::$lastQuery);
                     $cursor = $collection->find($where);
                 }
+                Logger::log('hello world');
                 $array = iterator_to_array($cursor);
+                Logger::log('goodbye cruel world');
                 return $array;
             }catch(Exception $ex){
                 Logger::log('There was a Mongo error['.$ex->getMessage().'] from query :'.MongoData::$lastQuery);

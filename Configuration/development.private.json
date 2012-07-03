@@ -5,7 +5,7 @@
     },
     "DB:pa_budget_data":{
         "type":"mongo",
-        "database" : "pabudgets",
+        "database" : "salinasbudgets",
         "host" : "localhost",
         "user" : "",
         "password" : "",

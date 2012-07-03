@@ -1,9 +1,13 @@
+//files with city switch: core.js, graph.js, graph-tabs.js, graph-utils
+
+
 //global js here
 var graphs_initialized = false;
 var financial_state = true;
 var in_negative_state = false;
 var loadTimer = 0;
 var first_load = true;
+window.city = "salinas";
 var refreshGUI = function(includeData){
     BudgetGraph.timer(1);
     DelphiGraphTabs.filter();
@@ -66,76 +70,77 @@ var initGraphs = function(){
             window.graphTabs.showSlide(2);
         }
     });
-    window.graphs.expenses_vs_fee_revenue = new BudgetGraph('exp_vs_fee_rev_graph', {
-    	dataset : 'financial',
-        type : 'rev_exp',
-        target : 'revenue_expense',
-        metric : 'revenue_expense',
-        id : 'revenue_expenses',
-        select : function(){
-            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(3);
-        }
-    });
-    window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
-    	dataset : 'financial',
-        type : 'categories',
-        target : 'category',
-        metric : 'fee_revenue',
-        id : 'fee_revenue',
-        select : function(){
-            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(4);
-            
-        }
-    });
-    window.graphs.revenue = new BudgetGraph('revenue_graph', {
-    	dataset : 'financial',
-        type : 'categories',
-        target : 'category',
-        metric : 'revenue',
-        id : 'revenue',
-        select : function(){
-            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(5);
-            
-        }
-    });
-    //PALO ALTO SPECIFIC
-	window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
-		dataset : 'employee',
-        type : 'departments',
-        target : 'department',
-        column : 'department',
-        id : 'employee_department',
-        select : function(){
-            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(6);
-            
-        }
-    });
-    window.graphs.employee_type = new BudgetTable('employee_type_graph', {
-		dataset : 'employee',
-        type : 'titles',
-        target : 'title',
-        id : 'employee_type',
-        select : function(){
-            //(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-            //this.setKeys();
-            //this.setLegend();
-            window.graphTabs.showSlide(7);
-            
-        }
-    });
-    //END PALO ALTO
+    //CITY SWITCH
+    if(window.city == 'palo alto'){
+		window.graphs.expenses_vs_fee_revenue = new BudgetGraph('exp_vs_fee_rev_graph', {
+			dataset : 'financial',
+			type : 'rev_exp',
+			target : 'revenue_expense',
+			metric : 'revenue_expense',
+			id : 'revenue_expenses',
+			select : function(){
+				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+				//this.setKeys();
+				//this.setLegend();
+				window.graphTabs.showSlide(3);
+			}
+		});
+		window.graphs.fee_revenue = new BudgetGraph('fee_revenue_graph', {
+			dataset : 'financial',
+			type : 'categories',
+			target : 'category',
+			metric : 'fee_revenue',
+			id : 'fee_revenue',
+			select : function(){
+				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+				//this.setKeys();
+				//this.setLegend();
+				window.graphTabs.showSlide(4);
+				
+			}
+		});
+		window.graphs.revenue = new BudgetGraph('revenue_graph', {
+			dataset : 'financial',
+			type : 'categories',
+			target : 'category',
+			metric : 'revenue',
+			id : 'revenue',
+			select : function(){
+				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+				//this.setKeys();
+				//this.setLegend();
+				window.graphTabs.showSlide(5);
+				
+			}
+		});
+		window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
+			dataset : 'employee',
+			type : 'departments',
+			target : 'department',
+			column : 'department',
+			id : 'employee_department',
+			select : function(){
+				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+				//this.setKeys();
+				//this.setLegend();
+				window.graphTabs.showSlide(6);
+				
+			}
+		});
+		window.graphs.employee_type = new BudgetTable('employee_type_graph', {
+			dataset : 'employee',
+			type : 'titles',
+			target : 'title',
+			id : 'employee_type',
+			select : function(){
+				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+				//this.setKeys();
+				//this.setLegend();
+				window.graphTabs.showSlide(7);
+				
+			}
+		});
+	}
 };
 
 var loadDefaultGraph = function(type){
@@ -169,12 +174,16 @@ var loadDefaultGraph = function(type){
 	}*/
 }
 
-//PALO ALTO
 var isSuper = function(name){
-	var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Debt Service Funds', 'Non-Departmental', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'FIR', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
+	//CITY SWITCH
+	if(city == "palo alto"){
+		var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Debt Service Funds', 'Non-Departmental', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'FIR', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
+	}
+	else if(city == "salinas"){
+		var supers = [];
+	}
 	return (supers.indexOf(name) != -1);
 }
-//END PALO ALTO
 
 var initialized = false;
 function panelData(){
@@ -313,13 +322,15 @@ function panelData(){
                         loadDefaultGraph();
                     }
                 } else {
-                	//PALO ALTO
-					if(this.get('text') == 'Capital Funds' || this.get('text') == 'Capital Improvement Fund'){
-						document.id('stacked_graph').hide();
-						document.id('percentage_graph').hide();
-						document.id('pie_chart').hide();
-						changeCurrentGraphType('line', document.id('standard_graph'));
-						in_negative_state = true;
+                	//CITY SWITCH
+                	if(window.city == 'palo alto'){
+						if(this.get('text') == 'Capital Funds' || this.get('text') == 'Capital Improvement Fund'){
+							document.id('stacked_graph').hide();
+							document.id('percentage_graph').hide();
+							document.id('pie_chart').hide();
+							changeCurrentGraphType('line', document.id('standard_graph'));
+							in_negative_state = true;
+						}
 					}
 					
                     if (!this.hasClass('disabled')) { 
@@ -477,15 +488,18 @@ function panelData(){
 					}
 				});
 				*/
+				try{
                  if(!panelUl){
 			        panelUl = new Element('ul', {
 			            class: 'sublist'
 			        });
 			        panelSet.appendChild(panelUl);
 			    }
+			    
                 panelLi.appendChild(panelSpan);
                 panelUl.appendChild(panelLi);
                 panelSet.appendChild(panelUl);
+                }catch(e){}
             }
             
             BudgetGraph.timer(-1);

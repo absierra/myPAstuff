@@ -19,21 +19,21 @@
     function uniqueCategories(){
         $filename = './Cache/budget/unique.json';
         if(false || !file_exists($filename)){
-            $results = Data::search('BudgetData');
+            $results = Data::query('BudgetData');
             $data = array(
                 'funds' => array(),
                 'departments' => array(),
                 'categories' => array()
             );
             foreach($results as $result){
-                if(!in_array($result->get('superfund'), $data['funds'])) $data['funds'][] = $result->get('superfund');
-                if(!in_array($result->get('superfund_fund'), $data['funds']))
-                    $data['funds'][] = $result->get('superfund_fund');
-                if(!in_array($result->get('ledger_type'), $data['categories'])) $data['categories'][] = $result->get('ledger_type');
-                if(!in_array($result->get('ledger_type_ledger_description'), $data['categories']))
-                    $data['categories'][] = $result->get('ledger_type_ledger_description');
-                $dep = $result->get('division')?$result->get('department').':'.$result->get('division'):$result->get('department');
-                if(!in_array($result->get('department'), $data['departments'])) $data['departments'][] = $result->get('department');
+                if(!in_array($result['superfund'], $data['funds'])) $data['funds'][] = $result['superfund'];
+                if(!in_array($result['superfund_fund'], $data['funds']))
+                    $data['funds'][] = $result['superfund_fund'];
+                if(!in_array($result['ledger_type'], $data['categories'])) $data['categories'][] = $result['ledger_type'];
+                if(!in_array($result['ledger_type_ledger_description'], $data['categories']))
+                    $data['categories'][] = $result['ledger_type_ledger_description'];
+                $dep = $result['division']?$result['department'].':'.$result['division']:$result['department'];
+                if(!in_array($result['department'], $data['departments'])) $data['departments'][] = $result['department'];
                 if(!in_array($dep, $data['departments']))
                     $data['departments'][] = $dep;
             }
@@ -42,6 +42,7 @@
         }else{
             return json_decode(file_get_contents($filename), true);
         }
+        
     }
     
     function categoryDependencies(&$data, $unique, $dependencyTree, $values){
