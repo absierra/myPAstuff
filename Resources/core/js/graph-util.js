@@ -17,7 +17,7 @@ PseudoDOM.pseudo = function(element, properties, pseudo){
         style = new Element('style', {
             id : id+'-rule',
             class : 'pseudo-chop'
-        });
+        }); 
     }
     var css = '#'+id+'::'+pseudo+'{\n';
     Object.each(properties, function(value, key){

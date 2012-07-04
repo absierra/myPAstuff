@@ -11,12 +11,11 @@
 	howworks[4] = 'Moreover, a city\'s various departments have the same types of expenses. For example, departments spend money on salaries and benefits for their employees (which is the largest city expenditure category). This allows a budget to offer an additional perspective on a city\'s finances: how much money is being spent on various categories of expenses, instead of a breakdown merely by department or division.';
 
 	var howtops = new Array();
-	howtops[0] = 'Delphi Budgets offers the ability to explore a budget in a simple graphical user interface, making it easier than pouring through hundreds of pages of a budget document to get at the information you want about your city\'s finances.';
-	howtops[1] = 'The interface is organized into two main panels. The panel on the left contains two columns: one for Fund and the other for Department. These panels filter one another as you make selections, indicating which departments recieve money from which funds, or, conversely, which funds grant money to which departments. You can select a fund first or a department first&mdash;it all depends on what information you need.';
-	howtops[2] = 'The right panel displays the data that represents the selections you made in the left panel. Financial data is vizualized in graph form, while employee data (available when only a department is selected) is presented in both graph and tabular forms.';
-	howtops[3] = 'Above the graph, you\'ll notice selector buttons that allow you to change the graph breakdown. For example, if you want the graph lines (or pie slices) to represent the different funds, select "Funds", or if you want them to represent different expense types, select "Expenses". This is also where you can choose between financial and employee breakdowns.';
-	howtops[4] = 'You can also choose different graph types. There are the traditional pie and line charts, as well as a stacked (or area) chart to illustrate each component\'s contribution to the total, in both absolute numbers and percentages.';
-	howtops[5] = 'Hover your mouse over graph data points to get more information.';
+	howtops[0] = 'The interface is organized into two main panels. The panel on the left contains two columns: one for Fund and the other for Department. These panels filter one another as you make selections, indicating which departments recieve money from which funds, or, conversely, which funds grant money to which departments. You can select a fund first or a department first&mdash;it all depends on what information you need.';
+	howtops[1] = 'The right panel displays the data that represents the selections you made in the left panel. Financial data is vizualized in graph form, while employee data (available when only a department is selected) is presented in both graph and tabular forms.';
+	howtops[2] = 'Above the graph, you\'ll notice selector buttons that allow you to change the graph breakdown. For example, if you want the graph lines (or pie slices) to represent the different funds, select "Funds", or if you want them to represent different expense types, select "Expenses". This is also where you can choose between financial and employee breakdowns.';
+	howtops[3] = 'You can also choose different graph types. There are the traditional pie and line charts, as well as a stacked (or area) chart to illustrate each component\'s contribution to the total, in both absolute numbers and percentages.';
+	howtops[4] = 'Hover your mouse over graph data points to get more information.';
 	
 	// these next two variables will let us know which way we want to swipe the slideshow, by letting functions know where we are now (since where we're going is passed in as arguments)
 	var currentSection = -1;
@@ -47,10 +46,12 @@
 		// we only want the image to have the sliding transition effect if we're not moving within the how to use section. the reason is that the how to use images are very similar, so it makes more sense to just replace them.
 		if (section == 0 && section == currentSection)
 		{
-			imgElement.setProperty('src', '/Resources/core/img/howto' + slide + '.png');
+			var actualslide = slide + 1;
+			imgElement.setProperty('src', '/Resources/core/img/howto' + actualslide + '.png');
 		}
 		else
 		{
+		    var actualslide = slide + 1;
 			var slideOut = new Fx.Tween(imgDiv, {
 				property: 'left',
 				duration: '500',
@@ -65,7 +66,7 @@
 			
 			newImgDiv.setStyle('left', (direction == 'forward' ? '100%' : '-100%'));
 			var newImgElement = newImgDiv.getElement('img');
-			newImgElement.setProperty('src', '/Resources/core/img/' + (section == 1 ? 'howworks' : 'howto') + slide + '.png');
+			newImgElement.setProperty('src', '/Resources/core/img/' + (section == 1 ? 'howworks' : 'howto') + actualslide + '.png');
 			
 			var slideIn = new Fx.Tween(newImgDiv, {
 				property: 'left',
@@ -205,14 +206,8 @@
 	
 	document.addEvent('domready', function() {
 		// first, we need to add some click events to the section tabs
-		var sectionTabs = document.getElements('#sectionTabs li a');
-		sectionTabs.each(function(sectionTab, index){
-			sectionTab.addEvent('click', function(){
-				activateSlide(1, 0);
-			});
-		});
 		
-		activateSlide(1, 0);
+		activateSlide(0, 0);
 		
 		//this snippet adds functionality to the mouse scroll wheel
 		document.addEvent('mousewheel', function(event){
@@ -248,7 +243,7 @@
     <div id="about">
 		<div id="slideshow">
 			<ul id="sectionTabs">
-				<li><a href="#">About Your City's Budget</a></li>
+				<li><a href="#">How to use Delphi Budgets</a></li>
 			</ul>
 			<div id="slide">
 				<div id="slideImg">

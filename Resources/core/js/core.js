@@ -7,6 +7,7 @@ var financial_state = true;
 var in_negative_state = false;
 var loadTimer = 0;
 var first_load = true;
+//CITY SWITCH
 window.city = "salinas";
 var refreshGUI = function(includeData){
     BudgetGraph.timer(1);
@@ -166,6 +167,7 @@ var loadDefaultGraph = function(type){
         BudgetGraph.select(type);
         refreshGUI(true);
     });
+    changeCurrentGraphType('stacked-line', document.id('stacked_graph'));
     /*if(first_load){
 		console.log('this happened');
 		window.graphTabs.showSlide(1);
