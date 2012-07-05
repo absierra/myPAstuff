@@ -20,6 +20,12 @@ RewriteEngine on
     Deny from all
 </FilesMatch>
 
+# Deny HTTP access to all git files
+<FilesMatch "\.git.*$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
 # Set user agent environment variables
 SetEnvIfNoCase User-Agent (Opera|Chrome|Version|Firefox|MSIE)[\/|\s](\d+)\. browser=$1 version=$2
 SetEnvIf browser Version browser=Safari
