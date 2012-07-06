@@ -1,0 +1,3669 @@
+{
+    "divisions": {
+        "Administration": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Governmental Funds:Insurance", 
+                "Governmental Funds:Meas. J Return-to-Source"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Worker's Compensation", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Community Promotion", 
+                "Expense:Overtime", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Maintenance of Right of Way", 
+                "Expense:Improvements", 
+                "Expense:Claims Payments", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Legal Services", 
+                "Expense:Transfers Out", 
+                "Expense:Utilities-Street Lighting"
+            ]
+        }, 
+        "Administration:Administrative Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Worker's Compensation"
+            ]
+        }, 
+        "Administration:Business Registration": {
+            "funds": [
+                "Enterprise Funds:Business Registration"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Postage"
+            ]
+        }, 
+        "Administration:City Clerk": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Training", 
+                "Expense:Books and Software", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Office Supplies", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Fringe Benefits", 
+                "Expense:Regular Personnel", 
+                "Expense:Temporary Personnel", 
+                "Expense:Equipment", 
+                "Expense:Rental Expense", 
+                "Expense:Social Security", 
+                "Expense:Miscellaneous Expenses Under $500"
+            ]
+        }, 
+        "Administration:City Manager": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Fringe Benefits", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Community Promotion", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel", 
+                "Expense:Temporary Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Rental Expense", 
+                "Expense:Overtime", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Training", 
+                "Expense:Contractual Services", 
+                "Expense:Maintenance of Right of Way", 
+                "Expense:Equipment", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "Administration:Insurance": {
+            "funds": [
+                "Governmental Funds:Insurance"
+            ], 
+            "ledgers": [
+                "Expense:Claims Payments", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Contractual Services"
+            ]
+        }, 
+        "Administration:Legal Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Legal Services", 
+                "Expense:Community Promotion", 
+                "Expense:Contractual Services"
+            ]
+        }, 
+        "Administration:Meas. J Return-to-Source": {
+            "funds": [
+                "Governmental Funds:Meas. J Return-to-Source"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Transfers Out", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Social Security", 
+                "Expense:Contractual Services", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Administration:Rent and Expenses": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Temporary Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Equipment", 
+                "Expense:Office Supplies", 
+                "Expense:Regular Personnel", 
+                "Expense:Community Promotion", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Postage"
+            ]
+        }, 
+        "Administration:Technology Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Equipment", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Rental Expense", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Books and Software", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Commissions and Committees": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Regular Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Worker's Compensation", 
+                "Expense:Printing and Binding", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Commissions and Committees:CPAC": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Regular Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Worker's Compensation"
+            ]
+        }, 
+        "Commissions and Committees:MORTRAC": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Contractual Services", 
+                "Expense:Regular Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Council and Commissions": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Printing and Binding", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Training", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Books and Software", 
+                "Expense:Office Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Rental Expense", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Social Security", 
+                "Expense:Contractual Services", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Transfers Out", 
+                "Expense:Equipment", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Maintenance of Buildings"
+            ]
+        }, 
+        "Council and Commissions:Circulation Commission": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Printing and Binding", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Training", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Books and Software", 
+                "Expense:Office Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Rental Expense", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Social Security", 
+                "Expense:Contractual Services", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Maintenance of Vehicles"
+            ]
+        }, 
+        "Council and Commissions:City Council": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Printing and Binding", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Community Promotion", 
+                "Expense:Training", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense"
+            ]
+        }, 
+        "Council and Commissions:Design Rev. Commission": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Regular Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Overtime", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Printing and Binding", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Books and Software"
+            ]
+        }, 
+        "Council and Commissions:Emergency Prep. Comm.": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Telephones", 
+                "Expense:Equipment", 
+                "Expense:Training", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Community Promotion", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Miscellaneous Expenses Under $500"
+            ]
+        }, 
+        "Council and Commissions:Parks Trails and Rec. Commission": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Training", 
+                "Expense:Worker's Compensation", 
+                "Expense:Rental Expense", 
+                "Expense:Regular Personnel", 
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Office Supplies", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Printing and Binding", 
+                "Expense:Social Security"
+            ]
+        }, 
+        "Council and Commissions:Planning Commission": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Overtime", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Printing and Binding", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Worker's Compensation", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Books and Software", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Postage", 
+                "Expense:Social Security", 
+                "Expense:Fringe Benefits"
+            ]
+        }, 
+        "Council and Commissions:Youth Commission": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Social Security", 
+                "Expense:Temporary Personnel", 
+                "Expense:Training", 
+                "Expense:Overtime", 
+                "Expense:Fringe Benefits", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Regular Personnel", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Office Supplies", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Community Promotion", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "Engineering": {
+            "funds": [
+                "Governmental Funds:City Office Development", 
+                "General Fund:General Fund", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Library Project"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Land", 
+                "Expense:Improvements", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Overtime", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Training", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense", 
+                "Expense:Transfers Out", 
+                "Expense:Utilities-Water", 
+                "Expense:Community Promotion", 
+                "Expense:Interest", 
+                "Expense:Debt Service", 
+                "Expense:Claims Payments"
+            ]
+        }, 
+        "Engineering:City Office Development": {
+            "funds": [
+                "Governmental Funds:City Office Development"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Land", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "Engineering:Engineering Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Overtime", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense"
+            ]
+        }, 
+        "Engineering:Redevelopment Programs": {
+            "funds": [
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Library Project"
+            ], 
+            "ledgers": [
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Water", 
+                "Expense:Office Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Postage", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Improvements", 
+                "Expense:Fringe Benefits", 
+                "Expense:Interest", 
+                "Expense:Debt Service", 
+                "Expense:Printing and Binding", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Claims Payments"
+            ]
+        }, 
+        "Parks and Recreation": {
+            "funds": [
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Recreation Programs"
+            ], 
+            "ledgers": [
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Utilities-Water", 
+                "Expense:Community Promotion", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Insurance and Surety Bonds", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Social Security", 
+                "Expense:Office Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Interest", 
+                "Expense:Improvements", 
+                "Expense:Printing and Binding", 
+                "Expense:Temporary Personnel", 
+                "Expense:Debt Service", 
+                "Expense:Transfers Out", 
+                "Expense:Training", 
+                "Expense:Land", 
+                "Expense:Overtime", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Premium Payment-Liability"
+            ]
+        }, 
+        "Parks and Recreation:Library Operations": {
+            "funds": [
+                "Enterprise Funds:Library Operations"
+            ], 
+            "ledgers": [
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Utilities-Water", 
+                "Expense:Community Promotion", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Insurance and Surety Bonds", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Social Security", 
+                "Expense:Office Supplies", 
+                "Expense:Fringe Benefits"
+            ]
+        }, 
+        "Parks and Recreation:Library Project": {
+            "funds": [
+                "Redevelopment Agency:Library Project"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Interest", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Improvements", 
+                "Expense:Regular Personnel", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Books and Software", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Printing and Binding", 
+                "Expense:Temporary Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Debt Service", 
+                "Expense:Community Promotion", 
+                "Expense:Transfers Out", 
+                "Expense:Social Security", 
+                "Expense:Training", 
+                "Expense:Land", 
+                "Expense:Overtime", 
+                "Expense:Utilities-Water", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Parks and Recreation:Recreation Programs": {
+            "funds": [
+                "Enterprise Funds:Recreation Programs"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Equipment", 
+                "Expense:Overtime", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Temporary Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Water", 
+                "Expense:Maintenance of Buildings"
+            ]
+        }, 
+        "Planning": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Redevelopment Agency:Housing Programs", 
+                "Redevelopment Agency:Redevelopment Debt", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ], 
+            "ledgers": [
+                "Expense:Special Departmental Supplies", 
+                "Expense:Community Promotion", 
+                "Expense:Training", 
+                "Expense:Printing and Binding", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Social Security", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Regular Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Insurance Reserve", 
+                "Expense:Overtime", 
+                "Expense:Temporary Personnel", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Debt Service", 
+                "Expense:Interest", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Water", 
+                "Expense:Transfers Out", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Land"
+            ]
+        }, 
+        "Planning:Crime Prevention Com.": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Special Departmental Supplies", 
+                "Expense:Community Promotion", 
+                "Expense:Training", 
+                "Expense:Printing and Binding", 
+                "Expense:Office Supplies"
+            ]
+        }, 
+        "Planning:Housing Programs": {
+            "funds": [
+                "Redevelopment Agency:Housing Programs"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Office Supplies", 
+                "Expense:Regular Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Insurance Reserve", 
+                "Expense:Overtime"
+            ]
+        }, 
+        "Planning:Planning Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Telephones", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Temporary Personnel", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Social Security", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Community Promotion", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Regular Personnel", 
+                "Expense:Training", 
+                "Expense:Fringe Benefits", 
+                "Expense:Office Supplies", 
+                "Expense:Equipment", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Books and Software", 
+                "Expense:Contractual Services", 
+                "Expense:Worker's Compensation"
+            ]
+        }, 
+        "Planning:Redevelopment Debt": {
+            "funds": [
+                "Redevelopment Agency:Redevelopment Debt"
+            ], 
+            "ledgers": [
+                "Expense:Debt Service", 
+                "Expense:Interest"
+            ]
+        }, 
+        "Planning:Veterans Memorial Bldg.": {
+            "funds": [
+                "Redevelopment Agency:Veterans Memorial Hall", 
+                "Redevelopment Agency:Redevelopment Debt"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Water", 
+                "Expense:Transfers Out", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Debt Service", 
+                "Expense:Interest", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Land", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Training"
+            ]
+        }, 
+        "Police": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Governmental Funds:Supp. Law Enf. Services", 
+                "Enterprise Funds:Vehicle Abatement"
+            ], 
+            "ledgers": [
+                "Expense:Temporary Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Contractual Services", 
+                "Expense:Social Security", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Training", 
+                "Expense:Overtime", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Equipment", 
+                "Expense:Rental Expense", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Office Supplies", 
+                "Expense:Contract Sheriff Services", 
+                "Expense:Printing and Binding", 
+                "Expense:Community Promotion", 
+                "Expense:Postage", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits"
+            ]
+        }, 
+        "Police:Crossing Guards": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Temporary Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Contractual Services", 
+                "Expense:Social Security", 
+                "Expense:Maintenance of Equipment"
+            ]
+        }, 
+        "Police:Police Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Maintenance of Equipment", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Overtime", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Worker's Compensation", 
+                "Expense:Equipment", 
+                "Expense:Rental Expense", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Office Supplies", 
+                "Expense:Contract Sheriff Services", 
+                "Expense:Printing and Binding", 
+                "Expense:Community Promotion", 
+                "Expense:Postage", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits"
+            ]
+        }, 
+        "Police:Supp. Law Enf. Services": {
+            "funds": [
+                "Governmental Funds:Supp. Law Enf. Services"
+            ], 
+            "ledgers": [
+                "Expense:Contract Sheriff Services"
+            ]
+        }, 
+        "Police:Traffic Enforcement": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Contract Sheriff Services", 
+                "Expense:Overtime", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Equipment"
+            ]
+        }, 
+        "Police:Vehicle Abatement": {
+            "funds": [
+                "Enterprise Funds:Vehicle Abatement"
+            ], 
+            "ledgers": [
+                "Expense:Regular Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Rental Expense", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Social Security", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Miscellaneous Expenses Under $500"
+            ]
+        }, 
+        "Public Works": {
+            "funds": [
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Assessment District Funds:Street Lighting"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel", 
+                "Expense:Utilities-Water", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Training", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Printing and Binding", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Community Promotion", 
+                "Expense:Transfers Out", 
+                "Expense:Books and Software", 
+                "Expense:Land", 
+                "Expense:Depreciation-Capital Equipment", 
+                "Expense:Utilities-Traffic Signals"
+            ]
+        }, 
+        "Public Works:Capital Improvement Projects": {
+            "funds": [
+                "Capital Improvement Funds:Capital Improvement Projects"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel"
+            ]
+        }, 
+        "Public Works:Comm. Ctr. Maint.": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Water", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Office Supplies", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Rental Expense", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Fringe Benefits", 
+                "Expense:Improvements", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Temporary Personnel", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Training", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding"
+            ]
+        }, 
+        "Public Works:Core Area Maintenance": {
+            "funds": [
+                "Assessment District Funds:Core Area Maintenance"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Water", 
+                "Expense:Regular Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Office Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Utilities-Telephones"
+            ]
+        }, 
+        "Public Works:Emergency Response": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Public Works:Park Facilities": {
+            "funds": [
+                "Capital Improvement Funds:Parks Facilities"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Postage", 
+                "Expense:Equipment", 
+                "Expense:Social Security", 
+                "Expense:Temporary Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Regular Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Equipment"
+            ]
+        }, 
+        "Public Works:Parking Fund": {
+            "funds": [
+                "Enterprise Funds:Parking Fund"
+            ], 
+            "ledgers": [
+                "Expense:Transfers Out", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Social Security", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Overtime", 
+                "Expense:Printing and Binding", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Improvements", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Land", 
+                "Expense:Utilities-Water", 
+                "Expense:Utilities-Gas and Electric"
+            ]
+        }, 
+        "Public Works:Parkland Acquisition": {
+            "funds": [
+                "Capital Improvement Funds:Parks Acquisition"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Land", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel"
+            ]
+        }, 
+        "Public Works:Parks and Trails Maint.": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Temporary Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Printing and Binding", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Social Security", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Regular Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Postage", 
+                "Expense:Office Supplies", 
+                "Expense:Utilities-Water", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Books and Software", 
+                "Expense:Maintenance of Buildings"
+            ]
+        }, 
+        "Public Works:Public Facilities": {
+            "funds": [
+                "Capital Improvement Funds:Public Facilities"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Transfers Out", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Public Works:Road and Drain Maintenance": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Sewer", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Fringe Benefits", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Utilities-Water", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Overtime", 
+                "Expense:Improvements", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Regular Personnel", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Office Supplies", 
+                "Expense:Community Promotion", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Depreciation-Capital Equipment", 
+                "Expense:Postage", 
+                "Expense:Equipment"
+            ]
+        }, 
+        "Public Works:Storm Drain Maintenance": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Overtime", 
+                "Expense:Fringe Benefits", 
+                "Expense:Equipment", 
+                "Expense:Postage", 
+                "Expense:Rental Expense", 
+                "Expense:Social Security", 
+                "Expense:Regular Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Office Supplies", 
+                "Expense:Total Savings Carried Forward"
+            ]
+        }, 
+        "Public Works:Stormwater Pollution": {
+            "funds": [
+                "Assessment District Funds:Stormwater Pollution"
+            ], 
+            "ledgers": [
+                "Expense:Office Supplies", 
+                "Expense:Equipment", 
+                "Expense:Postage", 
+                "Expense:Temporary Personnel", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Regular Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Printing and Binding"
+            ]
+        }, 
+        "Public Works:Street Lighting": {
+            "funds": [
+                "Assessment District Funds:Street Lighting"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Postage", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Public Works:Traffic Maintenance": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Office Supplies", 
+                "Expense:Regular Personnel", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Contractual Services", 
+                "Expense:Worker's Compensation", 
+                "Expense:Overtime", 
+                "Expense:Social Security", 
+                "Expense:Equipment", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Traffic Signals", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Postage", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "School Bus Program": {
+            "funds": [
+                "Governmental Funds:School Bus Program"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Social Security", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contingency", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "School Bus Program:School Bus Program": {
+            "funds": [
+                "Governmental Funds:School Bus Program"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Social Security", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contingency", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Senior Services": {
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Senior Transportation"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Regular Personnel", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Improvements", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Senior Services:Senior Services": {
+            "funds": [
+                "General Fund:General Fund"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Regular Personnel", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "Senior Services:Senior Transportation": {
+            "funds": [
+                "Enterprise Funds:Senior Transportation"
+            ], 
+            "ledgers": [
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Overtime", 
+                "Expense:Worker's Compensation", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Office Supplies", 
+                "Expense:Social Security", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Equipment", 
+                "Expense:Printing and Binding"
+            ]
+        }
+    }, 
+    "funds": {
+        "Assessment District Funds": {
+            "divisions": [
+                "Public Works:Core Area Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Public Works:Street Lighting"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Water", 
+                "Expense:Regular Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Office Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Temporary Personnel", 
+                "Expense:Training", 
+                "Expense:Overtime", 
+                "Expense:Printing and Binding"
+            ]
+        }, 
+        "Assessment District Funds:Core Area Maintenance": {
+            "divisions": [
+                "Public Works:Core Area Maintenance"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Water", 
+                "Expense:Regular Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Office Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Equipment", 
+                "Expense:Utilities-Telephones"
+            ]
+        }, 
+        "Assessment District Funds:Stormwater Pollution": {
+            "divisions": [
+                "Public Works:Stormwater Pollution"
+            ], 
+            "ledgers": [
+                "Expense:Office Supplies", 
+                "Expense:Equipment", 
+                "Expense:Postage", 
+                "Expense:Temporary Personnel", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Regular Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Printing and Binding"
+            ]
+        }, 
+        "Assessment District Funds:Street Lighting": {
+            "divisions": [
+                "Public Works:Street Lighting"
+            ], 
+            "ledgers": [
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Postage", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Capital Improvement Funds": {
+            "divisions": [
+                "Public Works:Capital Improvement Projects", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Public Facilities"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel", 
+                "Expense:Equipment", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Printing and Binding", 
+                "Expense:Land", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Transfers Out", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Capital Improvement Funds:Capital Improvement Projects": {
+            "divisions": [
+                "Public Works:Capital Improvement Projects"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Social Security", 
+                "Expense:Rental Expense", 
+                "Expense:Worker's Compensation", 
+                "Expense:Temporary Personnel"
+            ]
+        }, 
+        "Capital Improvement Funds:Parks Acquisition": {
+            "divisions": [
+                "Public Works:Parkland Acquisition"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Land", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel"
+            ]
+        }, 
+        "Capital Improvement Funds:Parks Facilities": {
+            "divisions": [
+                "Public Works:Park Facilities"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Postage", 
+                "Expense:Equipment", 
+                "Expense:Social Security", 
+                "Expense:Temporary Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Regular Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Maintenance of Equipment"
+            ]
+        }, 
+        "Capital Improvement Funds:Public Facilities": {
+            "divisions": [
+                "Public Works:Public Facilities"
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Transfers Out", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Enterprise Funds": {
+            "divisions": [
+                "Administration:Business Registration", 
+                "Parks and Recreation:Library Operations", 
+                "Public Works:Parking Fund", 
+                "Parks and Recreation:Recreation Programs", 
+                "Senior Services:Senior Transportation", 
+                "Police:Vehicle Abatement"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Utilities-Water", 
+                "Expense:Community Promotion", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Insurance and Surety Bonds", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Transfers Out", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Overtime", 
+                "Expense:Training", 
+                "Expense:Improvements", 
+                "Expense:Land", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Premium Payment-Liability"
+            ]
+        }, 
+        "Enterprise Funds:Business Registration": {
+            "divisions": [
+                "Administration:Business Registration"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Postage"
+            ]
+        }, 
+        "Enterprise Funds:Library Operations": {
+            "divisions": [
+                "Parks and Recreation:Library Operations"
+            ], 
+            "ledgers": [
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Utilities-Water", 
+                "Expense:Community Promotion", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Postage", 
+                "Expense:Insurance and Surety Bonds", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Social Security", 
+                "Expense:Office Supplies", 
+                "Expense:Fringe Benefits"
+            ]
+        }, 
+        "Enterprise Funds:Parking Fund": {
+            "divisions": [
+                "Public Works:Parking Fund"
+            ], 
+            "ledgers": [
+                "Expense:Transfers Out", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Social Security", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Contractual Services", 
+                "Expense:Office Supplies", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Overtime", 
+                "Expense:Printing and Binding", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Improvements", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Land", 
+                "Expense:Utilities-Water", 
+                "Expense:Utilities-Gas and Electric"
+            ]
+        }, 
+        "Enterprise Funds:Recreation Programs": {
+            "divisions": [
+                "Parks and Recreation:Recreation Programs"
+            ], 
+            "ledgers": [
+                "Expense:Social Security", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Worker's Compensation", 
+                "Expense:Equipment", 
+                "Expense:Overtime", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Temporary Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Books and Software", 
+                "Expense:Fringe Benefits", 
+                "Expense:Training", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Transfers Out", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Postage", 
+                "Expense:Regular Personnel", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Water", 
+                "Expense:Maintenance of Buildings"
+            ]
+        }, 
+        "Enterprise Funds:Senior Transportation": {
+            "divisions": [
+                "Senior Services:Senior Transportation"
+            ], 
+            "ledgers": [
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Community Promotion", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Overtime", 
+                "Expense:Worker's Compensation", 
+                "Expense:Rental Expense", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Office Supplies", 
+                "Expense:Social Security", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Equipment", 
+                "Expense:Printing and Binding"
+            ]
+        }, 
+        "Enterprise Funds:Vehicle Abatement": {
+            "divisions": [
+                "Police:Vehicle Abatement"
+            ], 
+            "ledgers": [
+                "Expense:Regular Personnel", 
+                "Expense:Worker's Compensation", 
+                "Expense:Rental Expense", 
+                "Expense:Printing and Binding", 
+                "Expense:Fringe Benefits", 
+                "Expense:Overtime", 
+                "Expense:Social Security", 
+                "Expense:Office Supplies", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Postage", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Miscellaneous Expenses Under $500"
+            ]
+        }, 
+        "General Fund": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Commissions and Committees:CPAC", 
+                "Planning:Crime Prevention Com.", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Administration:Legal Services", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Public Works:Storm Drain Maintenance", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Worker's Compensation", 
+                "Expense:Improvements", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Transfers Out", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Maintenance of Right of Way", 
+                "Expense:Utilities-Water", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Legal Services", 
+                "Expense:Contract Sheriff Services", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Depreciation-Capital Equipment", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Utilities-Traffic Signals"
+            ]
+        }, 
+        "General Fund:General Fund": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Commissions and Committees:CPAC", 
+                "Planning:Crime Prevention Com.", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Administration:Legal Services", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Public Works:Storm Drain Maintenance", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Contractual Services", 
+                "Expense:Training", 
+                "Expense:Total Savings Carried Forward", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Regular Personnel", 
+                "Expense:Office Supplies", 
+                "Expense:Temporary Personnel", 
+                "Expense:Social Security", 
+                "Expense:Equipment", 
+                "Expense:Books and Software", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Printing and Binding", 
+                "Expense:Rental Expense", 
+                "Expense:Fringe Benefits", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Worker's Compensation", 
+                "Expense:Improvements", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Maintenance of Vehicles", 
+                "Expense:Maintenance of Equipment", 
+                "Expense:Transfers Out", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Maintenance of Right of Way", 
+                "Expense:Utilities-Water", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Utilities-Sewer", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Legal Services", 
+                "Expense:Contract Sheriff Services", 
+                "Expense:Utilities-Street Lighting", 
+                "Expense:Depreciation-Capital Equipment", 
+                "Expense:Contractual-Recreation", 
+                "Expense:Utilities-Traffic Signals"
+            ]
+        }, 
+        "Governmental Funds": {
+            "divisions": [
+                "Engineering:City Office Development", 
+                "Administration:Insurance", 
+                "Administration:Meas. J Return-to-Source", 
+                "School Bus Program:School Bus Program", 
+                "Police:Supp. Law Enf. Services"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Land", 
+                "Expense:Improvements", 
+                "Expense:Claims Payments", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Rental Expense", 
+                "Expense:Transfers Out", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Social Security", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Books and Software", 
+                "Expense:Printing and Binding", 
+                "Expense:Temporary Personnel", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contingency", 
+                "Expense:Training", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Contract Sheriff Services"
+            ]
+        }, 
+        "Governmental Funds:City Office Development": {
+            "divisions": [
+                "Engineering:City Office Development"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Land", 
+                "Expense:Improvements"
+            ]
+        }, 
+        "Governmental Funds:Insurance": {
+            "divisions": [
+                "Administration:Insurance"
+            ], 
+            "ledgers": [
+                "Expense:Claims Payments", 
+                "Expense:Premium Payment-Liability", 
+                "Expense:Contractual Services"
+            ]
+        }, 
+        "Governmental Funds:Meas. J Return-to-Source": {
+            "divisions": [
+                "Administration:Meas. J Return-to-Source"
+            ], 
+            "ledgers": [
+                "Expense:Rental Expense", 
+                "Expense:Transfers Out", 
+                "Expense:Office Supplies", 
+                "Expense:Postage", 
+                "Expense:Social Security", 
+                "Expense:Contractual Services", 
+                "Expense:Regular Personnel", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Worker's Compensation", 
+                "Expense:Fringe Benefits", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Governmental Funds:School Bus Program": {
+            "divisions": [
+                "School Bus Program:School Bus Program"
+            ], 
+            "ledgers": [
+                "Expense:Books and Software", 
+                "Expense:Social Security", 
+                "Expense:Postage", 
+                "Expense:Printing and Binding", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Contractual Services", 
+                "Expense:Fringe Benefits", 
+                "Expense:Temporary Personnel", 
+                "Expense:Rental Expense", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Contingency", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Equipment", 
+                "Expense:Advertising/Legal Notices"
+            ]
+        }, 
+        "Governmental Funds:Supp. Law Enf. Services": {
+            "divisions": [
+                "Police:Supp. Law Enf. Services"
+            ], 
+            "ledgers": [
+                "Expense:Contract Sheriff Services"
+            ]
+        }, 
+        "Redevelopment Agency": {
+            "divisions": [
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Project", 
+                "Planning:Redevelopment Debt", 
+                "Engineering:Redevelopment Programs", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Office Supplies", 
+                "Expense:Regular Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Insurance Reserve", 
+                "Expense:Overtime", 
+                "Expense:Interest", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Books and Software", 
+                "Expense:Equipment", 
+                "Expense:Temporary Personnel", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Debt Service", 
+                "Expense:Community Promotion", 
+                "Expense:Transfers Out", 
+                "Expense:Land", 
+                "Expense:Utilities-Water", 
+                "Expense:Special Departmental Supplies", 
+                "Expense:Claims Payments", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Maintenance of Buildings"
+            ]
+        }, 
+        "Redevelopment Agency:Housing Programs": {
+            "divisions": [
+                "Planning:Housing Programs"
+            ], 
+            "ledgers": [
+                "Expense:Contractual Services", 
+                "Expense:Improvements", 
+                "Expense:Postage", 
+                "Expense:Worker's Compensation", 
+                "Expense:Social Security", 
+                "Expense:Printing and Binding", 
+                "Expense:Training", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Office Supplies", 
+                "Expense:Regular Personnel", 
+                "Expense:Fringe Benefits", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Insurance Reserve", 
+                "Expense:Overtime"
+            ]
+        }, 
+        "Redevelopment Agency:Library Project": {
+            "divisions": [
+                "Parks and Recreation:Library Project", 
+                "Engineering:Redevelopment Programs"
+            ], 
+            "ledgers": [
+                "Expense:Postage", 
+                "Expense:Fringe Benefits", 
+                "Expense:Interest", 
+                "Expense:Rental Expense", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Improvements", 
+                "Expense:Regular Personnel", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Office Supplies", 
+                "Expense:Worker's Compensation", 
+                "Expense:Books and Software", 
+                "Expense:Contractual Services", 
+                "Expense:Equipment", 
+                "Expense:Printing and Binding", 
+                "Expense:Temporary Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Debt Service", 
+                "Expense:Community Promotion", 
+                "Expense:Transfers Out", 
+                "Expense:Social Security", 
+                "Expense:Training", 
+                "Expense:Land", 
+                "Expense:Overtime", 
+                "Expense:Utilities-Water", 
+                "Expense:Special Departmental Supplies"
+            ]
+        }, 
+        "Redevelopment Agency:Redevelopment Debt": {
+            "divisions": [
+                "Planning:Redevelopment Debt", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "ledgers": [
+                "Expense:Debt Service", 
+                "Expense:Interest", 
+                "Expense:Transfers Out"
+            ]
+        }, 
+        "Redevelopment Agency:Redevelopment Programs": {
+            "divisions": [
+                "Engineering:Redevelopment Programs"
+            ], 
+            "ledgers": [
+                "Expense:Transfers Out", 
+                "Expense:Rental Expense", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Utilities-Water", 
+                "Expense:Office Supplies", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Social Security", 
+                "Expense:Worker's Compensation", 
+                "Expense:Postage", 
+                "Expense:Training", 
+                "Expense:Regular Personnel", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Overtime", 
+                "Expense:Community Promotion", 
+                "Expense:Improvements", 
+                "Expense:Fringe Benefits", 
+                "Expense:Interest", 
+                "Expense:Debt Service", 
+                "Expense:Printing and Binding", 
+                "Expense:Utilities-Telephones", 
+                "Expense:Claims Payments"
+            ]
+        }, 
+        "Redevelopment Agency:Veterans Memorial Hall": {
+            "divisions": [
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "ledgers": [
+                "Expense:Improvements", 
+                "Expense:Utilities-Garbage Disposal", 
+                "Expense:Utilities-Water", 
+                "Expense:Miscellaneous Expenses Under $500", 
+                "Expense:Interest", 
+                "Expense:Social Security", 
+                "Expense:Utilities-Gas and Electric", 
+                "Expense:Printing and Binding", 
+                "Expense:Maintenance of Buildings", 
+                "Expense:Land", 
+                "Expense:Transfers Out", 
+                "Expense:Temporary Personnel", 
+                "Expense:Contractual Services", 
+                "Expense:Advertising/Legal Notices", 
+                "Expense:Training"
+            ]
+        }
+    }, 
+    "ledgers": {
+        "Expense": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Engineering:City Office Development", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Planning:Crime Prevention Com.", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Administration:Insurance", 
+                "Administration:Legal Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Public Works:Public Facilities", 
+                "Parks and Recreation:Recreation Programs", 
+                "Planning:Redevelopment Debt", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Public Works:Street Lighting", 
+                "Police:Supp. Law Enf. Services", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Governmental Funds:City Office Development", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Governmental Funds:Insurance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Debt", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Assessment District Funds:Street Lighting", 
+                "Governmental Funds:Supp. Law Enf. Services", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Advertising/Legal Notices": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Public Works:Core Area Maintenance", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Public Works:Public Facilities", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Street Lighting", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Street Lighting", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Books and Software": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Administration:Rent and Expenses", 
+                "School Bus Program:School Bus Program", 
+                "Administration:Technology Services"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Governmental Funds:School Bus Program"
+            ]
+        }, 
+        "Expense:Claims Payments": {
+            "divisions": [
+                "Administration:Insurance", 
+                "Engineering:Redevelopment Programs"
+            ], 
+            "funds": [
+                "Governmental Funds:Insurance", 
+                "Redevelopment Agency:Redevelopment Programs"
+            ]
+        }, 
+        "Expense:Community Promotion": {
+            "divisions": [
+                "Council and Commissions:Circulation Commission", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Core Area Maintenance", 
+                "Planning:Crime Prevention Com.", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Administration:Legal Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution"
+            ]
+        }, 
+        "Expense:Contingency": {
+            "divisions": [
+                "School Bus Program:School Bus Program"
+            ], 
+            "funds": [
+                "Governmental Funds:School Bus Program"
+            ]
+        }, 
+        "Expense:Contract Sheriff Services": {
+            "divisions": [
+                "Police:Police Services", 
+                "Police:Supp. Law Enf. Services", 
+                "Police:Traffic Enforcement"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Governmental Funds:Supp. Law Enf. Services"
+            ]
+        }, 
+        "Expense:Contractual Services": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Engineering:City Office Development", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Administration:Insurance", 
+                "Administration:Legal Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Public Works:Street Lighting", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Governmental Funds:City Office Development", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Governmental Funds:Insurance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Assessment District Funds:Street Lighting", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Contractual-Recreation": {
+            "divisions": [
+                "Parks and Recreation:Recreation Programs", 
+                "Senior Services:Senior Services", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "Enterprise Funds:Recreation Programs", 
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Debt Service": {
+            "divisions": [
+                "Parks and Recreation:Library Project", 
+                "Planning:Redevelopment Debt", 
+                "Engineering:Redevelopment Programs", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "Redevelopment Agency:Library Project", 
+                "Redevelopment Agency:Redevelopment Debt", 
+                "Redevelopment Agency:Redevelopment Programs"
+            ]
+        }, 
+        "Expense:Depreciation-Capital Equipment": {
+            "divisions": [
+                "Public Works:Road and Drain Maintenance"
+            ], 
+            "funds": [
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Equipment": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Public Works:Public Facilities", 
+                "Parks and Recreation:Recreation Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Enterprise Funds:Recreation Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution"
+            ]
+        }, 
+        "Expense:Fringe Benefits": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Improvements": {
+            "divisions": [
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Manager", 
+                "Engineering:City Office Development", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Public Works:Public Facilities", 
+                "Engineering:Redevelopment Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Public Works:Traffic Maintenance", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "General Fund:General Fund", 
+                "Governmental Funds:City Office Development", 
+                "Redevelopment Agency:Housing Programs", 
+                "Redevelopment Agency:Library Project", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Insurance Reserve": {
+            "divisions": [
+                "Planning:Housing Programs"
+            ], 
+            "funds": [
+                "Redevelopment Agency:Housing Programs"
+            ]
+        }, 
+        "Expense:Insurance and Surety Bonds": {
+            "divisions": [
+                "Parks and Recreation:Library Operations"
+            ], 
+            "funds": [
+                "Enterprise Funds:Library Operations"
+            ]
+        }, 
+        "Expense:Interest": {
+            "divisions": [
+                "Parks and Recreation:Library Project", 
+                "Planning:Redevelopment Debt", 
+                "Engineering:Redevelopment Programs", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "Redevelopment Agency:Library Project", 
+                "Redevelopment Agency:Redevelopment Debt", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Land": {
+            "divisions": [
+                "Engineering:City Office Development", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "Governmental Funds:City Office Development", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Legal Services": {
+            "divisions": [
+                "Administration:Legal Services"
+            ], 
+            "funds": [
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Maintenance of Buildings": {
+            "divisions": [
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Parks and Recreation:Library Operations", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Library Operations", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Maintenance of Equipment": {
+            "divisions": [
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Parks and Recreation:Library Operations", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Enterprise Funds:Senior Transportation", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Maintenance of Right of Way": {
+            "divisions": [
+                "Administration:City Manager"
+            ], 
+            "funds": [
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Maintenance of Vehicles": {
+            "divisions": [
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Engineering:Engineering Services", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Transportation", 
+                "Police:Traffic Enforcement"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Enterprise Funds:Senior Transportation"
+            ]
+        }, 
+        "Expense:Miscellaneous Expenses Under $500": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Engineering:Engineering Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parkland Acquisition", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "School Bus Program:School Bus Program", 
+                "Administration:Technology Services", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Office Supplies": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Planning:Crime Prevention Com.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Public Works:Street Lighting", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Assessment District Funds:Street Lighting", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Overtime": {
+            "divisions": [
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "General Fund:General Fund", 
+                "Redevelopment Agency:Housing Programs", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Postage": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Public Works:Street Lighting", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Assessment District Funds:Street Lighting", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Premium Payment-Liability": {
+            "divisions": [
+                "Administration:Insurance", 
+                "Parks and Recreation:Recreation Programs"
+            ], 
+            "funds": [
+                "Governmental Funds:Insurance", 
+                "Enterprise Funds:Recreation Programs"
+            ]
+        }, 
+        "Expense:Printing and Binding": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Planning:Crime Prevention Com.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Project", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Redevelopment Agency:Housing Programs", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Regular Personnel": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Rental Expense": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }, 
+        "Expense:Social Security": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Special Departmental Supplies": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Planning:Crime Prevention Com.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Public Works:Emergency Response", 
+                "Engineering:Engineering Services", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Police:Traffic Enforcement", 
+                "Public Works:Traffic Maintenance", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution"
+            ]
+        }, 
+        "Expense:Temporary Personnel": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Police:Crossing Guards", 
+                "Engineering:Engineering Services", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Planning:Planning Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Redevelopment Agency:Library Project", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Total Savings Carried Forward": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Engineering:Engineering Services", 
+                "Public Works:Parks and Trails Maint.", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Public Works:Road and Drain Maintenance", 
+                "Public Works:Storm Drain Maintenance", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance"
+            ], 
+            "funds": [
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Training": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Council and Commissions:City Council", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Planning:Crime Prevention Com.", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Police:Vehicle Abatement", 
+                "Planning:Veterans Memorial Bldg.", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Redevelopment Agency:Housing Programs", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Transfers Out": {
+            "divisions": [
+                "Council and Commissions:City Council", 
+                "Public Works:Core Area Maintenance", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Public Works:Parking Fund", 
+                "Public Works:Public Facilities", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Public Facilities", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Redevelopment Debt", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Utilities-Garbage Disposal": {
+            "divisions": [
+                "Public Works:Comm. Ctr. Maint.", 
+                "Parks and Recreation:Library Operations", 
+                "Public Works:Parking Fund", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Library Operations", 
+                "Enterprise Funds:Parking Fund", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Utilities-Gas and Electric": {
+            "divisions": [
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Public Works:Road and Drain Maintenance", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Utilities-Sewer": {
+            "divisions": [
+                "Public Works:Comm. Ctr. Maint.", 
+                "Parks and Recreation:Library Operations", 
+                "Public Works:Parks and Trails Maint.", 
+                "Public Works:Road and Drain Maintenance"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Library Operations"
+            ]
+        }, 
+        "Expense:Utilities-Street Lighting": {
+            "divisions": [
+                "Public Works:Core Area Maintenance", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Street Lighting"
+            ], 
+            "funds": [
+                "Assessment District Funds:Core Area Maintenance", 
+                "General Fund:General Fund", 
+                "Assessment District Funds:Street Lighting"
+            ]
+        }, 
+        "Expense:Utilities-Telephones": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Council and Commissions:Emergency Prep. Comm.", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution"
+            ]
+        }, 
+        "Expense:Utilities-Traffic Signals": {
+            "divisions": [
+                "Public Works:Traffic Maintenance"
+            ], 
+            "funds": [
+                "General Fund:General Fund"
+            ]
+        }, 
+        "Expense:Utilities-Water": {
+            "divisions": [
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parks and Trails Maint.", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Public Works:Road and Drain Maintenance", 
+                "Planning:Veterans Memorial Bldg."
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Enterprise Funds:Parking Fund", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Redevelopment Agency:Veterans Memorial Hall"
+            ]
+        }, 
+        "Expense:Worker's Compensation": {
+            "divisions": [
+                "Administration:Administrative Services", 
+                "Administration:Business Registration", 
+                "Public Works:Capital Improvement Projects", 
+                "Council and Commissions:Circulation Commission", 
+                "Administration:City Clerk", 
+                "Administration:City Manager", 
+                "Public Works:Comm. Ctr. Maint.", 
+                "Public Works:Core Area Maintenance", 
+                "Commissions and Committees:CPAC", 
+                "Police:Crossing Guards", 
+                "Council and Commissions:Design Rev. Commission", 
+                "Engineering:Engineering Services", 
+                "Planning:Housing Programs", 
+                "Parks and Recreation:Library Operations", 
+                "Parks and Recreation:Library Project", 
+                "Administration:Meas. J Return-to-Source", 
+                "Commissions and Committees:MORTRAC", 
+                "Public Works:Park Facilities", 
+                "Public Works:Parking Fund", 
+                "Public Works:Parkland Acquisition", 
+                "Public Works:Parks and Trails Maint.", 
+                "Council and Commissions:Parks Trails and Rec. Commission", 
+                "Council and Commissions:Planning Commission", 
+                "Planning:Planning Services", 
+                "Police:Police Services", 
+                "Parks and Recreation:Recreation Programs", 
+                "Engineering:Redevelopment Programs", 
+                "Administration:Rent and Expenses", 
+                "Public Works:Road and Drain Maintenance", 
+                "School Bus Program:School Bus Program", 
+                "Senior Services:Senior Services", 
+                "Senior Services:Senior Transportation", 
+                "Public Works:Storm Drain Maintenance", 
+                "Public Works:Stormwater Pollution", 
+                "Administration:Technology Services", 
+                "Public Works:Traffic Maintenance", 
+                "Police:Vehicle Abatement", 
+                "Council and Commissions:Youth Commission"
+            ], 
+            "funds": [
+                "General Fund:General Fund", 
+                "Enterprise Funds:Business Registration", 
+                "Capital Improvement Funds:Capital Improvement Projects", 
+                "Assessment District Funds:Core Area Maintenance", 
+                "Redevelopment Agency:Housing Programs", 
+                "Enterprise Funds:Library Operations", 
+                "Redevelopment Agency:Library Project", 
+                "Governmental Funds:Meas. J Return-to-Source", 
+                "Capital Improvement Funds:Parks Facilities", 
+                "Enterprise Funds:Parking Fund", 
+                "Capital Improvement Funds:Parks Acquisition", 
+                "Enterprise Funds:Recreation Programs", 
+                "Redevelopment Agency:Redevelopment Programs", 
+                "Governmental Funds:School Bus Program", 
+                "Enterprise Funds:Senior Transportation", 
+                "Assessment District Funds:Stormwater Pollution", 
+                "Enterprise Funds:Vehicle Abatement"
+            ]
+        }
+    }
+}

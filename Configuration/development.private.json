@@ -2,11 +2,11 @@
     "application":{
         "mode" : "debug",
         "cookie_domain": "pabudget.dev",
-	"city" : "salinas"
+		"city" : "saratoga"
     },
     "DB:pa_budget_data":{
         "type":"mongo",
-        "database" : "salinasbudgets",
+        "database" : "saratogabudgets",
         "host" : "localhost",
         "user" : "",
         "password" : "",

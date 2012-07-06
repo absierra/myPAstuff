@@ -31,6 +31,16 @@
     	else if($value == 'Rental Income') return true;
     	else if($value == 'From Other Agencies') return true;
     	else if($value == 'Charges to Other Funds') return true;
+    	else if($value == 'Charge for Services') return true;
+    	else if($value == 'Fees Licenses and Permits') return true;
+    	else if($value == 'Interest and Rental Income') return true;
+    	else if($value == 'Intergovernmental Revenues') return true;
+    	else if($value == 'Internal Service Charges') return true;
+    	else if($value == 'LandL Assessments') return true;
+    	else if($value == 'Motor Vehicle in Lieu') return true;
+    	else if($value == 'Other Intergovernmental') return true;
+    	else if($value == 'Other Sources') return true;
+    	else if($value == 'Rental Income') return true;
     	else return false;
     }
     $values = array();

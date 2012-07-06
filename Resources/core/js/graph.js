@@ -19,8 +19,11 @@ var BudgetGraph = new Class({
    },
    initialize : function(element, options){
    		//CITY SWITCH
-   	   if(window.city == 'palo_alto' || window.city == 'salinas'){
+   	   if(window.city == 'palo_alto' || window.city == 'salinas' || window.city == 'saratoga'){
    	   		var lastYear = '2013';
+   	   }
+   	   else if(window.city == 'lafayette'){
+   	   		var lastYear = '2012';
    	   }
        this.element = element;
        this.setOptions(options);
@@ -71,10 +74,19 @@ var BudgetGraph = new Class({
 					var metric = this.options.metric;
 					b=this;
 			   		Object.each(this.data, function(value, key){
-			   			if(data[key][lastYear][metric] || data[key][lastYear][metric] === 0){
+			   		try
+					  {
+					  	if(data[key][lastYear][metric] || data[key][lastYear][metric] === 0){
 			   				b.dataOrder.push(key);
 			   				b.displayOrder.push(key);
 			   			}
+					  }
+					catch(err)
+					  {
+					  	console.log(data);
+					  	console.log(key);
+					  	console.log(lastYear);
+					  }		
 			   		});
 			   }
                if(this.options.target == 'revenue_expense'){
@@ -162,8 +174,11 @@ var BudgetGraph = new Class({
    },
    getLegendItems : function(){
    		//CITY SWITCH
-   	   if(window.city == 'palo_alto' || window.city == 'salinas'){
+   	   if(window.city == 'palo_alto' || window.city == 'salinas' || window.city == 'saratoga'){
    	   		var lastYear = '2013';
+   	   }
+   	   else if(window.city == 'lafayette'){
+   	   		var lastYear = '2012';
    	   }
        var keys = [];
        target = this.options.target;
@@ -512,13 +527,23 @@ var BudgetGraph = new Class({
                        //if (xGraph > 600) xGraph = 600;
                        var yGraph = graphSize.y - 61;
                        var a = this;
+                       var steps = 0;
+                       //CITY SWITCH
+                       if(window.city == 'palo_alto' || window.city == 'salinas' || window.city == 'saratoga'){
+                       		steps = 4;
+                       }else if(window.city == 'saratoga'){
+                       		steps = 5;
+                       }
+                       }else if(window.city == 'lafayette'){
+                       		steps = 6;
+                       }
                        if(ySet.length != 0){
 								// the second parameter below, the y coordinate of the center (25 as of 2012-06-25) was modified from "20" to stop tooltips from being clipped. this doesn't seem to create any other spacing issues.
                                this.lines = this.raphael.linechart(75, 25, xGraph, yGraph, xSet, ySet, {
                                        shade: (this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                                        nostroke: false,
                                        axis: "0 0 1 1",
-                                       axisxstep : 4,
+                                       axisxstep : steps,
                                        colors:this.colors,
                                        stacked:(this.options.mode == 'stacked-line' || this.options.mode == 'percentage-line'),
                                        percent:(this.options.mode == 'percentage-line'),
