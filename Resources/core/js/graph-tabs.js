@@ -22,7 +22,7 @@ var DelphiGraphTabs = {
         var employeeBreakdown = document.id('employee_breakdown');
         var graphTabsSelect = new Array();
         //CITY SWITCH
-        if(window.city == 'palo alto'){
+        if(window.city == 'palo_alto'){
 			if (window.panelSelection.fund && window.panelSelection.department){ //WTF is 'panelSelection' and why can't we use selection?
 				document.id('fin_rev').hide();
 				document.id('fin_feerev').show();

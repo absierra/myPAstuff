@@ -1,4 +1,4 @@
-//files with city switch: core.js, graph.js, graph-tabs.js, graph-utils
+//files with city switch: core.js, graph.js, graph-tabs.js, graph-utils.js, header.controller.php
 
 
 //global js here
@@ -7,8 +7,6 @@ var financial_state = true;
 var in_negative_state = false;
 var loadTimer = 0;
 var first_load = true;
-//CITY SWITCH
-window.city = "salinas";
 var refreshGUI = function(includeData){
     BudgetGraph.timer(1);
     DelphiGraphTabs.filter();
@@ -72,7 +70,7 @@ var initGraphs = function(){
         }
     });
     //CITY SWITCH
-    if(window.city == 'palo alto'){
+    if(window.city == 'palo_alto'){
 		window.graphs.expenses_vs_fee_revenue = new BudgetGraph('exp_vs_fee_rev_graph', {
 			dataset : 'financial',
 			type : 'rev_exp',
@@ -167,7 +165,7 @@ var loadDefaultGraph = function(type){
         BudgetGraph.select(type);
         refreshGUI(true);
     });
-    changeCurrentGraphType('stacked-line', document.id('stacked_graph'));
+    
     /*if(first_load){
 		console.log('this happened');
 		window.graphTabs.showSlide(1);
@@ -178,7 +176,7 @@ var loadDefaultGraph = function(type){
 
 var isSuper = function(name){
 	//CITY SWITCH
-	if(city == "palo alto"){
+	if(city == "palo_alto"){
 		var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Debt Service Funds', 'Non-Departmental', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'FIR', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
 	}
 	else if(city == "salinas"){
@@ -189,6 +187,7 @@ var isSuper = function(name){
 
 var initialized = false;
 function panelData(){
+		
 	var dataRequest = new Request.JSON({url : '/data/unique_categorizations', 
     onRequest: function(){
         BudgetGraph.timer(1);
@@ -325,7 +324,7 @@ function panelData(){
                     }
                 } else {
                 	//CITY SWITCH
-                	if(window.city == 'palo alto'){
+                	if(window.city == 'palo_alto'){
 						if(this.get('text') == 'Capital Funds' || this.get('text') == 'Capital Improvement Fund'){
 							document.id('stacked_graph').hide();
 							document.id('percentage_graph').hide();

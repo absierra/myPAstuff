@@ -1,7 +1,8 @@
 {
     "application":{
         "mode" : "debug",
-        "cookie_domain": "pabudget.dev"
+        "cookie_domain": "pabudget.dev",
+	"city" : "salinas"
     },
     "DB:pa_budget_data":{
         "type":"mongo",
