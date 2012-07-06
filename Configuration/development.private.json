@@ -2,11 +2,11 @@
     "application":{
         "mode" : "debug",
         "cookie_domain": "pabudget.dev",
-		"city" : "lafayette"
+		"city" : "saratoga"
     },
     "DB:pa_budget_data":{
         "type":"mongo",
-        "database" : "lafayettebudgets",
+        "database" : "saratogabudgets",
         "host" : "localhost",
         "user" : "",
         "password" : "",

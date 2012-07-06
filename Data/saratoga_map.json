@@ -8,18 +8,18 @@
                 "Internal Service Fund:Office Support Services"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Fixed Assets", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Benefits", 
+                "Expense:Salaries", 
+                "Expense:Benefits", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Charge for Services"
             ]
         }, 
@@ -28,16 +28,16 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Fixed Assets", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Benefits"
+                "Expense:Salaries", 
+                "Expense:Benefits"
             ]
         }, 
         "Administrative Services:Human Resources": {
@@ -45,13 +45,13 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries"
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries"
             ]
         }, 
         "Administrative Services:IT Equipment Replacement": {
@@ -59,12 +59,12 @@
                 "Internal Service Fund:IT Replacement Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Administrative Services:Information Technology Services": {
@@ -72,15 +72,15 @@
                 "Internal Service Fund:Information Technology Services"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Administrative Services:Office Support": {
@@ -89,11 +89,11 @@
             ], 
             "ledgers": [
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies"
+                "Expense:Materials and Supplies"
             ]
         }, 
         "City Manager": {
@@ -101,17 +101,17 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "City Manager:City Clerk": {
@@ -119,17 +119,17 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "City Manager:City Manager's Office": {
@@ -137,13 +137,13 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Benefits", 
+                "Expense:Fees and Charges", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Community Development": {
@@ -153,19 +153,19 @@
                 "Special Revenue Fund:SHARP Program Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries", 
                 "Revenue:Charge for Services", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Other Sources "
+                "Expense:Other Sources "
             ]
         }, 
         "Community Development:Advanced Planning": {
@@ -173,14 +173,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries"
             ]
         }, 
         "Community Development:Building and Inspection Services": {
@@ -188,15 +188,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries"
             ]
         }, 
         "Community Development:CDBG Administration": {
@@ -205,7 +205,7 @@
             ], 
             "ledgers": [
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Community Development:Code Compliance": {
@@ -213,15 +213,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Community Development:Development Services": {
@@ -229,16 +229,16 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Other Sources ", 
+                "Expense:Salaries"
             ]
         }, 
         "Community Development:Saratoga Housing and Rehabilitation Program": {
@@ -246,7 +246,7 @@
                 "Special Revenue Fund:SHARP Program Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
+                "Expense:Fees and Charges", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -255,14 +255,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -271,12 +271,12 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries"
             ]
         }, 
         "Council and Commissions:City Council": {
@@ -284,15 +284,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Non Departmental": {
@@ -306,43 +306,43 @@
             ], 
             "ledgers": [
                 "Revenue:Other Sources ", 
-                "Expenditure:Total Community Events", 
-                "Expenditure:CDBG Funded Public Service Grants", 
-                "Expenditure:Chamber of Commerce", 
-                "Expenditure:Community Service Saratoga Support Groups", 
-                "Expenditure:Community Service Special Interest Grants ", 
-                "Expenditure:KSAR", 
-                "Expenditure:SASCC", 
-                "Expenditure:Benefits", 
+                "Expense:Total Community Events", 
+                "Expense:CDBG Funded Public Service Grants", 
+                "Expense:Chamber of Commerce", 
+                "Expense:Community Service Saratoga Support Groups", 
+                "Expense:Community Service Special Interest Grants ", 
+                "Expense:KSAR", 
+                "Expense:SASCC", 
+                "Expense:Benefits", 
                 "Revenue:Business License Tax", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Franchise Fee Tax", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Motor Vehicle in Lieu ", 
                 "Revenue:Other Intergovernmental", 
                 "Revenue:Other Taxes ", 
                 "Revenue:Property Taxes ", 
-                "Expenditure:Salaries", 
+                "Expense:Salaries", 
                 "Revenue:Sales Tax", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Transient Occupancy Tax", 
-                "Expenditure:Fund Withdrawals", 
+                "Expense:Fund Withdrawals", 
                 "Revenue:Interest", 
                 "Revenue:Taxes/Franchise Fees", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Insurance", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Total Operating Transfers", 
-                "Expenditure:Debt Service ", 
+                "Expense:Total Operating Transfers", 
+                "Expense:Debt Service ", 
                 "Revenue:Interest and Rental Income", 
                 "Revenue:Taxes", 
-                "Expenditure:Fixed Assets"
+                "Expense:Fixed Assets"
             ]
         }, 
         "Non Departmental:Community Events": {
@@ -351,7 +351,7 @@
             ], 
             "ledgers": [
                 "Revenue:Other Sources ", 
-                "Expenditure:Total Community Events"
+                "Expense:Total Community Events"
             ]
         }, 
         "Non Departmental:Community Grants": {
@@ -359,12 +359,12 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:CDBG Funded Public Service Grants", 
-                "Expenditure:Chamber of Commerce", 
-                "Expenditure:Community Service Saratoga Support Groups", 
-                "Expenditure:Community Service Special Interest Grants ", 
-                "Expenditure:KSAR", 
-                "Expenditure:SASCC"
+                "Expense:CDBG Funded Public Service Grants", 
+                "Expense:Chamber of Commerce", 
+                "Expense:Community Service Saratoga Support Groups", 
+                "Expense:Community Service Special Interest Grants ", 
+                "Expense:KSAR", 
+                "Expense:SASCC"
             ]
         }, 
         "Non Departmental:General Administration": {
@@ -372,24 +372,24 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Business License Tax", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Franchise Fee Tax", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Motor Vehicle in Lieu ", 
                 "Revenue:Other Intergovernmental", 
                 "Revenue:Other Sources ", 
                 "Revenue:Other Taxes ", 
                 "Revenue:Property Taxes ", 
-                "Expenditure:Salaries", 
+                "Expense:Salaries", 
                 "Revenue:Sales Tax", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Transient Occupancy Tax"
             ]
         }, 
@@ -398,7 +398,7 @@
                 "Trust Fund:KSAR Trust Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fund Withdrawals", 
+                "Expense:Fund Withdrawals", 
                 "Revenue:Interest", 
                 "Revenue:Taxes/Franchise Fees"
             ]
@@ -409,12 +409,12 @@
             ], 
             "ledgers": [
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training"
             ]
         }, 
         "Non Departmental:Liability / Risk Management": {
@@ -422,18 +422,18 @@
                 "Internal Service Fund:Liability / Risk Management"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Insurance", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
+                "Expense:Internal Service Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Total Operating Transfers"
+                "Expense:Salaries", 
+                "Expense:Total Operating Transfers"
             ]
         }, 
         "Non Departmental:Liability Insurance / Pass Throughs": {
@@ -441,9 +441,9 @@
                 "Internal Service Fund:Liability / Risk Management"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -452,7 +452,7 @@
                 "Debt Service Fund:2001 Series GO Bond"
             ], 
             "ledgers": [
-                "Expenditure:Debt Service ", 
+                "Expense:Debt Service ", 
                 "Revenue:Interest and Rental Income", 
                 "Revenue:Taxes"
             ]
@@ -462,9 +462,9 @@
                 "Trust Fund:Library Capital Improvement Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Interest and Rental Income", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Non Departmental:Workers Compensation": {
@@ -472,15 +472,15 @@
                 "Internal Service Funds:Workers Compensation"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Insurance", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Public Safety": {
@@ -488,15 +488,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Fees and Charges", 
+                "Expense:Fixed Assets", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services "
+                "Expense:Consultant and Contract Services "
             ]
         }, 
         "Public Safety:Emergency Preparedness": {
@@ -504,12 +504,12 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Fees and Charges", 
+                "Expense:Fixed Assets", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -519,10 +519,10 @@
             ], 
             "ledgers": [
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -534,23 +534,23 @@
                 "Internal Service Fund:Vehicle and Equipment Replacement"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Salaries", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Salaries", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Taxes", 
                 "Revenue:Other Sources ", 
                 "Revenue:LandL Assessments", 
                 "Revenue:Property Taxes ", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Transfers Out", 
+                "Expense:Fixed Assets", 
                 "Revenue:Rental Income", 
                 "Revenue:Internal Service Charges"
             ]
@@ -560,14 +560,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Salaries"
             ]
         }, 
         "Public Works:Environmental Services": {
@@ -575,14 +575,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries", 
                 "Revenue:Taxes"
             ]
         }, 
@@ -591,15 +591,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Public Works:Landscape and Lighting Districts": {
@@ -607,14 +607,14 @@
                 "Special Revenue Funds:Landscape and Lighting Districts"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:LandL Assessments", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
                 "Revenue:Property Taxes ", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Public Works:Parks and Landscape Maintenance": {
@@ -622,18 +622,18 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Fixed Assets", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
                 "Revenue:Rental Income", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Public Works:Streets and Storm Drain Maintenance": {
@@ -641,15 +641,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Public Works:Vehicle and Equipment Maintenance": {
@@ -657,14 +657,14 @@
                 "Internal Service Fund:Vehicle and Equipment Maintenance"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Public Works:Vehicle and Equipment Replacement": {
@@ -672,7 +672,7 @@
                 "Internal Service Fund:Vehicle and Equipment Replacement"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
                 "Revenue:Other Sources "
             ]
@@ -683,15 +683,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
+                "Expense:Salaries", 
                 "Revenue:Transfers In", 
                 "Revenue:Rental Income", 
                 "Revenue:Charge for Services", 
@@ -703,15 +703,15 @@
                 "Internal Service Funds:Building Maintenance"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
+                "Expense:Salaries", 
                 "Revenue:Transfers In"
             ]
         }, 
@@ -720,14 +720,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Rental Income", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Recreation:Receation Services": {
@@ -735,15 +735,15 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
-                "Expenditure:Salaries"
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
+                "Expense:Salaries"
             ]
         }, 
         "Recreation:Teen Services": {
@@ -751,14 +751,14 @@
                 "General Fund:General Fund"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
+                "Expense:Benefits", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }
     }, 
@@ -768,7 +768,7 @@
                 "Non Departmental:Library 2001 Series Bond Debt Service"
             ], 
             "ledgers": [
-                "Expenditure:Debt Service ", 
+                "Expense:Debt Service ", 
                 "Revenue:Interest and Rental Income", 
                 "Revenue:Taxes"
             ]
@@ -778,7 +778,7 @@
                 "Non Departmental:Library 2001 Series Bond Debt Service"
             ], 
             "ledgers": [
-                "Expenditure:Debt Service ", 
+                "Expense:Debt Service ", 
                 "Revenue:Interest and Rental Income", 
                 "Revenue:Taxes"
             ]
@@ -811,26 +811,26 @@
                 "Recreation:Teen Services"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Fixed Assets", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Benefits", 
+                "Expense:Salaries", 
+                "Expense:Benefits", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Other Sources ", 
-                "Expenditure:Total Community Events", 
-                "Expenditure:CDBG Funded Public Service Grants", 
-                "Expenditure:Chamber of Commerce", 
-                "Expenditure:Community Service Saratoga Support Groups", 
-                "Expenditure:Community Service Special Interest Grants ", 
-                "Expenditure:KSAR", 
-                "Expenditure:SASCC", 
+                "Expense:Other Sources ", 
+                "Expense:Total Community Events", 
+                "Expense:CDBG Funded Public Service Grants", 
+                "Expense:Chamber of Commerce", 
+                "Expense:Community Service Saratoga Support Groups", 
+                "Expense:Community Service Special Interest Grants ", 
+                "Expense:KSAR", 
+                "Expense:SASCC", 
                 "Revenue:Business License Tax", 
                 "Revenue:Franchise Fee Tax", 
                 "Revenue:Motor Vehicle in Lieu ", 
@@ -839,7 +839,7 @@
                 "Revenue:Property Taxes ", 
                 "Revenue:Sales Tax", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Transient Occupancy Tax", 
                 "Revenue:Taxes", 
                 "Revenue:Rental Income"
@@ -873,26 +873,26 @@
                 "Recreation:Teen Services"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Fees Licenses and Permits ", 
-                "Expenditure:Fixed Assets", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Fixed Assets", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Benefits", 
+                "Expense:Salaries", 
+                "Expense:Benefits", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Other Sources ", 
-                "Expenditure:Total Community Events", 
-                "Expenditure:CDBG Funded Public Service Grants", 
-                "Expenditure:Chamber of Commerce", 
-                "Expenditure:Community Service Saratoga Support Groups", 
-                "Expenditure:Community Service Special Interest Grants ", 
-                "Expenditure:KSAR", 
-                "Expenditure:SASCC", 
+                "Expense:Other Sources ", 
+                "Expense:Total Community Events", 
+                "Expense:CDBG Funded Public Service Grants", 
+                "Expense:Chamber of Commerce", 
+                "Expense:Community Service Saratoga Support Groups", 
+                "Expense:Community Service Special Interest Grants ", 
+                "Expense:KSAR", 
+                "Expense:SASCC", 
                 "Revenue:Business License Tax", 
                 "Revenue:Franchise Fee Tax", 
                 "Revenue:Motor Vehicle in Lieu ", 
@@ -901,7 +901,7 @@
                 "Revenue:Property Taxes ", 
                 "Revenue:Sales Tax", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out", 
+                "Expense:Transfers Out", 
                 "Revenue:Transient Occupancy Tax", 
                 "Revenue:Taxes", 
                 "Revenue:Rental Income"
@@ -918,21 +918,21 @@
                 "Public Works:Vehicle and Equipment Replacement"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Fixed Assets", 
-                "Expenditure:Transfers Out", 
+                "Expense:Salaries", 
+                "Expense:Fixed Assets", 
+                "Expense:Transfers Out", 
                 "Revenue:Charge for Services", 
-                "Expenditure:Insurance", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Total Operating Transfers", 
+                "Expense:Total Operating Transfers", 
                 "Revenue:Fees Licenses and Permits "
             ]
         }, 
@@ -941,12 +941,12 @@
                 "Administrative Services:IT Equipment Replacement"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Internal Service Fund:Information Technology Services": {
@@ -954,15 +954,15 @@
                 "Administrative Services:Information Technology Services"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Internal Service Fund:Liability / Risk Management": {
@@ -971,18 +971,18 @@
                 "Non Departmental:Liability Insurance / Pass Throughs"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Insurance", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Internal Service Charges", 
+                "Expense:Internal Service Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Total Operating Transfers", 
+                "Expense:Salaries", 
+                "Expense:Total Operating Transfers", 
                 "Revenue:Fees Licenses and Permits "
             ]
         }, 
@@ -992,11 +992,11 @@
             ], 
             "ledgers": [
                 "Revenue:Charge for Services", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies"
+                "Expense:Materials and Supplies"
             ]
         }, 
         "Internal Service Fund:Vehicle and Equipment Maintenance": {
@@ -1004,14 +1004,14 @@
                 "Public Works:Vehicle and Equipment Maintenance"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Internal Service Fund:Vehicle and Equipment Replacement": {
@@ -1019,7 +1019,7 @@
                 "Public Works:Vehicle and Equipment Replacement"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Internal Service Charges", 
                 "Revenue:Other Sources "
             ]
@@ -1030,17 +1030,17 @@
                 "Recreation:Building Maintenance"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Insurance", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
-                "Expenditure:Fees and Charges", 
-                "Expenditure:Internal Service Charges", 
+                "Expense:Salaries", 
+                "Expense:Fees and Charges", 
+                "Expense:Internal Service Charges", 
                 "Revenue:Transfers In"
             ]
         }, 
@@ -1049,15 +1049,15 @@
                 "Recreation:Building Maintenance"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Internal Service Charges", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries", 
+                "Expense:Salaries", 
                 "Revenue:Transfers In"
             ]
         }, 
@@ -1066,15 +1066,15 @@
                 "Non Departmental:Workers Compensation"
             ], 
             "ledgers": [
-                "Expenditure:Benefits", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Insurance", 
+                "Expense:Benefits", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Insurance", 
                 "Revenue:Intergovernmental Revenues", 
                 "Revenue:Internal Service Charges", 
-                "Expenditure:Materials and Supplies", 
-                "Expenditure:Meetings Events and Training", 
+                "Expense:Materials and Supplies", 
+                "Expense:Meetings Events and Training", 
                 "Revenue:Other Sources ", 
-                "Expenditure:Salaries"
+                "Expense:Salaries"
             ]
         }, 
         "Special Revenue Fund": {
@@ -1082,7 +1082,7 @@
                 "Community Development:Saratoga Housing and Rehabilitation Program"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
+                "Expense:Fees and Charges", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -1091,7 +1091,7 @@
                 "Community Development:Saratoga Housing and Rehabilitation Program"
             ], 
             "ledgers": [
-                "Expenditure:Fees and Charges", 
+                "Expense:Fees and Charges", 
                 "Revenue:Other Sources "
             ]
         }, 
@@ -1102,11 +1102,11 @@
             ], 
             "ledgers": [
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Transfers Out", 
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Transfers Out", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:LandL Assessments", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
                 "Revenue:Property Taxes ", 
                 "Revenue:Transfers In"
@@ -1118,7 +1118,7 @@
             ], 
             "ledgers": [
                 "Revenue:Intergovernmental Revenues", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Special Revenue Funds:Landscape and Lighting Districts": {
@@ -1126,14 +1126,14 @@
                 "Public Works:Landscape and Lighting Districts"
             ], 
             "ledgers": [
-                "Expenditure:Consultant and Contract Services ", 
-                "Expenditure:Fees and Charges", 
+                "Expense:Consultant and Contract Services ", 
+                "Expense:Fees and Charges", 
                 "Revenue:LandL Assessments", 
-                "Expenditure:Materials and Supplies", 
+                "Expense:Materials and Supplies", 
                 "Revenue:Other Sources ", 
                 "Revenue:Property Taxes ", 
                 "Revenue:Transfers In", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Trust Fund": {
@@ -1142,12 +1142,12 @@
                 "Non Departmental:Library Capital Improvement Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fund Withdrawals", 
+                "Expense:Fund Withdrawals", 
                 "Revenue:Interest", 
                 "Revenue:Taxes/Franchise Fees", 
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Interest and Rental Income", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }, 
         "Trust Fund:KSAR Trust Fund": {
@@ -1155,7 +1155,7 @@
                 "Non Departmental:KSAR Community Access"
             ], 
             "ledgers": [
-                "Expenditure:Fund Withdrawals", 
+                "Expense:Fund Withdrawals", 
                 "Revenue:Interest", 
                 "Revenue:Taxes/Franchise Fees"
             ]
@@ -1165,14 +1165,14 @@
                 "Non Departmental:Library Capital Improvement Fund"
             ], 
             "ledgers": [
-                "Expenditure:Fixed Assets", 
+                "Expense:Fixed Assets", 
                 "Revenue:Interest and Rental Income", 
-                "Expenditure:Transfers Out"
+                "Expense:Transfers Out"
             ]
         }
     }, 
     "ledgers": {
-        "Expenditure": {
+        "Expense": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1232,7 +1232,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Benefits": {
+        "Expense:Benefits": {
             "divisions": [
                 "Administrative Services:Human Resources", 
                 "Administrative Services:Information Technology Services", 
@@ -1268,7 +1268,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:CDBG Funded Public Service Grants": {
+        "Expense:CDBG Funded Public Service Grants": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1276,7 +1276,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Chamber of Commerce": {
+        "Expense:Chamber of Commerce": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1284,7 +1284,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Community Service Saratoga Support Groups": {
+        "Expense:Community Service Saratoga Support Groups": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1292,7 +1292,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Community Service Special Interest Grants ": {
+        "Expense:Community Service Special Interest Grants ": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1300,7 +1300,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Consultant and Contract Services ": {
+        "Expense:Consultant and Contract Services ": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1340,7 +1340,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Debt Service ": {
+        "Expense:Debt Service ": {
             "divisions": [
                 "Non Departmental:Library 2001 Series Bond Debt Service"
             ], 
@@ -1348,7 +1348,7 @@
                 "Debt Service Fund:2001 Series GO Bond"
             ]
         }, 
-        "Expenditure:Fees and Charges": {
+        "Expense:Fees and Charges": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1390,7 +1390,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Fixed Assets": {
+        "Expense:Fixed Assets": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:IT Equipment Replacement", 
@@ -1409,7 +1409,7 @@
                 "Internal Service Fund:Vehicle and Equipment Replacement"
             ]
         }, 
-        "Expenditure:Fund Withdrawals": {
+        "Expense:Fund Withdrawals": {
             "divisions": [
                 "Non Departmental:KSAR Community Access"
             ], 
@@ -1417,7 +1417,7 @@
                 "Trust Fund:KSAR Trust Fund"
             ]
         }, 
-        "Expenditure:Insurance": {
+        "Expense:Insurance": {
             "divisions": [
                 "Non Departmental:Liability / Risk Management", 
                 "Non Departmental:Workers Compensation"
@@ -1427,7 +1427,7 @@
                 "Internal Service Funds:Workers Compensation"
             ]
         }, 
-        "Expenditure:Internal Service Charges": {
+        "Expense:Internal Service Charges": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1465,7 +1465,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:KSAR": {
+        "Expense:KSAR": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1473,7 +1473,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Materials and Supplies": {
+        "Expense:Materials and Supplies": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1519,7 +1519,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Meetings Events and Training": {
+        "Expense:Meetings Events and Training": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1554,7 +1554,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Other Sources ": {
+        "Expense:Other Sources ": {
             "divisions": [
                 "Community Development:Development Services"
             ], 
@@ -1562,7 +1562,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:SASCC": {
+        "Expense:SASCC": {
             "divisions": [
                 "Non Departmental:Community Grants"
             ], 
@@ -1570,7 +1570,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Salaries": {
+        "Expense:Salaries": {
             "divisions": [
                 "Administrative Services:Finance Services", 
                 "Administrative Services:Human Resources", 
@@ -1606,7 +1606,7 @@
                 "Internal Service Funds:Building Maintenance"
             ]
         }, 
-        "Expenditure:Total Community Events": {
+        "Expense:Total Community Events": {
             "divisions": [
                 "Non Departmental:Community Events"
             ], 
@@ -1614,7 +1614,7 @@
                 "General Fund:General Fund"
             ]
         }, 
-        "Expenditure:Total Operating Transfers": {
+        "Expense:Total Operating Transfers": {
             "divisions": [
                 "Non Departmental:Liability / Risk Management"
             ], 
@@ -1622,7 +1622,7 @@
                 "Internal Service Fund:Liability / Risk Management"
             ]
         }, 
-        "Expenditure:Transfers Out": {
+        "Expense:Transfers Out": {
             "divisions": [
                 "Administrative Services:IT Equipment Replacement", 
                 "Community Development:CDBG Administration", 

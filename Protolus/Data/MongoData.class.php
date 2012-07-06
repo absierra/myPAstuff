@@ -89,14 +89,10 @@
                         }
                     }
                     $collection = $db->$type;
-                    Logger::log('debug:'.$collection);
                     MongoData::$lastQuery = '$collection->find('.json_encode($where).')';
-                    Logger::log('MongoDB:'.MongoData::$lastQuery);
                     $cursor = $collection->find($where);
                 }
-                Logger::log('hello world');
                 $array = iterator_to_array($cursor);
-                Logger::log('goodbye cruel world');
                 return $array;
             }catch(Exception $ex){
                 Logger::log('There was a Mongo error['.$ex->getMessage().'] from query :'.MongoData::$lastQuery);

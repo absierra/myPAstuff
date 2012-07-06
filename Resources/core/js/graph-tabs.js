@@ -43,6 +43,27 @@ var DelphiGraphTabs = {
 				document.id('fin_feerev').hide();
 				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab'];
 			}
+		}else if(window.city == 'saratoga'){
+			if (window.panelSelection.fund && window.panelSelection.department){ //WTF is 'panelSelection' and why can't we use selection?
+				document.id('fin_rev').hide();
+				document.id('fin_feerev').show();
+				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab'];
+				
+			} else if (window.panelSelection.fund){
+				document.id('fin_rev').show();
+				document.id('fin_feerev').hide();
+				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab'];
+				
+			} else if (window.panelSelection.department){
+				document.id('fin_rev').hide();
+				document.id('fin_feerev').show();
+				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'fee_revenue_tab', 'exp_vs_fee_rev_tab']; // [Fund 0][Dept 1]
+				
+			} else {
+				document.id('fin_rev').show();
+				document.id('fin_feerev').hide();
+				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab'];
+			}
 		}else if(window.city == 'salinas' || window.city == 'lafayette'){
 			if (window.panelSelection.fund && window.panelSelection.department){ //WTF is 'panelSelection' and why can't we use selection?
 				document.id('fin_rev').hide();

@@ -107,7 +107,15 @@
 		});
 		document.id('pie_chart').addEvent('click', function(event){
 			changeCurrentGraphType('pie', this);
-			document.id('graph_fiscal_year').set('text', 'Fiscal Year 2013');
+			var lastYear = '';
+			//CITY SWITCH
+			if(window.city == 'palo_alto' || window.city == 'salinas' || window.city == 'saratoga'){
+   	   			var lastYear = '2013';
+   	   		}
+   	   		else if(window.city == 'lafayette'){
+   	   			var lastYear = '2012';
+   	   		}
+			document.id('graph_fiscal_year').set('text', 'Fiscal Year '+lastYear);
 			document.id('graph_breakdown').empty();
 		});
 		document.id('default_department').addEvent('click', function(event){

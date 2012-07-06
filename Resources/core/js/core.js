@@ -1,4 +1,4 @@
-//files with city switch: core.js, graph.js, graph-tabs.js, graph-utils.js, header.controller.php
+//files with city switch: core.js, graph.js, graph-tabs.js, graph-utils.js, header.controller.php, graph.controller.php, index.panel.tpl
 
 
 //global js here
@@ -70,7 +70,7 @@ var initGraphs = function(){
         }
     });
     //CITY SWITCH
-    if(window.city == 'palo_alto'){
+    if(window.city == 'palo_alto' || window.city == 'saratoga'){
 		window.graphs.expenses_vs_fee_revenue = new BudgetGraph('exp_vs_fee_rev_graph', {
 			dataset : 'financial',
 			type : 'rev_exp',
@@ -112,33 +112,35 @@ var initGraphs = function(){
 				
 			}
 		});
-		window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
-			dataset : 'employee',
-			type : 'departments',
-			target : 'department',
-			column : 'department',
-			id : 'employee_department',
-			select : function(){
-				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-				//this.setKeys();
-				//this.setLegend();
-				window.graphTabs.showSlide(6);
-				
-			}
-		});
-		window.graphs.employee_type = new BudgetTable('employee_type_graph', {
-			dataset : 'employee',
-			type : 'titles',
-			target : 'title',
-			id : 'employee_type',
-			select : function(){
-				//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
-				//this.setKeys();
-				//this.setLegend();
-				window.graphTabs.showSlide(7);
-				
-			}
-		});
+		if(window.city == 'palo_alto'){
+			window.graphs.employee_department = new BudgetGraph('employee_department_graph', {
+				dataset : 'employee',
+				type : 'departments',
+				target : 'department',
+				column : 'department',
+				id : 'employee_department',
+				select : function(){
+					//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+					//this.setKeys();
+					//this.setLegend();
+					window.graphTabs.showSlide(6);
+					
+				}
+			});
+			window.graphs.employee_type = new BudgetTable('employee_type_graph', {
+				dataset : 'employee',
+				type : 'titles',
+				target : 'title',
+				id : 'employee_type',
+				select : function(){
+					//(this.options.mode == 'pie') ? yearSlider('show') : yearSlider('hide');
+					//this.setKeys();
+					//this.setLegend();
+					window.graphTabs.showSlide(7);
+					
+				}
+			});
+		}
 	}
 };
 
@@ -184,6 +186,9 @@ var isSuper = function(name){
 	}
 	else if(window.city == 'lafayette'){
 		var supers = ['Assessment District Funds','Capital Improvement Funds','Enterprise Funds','General Fund','Governmental Funds','Redevelopment Agency','Public Works','Administration','Parks & Recreation','Senior Services','Police','Commissions and Committees','Council & Commissions','Engineering','Planning','School Bus Program'];
+	}
+	else if(window.city == 'saratoga'){
+		var supers = ['Debt Service Fund','General Fund','Internal Service Fund','Internal Service Funds','Special Revenue Fund','Special Revenue Funds','Trust Fund','Non Departmental','Administrative Services','City Manager','Community Development','Council and Commissions','Public Safety','Public Works','Recreation'];
 	}
 	return (supers.indexOf(name) != -1);
 }
