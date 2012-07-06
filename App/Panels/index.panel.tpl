@@ -13,6 +13,7 @@
 				refreshGUI();
 			}
 		});
+		
         window.tabSettings = {
             emp_type: function(event){
                 //yearSlider('hide');

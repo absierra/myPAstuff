@@ -1,7 +1,7 @@
 {*<header>
-	<img src="/Resources/core/img/logo.png" alt="Delphi Performance"/><span class="logo-text">Budgets</span>
+	<img src="/Resources/core/img/{$delphi_city_name}_logo.png" alt="Delphi Performance"/><span class="logo-text">Budgets</span>
 </header>*}
-<header>
+<header style="background-image: url('/Resources/core/img/logos/{$delphi_city_name}_logo.png'); border-color: {$color};">
     <div id="navlinks">
 	    <ul>
 		    <li{if $panel == 'index'} class="active">Explore the Budget{else}><a href="/">Explore the Budget</a>{/if}</li>

@@ -8,4 +8,5 @@
     $data = $unique;
     categoryDependencies(&$data, $unique, $results, $values);
     $renderer->assign('data', $data);
+
 ?>

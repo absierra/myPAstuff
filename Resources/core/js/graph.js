@@ -19,7 +19,7 @@ var BudgetGraph = new Class({
    },
    initialize : function(element, options){
    		//CITY SWITCH
-   	   if(window.city == 'palo alto' || window.city == 'salinas'){
+   	   if(window.city == 'palo_alto' || window.city == 'salinas'){
    	   		var lastYear = '2013';
    	   }
        this.element = element;
@@ -162,7 +162,7 @@ var BudgetGraph = new Class({
    },
    getLegendItems : function(){
    		//CITY SWITCH
-   	   if(window.city == 'palo alto' || window.city == 'salinas'){
+   	   if(window.city == 'palo_alto' || window.city == 'salinas'){
    	   		var lastYear = '2013';
    	   }
        var keys = [];
