@@ -22,6 +22,9 @@ var BudgetGraph = new Class({
    	   if(window.city == 'palo_alto' || window.city == 'salinas'){
    	   		var lastYear = '2013';
    	   }
+   	   else if(window.city == 'lafayette'){
+   	   		var lastYear = '2012';
+   	   }
        this.element = element;
        this.setOptions(options);
        if(!this.options.requestor) this.options.requestor = new Request.JSON({
@@ -164,6 +167,9 @@ var BudgetGraph = new Class({
    		//CITY SWITCH
    	   if(window.city == 'palo_alto' || window.city == 'salinas'){
    	   		var lastYear = '2013';
+   	   }
+   	   else if(window.city == 'lafayette'){
+   	   		var lastYear = '2012';
    	   }
        var keys = [];
        target = this.options.target;

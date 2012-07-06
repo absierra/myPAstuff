@@ -176,14 +176,18 @@ var loadDefaultGraph = function(type){
 
 var isSuper = function(name){
 	//CITY SWITCH
-	if(city == "palo_alto"){
+	if(window.city == "palo_alto"){
 		var supers = ['Enterprise Funds', 'General Funds', 'Internal Services Funds', 'Special Revenue Funds', 'Capital Funds', 'Debt Service Funds', 'Non-Departmental', 'Utilities', 'Public Works', 'Police', 'Planning', 'Library', 'Information Technology', 'Human Resources', 'Fire', 'Community Services', 'City Manager', 'City Council', 'City Clerk', 'City Auditor', 'FIR', 'City Attorney', 'Capital Fund', 'Administrative Services', 'Airport'];
 	}
-	else if(city == "salinas"){
-		var supers = [];
+	else if(window.city == "salinas"){
+		var supers = ['General Government','Assessment and Maintenance','Block Grants and Home Prgm','Debt Service','Enterprise Operations','Grants Trusts and Agencies','Internal Services','Redevelopment Agency','Police Department','Fire Department','Administration Department','City Attorney Department','City Council Department','Comm and Econ Development','Finance Department','Library and Comm Services','Non-Departmental','Public Works Department','Assess and Maint Districts','Enterprise Operations Dept','Internal Services Department'];
+	}
+	else if(window.city == 'lafayette'){
+		var supers = ['Assessment District Funds','Capital Improvement Funds','Enterprise Funds','General Fund','Governmental Funds','Redevelopment Agency','Public Works','Administration','Parks & Recreation','Senior Services','Police','Commissions and Committees','Council & Commissions','Engineering','Planning','School Bus Program'];
 	}
 	return (supers.indexOf(name) != -1);
 }
+
 
 var initialized = false;
 function panelData(){

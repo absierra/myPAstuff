@@ -43,7 +43,7 @@ var DelphiGraphTabs = {
 				document.id('fin_feerev').hide();
 				graphTabsSelect = ['fund_tab', 'department_tab', 'expenditure_tab', 'revenue_tab'];
 			}
-		}else if(window.city == 'salinas'){
+		}else if(window.city == 'salinas' || window.city == 'lafayette'){
 			if (window.panelSelection.fund && window.panelSelection.department){ //WTF is 'panelSelection' and why can't we use selection?
 				document.id('fin_rev').hide();
 				document.id('fin_feerev').show();
