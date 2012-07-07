@@ -533,7 +533,6 @@ var BudgetGraph = new Class({
                        		steps = 4;
                        }else if(window.city == 'saratoga'){
                        		steps = 5;
-                       }
                        }else if(window.city == 'lafayette'){
                        		steps = 6;
                        }
