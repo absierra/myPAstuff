@@ -1,0 +1,1109 @@
+/* RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* /RESET *//* @license
+ * MyFonts Webfont Build ID 2200210, 2012-04-02T16:44:43-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Proxima Nova Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ * 
+ * Webfont: Proxima Nova Bold Italic by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+ * 
+ * Webfont: Proxima Nova Italic by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2200210
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * 
+ * © 2012 Bitstream Inc
+*/
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/Resources/core/webfonts/219292_0_0.eot');
+  src: url('/Resources/core/webfonts/219292_0_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_0_0.woff') format('woff'), url('/Resources/core/webfonts/219292_0_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_0_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-BoldItalic';
+  src: url('/Resources/core/webfonts/219292_1_0.eot');
+  src: url('/Resources/core/webfonts/219292_1_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_1_0.woff') format('woff'), url('/Resources/core/webfonts/219292_1_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_1_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-Italic';
+  src: url('/Resources/core/webfonts/219292_2_0.eot');
+  src: url('/Resources/core/webfonts/219292_2_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219292_2_0.woff') format('woff'), url('/Resources/core/webfonts/219292_2_0.ttf') format('truetype'), url('/Resources/core/webfonts/219292_2_0.svg#wf') format('svg');
+}
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('/Resources/core/webfonts/219462_0_0.eot');
+  src: url('/Resources/core/webfonts/219462_0_0.eot?#iefix') format('embedded-opentype'), url('/Resources/core/webfonts/219462_0_0.woff') format('woff'), url('/Resources/core/webfonts/219462_0_0.ttf') format('truetype');
+}
+html {
+  font-family: "Helvetica";
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+body, html {
+  height: 100%;
+}
+body {
+  background-color: #e1e5e8;
+  color: #818285;
+  font-family: "ProximaNova";
+}
+#protolus_root {
+  margin: 0 auto;
+}
+#saved-metrics h3 {
+  color: #0F0;
+}
+#load_spinner {
+  display: none;
+  z-index: 200;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+#load_spinner .spinner {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  background-image: url('/Resources/core/img/loader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#delphilogo {
+  position: absolute;
+  height: 36px;
+  width: 102px;
+  bottom: -42px;
+  right: 0px;
+  background-image: url('/Resources/core/img/logo_powered_by_delphi.png');
+  background-repeat: no-repeat;
+}
+#content_wrapper {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f3f3f4 url('/Resources/core/img/background.png') repeat;
+  border-top: 1px solid #3f3f3f;
+  overflow: auto;
+}
+header {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  background-image: url('/Resources/core/img/logo_palo_alto.png');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-color: #1e1f1f;
+  width: 100%;
+  border-style: solid none none none;
+  border-color: #8DC63F;
+  border-width: 2px;
+  /* todo make shadow work in angle & incline */
+
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  height: 38px;
+}
+header img {
+  margin-top: 17px;
+  margin-left: 15px;
+  height: 22px;
+}
+header span.logo_text {
+  position: absolute;
+  top: 17.9px;
+  margin-left: 3px;
+  font-size: 1.4em;
+  vertical-align: middle;
+  color: #989A9C;
+  font-family: "ProximaNova";
+}
+#navlinks {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  right: 10px;
+  width: 400px;
+  height: 38px;
+}
+#navlinks ul {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#navlinks ul li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  line-height: 38px;
+  font-size: 0.8em;
+}
+#navlinks ul li.active {
+  color: #fff;
+  font-family: "ProximaNova-Bold";
+}
+#navlinks ul li a {
+  color: #c5c6c8;
+  text-decoration: none;
+}
+#navlinks ul li a:hover {
+  color: #fff;
+}
+#column_header_divider_horizontal {
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  width: 444px;
+  height: 10px;
+  margin: 0px 8px 0px 8px;
+  background-image: url('/Resources/core/img/dots.png');
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-color: #FFFFFF;
+}
+#column_header_divider_vertical {
+  position: absolute;
+  top: 0px;
+  left: 223px;
+  width: 10px;
+  height: 33px;
+  margin: 0px 0px 0px 0px;
+  background-image: url('/Resources/core/img/dots.png');
+  background-repeat: repeat-y;
+  background-position: left center;
+}
+#left_column {
+  margin-top: 0px;
+  background-color: #1e1f1f;
+  width: 460px;
+  height: 100%;
+}
+#left_column ul ul {
+  border-right: 1px dotted #4e4d4d;
+}
+#left_column ul:last-of-type ul {
+  border-right-width: 0;
+}
+#left_column ul h3 {
+  position: relative;
+  width: 230px;
+  color: #fff;
+  background-color: #1e1f1f;
+  padding-top: 3px;
+  line-height: 2em;
+  font-family: "ProximaNova-Bold";
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+#left_column ul h3:hover {
+  color: #FFFFFF;
+  background-color: #3b3b3c;
+}
+#left_column ul h3 a {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  display: block;
+  height: 18px;
+  width: 20px;
+  background: url('/Resources/core/img/info_inactive.png') no-repeat 5px 0;
+  cursor: help;
+}
+#left_column ul h3 a:hover {
+  /*background-position: 4px -17px;*/
+
+  background: url('/Resources/core/img/info_active.png') no-repeat 4px 0;
+}
+#left_column > ul {
+  float: left;
+  color: #333335;
+  font-size: 0.8em;
+  white-space: nowrap;
+  z-index: 10;
+}
+#left_column > ul .panel_description {
+  display: none;
+  position: absolute;
+  white-space: normal;
+  width: 200px;
+  color: #FFFFFF;
+  background-color: #3b3b3c;
+  line-height: 1.25em;
+  padding: 0 15px 10px;
+  font-size: 1em;
+  z-index: 20;
+  opacity: 0.9;
+}
+#left_column > ul > ul {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 43px;
+  bottom: 0;
+  vertical-align: text-top;
+}
+#left_column > ul ul li {
+  width: 222px;
+  line-height: 30px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  overflow-x: hidden;
+}
+#left_column > ul ul li span {
+  padding-left: 15px;
+  color: #e6e7e8;
+  font-family: "ProximaNova-Bold";
+}
+#left_column > ul ul li span:hover {
+  background-color: #00a1e4;
+  color: #FFFFFF;
+}
+#left_column > ul ul li span.disabled {
+  color: #666;
+}
+#left_column > ul ul li span.disabled:hover {
+  color: #333;
+  background-color: #e1e1e1;
+}
+#left_column > ul ul li span.disabled a:after {
+  content: '\25B6';
+  font-size: 11px;
+}
+#left_column > ul ul li span.disabled a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
+}
+#left_column > ul ul li span.selected {
+  color: #fff;
+  background-color: #00a1e4;
+  height: 30px;
+}
+#left_column > ul ul li span.selected.sublist {
+  height: 0;
+}
+#left_column > ul ul li span.selected a:after {
+  content: '\25B6';
+  font-size: 11px;
+}
+#left_column > ul ul li span.selected a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
+}
+#left_column > ul ul li span a:after {
+  position: absolute;
+  content: '\25B6';
+  right: 0;
+  font-size: 11px;
+  padding: 0 15px;
+}
+#left_column > ul ul li span a.expanded:after {
+  content: '\25BC';
+  font-size: 14px;
+}
+#left_column > ul ul ul {
+  overflow: hidden;
+}
+#left_column > ul ul ul.sublist {
+  height: 0;
+}
+#left_column > ul ul ul li {
+  border: 0;
+  overflow-x: hidden;
+  margin-left: 15px;
+}
+#left_column > ul ul ul li span {
+  width: 182px;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  text-wrap: none;
+  overflow: hidden;
+  white-space: wrap;
+  font-family: "ProximaNova";
+  color: #e6e7e8;
+  background: none;
+  /*
+				&:hover {
+					width: @leftColumnWidth / 2;
+					padding-right: 0px;
+					z-index: 200;
+				}
+				*/
+
+}
+#left_column > ul ul ul li span:after {
+  content: '';
+}
+#left_column > ul span {
+  padding-left: 10px;
+  height: 30px;
+  display: inline-block;
+  width: 100%;
+}
+#left_column > ul .selected > span {
+  background-color: #3A3A3C;
+  color: #00A9E2;
+}
+#left_column > ul .selected > .colorkey:before {
+  position: absolute;
+  left: 15px;
+  content: '';
+  padding: 2px;
+  display: block;
+  height: 30px;
+  width: 7px;
+}
+#left_column > ul .colorkey:before {
+  position: absolute;
+  left: 0;
+  content: '';
+  display: block;
+  height: 30px;
+  width: 7px;
+}
+#secondLevelMouseOver {
+  display: none;
+  position: absolute;
+  /*border: 1px solid red;*/
+
+  background-color: #00a1e4;
+  z-index: 500;
+  cursor: pointer;
+}
+#secondLevelMouseOver span {
+  display: block;
+  width: 100%;
+  padding: 0px 15px;
+  height: 30px;
+  line-height: 30px;
+  font-family: "ProximaNova";
+  font-size: 0.8em;
+  color: #FFFFFF;
+}
+#secondLevelMouseOver .hidden {
+  display: none;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+}
+#pie_hole {
+  -moz-border-radius-topright: 999px;
+  border-top-right-radius: 999px;
+  -moz-border-radius-topleft: 999px;
+  border-top-left-radius: 999px;
+  -moz-border-radius-bottomright: 999px;
+  border-bottom-right-radius: 999px;
+  -moz-border-radius-bottomleft: 999px;
+  border-bottom-left-radius: 999px;
+  width: 100px;
+  height: 100px;
+  background: white;
+}
+#content {
+  clear: both;
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 460px;
+  right: 0;
+  padding: 0 20px;
+  overflow: auto;
+}
+#content p {
+  white-space: pre-wrap;
+  line-height: 18px;
+  margin: 10px 0px 10px 0px;
+}
+#content.fullwidth {
+  left: 0;
+  top: 0px;
+  padding: 0 20px 20px 20px;
+}
+#content h1, #content h2, #content h3 {
+  font-family: "ProximaNova-Bold";
+  margin-top: 20px;
+}
+#content h1 {
+  font-size: 30px;
+}
+#content h2 {
+  font-size: 25px;
+}
+#about {
+  clear: both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2%;
+  overflow: auto;
+  width: 96%;
+  height: 96%;
+}
+#about #slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#about #slideshow ul#sectionTabs {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+#about #slideshow ul#sectionTabs li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 40px;
+}
+#about #slideshow ul#sectionTabs li a {
+  color: #606060;
+  text-decoration: none;
+  font-family: "ProximaNova-Bold";
+}
+#about #slideshow ul#sectionTabs li a:hover, #about #slideshow ul#sectionTabs li a.active {
+  color: #00a1e4;
+}
+#about #slideshow ul#sectionTabs li a.active {
+  /*border-bottom: solid 3px #00a1e4;*/
+
+  /*font-size: 1.2em;*/
+
+}
+#about #slideshow #slide {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  width: 90%;
+  height: 85%;
+  text-align: center;
+  overflow: hidden;
+}
+#about #slideshow #slide #slideImg {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 90%;
+  height: 60%;
+}
+#about #slideshow #slide #slideImg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#about #slideshow #slide #slideText {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 90%;
+  height: 35%;
+  font-size: 1em;
+}
+#about #slideshow #slide #slideText p {
+  width: 760px;
+  text-align: left;
+  color: #e6e7e8;
+  margin: 20px auto;
+}
+#about #slideshow ul#progressDots {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  text-align: center;
+}
+#about #slideshow ul#progressDots li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 5px;
+  height: 10px;
+  width: 10px;
+  background-repeat: no-repeat;
+  background-image: url('/Resources/core/img/dot_inactive.png');
+}
+#about #slideshow ul#progressDots li.active, #about #slideshow ul#progressDots li:hover {
+  background-image: url('/Resources/core/img/dot_active.png');
+  cursor: pointer;
+}
+#about #slideshow #goLeft, #about #slideshow #goRight {
+  position: absolute;
+  top: 40%;
+  width: 20px;
+  height: 30px;
+  font-size: 3em;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+#about #slideshow #goLeft.disabled, #about #slideshow #goRight.disabled {
+  display: none;
+}
+#about #slideshow #goLeft {
+  left: 0px;
+  background-image: url('/Resources/core/img/prev_inact.png');
+}
+#about #slideshow #goLeft:hover {
+  background-image: url('/Resources/core/img/prev_act.png');
+}
+#about #slideshow #goRight {
+  right: 0px;
+  background-image: url('/Resources/core/img/next_inact.png');
+}
+#about #slideshow #goRight:hover {
+  background-image: url('/Resources/core/img/next_act.png');
+}
+.graph_tabs {
+  display: block;
+  width: 676px;
+  margin: 12px auto 25px;
+  height: 55px;
+}
+.graph_tabs fieldset {
+  float: left;
+  margin: 0 3px 0 0;
+}
+.graph_tabs legend {
+  font-family: "ProximaNova-Bold";
+  color: #58585a;
+  display: block;
+  float: left;
+  height: 15px;
+  border: 1px solid #4f4a4b;
+  border-bottom: 0;
+  margin: 6px 0 5px 0;
+  text-align: center;
+  line-height: 0;
+  font-size: 0.8em;
+  width: 99.5%;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+.graph_tabs legend span {
+  color: #a6a6a6;
+  background: #1a1a1a;
+  padding: 0 5px;
+}
+.graph_tabs li:first-of-type {
+  clear: both;
+}
+.graph_tabs li {
+  display: block;
+  font-size: 0.85em;
+  color: #666;
+  background: #414042;
+  text-align: center;
+  padding: 5px 10px;
+  margin-right: 2px;
+  float: left;
+  cursor: pointer;
+  font-family: "ProximaNova";
+  /*
+       &.super {
+            width: 370px;
+        }
+*/
+
+}
+.graph_tabs li:last-of-type {
+  margin-right: 0;
+}
+.graph_tabs li.display {
+  color: #424242;
+  background: #a7a7a7;
+}
+.graph_tabs li.display:hover {
+  /*background: #e3e4e5;*/
+
+  color: #fff;
+  background: #0099cc;
+}
+.graph_tabs li.active {
+  color: #fff;
+  background: #0099cc;
+  cursor: pointer;
+}
+.graph_tabs li.active:hover {
+  background: #0099cc;
+}
+#graph_container {
+  clear: both;
+  margin: 0 auto;
+  position: relative;
+  color: #a5a8ab;
+  min-height: 500px;
+  min-width: 560px;
+  padding-bottom: 10px;
+}
+#graph_container #graphs {
+  min-height: 315px;
+}
+#graph_container #graphs .graph {
+  height: 63%;
+  width: 90%;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  right: 40px;
+}
+#graph_container .container {
+  display: inline-block;
+  margin-bottom: 0;
+}
+#graph_container h1#graph_title {
+  text-align: center;
+  font-family: "ProximaNova-Bold";
+  padding-top: 13px;
+  font-size: 18px;
+  color: #00abe3;
+}
+#graph_container h2#graph_breakdown {
+  position: absolute;
+  top: 34%;
+  left: -4px;
+  font-family: "ProximaNova-Bold";
+  font-size: 15px;
+  -webkit-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -moz-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -o-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  -ms-transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+  transform: rotate(270deg) scale(1) skew(1deg) translate(10px);
+}
+#graph_container h2#graph_fiscal_year {
+  margin-top: 6px;
+  text-align: center;
+  font-family: "ProximaNova-Bold";
+  font-size: 15px;
+}
+#graph_types {
+  position: absolute;
+  right: 52px;
+  top: 15%;
+  z-index: 20;
+}
+#graph_types li {
+  display: block;
+  cursor: pointer;
+}
+/* Graph Type Icons */
+.active.percentage.icon, .percentage.icon:hover {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 60px;
+  height: 60px;
+  background-position: 0px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.percentage.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 60px;
+  height: 60px;
+  background-position: 0px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.active.stacked.icon, .stacked.icon:hover {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 60px;
+  height: 60px;
+  background-position: -60px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.stacked.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 60px;
+  height: 60px;
+  background-position: -60px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.active.line.icon, .line.icon:hover {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 60px;
+  height: 60px;
+  background-position: -120px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.line.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 60px;
+  height: 60px;
+  background-position: -120px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.active.pie.icon, .pie.icon:hover {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons-active.png');
+  width: 60px;
+  height: 60px;
+  background-position: -180px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+.pie.icon {
+  display: block;
+  display: inline-block;
+  background-image: url('/Resources/core/img/graph-type-icons.png');
+  width: 60px;
+  height: 60px;
+  background-position: -180px 0px;
+  content: '';
+  display: block;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+#legend {
+  position: absolute;
+  bottom: 0px;
+  display: none;
+  white-space: normal;
+  margin: 0 15px;
+  padding: 0 3px;
+  color: #373739;
+  overflow: auto;
+  /*height: 118px; changed by Arthur 2012-06-15 to get the legend away from the axis label*/
+
+  height: 117px;
+  /*text-align: center;*/
+
+}
+#legend li {
+  text-align: left;
+  display: inline-block;
+  margin: 0 5px;
+  line-height: 33px;
+  height: 21px;
+}
+#legend li span {
+  color: #afa8ab;
+  display: inline-block;
+  position: relative;
+  width: 125px;
+  padding: 0 0 0 14px;
+  text-overflow: ellipsis;
+  text-wrap: none;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+#legend li span:before {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  content: '';
+  display: block;
+  height: 24px;
+  width: 5px;
+  color: blue;
+}
+#years_container {
+  display: none;
+  width: 510px;
+  margin: 30px auto 0;
+}
+#years_container #years_text {
+  height: 12px;
+}
+#years_container #years_text li {
+  font-family: "ProximaNova-Bold";
+  font-size: 11px;
+  display: inline-block;
+  line-height: 12px;
+  cursor: default;
+  width: 102px;
+  text-align: center;
+}
+#years_container #years_slider {
+  /*-webkit-appearance: slider-vertical;*/
+
+  width: 410px;
+  margin-left: 55px;
+  display: block;
+  cursor: pointer;
+}
+#graph_container #graphs #employee_type_graph {
+  left: 0;
+  width: 100%;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container {
+  margin: 15px 25px;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles, #graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table {
+  width: 100%;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles thead tr th {
+  background-color: #19b3e2;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1em;
+  font-size: 0.8em;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 5px 10px 5px;
+  width: 9%;
+  border: 0 ;
+  border-left: 2px dotted #fff;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles thead tr th:first-child {
+  width: 40%;
+  border-left-width: 0;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_titles thead tr th:last-child {
+  border-right: 0;
+  width: 12%;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container {
+  height: 397px;
+  width: 100%;
+  overflow: auto;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr td {
+  padding: 5px 0;
+  font-size: 0.8em;
+  width: 9%;
+  text-align: center;
+  border: 0 dotted #787878;
+  border-width: 0 0 0 2px;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr td:first-child {
+  text-align: left;
+  width: 40%;
+  border-left-width: 0;
+  padding: 0 10px;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr td:last-child {
+  width: 11%;
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr {
+  color: #e6e7e8;
+  background: url('/Resources/core/img/background_40_percent_white.png');
+}
+#graph_container #graphs #employee_type_graph #employee_type_container #employee_type_table_container #employee_type_table tbody tr:nth-child(odd) {
+  background: transparent;
+}
+/* Scroll Bars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(30, 31, 31, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(166, 168, 171, 0.8);
+  -webkit-box-shadow: inset 0 0 2px #444444;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(166, 168, 171, 0.8);
+}

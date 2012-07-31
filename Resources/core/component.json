@@ -6,7 +6,10 @@
         "graph_util_js" : "js/graph-util.js",
         "graph_tabs_js" : "js/graph-tabs.js",
         "graph_js" : "js/graph.js",
-	"table_js" : "js/table.js"
+	   "table_js" : "js/table.js",
+	   "ajax_js" : "js/ajax.js",
+	   "mktree_css" : "css/mktree.css",
+	   "mktree_js" : "js/mktree.js"
     },
     "dependency":[
         "mootools-core"

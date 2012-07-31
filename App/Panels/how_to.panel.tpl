@@ -17,6 +17,9 @@
 	howtops[3] = 'You can also choose different graph types. There are the traditional pie and line charts, as well as a stacked (or area) chart to illustrate each component\'s contribution to the total, in both absolute numbers and percentages.';
 	howtops[4] = 'Hover your mouse over graph data points to get more information.';
 	
+	//howworks = ['a','b','c','d','e'];
+	//howtops = ['1','2','3','4','5'];
+	
 	// these next two variables will let us know which way we want to swipe the slideshow, by letting functions know where we are now (since where we're going is passed in as arguments)
 	var currentSection = -1;
 	var currentSlide = -1;

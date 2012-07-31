@@ -1,0 +1,39 @@
+<?php
+
+include 'CTree.php'
+
+class CTreeIterator extends RecursiveIteratorIterator{
+
+	private $Tree;
+	private $str;
+	
+	public function __construct(CTree $ct, $iterator, $mode = LEAVES_ONLY, $flags = 0) {
+		parent::_construct($iterator, $mode, $flags);
+		$this->Tree = $ct;
+		$this->str = '<ul>\n';
+	}
+	
+	public function endChildren() {
+		parent::endChildren();
+		$this->str .= "</ul></li>\n";
+	}
+	
+	public function callHasChildren() {
+		$val = $this->current()->getvalue();
+		$tmp = parent::callHasChildren();
+		if($tmp === true) {
+			$this->str .= "<li>{$val}<ul>\n";
+		}else {
+			$this->_str .= "<li>{$val}</li>\n";
+		}
+		return $tmp;
+	}
+	
+	public function __destruct() {
+		$this->str .= "</ul>\n";\
+			$echo $this->str;
+	}
+
+}
+
+?>

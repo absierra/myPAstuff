@@ -633,6 +633,12 @@ header span.logo_text {
   text-align: center;
   overflow: hidden;
 }
+
+/*ADRIAN*/
+#about #slideshow #slide #chooseDepDiv {
+  text-align: left;
+}
+
 #about #slideshow #slide #slideImg {
   position: absolute;
   top: 5%;
@@ -640,6 +646,9 @@ header span.logo_text {
   width: 90%;
   height: 60%;
 }
+
+/*ADRIAN*/
+
 #about #slideshow #slide #slideImg img {
   max-width: 100%;
   max-height: 100%;

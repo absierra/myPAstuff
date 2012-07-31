@@ -1,0 +1,18 @@
+{
+    "application":{
+        "mode" : "debug",
+        "cookie_domain": "pabudget.dev",
+        "city":"palo_alto"
+    },
+    "DB:pa_budget_data":{
+        "type":"mongo",
+        "database" : "paloaltobudgets",
+        "host" : "localhost",
+        "user" : "",
+        "password" : "",
+        "mode":"mongo",
+        "session":"true",
+        "session_hook":"php"
+    }
+}
+

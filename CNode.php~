@@ -1,0 +1,73 @@
+<?php
+
+class CNode {
+
+	private $parent;
+	private $children;
+	private $ID;
+	private $original;
+	private $metrics;
+	private $spending;
+	
+	public function __construct($metrics, $spending, $ID) {
+		/*$this->setID($ID);
+		$this->setMetrics($metrics);
+		$this->setSpending($spending);
+		$this->setParent(null);
+		$this->setChildren(array());*/
+	}
+
+/**************** GETTERS ****************/
+	public function getID() {
+		return $this->ID;
+	}
+	
+	public function getMetrics() {
+		return $this->metrics;
+	}
+	
+	public function getSpending() {
+		return $this->spending;
+	}
+	
+	public function getChildren() {
+		return $this->children;
+	}
+	
+	public function getParent() {
+		return $this->parent;
+	}
+	
+/*************** SETTERS *****************/
+	
+	public function setID($ID) {
+		$this->ID = $ID;
+	}
+	
+	public function setMetrics($metrics) {
+		$this->metrics = $metrics;
+	}
+	
+	public function setSpending($spending) {
+		$this->spending = $spending;
+	}
+	
+	public function setChildren($children) {
+		$this->children = $children;
+	}
+	
+	public function setParent($parent) {
+		$this->parent = $parent;
+	}
+	
+	public function setChild($child) {
+		if(array_key_exists($child->getID(), $this->children)) {
+			throw new Exception('Node already exists');
+		}
+		if(!empty($child) {
+			$this->children[] = $child;
+		}
+	}
+}
+
+?>

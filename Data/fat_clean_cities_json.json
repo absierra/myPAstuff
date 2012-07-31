@@ -1,0 +1,1190 @@
+[
+	{
+		"City": "Adelanto"
+	},
+	{
+		"City": "Agoura Hills"
+	},
+	{
+		"City": "Alameda"
+	},
+	{
+		"City": "Albany"
+	},
+	{
+		"City": "Alhambra"
+	},
+	{
+		"City": "Aliso Viejo"
+	},
+	{
+		"City": "American Canyon"
+	},
+	{
+		"City": "Anaheim"
+	},
+	{
+		"City": "Anderson"
+	},
+	{
+		"City": "Antioch"
+	},
+	{
+		"City": "Arcadia"
+	},
+	{
+		"City": "Arcata"
+	},
+	{
+		"City": "Arroyo Grande"
+	},
+	{
+		"City": "Artesia"
+	},
+	{
+		"City": "Arvin"
+	},
+	{
+		"City": "Atascadero"
+	},
+	{
+		"City": "Atwater"
+	},
+	{
+		"City": "Auburn"
+	},
+	{
+		"City": "Avenal"
+	},
+	{
+		"City": "Azusa"
+	},
+	{
+		"City": "Bakersfield"
+	},
+	{
+		"City": "Baldwin Park"
+	},
+	{
+		"City": "Banning"
+	},
+	{
+		"City": "Barstow"
+	},
+	{
+		"City": "Beaumont"
+	},
+	{
+		"City": "Bell"
+	},
+	{
+		"City": "Bell Gardens"
+	},
+	{
+		"City": "Bellflower"
+	},
+	{
+		"City": "Belmont"
+	},
+	{
+		"City": "Benicia"
+	},
+	{
+		"City": "Berkeley"
+	},
+	{
+		"City": "Beverly Hills"
+	},
+	{
+		"City": "Big Bear Lake"
+	},
+	{
+		"City": "Blythe"
+	},
+	{
+		"City": "Brawley"
+	},
+	{
+		"City": "Brea"
+	},
+	{
+		"City": "Brentwood"
+	},
+	{
+		"City": "Buena Park"
+	},
+	{
+		"City": "Burbank"
+	},
+	{
+		"City": "Burlingame"
+	},
+	{
+		"City": "Calabasas"
+	},
+	{
+		"City": "Calexico"
+	},
+	{
+		"City": "California City"
+	},
+	{
+		"City": "Calimesa"
+	},
+	{
+		"City": "Calipatria"
+	},
+	{
+		"City": "Calistoga"
+	},
+	{
+		"City": "Camarillo"
+	},
+	{
+		"City": "Campbell"
+	},
+	{
+		"City": "Canyon Lake"
+	},
+	{
+		"City": "Capitola"
+	},
+	{
+		"City": "Carlsbad"
+	},
+	{
+		"City": "Carpinteria"
+	},
+	{
+		"City": "Carson"
+	},
+	{
+		"City": "Cathedral City"
+	},
+	{
+		"City": "Ceres"
+	},
+	{
+		"City": "Cerritos"
+	},
+	{
+		"City": "Chico"
+	},
+	{
+		"City": "Chino"
+	},
+	{
+		"City": "Chino Hills"
+	},
+	{
+		"City": "Chowchilla"
+	},
+	{
+		"City": "Chula Vista"
+	},
+	{
+		"City": "Citrus Heights"
+	},
+	{
+		"City": "Claremont"
+	},
+	{
+		"City": "Clayton"
+	},
+	{
+		"City": "Clearlake"
+	},
+	{
+		"City": "Cloverdale"
+	},
+	{
+		"City": "Clovis"
+	},
+	{
+		"City": "Coachella"
+	},
+	{
+		"City": "Coalinga"
+	},
+	{
+		"City": "Colton"
+	},
+	{
+		"City": "Colusa"
+	},
+	{
+		"City": "Commerce"
+	},
+	{
+		"City": "Compton"
+	},
+	{
+		"City": "Concord"
+	},
+	{
+		"City": "Corcoran"
+	},
+	{
+		"City": "Corning"
+	},
+	{
+		"City": "Corona"
+	},
+	{
+		"City": "Coronado"
+	},
+	{
+		"City": "Costa Mesa"
+	},
+	{
+		"City": "Cotati"
+	},
+	{
+		"City": "Covina"
+	},
+	{
+		"City": "Crescent City"
+	},
+	{
+		"City": "Cudahy"
+	},
+	{
+		"City": "Culver City"
+	},
+	{
+		"City": "Cupertino"
+	},
+	{
+		"City": "Cypress"
+	},
+	{
+		"City": "Daly City"
+	},
+	{
+		"City": "Dana Point"
+	},
+	{
+		"City": "Davis"
+	},
+	{
+		"City": "Delano"
+	},
+	{
+		"City": "Desert Hot Springs"
+	},
+	{
+		"City": "Diamond Bar"
+	},
+	{
+		"City": "Dinuba"
+	},
+	{
+		"City": "Dixon"
+	},
+	{
+		"City": "Downey"
+	},
+	{
+		"City": "Duarte"
+	},
+	{
+		"City": "Dublin"
+	},
+	{
+		"City": "East Palo Alto"
+	},
+	{
+		"City": "El Cajon"
+	},
+	{
+		"City": "El Centro"
+	},
+	{
+		"City": "El Cerrito"
+	},
+	{
+		"City": "El Monte"
+	},
+	{
+		"City": "El Segundo"
+	},
+	{
+		"City": "Elk Grove"
+	},
+	{
+		"City": "Emeryville"
+	},
+	{
+		"City": "Encinitas"
+	},
+	{
+		"City": "Escalon"
+	},
+	{
+		"City": "Escondido"
+	},
+	{
+		"City": "Eureka"
+	},
+	{
+		"City": "Exeter"
+	},
+	{
+		"City": "Fairfield"
+	},
+	{
+		"City": "Farmersville"
+	},
+	{
+		"City": "Fillmore"
+	},
+	{
+		"City": "Firebaugh"
+	},
+	{
+		"City": "Folsom"
+	},
+	{
+		"City": "Fontana"
+	},
+	{
+		"City": "Fort Bragg"
+	},
+	{
+		"City": "Fortuna"
+	},
+	{
+		"City": "Foster City"
+	},
+	{
+		"City": "Fountain Valley"
+	},
+	{
+		"City": "Fowler"
+	},
+	{
+		"City": "Fremont"
+	},
+	{
+		"City": "Fresno"
+	},
+	{
+		"City": "Fullerton"
+	},
+	{
+		"City": "Galt"
+	},
+	{
+		"City": "Garden Grove"
+	},
+	{
+		"City": "Gardena"
+	},
+	{
+		"City": "Gilroy"
+	},
+	{
+		"City": "Glendale"
+	},
+	{
+		"City": "Glendora"
+	},
+	{
+		"City": "Goleta"
+	},
+	{
+		"City": "Gonzales"
+	},
+	{
+		"City": "Grand Terrace"
+	},
+	{
+		"City": "Grass Valley"
+	},
+	{
+		"City": "Greenfield"
+	},
+	{
+		"City": "Gridley"
+	},
+	{
+		"City": "Grover Beach"
+	},
+	{
+		"City": "Guadalupe"
+	},
+	{
+		"City": "Gustine"
+	},
+	{
+		"City": "Half Moon Bay"
+	},
+	{
+		"City": "Hanford"
+	},
+	{
+		"City": "Hawaiian Gardens"
+	},
+	{
+		"City": "Hawthorne"
+	},
+	{
+		"City": "Hayward"
+	},
+	{
+		"City": "Healdsburg"
+	},
+	{
+		"City": "Hemet"
+	},
+	{
+		"City": "Hercules"
+	},
+	{
+		"City": "Hermosa Beach"
+	},
+	{
+		"City": "Hesperia"
+	},
+	{
+		"City": "Highland"
+	},
+	{
+		"City": "Hollister"
+	},
+	{
+		"City": "Holtville"
+	},
+	{
+		"City": "Hughson"
+	},
+	{
+		"City": "Huntington Beach"
+	},
+	{
+		"City": "Huntington Park"
+	},
+	{
+		"City": "Huron"
+	},
+	{
+		"City": "Imperial"
+	},
+	{
+		"City": "Imperial Beach"
+	},
+	{
+		"City": "Indio"
+	},
+	{
+		"City": "Inglewood"
+	},
+	{
+		"City": "Ione"
+	},
+	{
+		"City": "Irvine"
+	},
+	{
+		"City": "Kerman"
+	},
+	{
+		"City": "King City"
+	},
+	{
+		"City": "Kingsburg"
+	},
+	{
+		"City": "La Canada Flintridge"
+	},
+	{
+		"City": "La Habra"
+	},
+	{
+		"City": "La Habra Heights"
+	},
+	{
+		"City": "La Mesa"
+	},
+	{
+		"City": "La Mirada"
+	},
+	{
+		"City": "La Palma"
+	},
+	{
+		"City": "La Puente"
+	},
+	{
+		"City": "La Quinta"
+	},
+	{
+		"City": "La Verne"
+	},
+	{
+		"City": "Lafayette"
+	},
+	{
+		"City": "Laguna Beach"
+	},
+	{
+		"City": "Laguna Hills"
+	},
+	{
+		"City": "Laguna Niguel"
+	},
+	{
+		"City": "Laguna Woods"
+	},
+	{
+		"City": "Lake Elsinore"
+	},
+	{
+		"City": "Lake Forest"
+	},
+	{
+		"City": "Lakewood"
+	},
+	{
+		"City": "Lancaster"
+	},
+	{
+		"City": "Lawndale"
+	},
+	{
+		"City": "Lemon Grove"
+	},
+	{
+		"City": "Lemoore"
+	},
+	{
+		"City": "Lincoln"
+	},
+	{
+		"City": "Lindsay"
+	},
+	{
+		"City": "Livermore"
+	},
+	{
+		"City": "Livingston"
+	},
+	{
+		"City": "Lodi"
+	},
+	{
+		"City": "Loma Linda"
+	},
+	{
+		"City": "Lomita"
+	},
+	{
+		"City": "Lompoc"
+	},
+	{
+		"City": "Long Beach"
+	},
+	{
+		"City": "Los Alamitos"
+	},
+	{
+		"City": "Los Altos"
+	},
+	{
+		"City": "Los Angeles"
+	},
+	{
+		"City": "Los Banos"
+	},
+	{
+		"City": "Lynwood"
+	},
+	{
+		"City": "Madera"
+	},
+	{
+		"City": "Malibu"
+	},
+	{
+		"City": "Manhattan Beach"
+	},
+	{
+		"City": "Manteca"
+	},
+	{
+		"City": "Marina"
+	},
+	{
+		"City": "Martinez"
+	},
+	{
+		"City": "Marysville"
+	},
+	{
+		"City": "Maywood"
+	},
+	{
+		"City": "McFarland"
+	},
+	{
+		"City": "Mendota"
+	},
+	{
+		"City": "Menifee"
+	},
+	{
+		"City": "Menlo Park"
+	},
+	{
+		"City": "Merced"
+	},
+	{
+		"City": "Mill Valley"
+	},
+	{
+		"City": "Millbrae"
+	},
+	{
+		"City": "Milpitas"
+	},
+	{
+		"City": "Mission Viejo"
+	},
+	{
+		"City": "Modesto"
+	},
+	{
+		"City": "Monrovia"
+	},
+	{
+		"City": "Montclair"
+	},
+	{
+		"City": "Montebello"
+	},
+	{
+		"City": "Monterey"
+	},
+	{
+		"City": "Monterey Park"
+	},
+	{
+		"City": "Moorpark"
+	},
+	{
+		"City": "Moreno Valley"
+	},
+	{
+		"City": "Morgan Hill"
+	},
+	{
+		"City": "Morro Bay"
+	},
+	{
+		"City": "Mountain View"
+	},
+	{
+		"City": "Murrieta"
+	},
+	{
+		"City": "Napa"
+	},
+	{
+		"City": "National City"
+	},
+	{
+		"City": "Newark"
+	},
+	{
+		"City": "Newman"
+	},
+	{
+		"City": "Newport Beach"
+	},
+	{
+		"City": "Norco"
+	},
+	{
+		"City": "Norwalk"
+	},
+	{
+		"City": "Novato"
+	},
+	{
+		"City": "Oakdale"
+	},
+	{
+		"City": "Oakland"
+	},
+	{
+		"City": "Oakley"
+	},
+	{
+		"City": "Oceanside"
+	},
+	{
+		"City": "Ojai"
+	},
+	{
+		"City": "Ontario"
+	},
+	{
+		"City": "Orange"
+	},
+	{
+		"City": "Orinda"
+	},
+	{
+		"City": "Orland"
+	},
+	{
+		"City": "Oroville"
+	},
+	{
+		"City": "Oxnard"
+	},
+	{
+		"City": "Pacific Grove"
+	},
+	{
+		"City": "Pacifica"
+	},
+	{
+		"City": "Palm Desert"
+	},
+	{
+		"City": "Palm Springs"
+	},
+	{
+		"City": "Palmdale"
+	},
+	{
+		"City": "Palo Alto"
+	},
+	{
+		"City": "Palos Verdes Estates"
+	},
+	{
+		"City": "Paramount"
+	},
+	{
+		"City": "Parlier"
+	},
+	{
+		"City": "Pasadena"
+	},
+	{
+		"City": "Patterson"
+	},
+	{
+		"City": "Perris"
+	},
+	{
+		"City": "Petaluma"
+	},
+	{
+		"City": "Pico Rivera"
+	},
+	{
+		"City": "Piedmont"
+	},
+	{
+		"City": "Pinole"
+	},
+	{
+		"City": "Pismo Beach"
+	},
+	{
+		"City": "Pittsburg"
+	},
+	{
+		"City": "Placentia"
+	},
+	{
+		"City": "Placerville"
+	},
+	{
+		"City": "Pleasant Hill"
+	},
+	{
+		"City": "Pleasanton"
+	},
+	{
+		"City": "Pomona"
+	},
+	{
+		"City": "Port Hueneme"
+	},
+	{
+		"City": "Porterville"
+	},
+	{
+		"City": "Poway"
+	},
+	{
+		"City": "Rancho Cordova"
+	},
+	{
+		"City": "Rancho Cucamonga"
+	},
+	{
+		"City": "Rancho Mirage"
+	},
+	{
+		"City": "Rancho Palos Verdes"
+	},
+	{
+		"City": "Red Bluff"
+	},
+	{
+		"City": "Redding"
+	},
+	{
+		"City": "Redlands"
+	},
+	{
+		"City": "Redondo Beach"
+	},
+	{
+		"City": "Redwood City"
+	},
+	{
+		"City": "Reedley"
+	},
+	{
+		"City": "Rialto"
+	},
+	{
+		"City": "Richmond"
+	},
+	{
+		"City": "Ridgecrest"
+	},
+	{
+		"City": "Rio Vista"
+	},
+	{
+		"City": "Ripon"
+	},
+	{
+		"City": "Riverbank"
+	},
+	{
+		"City": "Riverside"
+	},
+	{
+		"City": "Rocklin"
+	},
+	{
+		"City": "Rohnert Park"
+	},
+	{
+		"City": "Rolling Hills Estates"
+	},
+	{
+		"City": "Rosemead"
+	},
+	{
+		"City": "Roseville"
+	},
+	{
+		"City": "Sacramento"
+	},
+	{
+		"City": "Salinas"
+	},
+	{
+		"City": "San Bernardino"
+	},
+	{
+		"City": "San Bruno"
+	},
+	{
+		"City": "San Clemente"
+	},
+	{
+		"City": "San Diego"
+	},
+	{
+		"City": "San Dimas"
+	},
+	{
+		"City": "San Fernando"
+	},
+	{
+		"City": "San Francisco"
+	},
+	{
+		"City": "San Gabriel"
+	},
+	{
+		"City": "San Jacinto"
+	},
+	{
+		"City": "San Jose"
+	},
+	{
+		"City": "San Juan Capistrano"
+	},
+	{
+		"City": "San Leandro"
+	},
+	{
+		"City": "San Luis Obispo"
+	},
+	{
+		"City": "San Marcos"
+	},
+	{
+		"City": "San Marino"
+	},
+	{
+		"City": "San Mateo"
+	},
+	{
+		"City": "San Pablo"
+	},
+	{
+		"City": "San Rafael"
+	},
+	{
+		"City": "San Ramon"
+	},
+	{
+		"City": "Sanger"
+	},
+	{
+		"City": "Santa Ana"
+	},
+	{
+		"City": "Santa Barbara"
+	},
+	{
+		"City": "Santa Clara"
+	},
+	{
+		"City": "Santa Clarita"
+	},
+	{
+		"City": "Santa Cruz"
+	},
+	{
+		"City": "Santa Fe Springs"
+	},
+	{
+		"City": "Santa Maria"
+	},
+	{
+		"City": "Santa Monica"
+	},
+	{
+		"City": "Santa Paula"
+	},
+	{
+		"City": "Santa Rosa"
+	},
+	{
+		"City": "Santee"
+	},
+	{
+		"City": "Saratoga"
+	},
+	{
+		"City": "Sausalito"
+	},
+	{
+		"City": "Scotts Valley"
+	},
+	{
+		"City": "Seal Beach"
+	},
+	{
+		"City": "Seaside"
+	},
+	{
+		"City": "Sebastopol"
+	},
+	{
+		"City": "Selma"
+	},
+	{
+		"City": "Shafter"
+	},
+	{
+		"City": "Sierra Madre"
+	},
+	{
+		"City": "Signal Hill"
+	},
+	{
+		"City": "Simi Valley"
+	},
+	{
+		"City": "Solana Beach"
+	},
+	{
+		"City": "Soledad"
+	},
+	{
+		"City": "Solvang"
+	},
+	{
+		"City": "Sonoma"
+	},
+	{
+		"City": "South El Monte"
+	},
+	{
+		"City": "South Gate"
+	},
+	{
+		"City": "South Lake Tahoe"
+	},
+	{
+		"City": "South Pasadena"
+	},
+	{
+		"City": "South San Francisco"
+	},
+	{
+		"City": "St. Helena"
+	},
+	{
+		"City": "Stanton"
+	},
+	{
+		"City": "Stockton"
+	},
+	{
+		"City": "Suisun City"
+	},
+	{
+		"City": "Sunnyvale"
+	},
+	{
+		"City": "Susanville"
+	},
+	{
+		"City": "Taft"
+	},
+	{
+		"City": "Tehachapi"
+	},
+	{
+		"City": "Temecula"
+	},
+	{
+		"City": "Temple City"
+	},
+	{
+		"City": "Thousand Oaks"
+	},
+	{
+		"City": "Torrance"
+	},
+	{
+		"City": "Tracy"
+	},
+	{
+		"City": "Tulare"
+	},
+	{
+		"City": "Turlock"
+	},
+	{
+		"City": "Tustin"
+	},
+	{
+		"City": "Twentynine Palms"
+	},
+	{
+		"City": "Ukiah"
+	},
+	{
+		"City": "Union City"
+	},
+	{
+		"City": "Upland"
+	},
+	{
+		"City": "Vacaville"
+	},
+	{
+		"City": "Vallejo"
+	},
+	{
+		"City": "Victorville"
+	},
+	{
+		"City": "Villa Park"
+	},
+	{
+		"City": "Visalia"
+	},
+	{
+		"City": "Vista"
+	},
+	{
+		"City": "Walnut"
+	},
+	{
+		"City": "Walnut Creek"
+	},
+	{
+		"City": "Wasco"
+	},
+	{
+		"City": "Waterford"
+	},
+	{
+		"City": "Watsonville"
+	},
+	{
+		"City": "West Covina"
+	},
+	{
+		"City": "West Hollywood"
+	},
+	{
+		"City": "West Sacramento"
+	},
+	{
+		"City": "Westlake Village"
+	},
+	{
+		"City": "Westminster"
+	},
+	{
+		"City": "Whittier"
+	},
+	{
+		"City": "Wildomar"
+	},
+	{
+		"City": "Williams"
+	},
+	{
+		"City": "Willows"
+	},
+	{
+		"City": "Winters"
+	},
+	{
+		"City": "Woodlake"
+	},
+	{
+		"City": "Woodland"
+	},
+	{
+		"City": "Yorba Linda"
+	},
+	{
+		"City": "Yreka"
+	},
+	{
+		"City": "Yuba City"
+	},
+	{
+		"City": "Yucaipa"
+	}
+]

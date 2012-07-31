@@ -1,0 +1,85 @@
+<?php
+
+class CTree {
+
+	private $head;
+	private $size;
+	private $nodes;
+
+	public function __construct() {
+		$this->head = $this->newNode(null, null, 'ROOT');
+		$this->size = 0;
+		$this->nodes = array();
+	}
+	
+	public function getTree() {
+		return $this->nodes;
+	}
+	
+	public function getNode($nodeID) {
+		if(array_key_exists($nodeID,$this->nodes)) {
+			return $this->nodes[$nodeID];
+		}
+		return null;
+	}
+	
+	public function getChildren($nodeID) {
+		if(!array_key_exists($nodeID, $this->nodes)) {
+			throw new Exception('Node doesn\'t exist');
+		}
+		return $this->nodes[$nodeID]->getChildren();
+	}
+	
+	public function getParent($nodeID) {
+		if(!array_key_exists($nodeID, $this->nodes)) {
+			throw new Exception('Node doesn\'t exist');
+		}
+		return $this->nodes[$nodeID]->getParent();
+	}
+	
+	public function setChild($nodeID, $childID) {
+		if(empty($nodeID) || empty($childID)){
+			throw new Exception('Must have valid IDs for each node');
+		}
+		$parent = $this->nodes[$nodeID];
+		$child = $this->nodes[$childID];
+		if($child && $parent) {
+			$parent->setChild($child);
+		}
+	}
+
+	public function setParent($nodeID, $parentID) {
+		if(empty($nodeID) || empty($parentID)){
+			throw new Exception('Must have valid IDs for each node');
+		}
+		$parent = $this->nodes[$nodeID];
+		$child = $this->nodes[$nodeID];
+		if($child && $parent) {
+			$child->setParent($parent);
+		}
+	}
+	
+	public function newNode($nodeID, $metrics = null, $spending = null) {
+		if(array_key_exists($nodeID, $this->nodes)) {
+			throw new Exception('Node already exists');
+		}
+		$newNode = new CNode($metrics, $spending, $nodeID);
+		$this->nodes[$newNode->getID()] = $newNode;
+		$this->size += 1;
+		return $newNode->getID();
+	}
+	
+	public function insertNode($childID, $parentID = null) {
+		if(empty($childID)) {
+			throw new Exception('Need valid child ID');
+		}
+		if($parentID === null) {
+			$parentID = $this->head;
+		}
+		$this->setParent($childID, $parentID);
+		$this->setChild($parentID, $childID);
+	}
+
+}
+
+?>
